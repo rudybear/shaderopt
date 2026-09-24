@@ -19,6 +19,7 @@ All tools below are vendored through IGL's `deploy_deps.py` or built from that v
 
 ## Not yet available
 
-- **IGL library build.** Blocked: IGL's Vulkan CMake hardcodes `VK_USE_PLATFORM_XLIB_KHR`, and `X11/Xlib.h` is not installed. The GLFW shell additionally needs xrandr, xinerama, xcursor and xi headers. Needs `sudo apt install libx11-dev libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev`.
+- **IGL headless library.** Built 2026-09-24 in `~/sources/igl/build-headless` (Vulkan only, no shell): `libIGLLibrary.a`, `libIGLVulkan.a`, `libIGLGlslang.a`. X11 dev headers were installed by the user.
+- **IGL shell and samples.** Blocked on the OpenGL/EGL dev libraries: the top-level CMake calls `find_package(OpenGL)` for the desktop shell even with the OpenGL backend off. Needs `sudo apt install libgl-dev libegl-dev`.
 - **malioc, RGA, adb, NDK, Xcode, renderdoc.** Not installed; needed only when mobile devices arrive or for proxy stats.
 - **python3-venv system package.** Absent; `uv` is used instead.
