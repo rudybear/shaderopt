@@ -9,7 +9,7 @@ from .build import build_all
 from .jobs import gen_inputs, make_job, run_job, load_result_images
 from .stats import median_ci, speedup_ci
 from .metrics import flip_metrics, exact_metrics, kind_for
-from .formats import quantize
+from .formats import quantize, code_error
 
 def budgets() -> dict:
     return tomllib.loads(BUDGETS.read_text()) if BUDGETS.exists() else {}
@@ -104,9 +104,9 @@ def cmd_aa(a):
                               "device": runs["A"][0].get("device"), "state": runs["A"][0].get("state"), "floor": floor}, indent=2))
     print(f"noise floor written: {fp}")
 
-def _eval_cpu(spv: Path, w: int, h: int, mode: str, samplers: dict[str, Path], uniforms: dict, out: Path, nearest: bool = False) -> None:
+def _eval_cpu(spv: Path, w: int, h: int, mode: str, samplers: dict[str, Path], uniforms: dict, out: Path, nearest: bool = False, weight_bits: int = 8) -> None:
     require(SHADER_IR, "shader-ir binary (cargo build --release in lab/crates/shader-ir)")
-    cmd = [SHADER_IR, "eval", "--spv", spv, "--width", str(w), "--height", str(h), "--mode", mode, "--out", out]
+    cmd = [SHADER_IR, "eval", "--spv", spv, "--width", str(w), "--height", str(h), "--mode", mode, "--out", out, "--sampler-weight-bits", str(weight_bits)]
     for n, p in samplers.items():
         cmd += ["--sampler", f"{n}={p}" + (":nearest" if nearest else "")]
     for n, v in uniforms.items():
@@ -117,10 +117,10 @@ def _eval_cpu(spv: Path, w: int, h: int, mode: str, samplers: dict[str, Path], u
 
 def cmd_lift_check(a):
     """M1 gate 3: (a) empty-edit round trip is body-identical; (b) CPU f32 output matches the GPU output per pass,
-    feeding each pass the GPU's own readback of its inputs."""
+    measured in code units of the storage format, feeding each pass the GPU's own readback of its inputs."""
     require(SHADER_IR, "shader-ir binary")
+    tols = tomllib.loads((paths.LAB / "lift_tolerances.toml").read_text())
     scs = all_scenarios(a.split) if not a.scenario else [load_scenario(a.scenario)]
-    tol = a.tolerance
     report = []
     for sc in scs:
         res, out = _run_one(sc, "baseline", a)
@@ -130,30 +130,24 @@ def cmd_lift_check(a):
         inputs = {k: v for k, v in gen_inputs(sc).items()}
         for p in sc.passes:
             spv = SPV_DIR / f"{p.shader}.spv"
-            rt = run([SHADER_IR, "roundtrip", spv])
-            rt_ok = rt.returncode == 0
+            rt = run([SHADER_IR, "roundtrip", spv]); rt_ok = rt.returncode == 0
             w, h = sc.pass_size(p)
-            samplers = {}
-            for sname, src in p.samplers.items():
-                if src in inputs:
-                    samplers[sname] = inputs[src]
-                else:
-                    samplers[sname] = Path(res["_dir"]) / res["images"][src]
+            samplers = {sname: (inputs[src] if src in inputs else Path(res["_dir"]) / res["images"][src]) for sname, src in p.samplers.items()}
             cpu_out = Path(res["_dir"]) / f"{p.name}.cpu_{a.mode}.npy"
-            _eval_cpu(spv, w, h, a.mode, samplers, p.uniforms, cpu_out, nearest=(p.sampler == "nearest"))
-            cpu = quantize(p.format, np.load(cpu_out))
-            g = gpu[p.name]
+            _eval_cpu(spv, w, h, a.mode, samplers, p.uniforms, cpu_out, nearest=(p.sampler == "nearest"), weight_bits=a.sampler_weight_bits)
+            cpu = np.load(cpu_out); g = gpu[p.name]
             m = np.isfinite(cpu).all(-1) & np.isfinite(g).all(-1)
-            discard_mismatch = int((np.isnan(cpu).all(-1) != np.isnan(g).all(-1)).sum()) if np.isnan(cpu).any() else 0
-            d = np.abs(cpu - g)[m]
-            amax = float(d.max()) if d.size else 0.0; p99 = float(np.quantile(d, 0.99)) if d.size else 0.0
-            ok = rt_ok and amax <= tol
-            report.append({"scenario": sc.name, "pass": p.name, "shader": p.shader, "roundtrip_ok": rt_ok, "roundtrip": rt.stdout.strip(),
-                           "abs_max": amax, "abs_p99": p99, "masked": int((~m).sum()), "tolerance": tol, "ok": ok, "mode": a.mode,
-                           "format": p.format, "size": [w, h]})
-            print(f"{sc.name:24s} {p.name:12s} roundtrip={'ok' if rt_ok else 'DIFF'} cpu-vs-gpu max={amax:.3e} p99={p99:.3e} masked={int((~m).sum())} -> {'OK' if ok else 'FAIL'}")
+            err = code_error(p.format, cpu, g)[m]
+            t = {**tols.get("default", {}), **tols.get("shaders", {}).get(p.shader, {})}
+            p99 = float(np.quantile(err, 0.99)) if err.size else 0.0; emax = float(err.max()) if err.size else 0.0
+            frac1 = float((err > 1).mean()) if err.size else 0.0
+            ok = rt_ok and p99 <= t["p99_codes"] and emax <= t["max_codes"]
+            report.append({"scenario": sc.name, "pass": p.name, "shader": p.shader, "format": p.format, "size": [w, h], "mode": a.mode,
+                           "roundtrip_ok": rt_ok, "roundtrip": rt.stdout.strip(), "p99_codes": p99, "max_codes": emax,
+                           "frac_over_1_code": frac1, "masked": int((~m).sum()), "tolerance": t, "ok": ok})
+            print(f"{sc.name:22s} {p.name:10s} {p.format:10s} roundtrip={'ok' if rt_ok else 'DIFF'} err p99={p99:5.1f} max={emax:6.1f} codes, >1: {frac1*100:5.2f}%  masked={int((~m).sum()):7d} {'fragile' if t.get('fragile') else ''} -> {'OK' if ok else 'FAIL'}")
     fp = paths.RESULTS_DIR / f"lift_check_{a.mode}.json"; fp.parent.mkdir(parents=True, exist_ok=True)
-    fp.write_text(json.dumps({"tools": tool_versions(), "report": report}, indent=2))
+    fp.write_text(json.dumps({"tools": tool_versions(), "tolerances": tols, "report": report}, indent=2))
     bad = [r for r in report if not r["ok"]]
     print(f"{len(report) - len(bad)}/{len(report)} pass checks OK; report {fp}")
     sys.exit(1 if bad else 0)
@@ -184,7 +178,7 @@ def main(argv=None):
     p = sub.add_parser("run"); p.add_argument("scenario"); p.add_argument("--variant", default="baseline"); p.add_argument("--record", action="store_true"); common(p); p.set_defaults(f=cmd_run)
     p = sub.add_parser("baseline"); p.add_argument("--scenario"); p.add_argument("--split"); common(p); p.set_defaults(f=cmd_baseline)
     p = sub.add_parser("aa"); p.add_argument("scenario"); p.add_argument("--rounds", type=int, default=3); common(p); p.set_defaults(f=cmd_aa)
-    p = sub.add_parser("lift-check"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--mode", default="f32"); p.add_argument("--tolerance", type=float, default=2e-3); common(p, samples=3); p.set_defaults(f=cmd_lift_check)
+    p = sub.add_parser("lift-check"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--mode", default="f32"); p.add_argument("--sampler-weight-bits", type=int, default=8); common(p, samples=3); p.set_defaults(f=cmd_lift_check)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)

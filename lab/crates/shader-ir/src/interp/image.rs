@@ -14,10 +14,9 @@
 //! GPUs evaluate the weights in fixed point (Vulkan guarantees at least
 //! `subTexelPrecisionBits` = 8 fractional bits; NVIDIA reports 8) and the blend in unspecified
 //! precision. This sampler computes the weights and the blend in f64 and rounds the result to the
-//! numeric mode; `weight_bits > 0` additionally truncates `a` and `b` to that many fractional
-//! bits (`floor(a * 2^N) / 2^N`, i.e. the coordinate is converted to fixed point by truncation)
-//! so the approximation can be tightened once measured against a device. The rounding direction
-//! of that fixed-point conversion is a hypothesis to be verified per vendor, not a spec guarantee.
+//! numeric mode; `weight_bits > 0` first rounds the unnormalized coordinates to fixed point with that many
+//! fractional bits (round to nearest), which is what NVIDIA 580.178.04 was measured to do at 8 bits.
+//! Other vendors may truncate or use more bits; verify per device.
 
 use crate::npy::Image;
 
@@ -76,15 +75,20 @@ pub fn sample_2d(img: &Image, filter: Filter, s: f64, t: f64, offset: [i64; 2], 
         Filter::Linear => {
             let uf = (u - 0.5).clamp(-1e12, 1e12);
             let vf = (v - 0.5).clamp(-1e12, 1e12);
+            // GPU model: the unnormalized coordinate is converted to fixed point with `weight_bits`
+            // fractional bits by rounding to nearest BEFORE the floor, so a coordinate a hair below a
+            // texel center snaps to it (weight exactly 0 on the neighbour). Measured to match NVIDIA
+            // 580.178.04 at 8 bits (see lab/results/lift_check_f32.json); truncation did not.
+            let (uf, vf) = if weight_bits > 0 {
+                let scale = (1u64 << weight_bits.min(52)) as f64;
+                ((uf * scale).round() / scale, (vf * scale).round() / scale)
+            } else {
+                (uf, vf)
+            };
             let i0f = uf.floor();
             let j0f = vf.floor();
-            let mut a = uf - i0f;
-            let mut b = vf - j0f;
-            if weight_bits > 0 {
-                let scale = (1u64 << weight_bits.min(52)) as f64;
-                a = (a * scale).floor() / scale;
-                b = (b * scale).floor() / scale;
-            }
+            let a = uf - i0f;
+            let b = vf - j0f;
             let i0 = i0f as i64 + offset[0];
             let j0 = j0f as i64 + offset[1];
             let (x0, x1) = (clamp_index(i0, w), clamp_index(i0 + 1, w));

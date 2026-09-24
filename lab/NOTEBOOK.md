@@ -20,3 +20,8 @@
 - A/A noise floor, desktop, clocks unlocked (P0 2625 MHz, no throttle): vignette rel diff -0.09%, CI [-0.30%, +0.00%], CV 0.60%. Locking clocks needs sudo; not done.
 - Observation: fxaa_noise 56 us vs fxaa_edges 23 us at the same resolution: the early-out branch dominates cost; noise input defeats it. Good M2 branch-analysis target.
 - IGL does not enable shaderFloatControls2 (IGL_PATCHES.md #1); needed for M4 fast-math.
+- shader-ir (Rust) built: lift on rspirv dr::Module, fragment interpreter f64/f32/f16, 27 tests. Corpus round trip body-identical for all 9 shaders.
+- lift-check v1 (abs tolerance 2e-3) failed 12/16: wrong yardstick. v2 measures error in storage-format code units: 13/16, then found two model gaps.
+- NEGATIVE then POSITIVE: sampler weight quantization by truncation made tonemap edges worse (max 101 codes); round-to-nearest 8-bit fixed-point coordinates reproduce NVIDIA exactly (max 0). Adopted as the CPU sampler model.
+- lift-check train split: 16/16 OK, max <= 1 code everywhere except vignette_grain (hash amplification, flagged fragile). M1 gates hold on desktop.
+- M1 STOP: report in lab/reports/M1.md.

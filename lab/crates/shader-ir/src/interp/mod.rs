@@ -223,6 +223,10 @@ impl<'a> Program<'a> {
                                     format!("{}: --uniform {mname}", cfg.label)
                                 })?);
                             }
+                            None if mname.starts_with("pad") => {
+                                // Padding members are optional and zero-filled, matching the runner.
+                                vals.push(parse_value(lifted, *mty, "0").unwrap_or(Value::Undef));
+                            }
                             None => {
                                 missing.push(mname);
                                 vals.push(Value::Undef);

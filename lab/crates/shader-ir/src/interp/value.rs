@@ -497,7 +497,8 @@ mod tests {
     fn frexp_matches() {
         for &x in &[1.0, 0.75, 8.0, -3.0, 1e-310, 123456.789] {
             let (m, e) = frexp(x);
-            assert_eq!(m * 2f64.powi(e), x);
+            // Two-step scaling keeps 2^(e/2) representable for subnormal inputs.
+            assert_eq!(m * 2f64.powi(e / 2) * 2f64.powi(e - e / 2), x);
             assert!(m.abs() >= 0.5 && m.abs() < 1.0, "{x}: {m} {e}");
         }
     }

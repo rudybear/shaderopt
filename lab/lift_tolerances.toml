@@ -1,0 +1,15 @@
+# M1 gate 3 tolerances for the CPU f32 model vs the desktop GPU, in code units of the storage format:
+# 8-bit formats: integer code difference after encoding (sRGB-encoded for *_SRGB); float formats: ULP distance
+# of the stored float type (f16 for RGBA16F/R16F, f32 for RGBA32F/R32F).
+# Root cause of nonzero differences on this device: the NVIDIA compiler contracts a*b+c into FMA and uses
+# reduced-precision sampler weights; the CPU model computes IEEE f32 per instruction. Discarded pixels are masked.
+
+[default]
+p99_codes = 1      # 99% of pixels within one code unit / ULP
+max_codes = 4      # no pixel further than this
+
+[shaders.vignette_grain]
+fragile = true
+reason = "hash() chains fract() of large products; a 1-ULP difference flips the whole grain value (up to grain_amount)"
+p99_codes = 16
+max_codes = 255

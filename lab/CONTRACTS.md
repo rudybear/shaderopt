@@ -103,7 +103,7 @@ shader-ir roundtrip <in.spv> [--out out.spv]      # exit 0 iff body identical; p
 shader-ir eval --spv pass.spv --width W --height H --mode f32|f64|f16 \
     --sampler name=path.npy ... --uniform name=value ... --out out.npy [--discard-value nan]
 ```
-`eval` runs the fragment entry point at every pixel center with the same uv convention as the runner. Discarded pixels are written as NaN in all channels (the runner leaves them at the clear/load value, so comparisons mask NaN pixels). Uniform values use the scenario syntax.
+`eval` runs the fragment entry point at every pixel center with the same uv convention as the runner. `--sampler-weight-bits N` (the lab uses 8) models the GPU's fixed-point texture coordinates: the unnormalized coordinate is rounded to nearest with N fractional bits before the bilinear weights are taken; measured to reproduce NVIDIA 580.178.04 exactly. The CPU-vs-GPU tolerance is defined in code units of the storage format in `lab/lift_tolerances.toml`. Discarded pixels are written as NaN in all channels (the runner leaves them at the clear/load value, so comparisons mask NaN pixels). Uniform values use the scenario syntax.
 
 ## Variants: `lab/variants/<shader>/<variant-id>/`
 

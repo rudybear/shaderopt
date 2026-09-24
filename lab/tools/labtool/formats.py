@@ -37,3 +37,23 @@ def quantize(fmt: str, img: np.ndarray) -> np.ndarray:
     return out.astype(np.float32)
 
 LDR_FORMATS = {"RGBA8", "RGBA8_SRGB", "RGB10A2"}
+
+
+def code_error(fmt: str, a: np.ndarray, b: np.ndarray) -> np.ndarray:
+    """Per-pixel max-over-RGB error in code units of the storage format (8-bit codes, or ULPs of f16/f32)."""
+    a = a[..., :3].astype(np.float32); b = b[..., :3].astype(np.float32)
+    if fmt in ("RGBA8", "RGB10A2"):
+        n = 255 if fmt == "RGBA8" else 1023
+        return np.abs(np.round(np.clip(a, 0, 1) * n) - np.round(np.clip(b, 0, 1) * n)).max(-1)
+    if fmt == "RGBA8_SRGB":
+        return np.abs(np.round(srgb_encode(a) * 255) - np.round(srgb_encode(b) * 255)).max(-1)
+    if fmt in ("RGBA16F", "R16F"):
+        ia = a.astype(np.float16).view(np.int16).astype(np.int64); ib = b.astype(np.float16).view(np.int16).astype(np.int64)
+        # map sign-magnitude to a monotonic integer line so ULP distance across zero is right
+        ia = np.where(ia < 0, -(ia & 0x7FFF), ia); ib = np.where(ib < 0, -(ib & 0x7FFF), ib)
+        return np.abs(ia - ib).max(-1)
+    if fmt in ("RGBA32F", "R32F", "R11G11B10F"):
+        ia = a.view(np.int32).astype(np.int64); ib = b.view(np.int32).astype(np.int64)
+        ia = np.where(ia < 0, -(ia & 0x7FFFFFFF), ia); ib = np.where(ib < 0, -(ib & 0x7FFFFFFF), ib)
+        return np.abs(ia - ib).max(-1)
+    raise SystemExit(f"unknown format {fmt}")
