@@ -22,7 +22,7 @@ Read it fully before starting. Fields still marked `{{…}}` are unknown and mus
 - **Real input images:** `{{INPUTS_DIR}}/train/` and `{{INPUTS_DIR}}/holdout/`. Until provided, the synthetic generators in §3 are the only inputs.
 - **Debug tools:** renderdoc-skill `{{path}}` and metal-ai-skill `{{path}}`. Neither found on this machine yet.
 - **Static proxies:** `{{malioc core, RGA target}}`. Neither installed yet.
-- **Tooling status on this host (2026-09-23):** present: `glslc`, `cmake`, `ninja`, `cargo`/`rustc`, `python3` with numpy, opencv, imageio; `nvidia-smi`. Missing: `glslangValidator`, `spirv-val`, `spirv-opt`, `spirv-cross`, `spirv-reflect`, `malioc`, `rga`, `adb`, NDK, renderdoc, FLIP. Ubuntu packages `spirv-tools`, `glslang-tools`, `spirv-cross` (old, 2021) and `adb` are available via apt but need sudo; prefer a pinned Vulkan SDK or source builds recorded in `lab/TOOLS.md`.
+- **Tooling status on this host (2026-09-23):** IGL's `deploy_deps.py` vendors nearly everything. Built and pinned in `lab/TOOLS.md`: glslang 15.3.0, SPIRV-Tools v2025.2 (spirv-val, spirv-opt, spirv-dis, spirv-as), SPIRV-Cross vulkan-sdk-1.4.321.0, SPIRV-Reflect vulkan-sdk-1.4.304.0 (header+source), volk, VMA, and NVlabs FLIP in the lab venv (`.venv`, created with `uv`). Not yet: the IGL library itself, blocked on the X11 dev headers (see `lab/TOOLS.md`); malioc, RGA, adb, NDK, renderdoc, Xcode. Use the pinned binaries, never the system `glslc`, for anything that produces a measured artifact.
 
 ## 1. Mission
 
@@ -133,9 +133,9 @@ Milestones marked **[STOP]** end the same way: write the report, commit, fire th
 
 - **Shaders and pass chains.** Inventory the starter corpus (IGL render sessions) and any supplied shaders. Who reads which output, at what format and resolution.
 - **AXIOM's real state.** Which crates build, what HIR and MIR support, which of the §2 shader-profile features exist, test status. Produce the first `FEATURE_REQUEST.md` drafts for the gaps and run them through `axiom-guru`.
-- **Tooling.** Install and pin: glslang, SPIRV-Tools, SPIRV-Cross, SPIRV-Reflect, FLIP (NVlabs). Record versions in `lab/TOOLS.md`. Android and Apple tooling only when devices exist.
+- **Tooling.** Already pinned in `lab/TOOLS.md`. Verify each binary runs and add a `lab tools` check that fails on any version drift. Android and Apple tooling only when devices exist.
 - **Devices.** Desktop features: `shaderFloat16`, 16-bit storage and `VK_KHR_shader_float_controls2`. Mobile devices are pending.
-- **IGL.** Fetch deps, build the pinned commit for desktop, run one existing session and the GPU timer session. Confirm the timestamp path and how `shaderFloat16` is enabled at device creation.
+- **IGL.** Deps are fetched. Build the pinned commit for desktop once the X11 headers are installed, then run one existing session and the GPU timer session. Confirm the timestamp path and how `shaderFloat16` is enabled at device creation.
 
 Deliver `lab/DISCOVERY.md` with the plan and the gaps.
 
