@@ -92,4 +92,11 @@ Gaps that need the user:
 - Mobile devices and a Mac, when available.
 - Real shader samples and input images.
 
-Decision needed from the user: the IR strategy above (lab-local IR vs. shader profile inside axiom-compute). This is the M0 STOP.
+## 7. Guardian verdict and the M0 STOP
+
+The `axiom-guru` guardian reviewed `FEATURE_REQUEST.md` (verdict in `lab/AXIOM_REQUESTS.md`, Request 001): **Option A endorsed**, the lab builds its shader IR locally on rspirv `dr::Module`, axiom-compute stays untouched through M3, and five additive pieces (GLSL.std.450 emitters, vector types, f16 arithmetic, `@equiv_fp_tol` parsing, the `@rate/@range/@tolerance/@sink` family) are parked as individually-welcome upstream proposals pending device evidence and your approval. Evidence that the substrate works: `lab/probes/rspirv_roundtrip` re-assembles a glslang fragment module body-identically, with only the generator word of the header changed.
+
+**Decisions needed from you before M1 starts:**
+1. Confirm Option A, or overrule it.
+2. Confirm the lab-owned post-processing corpus in §1 as the M1 through M3 target until you supply shaders.
+3. Install the Khronos validation layer when convenient (acceptance gate 2).
