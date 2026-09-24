@@ -1,0 +1,36 @@
+[scenario]
+name = "deferred_spheres"
+split = "train"
+width = 1920
+height = 1080
+
+[[inputs]]
+name = "albedo"
+generator = "gbuffer"
+seed = 51
+params = { which = "albedo" }
+
+[[inputs]]
+name = "normal"
+generator = "gbuffer"
+seed = 51
+params = { which = "normal" }
+
+[[inputs]]
+name = "shadowuv"
+generator = "gbuffer"
+seed = 51
+params = { which = "shadowuv" }
+
+[[inputs]]
+name = "shadow"
+generator = "gbuffer"
+seed = 51
+params = { which = "shadow" }
+
+[[passes]]
+name = "lit"
+shader = "deferred_lit"
+samplers = { u_albedo = "albedo", u_normal = "normal", u_shadowuv = "shadowuv", u_shadow = "shadow" }
+uniforms = { light1 = [-1.0, 1.0, 1.0, 0.8], light2 = [-1.0, 1.0, -1.0, 0.6], ambient = [0.15, 0.15, 0.18, 0.0], shadow_texel = [0.00052083, 0.00092593], depth_bias = -0.00005, shadow_min = 0.3 }
+output = { format = "RGBA8", scale = 1.0 }

@@ -1,0 +1,25 @@
+[package]
+name = "shader-ir"
+version = "0.1.0"
+edition = "2021"
+description = "Lossless SPIR-V IR on rspirv plus a CPU interpreter for fragment shaders (shader lab M1)"
+publish = false
+
+[lib]
+name = "shader_ir"
+path = "src/lib.rs"
+
+[[bin]]
+name = "shader-ir"
+path = "src/main.rs"
+
+[dependencies]
+rspirv = "0.12"
+spirv = "0.3"
+half = "2"
+clap = { version = "4", features = ["derive"] }
+anyhow = "1"
+rayon = "1"
+
+[profile.release]
+debug = 1

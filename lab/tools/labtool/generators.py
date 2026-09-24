@@ -73,3 +73,31 @@ def generate(name: str, w: int, h: int, seed: int, params: dict) -> np.ndarray:
     img = GENERATORS[name](w, h, seed, params or {})
     assert img.shape == (h, w, 4) and img.dtype == np.float32
     return img
+
+# ---- G-buffer set for deferred_lit: one generator producing four named images via `gbuffer:<which>` ----
+def _gbuffer(w, h, seed):
+    rng = np.random.default_rng(seed)
+    u, v = _grid(w, h)
+    # a few spheres on a ground plane, in normalized screen space
+    albedo = np.zeros((h, w, 4), np.float32); normal = np.zeros((h, w, 4), np.float32)
+    shadowuv = np.zeros((h, w, 4), np.float32)
+    ground = v > 0.6
+    albedo[ground] = [0.5, 0.45, 0.4, 1.0]; normal[ground] = [0.5, 1.0, 0.5, 1.0]
+    for k in range(6):
+        cx, cy, r = rng.uniform(0.1, 0.9), rng.uniform(0.2, 0.7), rng.uniform(0.05, 0.15)
+        dx, dy = (u - cx) * w / h, (v - cy)
+        m = dx * dx + dy * dy < r * r
+        nz = np.sqrt(np.clip(r * r - dx * dx - dy * dy, 0, None)) / r
+        nrm = np.stack([dx / r, -dy / r, nz], -1) * 0.5 + 0.5
+        col = rng.uniform(0.2, 0.9, 3)
+        albedo[m] = [*col, 1.0]; normal[m, :3] = nrm[m]; normal[m, 3] = 1.0
+    shadowuv[..., 0] = u; shadowuv[..., 1] = v; shadowuv[..., 2] = 0.5 + 0.3 * v; shadowuv[..., 3] = 1.0
+    shadow = np.zeros((h, w, 4), np.float32)
+    shadow[..., 0] = np.where(((np.floor(u * 6) + np.floor(v * 4)) % 2) == 0, 1.0, 0.55 + 0.3 * v)  # occluders as depth
+    shadow[..., 3] = 1.0
+    return {"albedo": albedo, "normal": normal, "shadowuv": shadowuv, "shadow": shadow}
+
+def gbuffer(w, h, seed, params):
+    return _gbuffer(w, h, seed)[params.get("which", "albedo")]
+
+GENERATORS["gbuffer"] = gbuffer
