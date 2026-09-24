@@ -1,0 +1,12 @@
+# build and tool output
+/build/
+/target/
+/lab/cache/
+/lab/results/**/*.exr
+/lab/results/**/*.png
+*.spv
+*.msl
+__pycache__/
+.venv/
+# local scratch
+/tmp/
