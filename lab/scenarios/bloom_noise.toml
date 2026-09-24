@@ -1,0 +1,42 @@
+[scenario]
+name = "bloom_noise"
+split = "holdout"
+width = 1920
+height = 1080
+
+[[inputs]]
+name = "scene"
+generator = "noise"
+seed = 3
+params = {scale=4.0}
+
+[[passes]]
+name = "threshold"
+shader = "bloom_threshold"
+samplers = { u_scene = "scene" }
+uniforms = { threshold = 1.0, knee = 0.5, exposure = 1.0 }
+output = { format = "RGBA16F", scale = 0.5 }
+
+[[passes]]
+name = "blur_h"
+shader = "gaussian_blur_h"
+samplers = { u_src = "threshold" }
+uniforms = { texel = [0.0010416666666666667, 0.001851851851851852], sigma = 2.0 }
+output = { format = "RGBA16F", scale = 0.5 }
+
+[[passes]]
+name = "blur_v"
+shader = "gaussian_blur_v"
+samplers = { u_src = "blur_h" }
+uniforms = { texel = [0.0010416666666666667, 0.001851851851851852], sigma = 2.0 }
+output = { format = "RGBA16F", scale = 0.5 }
+
+[[passes]]
+name = "composite"
+shader = "bloom_composite"
+samplers = { u_scene = "scene", u_bloom = "blur_v" }
+uniforms = { intensity = 0.8, exposure = 1.0 }
+output = { format = "RGBA8_SRGB", scale = 1.0 }
+
+[quality]
+outputs = ["composite"]

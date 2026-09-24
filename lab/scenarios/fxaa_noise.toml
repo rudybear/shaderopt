@@ -1,0 +1,18 @@
+[scenario]
+name = "fxaa_noise"
+split = "holdout"
+width = 1920
+height = 1080
+
+[[inputs]]
+name = "scene"
+generator = "noise"
+seed = 33
+params = {scale=1.0}
+
+[[passes]]
+name = "fxaa"
+shader = "fxaa"
+samplers = { u_src = "scene" }
+uniforms = { texel = [0.0005208333333333333, 0.000925925925925926], edge_threshold = 0.166, edge_threshold_min = 0.0833, subpix = 0.75 }
+output = { format = "RGBA8", scale = 1.0 }

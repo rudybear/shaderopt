@@ -1,14 +1,18 @@
-# build and tool output
 /build/
-/target/
+# build and tool output
+/lab/build/
 /lab/cache/
+/lab/crates/*/target/
+/lab/probes/*/Cargo.lock
+/lab/probes/*/target/
+/lab/results/
 /lab/results/**/*.exr
 /lab/results/**/*.png
-*.spv
+/lab/runner/build/
+# local scratch
 *.msl
 __pycache__/
-.venv/
-# local scratch
+*.spv
+/target/
 /tmp/
-/lab/probes/*/target/
-/lab/probes/*/Cargo.lock
+.venv/

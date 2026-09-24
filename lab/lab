@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Lab CLI wrapper: ./lab/lab <command> ...
+set -e
+HERE="$(cd "$(dirname "$0")" && pwd)"
+cd "$HERE/tools" && exec "$HERE/../.venv/bin/python" -m labtool "$@"

@@ -1,0 +1,18 @@
+[scenario]
+name = "vignette_gradient"
+split = "train"
+width = 1920
+height = 1080
+
+[[inputs]]
+name = "scene"
+generator = "gradient"
+seed = 41
+params = {}
+
+[[passes]]
+name = "vignette"
+shader = "vignette_grain"
+samplers = { u_src = "scene" }
+uniforms = { center = [0.5, 0.5], radius = 0.45, softness = 0.5, grain_amount = 0.04, time = 1.0, aspect = 1.7777777777777777 }
+output = { format = "RGBA8", scale = 1.0 }

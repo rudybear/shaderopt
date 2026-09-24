@@ -1,0 +1,18 @@
+[scenario]
+name = "fxaa_ultrawide"
+split = "holdout"
+width = 3440
+height = 1440
+
+[[inputs]]
+name = "scene"
+generator = "edges"
+seed = 34
+params = {}
+
+[[passes]]
+name = "fxaa"
+shader = "fxaa"
+samplers = { u_src = "scene" }
+uniforms = { texel = [0.00029069767441860465, 0.0006944444444444445], edge_threshold = 0.166, edge_threshold_min = 0.0833, subpix = 0.75 }
+output = { format = "RGBA8", scale = 1.0 }

@@ -1,0 +1,30 @@
+# Quality budgets. Everything here is optional. With allow_lossy = false only exact rewrites and
+# variants within the A/A noise floor are accepted. See AXIOM_SHADER_LAB.md §1 and §9.
+
+[pipeline]
+allow_lossy = false
+min_speedup = 0.10          # a lossy variant must buy at least this speedup to spend any budget
+
+[defaults]
+color = { metric = "flip",     mean_max = 0.01, p99_max = 0.05 }   # display-encoded LDR outputs
+hdr   = { metric = "flip_hdr", mean_max = 0.01, p99_max = 0.05 }   # linear HDR outputs
+mask  = { metric = "exact" }
+
+# Which output kind each pass produces (drives the metric). Unlisted passes: "color" if the
+# scenario format is an 8-bit format, else "hdr".
+[kinds]
+threshold = "hdr"
+blur_h = "hdr"
+blur_v = "hdr"
+composite = "color"
+tonemap = "color"
+grade = "color"
+fxaa = "color"
+vignette = "color"
+lit = "color"
+
+[targets]
+# per-output overrides, e.g.
+# [targets.composite]
+# p99_max = 0.07
+# platforms.android = { p99_max = 0.09 }

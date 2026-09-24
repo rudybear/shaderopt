@@ -1,0 +1,18 @@
+[scenario]
+name = "tonemap_noise"
+split = "holdout"
+width = 1920
+height = 1080
+
+[[inputs]]
+name = "scene"
+generator = "noise"
+seed = 13
+params = {scale=8.0}
+
+[[passes]]
+name = "tonemap"
+shader = "tonemap_aces"
+samplers = { u_scene = "scene" }
+uniforms = { white_balance = [1.0, 0.98, 0.95, 1.0], exposure = 1.2, gamma = 2.2, contrast = 1.05 }
+output = { format = "RGBA8_SRGB", scale = 1.0 }
