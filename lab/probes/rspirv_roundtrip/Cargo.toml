@@ -1,0 +1,6 @@
+[package]
+name = "rspirv_roundtrip"
+version = "0.0.1"
+edition = "2021"
+[dependencies]
+rspirv = "0.12"

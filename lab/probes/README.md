@@ -16,3 +16,16 @@ Build and run:
 ```
 cc -O1 -o headless_surface_probe headless_surface_probe.c -lvulkan && ./headless_surface_probe
 ```
+
+## rspirv_roundtrip
+
+Loads a SPIR-V module with `rspirv::dr::load_words` (rspirv 0.12, the same version axiom-compute pins) and immediately re-assembles it, then compares words. `tonemap.frag` is a fragment shader with a sampler, a uniform block, a loop, `mix`/`clamp`/`pow`/`dot`, a helper function and `discard`.
+
+Result on 2026-09-24 with glslang 15.3.0 output (`-V`, `-V -Os`) and after `spirv-opt -O`:
+- Body after the 5-word header: **identical** in all three cases.
+- Header: only word 2 (generator magic) differs, glslang `0x8000b` → rspirv `0xf0000`. Magic, version, bound and schema are preserved.
+
+Consequence: rspirv's `dr::Module` already satisfies the M1 "faithful lift" gate as the lab's IR substrate, with the one header difference explained. Build and run:
+```
+cd lab/probes/rspirv_roundtrip && cargo run --release -- path/to/shader.spv
+```
