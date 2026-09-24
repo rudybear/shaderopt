@@ -19,7 +19,8 @@ All tools below are vendored through IGL's `deploy_deps.py` or built from that v
 
 ## Not yet available
 
-- **IGL headless library.** Built 2026-09-24 in `~/sources/igl/build-headless` (Vulkan only, no shell): `libIGLLibrary.a`, `libIGLVulkan.a`, `libIGLGlslang.a`. X11 dev headers were installed by the user.
-- **IGL shell and samples.** Blocked on the OpenGL/EGL dev libraries: the top-level CMake calls `find_package(OpenGL)` for the desktop shell even with the OpenGL backend off. Needs `sudo apt install libgl-dev libegl-dev`.
+- **IGL full build.** Done 2026-09-24 in `~/sources/igl/build` (Vulkan backend, shell, samples, IGLU; OpenGL off) after the user installed the X11 and GL/EGL dev packages. 29 `*_vulkan` shell sessions built. `HelloWorldSession_vulkan` renders windowed on the RTX PRO 6000 (swapchain BGRA_SRGB).
+- **IGL shell `--headless` is unusable on this driver.** NVIDIA 580.178.04 segfaults in `vkGetPhysicalDeviceSurfaceCapabilitiesKHR` for a `VK_EXT_headless_surface` surface; reproduced without IGL by `lab/probes/headless_surface_probe.c`. The lab runner therefore creates the IGL device with no window and zero swapchain size (`HWDevice::create` skips the swapchain when width or height is 0) and renders offscreen. Shell sessions are run windowed when needed.
+- **Khronos validation layer.** `VK_LAYER_KHRONOS_validation` is not installed, so acceptance gate 2 (no new validation messages) cannot run yet. Ubuntu has `vulkan-validationlayers` 1.3.275; a Vulkan SDK build would be newer. Needs sudo.
 - **malioc, RGA, adb, NDK, Xcode, renderdoc.** Not installed; needed only when mobile devices arrive or for proxy stats.
 - **python3-venv system package.** Absent; `uv` is used instead.
