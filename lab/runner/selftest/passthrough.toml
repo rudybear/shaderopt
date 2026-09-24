@@ -1,0 +1,21 @@
+[scenario]
+name = "selftest_passthrough"
+split = "train"
+width = 256
+height = 128
+
+[[inputs]]
+name = "src"
+file = "src.npy"
+
+[[passes]]
+name = "copy"
+shader = "copy"
+samplers = { u_src = "src" }
+uniforms = { }
+output = { format = "RGBA32F", scale = 1.0 }
+load = "dont_care"
+store = "store"
+
+[quality]
+outputs = ["copy"]

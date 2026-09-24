@@ -5,7 +5,7 @@ from .paths import GLSLANG, SPIRV_VAL, SHADERS, SPV_DIR, run, sha256_file, requi
 
 def compile_glsl(src: Path, out: Path) -> None:
     out.parent.mkdir(parents=True, exist_ok=True)
-    r = run([GLSLANG, "-V", "-g0", "-o", out, src])
+    r = run([GLSLANG, "-V", "-o", out, src])
     if r.returncode != 0:
         raise SystemExit(f"glslang failed for {src}:\n{r.stdout}{r.stderr}")
     r = run([SPIRV_VAL, out])

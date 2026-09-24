@@ -1,0 +1,18 @@
+[scenario]
+name = "selftest_passthrough_ubo"
+split = "train"
+width = 256
+height = 128
+
+[[inputs]]
+name = "src"
+file = "src.npy"
+
+[[passes]]
+name = "copy"
+shader = "copy_ubo"
+samplers = { u_src = "src" }
+# gain*tint = (1,1,1,2); channel swap on; xform = identity with row 3 scaled by 0.5 -> alpha back to 1
+uniforms = { gain = 2.0, channel_swap = 1, tint = [0.5, 0.5, 0.5, 1.0], xform = [1,0,0,0, 0,1,0,0, 0,0,1,0, 0,0,0,0.5] }
+output = { format = "RGBA16F", scale = 0.5 }
+sampler = "nearest"

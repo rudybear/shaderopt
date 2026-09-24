@@ -8,8 +8,8 @@ All images cross process boundaries as NumPy `.npy` files, dtype `float32`, shap
 
 ## Shaders
 
-- Baseline sources: `lab/shaders/<shader>.frag` (GLSL 450, Vulkan semantics), compiled with the pinned glslang: `glslang -V -g0 -o <shader>.spv`. The vertex stage is always the runner's built-in fullscreen triangle, which writes `layout(location = 0) out vec2 uv` with uv in [0,1], (0,0) at the top-left, sampled at pixel centers.
-- Fragment shader interface conventions: `layout(location = 0) in vec2 uv`; outputs `layout(location = N) out vec4`; samplers `layout(set = 0, binding = B) uniform sampler2D <name>`; one uniform block `layout(set = 0, binding = B, std140) uniform Params { ... } u` whose members are set by name. Push constants are not used. Bindings are discovered by SPIRV-Reflect, never hardcoded.
+- Baseline sources: `lab/shaders/<shader>.frag` (GLSL 450, Vulkan semantics), compiled with the pinned glslang: `glslang -V -o <shader>.spv` (never `-g0`: SPIRV-Reflect binds by `OpName`, so debug names must stay). The vertex stage is always the runner's built-in fullscreen triangle, which writes `layout(location = 0) out vec2 uv` with uv in [0,1], (0,0) at the top-left, sampled at pixel centers.
+- Fragment shader interface conventions: `layout(location = 0) in vec2 uv`; outputs `layout(location = N) out vec4`; samplers `layout(set = 0, binding = B) uniform sampler2D <name>`; one uniform block `layout(set = 0, binding = B, std140) uniform Params { ... } u` whose members are set by name; members named `pad*` are optional and zero-filled by the runner. Push constants are not used. Bindings are discovered by SPIRV-Reflect, never hardcoded. IGL's Vulkan backend hardwires descriptor set 0 = textures and set 1 = buffers, so the runner rewrites the `DescriptorSet` decoration of uniform-block variables to 1 before pipeline creation (decoration-only, reported in the result's `notes`); shaders keep writing `set = 0`.
 - Sampler state: linear min/mag filter, no mipmaps (lod 0), clamp-to-edge, unless a pass sets `sampler = "nearest"`.
 
 ## Scenario: `lab/scenarios/<name>.toml`
