@@ -13,12 +13,21 @@ def flip_metrics(ref: np.ndarray, test: np.ndarray, kind: str) -> dict:
     m = _mask(ref, test)
     r = np.nan_to_num(ref[..., :3].astype(np.float32), nan=0.0, posinf=0.0, neginf=0.0)
     t = np.nan_to_num(test[..., :3].astype(np.float32), nan=0.0, posinf=0.0, neginf=0.0)
+    note = None
     if kind == "color":
         r = np.clip(r, 0, 1); t = np.clip(t, 0, 1)
         res = flip.evaluate(r, t, "LDR", inputsRGB=True, applyMagma=False)
     else:
         r = np.clip(r, 0, None); t = np.clip(t, 0, None)
-        res = flip.evaluate(r, t, "HDR", inputsRGB=False, applyMagma=False)
+        # FLIP HDR derives its exposure range from the reference luminance and calls exit() (not raise) when the
+        # range is empty, so guard first: a flat reference falls back to LDR FLIP on x/(1+x) tonemapped images.
+        lum = 0.2126 * r[..., 0] + 0.7152 * r[..., 1] + 0.0722 * r[..., 2]
+        if not np.isfinite(lum).any() or float(lum.max() - lum.min()) <= 1e-6 or float(lum.max()) <= 1e-6:
+            note = "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+            rt = r / (1.0 + r); tt = t / (1.0 + t)
+            res = flip.evaluate(rt.astype(np.float32), tt.astype(np.float32), "LDR", inputsRGB=False, applyMagma=False)
+        else:
+            res = flip.evaluate(r, t, "HDR", inputsRGB=False, applyMagma=False)
     emap = res[0] if isinstance(res, (tuple, list)) else res
     emap = np.asarray(emap, dtype=np.float32)
     if emap.ndim == 3:
@@ -27,7 +36,7 @@ def flip_metrics(ref: np.ndarray, test: np.ndarray, kind: str) -> dict:
     d = np.abs(ref[..., :3] - test[..., :3])[m] if m.any() else np.zeros((1, 3), np.float32)
     return {"flip_mean": float(e.mean()), "flip_p99": float(np.quantile(e, 0.99)), "flip_max": float(e.max()),
             "abs_max": float(d.max()), "abs_p99": float(np.quantile(d, 0.99)), "masked_pixels": int((~m).sum()),
-            "metric": "flip" if kind == "color" else "flip_hdr"}
+            "metric": "flip" if kind == "color" else "flip_hdr", **({"note": note} if note else {})}
 
 def exact_metrics(ref, test) -> dict:
     m = _mask(ref, test)

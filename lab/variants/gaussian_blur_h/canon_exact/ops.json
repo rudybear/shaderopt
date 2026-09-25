@@ -1,0 +1,548 @@
+[
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %42",
+    "pass": "cse",
+    "replaced_by": 42,
+    "target": 44
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %44 == %43",
+    "pass": "cse",
+    "replaced_by": 43,
+    "target": 45
+  },
+  {
+    "class": "exact",
+    "detail": "loop %18: variable %16 \"i\" = -4; exit when !(i SLessThanEqual 4); step +1; 9 iterations; 4 blocks cloned 9 times",
+    "pass": "unroll",
+    "replaced_by": null,
+    "target": 18
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %17 -> OpConstant -4.0",
+    "pass": "fold",
+    "replaced_by": 384,
+    "target": 97
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %17 %40 -> OpConstant -3",
+    "pass": "fold",
+    "replaced_by": 89,
+    "target": 125
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %89 -> OpConstant -3.0",
+    "pass": "fold",
+    "replaced_by": 385,
+    "target": 129
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %89 %40 -> OpConstant -2",
+    "pass": "fold",
+    "replaced_by": 90,
+    "target": 157
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %90 -> OpConstant -2.0",
+    "pass": "fold",
+    "replaced_by": 386,
+    "target": 161
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %90 %40 -> OpConstant -1",
+    "pass": "fold",
+    "replaced_by": 91,
+    "target": 189
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %91 -> OpConstant -1.0",
+    "pass": "fold",
+    "replaced_by": 387,
+    "target": 193
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %91 %40 -> OpConstant 0",
+    "pass": "fold",
+    "replaced_by": 58,
+    "target": 221
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %58 -> OpConstant 0.0",
+    "pass": "fold",
+    "replaced_by": 10,
+    "target": 225
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %58 %40 -> OpConstant 1",
+    "pass": "fold",
+    "replaced_by": 40,
+    "target": 253
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %40 -> OpConstant 1.0",
+    "pass": "fold",
+    "replaced_by": 84,
+    "target": 257
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %40 %40 -> OpConstant 2",
+    "pass": "fold",
+    "replaced_by": 92,
+    "target": 285
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %92 -> OpConstant 2.0",
+    "pass": "fold",
+    "replaced_by": 388,
+    "target": 289
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %92 %40 -> OpConstant 3",
+    "pass": "fold",
+    "replaced_by": 93,
+    "target": 317
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %93 -> OpConstant 3.0",
+    "pass": "fold",
+    "replaced_by": 389,
+    "target": 321
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %93 %40 -> OpConstant 4",
+    "pass": "fold",
+    "replaced_by": 24,
+    "target": 349
+  },
+  {
+    "class": "exact",
+    "detail": "OpConvertSToF %24 -> OpConstant 4.0",
+    "pass": "fold",
+    "replaced_by": 390,
+    "target": 353
+  },
+  {
+    "class": "exact",
+    "detail": "OpIAdd %24 %40 -> OpConstant 5",
+    "pass": "fold",
+    "replaced_by": 94,
+    "target": 381
+  },
+  {
+    "class": "exact",
+    "detail": "OpVariable \"i\" only stored to; removed 1 store(s)",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 16
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 134
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %134 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 135
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %135 %135 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 136
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 139
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 140
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 142
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %142 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 143
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 166
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %166 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 167
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %167 %167 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 168
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 171
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 172
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 174
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %174 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 175
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 198
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %198 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 199
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %199 %199 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 200
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 203
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 204
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 206
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %206 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 207
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 230
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %230 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 231
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %231 %231 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 232
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 235
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 236
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 238
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %238 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 239
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 262
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %262 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 263
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %263 %263 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 264
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 267
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 268
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 270
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %270 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 271
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 294
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %294 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 295
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %295 %295 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 296
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 299
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 300
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 302
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %302 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 303
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 326
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %326 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 327
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %327 %327 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 328
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 331
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 332
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 334
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %334 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 335
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 == %102",
+    "pass": "cse",
+    "replaced_by": 102,
+    "target": 358
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %358 == %103",
+    "pass": "cse",
+    "replaced_by": 103,
+    "target": 359
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %359 %359 == %104",
+    "pass": "cse",
+    "replaced_by": 104,
+    "target": 360
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %52 == %107",
+    "pass": "cse",
+    "replaced_by": 107,
+    "target": 363
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %55 == %108",
+    "pass": "cse",
+    "replaced_by": 108,
+    "target": 364
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %58 %60 == %110",
+    "pass": "cse",
+    "replaced_by": 110,
+    "target": 366
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %366 == %111",
+    "pass": "cse",
+    "replaced_by": 111,
+    "target": 367
+  }
+]
