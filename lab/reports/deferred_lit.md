@@ -8,17 +8,18 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| hyp_pcf4 | 0.0000 | +11.65% | 1/0 | yes | yes |
+| canon_exact | 0.0000 | -0.08% | 1/0 | no | no |
+| hyp_pcf4 | 0.0268 | +11.70% | 1/0 | yes | no |
 
 ### Accepted variants
 
-- **hyp_pcf4**: speedup +11.65%, worst FLIP p99 0.0000, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
+- **hyp_pcf4**: speedup +11.70%, worst FLIP p99 0.0268, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
-| hyp_pcf4 |  |  |  | 0.0000 | +11.65% | yes | yes |
+| hyp_pcf4 |  |  |  | 0.0268 | +11.70% | yes | no |
 | canon_exact |  |  |  | 0.0000 | -0.08% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.08% | no | no |
 

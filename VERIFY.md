@@ -31,6 +31,7 @@ bash lab/runner/selftest/run_selftest.sh
 |---|---|---|---|---|
 | gaussian_blur_h | hyp_bilinear5 | +11.1% | 0.0071 | `./lab/lab hypo --shader gaussian_blur_h --id bilinear5` |
 | gaussian_blur_v | hyp_bilinear5 | +11.4% | 0.0100 | `./lab/lab hypo --shader gaussian_blur_v --id bilinear5` |
+| deferred_lit | hyp_pcf4 | +11.7% | 0.0268 | `./lab/lab hypo --shader deferred_lit --id pcf4` |
 
 ```
 Accepted variants are listed below with the exact command that reproduces their gate results.

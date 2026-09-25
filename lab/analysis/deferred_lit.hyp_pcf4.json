@@ -14,11 +14,11 @@
  "variant_id": "hyp_pcf4",
  "prediction": {
   "lit": {
-   "flip_mean": 0.0,
-   "flip_p99": 0.0,
-   "flip_max": 0.0,
-   "abs_max": 0.0,
-   "abs_p99": 0.0,
+   "flip_mean": 0.0015452960506081581,
+   "flip_p99": 0.059839628636837006,
+   "flip_max": 0.20849628746509552,
+   "abs_max": 0.11764705181121826,
+   "abs_p99": 0.011764705181121826,
    "masked_pixels": 1079132,
    "metric": "flip"
   }
@@ -33,34 +33,34 @@
     "3": true,
     "4": true,
     "5": null,
-    "speedup": 0.11645125673832565,
+    "speedup": 0.1169624861842533,
     "required": 0.1
    },
    "gates_strict": {
     "1": true,
     "2": true,
-    "3": true,
+    "3": false,
     "4": true,
     "5": null,
-    "speedup": 0.11645125673832565,
+    "speedup": 0.1169624861842533,
     "required": 0.02
    },
    "timing": {
     "lit": {
-     "baseline_median_ns": 30794.0,
-     "variant_median_ns": 27208.0,
-     "speedup": 0.11645125673832565,
+     "baseline_median_ns": 30762.0,
+     "variant_median_ns": 27164.0,
+     "speedup": 0.1169624861842533,
      "speedup_ci95": [
-      0.1151494858181933,
-      0.11844155844155844
+      0.11469376684409723,
+      0.11821667641515565
      ],
      "baseline_ci95": [
-      30764.0,
-      30814.0
+      30722.0,
+      30786.0
      ],
      "variant_ci95": [
-      27150.0,
-      27238.0
+      27134.0,
+      27224.0
      ],
      "n": 40,
      "touched": true
@@ -68,10 +68,10 @@
    },
    "metrics": {
     "lit": {
-     "flip_mean": 0.0,
-     "flip_p99": 0.0,
-     "flip_max": 0.0,
-     "abs_max": 0.0,
+     "flip_mean": 0.0007415344589389861,
+     "flip_p99": 0.026780270040035248,
+     "flip_max": 0.2301035225391388,
+     "abs_max": 0.11764705181121826,
      "abs_p99": 0.0,
      "masked_pixels": 0,
      "metric": "flip"

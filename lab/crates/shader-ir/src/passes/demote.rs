@@ -103,7 +103,21 @@ pub fn is_f32_value(l: &Lifted, ty: u32) -> bool {
     float_width(l, ty) == Some(32)
 }
 
+fn is_comparison(op: Op) -> bool {
+    use Op::*;
+    matches!(
+        op,
+        FOrdEqual | FUnordEqual | FOrdNotEqual | FUnordNotEqual | FOrdLessThan | FUnordLessThan | FOrdGreaterThan
+            | FUnordGreaterThan | FOrdLessThanEqual | FUnordLessThanEqual | FOrdGreaterThanEqual | FUnordGreaterThanEqual
+    )
+}
+
 fn type_reason(l: &Lifted, id: u32) -> Option<String> {
+    if let Some(inst) = def_inst(l, id) {
+        if is_comparison(inst.class.opcode) {
+            return Some(format!("is Op{}: comparisons feed control flow and keep their f32 operands (bool result)", inst.class.opname));
+        }
+    }
     match l.result_types.get(&id) {
         None => Some(if l.defs.contains_key(&id) {
             let what = def_inst(l, id).map(|i| format!("Op{}", i.class.opname)).unwrap_or_else(|| "a label or parameter".into());
@@ -181,11 +195,10 @@ pub fn reject_reason(l: &Lifted, id: u32, set: &HashSet<u32>) -> Option<String> 
     use Op::*;
     let op = inst.class.opcode;
     let name = format!("Op{}", inst.class.opname);
+    if is_comparison(op) {
+        return Some(format!("{name}: comparisons feed control flow and keep their f32 operands"));
+    }
     match op {
-        FOrdEqual | FUnordEqual | FOrdNotEqual | FUnordNotEqual | FOrdLessThan | FUnordLessThan | FOrdGreaterThan
-        | FUnordGreaterThan | FOrdLessThanEqual | FUnordLessThanEqual | FOrdGreaterThanEqual | FUnordGreaterThanEqual => {
-            return Some(format!("{name}: comparisons feed control flow and keep their f32 operands"));
-        }
         ImageSampleImplicitLod | ImageSampleExplicitLod | ImageSampleDrefImplicitLod | ImageSampleDrefExplicitLod
         | ImageSampleProjImplicitLod | ImageSampleProjExplicitLod | ImageSampleProjDrefImplicitLod
         | ImageSampleProjDrefExplicitLod | ImageFetch | ImageGather | ImageDrefGather | ImageRead | ImageQueryLod

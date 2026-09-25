@@ -49,3 +49,4 @@
   - REJECTED (metric-limited) vignette cheaphash: FLIP 0.34..0.46 because a different noise realization is different pixels; a statistical-equivalence metric would be needed to judge grain rewrites; parked.
 - CPU-model predictions track the GPU: blur bilinear5 predicted FLIP p99 0.0071 vs measured 0.0068; fxaa dir4 predicted max 0.219 vs 0.224 on checker; color_grade foldmat predicted max 0.0112 vs 0.0127.
 - NEGATIVE (test-design bug): deferred_spheres' shadow map never shadowed anything (occluder depth 0.55+0.3v vs receiver 0.5+0.3v), so pcf4's "lossless" +11.65% was a fetch-count win with no penumbra to judge. Generator fixed (occluder depth 0.3); deferred_lit re-classified and pcf4 re-measured below.
+- deferred_lit pcf4 re-measured with real shadows: +11.70%, FLIP p99 0.0268 (within the 0.05 budget), mean small. ACCEPTED under budget; the penumbra is visibly narrower, so it is a budgeted trade, not a free win.

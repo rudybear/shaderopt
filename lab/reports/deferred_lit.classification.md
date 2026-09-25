@@ -53,26 +53,26 @@ Float results with NaN/Inf observed, or ranges beyond f16 (|x| > 65504) or below
 
 ## Sensitivity to f16 rounding per site (CPU prediction)
 
-All candidate sites at once: FLIP mean 0.0006, p99 0.0094, max 0.0248.
+All candidate sites at once: FLIP mean 0.0005, p99 0.0084, max 0.0247.
 
 Most sensitive sites (avoid or budget carefully):
 
 | id | op | rate | line | source | FLIP mean | FLIP p99 |
 |---|---|---|---|---|---|---|
-| %131 | OpExtInst/Normalize | uniform | 32 | `float ndl1 = clamp(dot(n, normalize(u.light1.xyz)), 0.0, 1.0` | 0.0003 | 0.0059 |
-| %174 | OpLoad | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0003 | 0.0056 |
-| %175 | OpVectorShuffle | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0003 | 0.0056 |
-| %188 | OpFMul | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0003 | 0.0056 |
-| %191 | OpLoad | pixel | 38 | `o = vec4(c, 1.0);` | 0.0003 | 0.0056 |
-| %195 | OpCompositeConstruct | pixel | 38 | `o = vec4(c, 1.0);` | 0.0003 | 0.0056 |
-| %187 | OpFAdd | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0002 | 0.0055 |
-| %193 | OpCompositeExtract | pixel | 38 | `o = vec4(c, 1.0);` | 0.0002 | 0.0053 |
-| %135 | OpLoad | uniform | 32 | `float ndl1 = clamp(dot(n, normalize(u.light1.xyz)), 0.0, 1.0` | 0.0002 | 0.0052 |
-| %117 | OpLoad | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0052 |
-| %118 | OpVectorShuffle | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0052 |
-| %120 | OpVectorTimesScalar | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0052 |
+| %131 | OpExtInst/Normalize | uniform | 32 | `float ndl1 = clamp(dot(n, normalize(u.light1.xyz)), 0.0, 1.0` | 0.0002 | 0.0054 |
+| %174 | OpLoad | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0003 | 0.0053 |
+| %175 | OpVectorShuffle | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0003 | 0.0053 |
+| %188 | OpFMul | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0002 | 0.0052 |
+| %191 | OpLoad | pixel | 38 | `o = vec4(c, 1.0);` | 0.0002 | 0.0052 |
+| %195 | OpCompositeConstruct | pixel | 38 | `o = vec4(c, 1.0);` | 0.0002 | 0.0052 |
+| %187 | OpFAdd | pixel | 37 | `vec3 c = alb.rgb * (u.ambient.rgb + vec3(0.5 * (ndl1 + ndl2)` | 0.0002 | 0.0051 |
+| %193 | OpCompositeExtract | pixel | 38 | `o = vec4(c, 1.0);` | 0.0001 | 0.0045 |
+| %117 | OpLoad | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0045 |
+| %118 | OpVectorShuffle | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0045 |
+| %120 | OpVectorTimesScalar | pixel | 31 | `vec3 n = normalize(nrm.xyz * 2.0 - 1.0);` | 0.0002 | 0.0045 |
+| %135 | OpLoad | uniform | 32 | `float ndl1 = clamp(dot(n, normalize(u.light1.xyz)), 0.0, 1.0` | 0.0002 | 0.0042 |
 
-Sites whose f16 rounding changes no output code at all: 13 of 47 (free demotion candidates): %129, %130, %140, %141, %168, %171, %172, %185, %76, %77, %78, %83, %85
+Sites whose f16 rounding changes no output code at all: 10 of 47 (free demotion candidates): %129, %130, %140, %141, %171, %76, %77, %78, %83, %85
 
 ## Pass graph
 
