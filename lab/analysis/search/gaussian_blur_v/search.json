@@ -4115,10 +4115,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11883589329021826,
+     "speedup": 0.11783696529459241,
      "ci": [
-      0.11721907841552143,
-      0.11954765751211632
+      0.1162227602905569,
+      0.1189036678758565
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -4127,7 +4127,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11883589329021826,
+      "speedup": 0.11783696529459241,
       "required": 0.1
      },
      "gates_strict": {
@@ -4136,17 +4136,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11883589329021826,
+      "speedup": 0.11783696529459241,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11945117029862792,
+     "speedup": 0.11702986279257466,
      "ci": [
-      0.11783696529459241,
-      0.12106537530266344
+      0.11595959595959596,
+      0.11935483870967742
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -4155,7 +4155,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11945117029862792,
+      "speedup": 0.11702986279257466,
       "required": 0.1
      },
      "gates_strict": {
@@ -4164,17 +4164,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11945117029862792,
+      "speedup": 0.11702986279257466,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11762328213419564,
+     "speedup": 0.11859620814844696,
      "ci": [
-      0.11583637100040502,
-      0.11954765751211632
+      0.11676767676767677,
+      0.12077294685990338
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -4183,7 +4183,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11762328213419564,
+      "speedup": 0.11859620814844696,
       "required": 0.1
      },
      "gates_strict": {
@@ -4192,17 +4192,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11762328213419564,
+      "speedup": 0.11859620814844696,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.1138633639632441,
+     "speedup": 0.11523125996810207,
      "ci": [
-      0.1111111111111111,
-      0.1159824631327222
+      0.112,
+      0.11633466135458168
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -4211,7 +4211,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1138633639632441,
+      "speedup": 0.11523125996810207,
       "required": 0.1
      },
      "gates_strict": {
@@ -4220,12 +4220,12 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1138633639632441,
+      "speedup": 0.11523125996810207,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.1138633639632441,
+   "min_speedup": 0.11523125996810207,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701
@@ -4243,10 +4243,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11954765751211632,
+     "speedup": 0.11824051654560129,
      "ci": [
-      0.11767084512737566,
-      0.12106537530266344
+      0.116410670978173,
+      0.11935483870967742
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -4255,7 +4255,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11824051654560129,
       "required": 0.1
      },
      "gates_strict": {
@@ -4264,17 +4264,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11824051654560129,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11767084512737566,
+     "speedup": 0.11783696529459241,
      "ci": [
-      0.11578947368421053,
-      0.11883589329021826
+      0.11676767676767677,
+      0.11935483870967742
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -4283,7 +4283,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11767084512737566,
+      "speedup": 0.11783696529459241,
       "required": 0.1
      },
      "gates_strict": {
@@ -4292,17 +4292,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11767084512737566,
+      "speedup": 0.11783696529459241,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.1191437802907916,
+     "speedup": 0.11636363636363636,
      "ci": [
-      0.11707291629920838,
-      0.12167606768734891
+      0.11407766990291263,
+      0.1189036678758565
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -4311,7 +4311,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1191437802907916,
+      "speedup": 0.11636363636363636,
       "required": 0.1
      },
      "gates_strict": {
@@ -4320,17 +4320,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1191437802907916,
+      "speedup": 0.11636363636363636,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.11461661341853036,
+     "speedup": 0.11363636363636363,
      "ci": [
-      0.11222044728434505,
-      0.11661341853035144
+      0.11244019138755981,
+      0.11544585987261147
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -4339,7 +4339,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11461661341853036,
+      "speedup": 0.11363636363636363,
       "required": 0.1
      },
      "gates_strict": {
@@ -4348,12 +4348,12 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11461661341853036,
+      "speedup": 0.11363636363636363,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.11461661341853036,
+   "min_speedup": 0.11363636363636363,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701
@@ -4371,10 +4371,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11731391585760517,
+     "speedup": 0.11954765751211632,
      "ci": [
-      0.11578947368421053,
-      0.1191437802907916
+      0.1175270852097781,
+      0.1210177598363786
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -4383,7 +4383,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11731391585760517,
+      "speedup": 0.11954765751211632,
       "required": 0.1
      },
      "gates_strict": {
@@ -4392,17 +4392,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11731391585760517,
+      "speedup": 0.11954765751211632,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11954765751211632,
+     "speedup": 0.11600646725949879,
      "ci": [
-      0.11731391585760517,
-      0.12066182405165456
+      0.11448220064724919,
+      0.11864406779661017
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -4411,7 +4411,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11600646725949879,
       "required": 0.1
      },
      "gates_strict": {
@@ -4420,17 +4420,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11600646725949879,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11954765751211632,
+     "speedup": 0.11702986279257466,
      "ci": [
-      0.11781257321774692,
-      0.1217741935483871
+      0.11515151515151516,
+      0.11921183305137302
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -4439,7 +4439,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11702986279257466,
       "required": 0.1
      },
      "gates_strict": {
@@ -4448,17 +4448,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11954765751211632,
+      "speedup": 0.11702986279257466,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.1149241819632881,
+     "speedup": 0.11530815109343936,
      "ci": [
-      0.11235505797680928,
-      0.11687392221174167
+      0.11239425716821833,
+      0.11631715325716768
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -4467,7 +4467,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1149241819632881,
+      "speedup": 0.11530815109343936,
       "required": 0.1
      },
      "gates_strict": {
@@ -4476,12 +4476,12 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1149241819632881,
+      "speedup": 0.11530815109343936,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.1149241819632881,
+   "min_speedup": 0.11530815109343936,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701
@@ -4499,139 +4499,11 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11838383838383838,
+     "speedup": 0.11845286059629331,
      "ci": [
-      0.11721907841552143,
-      0.12056451612903225
-     ],
-     "flip_p99": 0.01001114770770073,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11838383838383838,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11838383838383838,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11752827140549273,
-     "ci": [
-      0.116410670978173,
-      0.11864406779661017
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11752827140549273,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11752827140549273,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11814516129032258,
-     "ci": [
-      0.11653225806451613,
+      0.11693548387096774,
       0.11996779388083736
      ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11814516129032258,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11814516129032258,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11544585987261147,
-     "ci": [
-      0.11336196724181902,
-      0.11725076804672757
-     ],
-     "flip_p99": 0.011253653094172478,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11544585987261147,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11544585987261147,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11544585987261147,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.010236827656626701
-  },
-  "g_bilinear5_xh_a0p001_dq4": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q4",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11693548387096774,
-     "ci": [
-      0.11612903225806452,
-      0.11854838709677419
-     ],
      "flip_p99": 0.01001114770770073,
      "gates": {
       "1": true,
@@ -4639,7 +4511,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11693548387096774,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -4648,16 +4520,16 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11693548387096774,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11871227364185111,
+     "speedup": 0.11845286059629331,
      "ci": [
-      0.11745776347546259,
+      0.11693548387096774,
       0.11987127916331457
      ],
      "flip_p99": 0.0,
@@ -4667,7 +4539,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11871227364185111,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -4676,273 +4548,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11871227364185111,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11693548387096774,
-     "ci": [
-      0.11558522396742292,
-      0.1197749196141479
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11693548387096774,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11693548387096774,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11416070007955449,
-     "ci": [
-      0.11195219123505976,
-      0.11605723370429252
-     ],
-     "flip_p99": 0.011253653094172478,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11416070007955449,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11416070007955449,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11416070007955449,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.010236827656626701
-  },
-  "g_bilinear5_xh_a0p001_dq2": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11956521739130435,
-     "ci": [
-      0.11653225806451613,
-      0.12067578439259855
-     ],
-     "flip_p99": 0.01001114770770073,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11956521739130435,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11956521739130435,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11764705882352941,
-     "ci": [
-      0.11653225806451613,
-      0.11946902654867257
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11764705882352941,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11764705882352941,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11764705882352941,
-     "ci": [
-      0.11612903225806452,
-      0.11996779388083736
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11764705882352941,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11764705882352941,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11416070007955449,
-     "ci": [
-      0.11296738265712013,
-      0.11685214626391097
-     ],
-     "flip_p99": 0.011253653094172478,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11416070007955449,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11416070007955449,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11416070007955449,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.010236827656626701
-  },
-  "g_bilinear5_xh_a0p001_dq1": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
      "speedup": 0.11845286059629331,
      "ci": [
-      0.1162227602905569,
-      0.12057999022570097
-     ],
-     "flip_p99": 0.01001114770770073,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11845286059629331,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11845286059629331,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.1180024164317358,
-     "ci": [
-      0.11653225806451613,
-      0.11946902654867257
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1180024164317358,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1180024164317358,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11987127916331457,
-     "ci": [
-      0.11714975845410629,
-      0.12178456591639872
+      0.11591276252019386,
+      0.12067578439259855
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -4951,7 +4567,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11987127916331457,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -4960,7 +4576,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11987127916331457,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
@@ -4969,8 +4585,8 @@
      "split": "holdout",
      "speedup": 0.11455847255369929,
      "ci": [
-      0.11225891377711567,
-      0.11596505162827642
+      0.1131451582206207,
+      0.1172962226640159
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -4998,6 +4614,390 @@
    "accepted": false,
    "predicted_p99": 0.010236827656626701
   },
+  "g_bilinear5_xh_a0p001_dq4": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11774193548387096,
+     "ci": [
+      0.11657926583299717,
+      0.11935483870967742
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.1180975413139863,
+     "ci": [
+      0.11577248890681727,
+      0.11966156325543917
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180975413139863,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180975413139863,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11876006441223833,
+     "ci": [
+      0.11550888529886914,
+      0.12148028962188254
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11876006441223833,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11876006441223833,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11455847255369929,
+     "ci": [
+      0.11296738265712013,
+      0.11694690613169187
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11455847255369929,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11455847255369929,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11455847255369929,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dq2": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11774193548387096,
+     "ci": [
+      0.11612903225806452,
+      0.12017684887459808
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11916264090177134,
+     "ci": [
+      0.11764705882352941,
+      0.11987127916331457
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11916264090177134,
+     "ci": [
+      0.11652991051701281,
+      0.12057877813504823
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11314741035856574,
+     "ci": [
+      0.11057884231536926,
+      0.1142515923566879
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11314741035856574,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11314741035856574,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11314741035856574,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11845286059629331,
+     "ci": [
+      0.1162227602905569,
+      0.11956521739130435
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11845286059629331,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11845286059629331,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11774193548387096,
+     "ci": [
+      0.1162227602905569,
+      0.11935483870967742
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11774193548387096,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11916264090177134,
+     "ci": [
+      0.11581920903954802,
+      0.12193158953722334
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11916264090177134,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11416070007955449,
+     "ci": [
+      0.11190760653126244,
+      0.11694510739856802
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11416070007955449,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
   "g_bilinear5_xh_a0p001_dall": {
    "genome": {
     "source": "bilinear5",
@@ -5011,10 +5011,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11648528819024587,
+     "speedup": 0.11845286059629331,
      "ci": [
-      0.11501210653753027,
-      0.11835748792270531
+      0.11693548387096774,
+      0.11996779388083736
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -5023,7 +5023,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11648528819024587,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -5032,17 +5032,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11648528819024587,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.1180975413139863,
+     "speedup": 0.11876006441223833,
      "ci": [
-      0.11653108381765938,
-      0.11891014220150434
+      0.11764705882352941,
+      0.12088474831426951
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5051,7 +5051,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1180975413139863,
+      "speedup": 0.11876006441223833,
       "required": 0.1
      },
      "gates_strict": {
@@ -5060,17 +5060,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1180975413139863,
+      "speedup": 0.11876006441223833,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11951710261569416,
+     "speedup": 0.12067578439259855,
      "ci": [
-      0.11764705882352941,
-      0.1218335343787696
+      0.1168412570507655,
+      0.12218649517684887
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -5079,7 +5079,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11951710261569416,
+      "speedup": 0.12067578439259855,
       "required": 0.1
      },
      "gates_strict": {
@@ -5088,17 +5088,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11951710261569416,
+      "speedup": 0.12067578439259855,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.11420612813370473,
+     "speedup": 0.11274900398406375,
      "ci": [
-      0.11269750418731743,
-      0.11575178997613365
+      0.11119968114786767,
+      0.11549183592194345
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -5107,7 +5107,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11420612813370473,
+      "speedup": 0.11274900398406375,
       "required": 0.1
      },
      "gates_strict": {
@@ -5116,33 +5116,33 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11420612813370473,
+      "speedup": 0.11274900398406375,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.11420612813370473,
+   "min_speedup": 0.11274900398406375,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701
   },
-  "g_baseline_xh_a0p01_dq1": {
+  "g_baseline_xh_a0p01_dq4": {
    "genome": {
     "source": "baseline",
     "exact": true,
     "hoist": true,
     "approx": 0.01,
-    "demote": "q1",
+    "demote": "q4",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.042236524537409496,
+     "speedup": 0.0410958904109589,
      "ci": [
-      0.040290088638195005,
-      0.044614147909967844
+      0.03951612903225806,
+      0.04230459307010476
      ],
      "flip_p99": 0.003803710453212261,
      "gates": {
@@ -5151,7 +5151,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.042236524537409496,
+      "speedup": 0.0410958904109589,
       "required": 0.1
      },
      "gates_strict": {
@@ -5160,17 +5160,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.042236524537409496,
+      "speedup": 0.0410958904109589,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.041432019308125505,
+     "speedup": 0.0410958904109589,
      "ci": [
-      0.03870967741935484,
-      0.04340836012861737
+      0.039065646395489324,
+      0.04225352112676056
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5179,7 +5179,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.041432019308125505,
+      "speedup": 0.0410958904109589,
       "required": 0.1
      },
      "gates_strict": {
@@ -5188,17 +5188,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.041432019308125505,
+      "speedup": 0.0410958904109589,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.04186795491143317,
+     "speedup": 0.04148207813129279,
      "ci": [
-      0.03870967741935484,
-      0.04344328238133548
+      0.03954802259887006,
+      0.04424778761061947
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -5207,7 +5207,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.04186795491143317,
+      "speedup": 0.04148207813129279,
       "required": 0.1
      },
      "gates_strict": {
@@ -5216,7 +5216,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.04186795491143317,
+      "speedup": 0.04148207813129279,
       "required": 0.02
      }
     },
@@ -5225,8 +5225,8 @@
      "split": "holdout",
      "speedup": 0.041766109785202864,
      "ci": [
-      0.03830806065442937,
-      0.04335719968178202
+      0.03939514524472742,
+      0.04332273449920509
      ],
      "flip_p99": 0.009322691708803177,
      "gates": {
@@ -5249,28 +5249,28 @@
      }
     }
    ],
-   "min_speedup": 0.041432019308125505,
+   "min_speedup": 0.0410958904109589,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.0023482684046030045
   },
-  "g_bilinear5_xh_a0p0001_dq1": {
+  "g_bilinear5_xh_a0p0001_dq4": {
    "genome": {
     "source": "bilinear5",
     "exact": true,
     "hoist": true,
     "approx": 0.0001,
-    "demote": "q1",
+    "demote": "q4",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11987127916331457,
+     "speedup": 0.11845286059629331,
      "ci": [
-      0.11774193548387096,
-      0.12107803700724054
+      0.11693548387096774,
+      0.1199195171026157
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -5279,7 +5279,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11987127916331457,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -5288,17 +5288,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11987127916331457,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.1180024164317358,
+     "speedup": 0.1189036678758565,
      "ci": [
-      0.11612903225806452,
-      0.1197749196141479
+      0.11738604275917709,
+      0.12032193158953722
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5307,7 +5307,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1180024164317358,
+      "speedup": 0.1189036678758565,
       "required": 0.1
      },
      "gates_strict": {
@@ -5316,17 +5316,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1180024164317358,
+      "speedup": 0.1189036678758565,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11693548387096774,
+     "speedup": 0.11916264090177134,
      "ci": [
-      0.11612903225806452,
-      0.11987127916331457
+      0.11714975845410629,
+      0.12077294685990338
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -5335,7 +5335,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11693548387096774,
+      "speedup": 0.11916264090177134,
       "required": 0.1
      },
      "gates_strict": {
@@ -5344,17 +5344,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11693548387096774,
+      "speedup": 0.11916264090177134,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.11155378486055777,
+     "speedup": 0.11394422310756971,
      "ci": [
-      0.1107073074721723,
-      0.11446740858505565
+      0.11155378486055777,
+      0.11610337972166998
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -5363,7 +5363,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11155378486055777,
+      "speedup": 0.11394422310756971,
       "required": 0.1
      },
      "gates_strict": {
@@ -5372,12 +5372,12 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11155378486055777,
+      "speedup": 0.11394422310756971,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.11155378486055777,
+   "min_speedup": 0.11394422310756971,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701
@@ -5395,10 +5395,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11724415793714746,
+     "speedup": 0.11845286059629331,
      "ci": [
-      0.11567916162837566,
-      0.11880789367700363
+      0.11693548387096774,
+      0.11916264090177134
      ],
      "flip_p99": 0.010013850405812263,
      "gates": {
@@ -5407,7 +5407,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11724415793714746,
+      "speedup": 0.11845286059629331,
       "required": 0.1
      },
      "gates_strict": {
@@ -5416,16 +5416,16 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11724415793714746,
+      "speedup": 0.11845286059629331,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11835748792270531,
+     "speedup": 0.11774193548387096,
      "ci": [
-      0.11693548387096774,
+      0.1162227602905569,
       0.11987127916331457
      ],
      "flip_p99": 0.0,
@@ -5435,7 +5435,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11835748792270531,
+      "speedup": 0.11774193548387096,
       "required": 0.1
      },
      "gates_strict": {
@@ -5444,17 +5444,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11835748792270531,
+      "speedup": 0.11774193548387096,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11648528819024587,
+     "speedup": 0.1180024164317358,
      "ci": [
-      0.11438734241605426,
-      0.11982308001608363
+      0.11581920903954802,
+      0.12057999022570097
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5463,7 +5463,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11648528819024587,
+      "speedup": 0.1180024164317358,
       "required": 0.1
      },
      "gates_strict": {
@@ -5472,17 +5472,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11648528819024587,
+      "speedup": 0.1180024164317358,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.11526232114467408,
+     "speedup": 0.11491053677932406,
      "ci": [
-      0.11341026661360923,
-      0.11755361397934869
+      0.11274900398406375,
+      0.11760031783869686
      ],
      "flip_p99": 0.006759203504770994,
      "gates": {
@@ -5491,7 +5491,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11526232114467408,
+      "speedup": 0.11491053677932406,
       "required": 0.1
      },
      "gates_strict": {
@@ -5500,33 +5500,33 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11526232114467408,
+      "speedup": 0.11491053677932406,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.11526232114467408,
+   "min_speedup": 0.11491053677932406,
    "worst_p99": 0.010013850405812263,
    "accepted": true,
    "predicted_p99": 0.0102623226121068
   },
-  "g_bilinear5_--_a0p01_dq2": {
+  "g_bilinear5_--_a0p01_dall": {
    "genome": {
     "source": "bilinear5",
     "exact": false,
     "hoist": false,
     "approx": 0.01,
-    "demote": "q2",
+    "demote": "all",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11151368760064412,
+     "speedup": 0.11129032258064517,
      "ci": [
-      0.11039484286865431,
-      0.11263073209975864
+      0.10976594027441484,
+      0.11272141706924316
      ],
      "flip_p99": 0.01001114770770073,
      "gates": {
@@ -5535,7 +5535,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11151368760064412,
+      "speedup": 0.11129032258064517,
       "required": 0.1
      },
      "gates_strict": {
@@ -5544,17 +5544,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11151368760064412,
+      "speedup": 0.11129032258064517,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11191626409017713,
+     "speedup": 0.11272141706924316,
      "ci": [
-      0.11079774375503626,
-      0.11343523732904263
+      0.11084240225715437,
+      0.11352657004830918
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5563,7 +5563,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11191626409017713,
+      "speedup": 0.11272141706924316,
       "required": 0.1
      },
      "gates_strict": {
@@ -5572,17 +5572,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11191626409017713,
+      "speedup": 0.11272141706924316,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11146881287726358,
+     "speedup": 0.11048387096774194,
      "ci": [
-      0.10887096774193548,
-      0.11263073209975864
+      0.10787878787878788,
+      0.11307847082494969
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -5591,7 +5591,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11146881287726358,
+      "speedup": 0.11048387096774194,
       "required": 0.1
      },
      "gates_strict": {
@@ -5600,17 +5600,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11146881287726358,
+      "speedup": 0.11048387096774194,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.10898965791567224,
+     "speedup": 0.10828025477707007,
      "ci": [
-      0.10748407643312102,
-      0.11141950832672483
+      0.10499001996007984,
+      0.10943095901313171
      ],
      "flip_p99": 0.011253653094172478,
      "gates": {
@@ -5619,7 +5619,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10898965791567224,
+      "speedup": 0.10828025477707007,
       "required": 0.1
      },
      "gates_strict": {
@@ -5628,12 +5628,12 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10898965791567224,
+      "speedup": 0.10828025477707007,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10898965791567224,
+   "min_speedup": 0.10828025477707007,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.010236827656626701

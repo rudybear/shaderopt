@@ -33,10 +33,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dzero/gaussian_blur_h.spv",
    "ops": 8,
    "extra_u": {},
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq4",
@@ -51,10 +51,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq4/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq2",
@@ -69,10 +69,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq2/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq1",
@@ -87,10 +87,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq1/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dall",
@@ -105,10 +105,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dall/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dnone",
@@ -123,9 +123,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dnone/gaussian_blur_h.spv",
    "ops": 1,
    "extra_u": {},
-   "pred_p99": 0.006570302881300449,
-   "pred_mean": 0.0005354882450774312,
-   "pred_scenario": "bloom_hdr_edges",
+   "pred_p99": 0.00839180313050747,
+   "pred_mean": 0.0005428722943179309,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -141,10 +141,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.006015322636812925,
-   "pred_mean": 0.0005360429058782756,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806282438337803,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq4",
@@ -159,10 +159,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq2",
@@ -177,10 +177,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq1",
@@ -195,10 +195,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dall",
@@ -213,10 +213,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p01_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dnone",
@@ -249,10 +249,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.002808807883411646,
-   "pred_mean": 0.00048239281750284135,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq4",
@@ -267,10 +267,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq2",
@@ -285,10 +285,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq1",
@@ -303,10 +303,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dall",
@@ -321,10 +321,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dnone",
@@ -357,10 +357,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.0018723842222243547,
-   "pred_mean": 0.0008988195331767201,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq4",
@@ -375,10 +375,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq2",
@@ -393,10 +393,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq1",
@@ -411,10 +411,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dall",
@@ -429,10 +429,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dnone",
@@ -459,10 +459,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dzero/gaussian_blur_h.spv",
    "ops": 8,
    "extra_u": {},
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq4",
@@ -477,10 +477,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq4/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq2",
@@ -495,10 +495,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq2/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq1",
@@ -513,10 +513,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq1/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dall",
@@ -531,10 +531,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dall/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002564363181591034,
-   "pred_mean": 0.0013530862051993608,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dnone",
@@ -549,9 +549,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dnone/gaussian_blur_h.spv",
    "ops": 1,
    "extra_u": {},
-   "pred_p99": 0.006570302881300449,
-   "pred_mean": 0.0005354882450774312,
-   "pred_scenario": "bloom_hdr_edges",
+   "pred_p99": 0.00839180313050747,
+   "pred_mean": 0.0005428722943179309,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -567,10 +567,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.006015322636812925,
-   "pred_mean": 0.0005360429058782756,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806282438337803,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq4",
@@ -585,10 +585,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq2",
@@ -603,10 +603,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq1",
@@ -621,10 +621,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dall",
@@ -639,10 +639,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p01_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.00728217139840126,
-   "pred_mean": 0.0010715341195464134,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806364394724369,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dnone",
@@ -675,10 +675,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.002808807883411646,
-   "pred_mean": 0.00048239281750284135,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq4",
@@ -693,10 +693,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq2",
@@ -711,10 +711,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq1",
@@ -729,10 +729,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dall",
@@ -747,10 +747,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.005196595564484596,
-   "pred_mean": 0.0009422960574738681,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dnone",
@@ -783,10 +783,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.0018723842222243547,
-   "pred_mean": 0.0008988195331767201,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq4",
@@ -801,10 +801,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq2",
@@ -819,10 +819,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq1",
@@ -837,10 +837,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dall",
@@ -855,10 +855,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.002663325984030962,
-   "pred_mean": 0.0014802491059526801,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.01806681603193283,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dnone",
@@ -921,10 +921,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq4",
@@ -954,10 +954,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq2",
@@ -987,10 +987,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq1",
@@ -1020,10 +1020,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dall",
@@ -1053,10 +1053,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dnone",
@@ -1119,10 +1119,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq4",
@@ -1152,10 +1152,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq2",
@@ -1185,10 +1185,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq1",
@@ -1218,10 +1218,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dall",
@@ -1251,10 +1251,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dnone",
@@ -1317,10 +1317,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq4",
@@ -1350,10 +1350,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq2",
@@ -1383,10 +1383,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq1",
@@ -1416,10 +1416,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dall",
@@ -1449,10 +1449,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dnone",
@@ -1515,10 +1515,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq4",
@@ -1548,10 +1548,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq2",
@@ -1581,10 +1581,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq1",
@@ -1614,10 +1614,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dall",
@@ -1647,10 +1647,10 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.0019245491130277514,
-   "pred_mean": 0.000967003928963095,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018063485622406006,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_aoff_dnone",
@@ -1683,10 +1683,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_aoff_dzero/gaussian_blur_h.spv",
    "ops": 7,
    "extra_u": {},
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_aoff_dq4",
@@ -1701,10 +1701,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_aoff_dq4/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_aoff_dq2",
@@ -1719,10 +1719,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_aoff_dq2/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_aoff_dq1",
@@ -1737,10 +1737,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_aoff_dq1/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_aoff_dall",
@@ -1755,10 +1755,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_aoff_dall/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p01_dnone",
@@ -1791,10 +1791,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p01_dzero/gaussian_blur_h.spv",
    "ops": 7,
    "extra_u": {},
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p01_dq4",
@@ -1809,10 +1809,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p01_dq4/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p01_dq2",
@@ -1827,10 +1827,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p01_dq2/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p01_dq1",
@@ -1845,10 +1845,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p01_dq1/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p01_dall",
@@ -1863,10 +1863,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p01_dall/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p001_dnone",
@@ -1899,10 +1899,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p001_dzero/gaussian_blur_h.spv",
    "ops": 7,
    "extra_u": {},
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p001_dq4",
@@ -1917,10 +1917,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p001_dq4/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p001_dq2",
@@ -1935,10 +1935,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p001_dq2/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p001_dq1",
@@ -1953,10 +1953,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p001_dq1/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p001_dall",
@@ -1971,10 +1971,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p001_dall/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p0001_dnone",
@@ -2007,10 +2007,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p0001_dzero/gaussian_blur_h.spv",
    "ops": 7,
    "extra_u": {},
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p0001_dq4",
@@ -2025,10 +2025,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p0001_dq4/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p0001_dq2",
@@ -2043,10 +2043,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p0001_dq2/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p0001_dq1",
@@ -2061,10 +2061,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p0001_dq1/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_--_a0p0001_dall",
@@ -2079,10 +2079,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_--_a0p0001_dall/gaussian_blur_h.spv",
    "ops": 33,
    "extra_u": {},
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_aoff_dnone",
@@ -2163,10 +2163,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_aoff_dq4",
@@ -2205,10 +2205,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_aoff_dq2",
@@ -2247,10 +2247,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_aoff_dq1",
@@ -2289,10 +2289,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_aoff_dall",
@@ -2331,10 +2331,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p01_dnone",
@@ -2415,10 +2415,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq4",
@@ -2457,10 +2457,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq2",
@@ -2499,10 +2499,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq1",
@@ -2541,10 +2541,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p01_dall",
@@ -2583,10 +2583,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p001_dnone",
@@ -2667,10 +2667,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq4",
@@ -2709,10 +2709,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq2",
@@ -2751,10 +2751,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq1",
@@ -2793,10 +2793,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p001_dall",
@@ -2835,10 +2835,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dnone",
@@ -2919,10 +2919,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq4",
@@ -2961,10 +2961,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq2",
@@ -3003,10 +3003,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq1",
@@ -3045,10 +3045,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dall",
@@ -3087,10 +3087,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_aoff_dnone",
@@ -3171,10 +3171,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_aoff_dq4",
@@ -3213,10 +3213,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_aoff_dq2",
@@ -3255,10 +3255,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_aoff_dq1",
@@ -3297,10 +3297,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_aoff_dall",
@@ -3339,10 +3339,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p01_dnone",
@@ -3423,10 +3423,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq4",
@@ -3465,10 +3465,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq2",
@@ -3507,10 +3507,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq1",
@@ -3549,10 +3549,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p01_dall",
@@ -3591,10 +3591,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p001_dnone",
@@ -3675,10 +3675,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq4",
@@ -3717,10 +3717,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq2",
@@ -3759,10 +3759,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq1",
@@ -3801,10 +3801,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p001_dall",
@@ -3843,10 +3843,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dnone",
@@ -3927,10 +3927,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007065445650368929,
-   "pred_mean": 0.0008405601838603616,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq4",
@@ -3969,10 +3969,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq2",
@@ -4011,10 +4011,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq1",
@@ -4053,10 +4053,10 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dall",
@@ -4095,39 +4095,39 @@
      4.8980302810668945
     ]
    },
-   "pred_p99": 0.007066851947456598,
-   "pred_mean": 0.0008608747157268226,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 1.0,
+   "pred_mean": 0.018075594678521156,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   }
  ],
  "measured": {
-  "g_bilinear5_xh_a0p01_dq4": {
+  "g_bilinear5_xh_a0p01_dnone": {
    "genome": {
     "source": "bilinear5",
     "exact": true,
     "hoist": true,
     "approx": 0.01,
-    "demote": "q4",
+    "demote": "none",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11174089068825911,
+     "speedup": 0.1145623235175474,
      "ci": [
-      0.11021069692058347,
-      0.11371914204775395
+      0.11299435028248588,
+      0.11603545527800162
      ],
-     "flip_p99": 0.006790504325181246,
+     "flip_p99": 0.006794383283704519,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11174089068825911,
+      "speedup": 0.1145623235175474,
       "required": 0.1
      },
      "gates_strict": {
@@ -4136,17 +4136,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11174089068825911,
+      "speedup": 0.1145623235175474,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11367313915857605,
+     "speedup": 0.1147011308562197,
      "ci": [
-      0.11209923052391561,
-      0.11515151515151516
+      0.11290975313638203,
+      0.11612903225806452
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -4155,7 +4155,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11367313915857605,
+      "speedup": 0.1147011308562197,
       "required": 0.1
      },
      "gates_strict": {
@@ -4164,117 +4164,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11367313915857605,
+      "speedup": 0.1147011308562197,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11407766990291263,
+     "speedup": 0.11138014527845036,
      "ci": [
-      0.1111111111111111,
-      0.11515267876828103
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11407766990291263,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11407766990291263,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.10737179487179487,
-     "ci": [
-      0.10545308740978349,
-      0.11
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.10737179487179487,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10737179487179487,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.10737179487179487,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p01_dq2": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11358124494745352,
-     "ci": [
-      0.11165048543689321,
-      0.1147011308562197
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11358124494745352,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11358124494745352,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11183144246353323,
-     "ci": [
-      0.11030008110300081,
-      0.11407766990291263
+      0.10980914648828952,
+      0.11460855528652139
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -4283,35 +4183,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11183144246353323,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11183144246353323,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11295546558704453,
-     "ci": [
-      0.11102106969205834,
-      0.11488673139158576
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11295546558704453,
+      "speedup": 0.11138014527845036,
       "required": 0.1
      },
      "gates_strict": {
@@ -4320,26 +4192,26 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11295546558704453,
+      "speedup": 0.11138014527845036,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.10933119743692431,
+     "speedup": 0.1093812375249501,
      "ci": [
-      0.10648518815052041,
-      0.11048839071257005
+      0.10822683706070288,
+      0.11265923566878981
      ],
-     "flip_p99": 0.009723278693854809,
+     "flip_p99": 0.007146922871470451,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10933119743692431,
+      "speedup": 0.1093812375249501,
       "required": 0.1
      },
      "gates_strict": {
@@ -4348,1039 +4220,15 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10933119743692431,
+      "speedup": 0.1093812375249501,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10933119743692431,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p01_dq1": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11398544866612773,
-     "ci": [
-      0.11245954692556634,
-      0.11550888529886914
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11398544866612773,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11398544866612773,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11438965238480193,
-     "ci": [
-      0.11214574898785425,
-      0.11591276252019386
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11438965238480193,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11438965238480193,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11326860841423948,
-     "ci": [
-      0.11102106969205834,
-      0.1144359078042863
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11326860841423948,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11326860841423948,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11,
-     "ci": [
-      0.10755697720911635,
-      0.1111111111111111
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p01_dall": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11326860841423948,
-     "ci": [
-      0.11200298445887652,
-      0.11479385610347616
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11326860841423948,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11326860841423948,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11093117408906883,
-     "ci": [
-      0.10980551053484602,
-      0.11245954692556634
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11093117408906883,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11093117408906883,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11174089068825911,
-     "ci": [
-      0.10993914807302231,
-      0.11412383650343991
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11174089068825911,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11174089068825911,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.1096,
-     "ci": [
-      0.108,
-      0.11142172523961662
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1096,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1096,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.1096,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p001_dq4": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q4",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11268174474959612,
-     "ci": [
-      0.11147011308562198,
-      0.1147011308562197
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11268174474959612,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11268174474959612,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11272727272727273,
-     "ci": [
-      0.11093117408906883,
-      0.11389337641357028
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11272727272727273,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11272727272727273,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11317704122877931,
-     "ci": [
-      0.1097165991902834,
-      0.11519805982215037
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11199681147867677,
-     "ci": [
-      0.11057773917448423,
-      0.11385350318471338
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11199681147867677,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11199681147867677,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11199681147867677,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p001_dq2": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11312399355877617,
-     "ci": [
-      0.11160354552780016,
-      0.1143317230273752
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11312399355877617,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11312399355877617,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11352657004830918,
-     "ci": [
-      0.11200644641418211,
-      0.11495176848874598
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11352657004830918,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11352657004830918,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11357229158276279,
-     "ci": [
-      0.11133521581282775,
-      0.1157556270096463
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11357229158276279,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11357229158276279,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11013916500994035,
-     "ci": [
-      0.10819411296738266,
-      0.11119936457505956
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11013916500994035,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11013916500994035,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11013916500994035,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p001_dq1": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11343523732904263,
-     "ci": [
-      0.11182622687047465,
-      0.11530735235034151
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11343523732904263,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11343523732904263,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11240934730056407,
-     "ci": [
-      0.11088597941126757,
-      0.1143317230273752
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11240934730056407,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11240934730056407,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11312399355877617,
-     "ci": [
-      0.11075312122432542,
-      0.11464430278156709
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11312399355877617,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11312399355877617,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11022682053322722,
-     "ci": [
-      0.10867834394904459,
-      0.11137629276054097
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11022682053322722,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11022682053322722,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11022682053322722,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_xh_a0p001_dall": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11298753518295135,
-     "ci": [
-      0.11146881287726358,
-      0.11419380780056293
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11298753518295135,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11298753518295135,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11316955296012887,
-     "ci": [
-      0.11128920115458128,
-      0.11504424778761062
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11316955296012887,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11316955296012887,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11307847082494969,
-     "ci": [
-      0.1111111111111111,
-      0.11485943775100402
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11307847082494969,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11307847082494969,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.1087216248506571,
-     "ci": [
-      0.10721189460673554,
-      0.1108473469438028
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1087216248506571,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1087216248506571,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.1087216248506571,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_baseline_xh_a0p001_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.03298471440064361,
-     "ci": [
-      0.030595813204508857,
-      0.03457981503819863
-     ],
-     "flip_p99": 0.006696125492453575,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.03298471440064361,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.03298471440064361,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.03459372485921158,
-     "ci": [
-      0.0322061191626409,
-      0.03578608765581021
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.03459372485921158,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.03459372485921158,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.033011272141706925,
-     "ci": [
-      0.030990486875388842,
-      0.03460799418086619
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.033011272141706925,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.033011272141706925,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.03418124006359301,
-     "ci": [
-      0.03223239156386789,
-      0.03611111111111111
-     ],
-     "flip_p99": 0.006939820013940334,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.03418124006359301,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.03418124006359301,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.03298471440064361,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0019245491130277514
-  },
-  "g_bilinear5_xh_a0p0001_dq1": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.0001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11414790996784566,
-     "ci": [
-      0.11298753518295135,
-      0.11566265060240964
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11414790996784566,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11414790996784566,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11272141706924316,
-     "ci": [
-      0.11129032258064517,
-      0.11459589867310012
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11272141706924316,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11272141706924316,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11504424778761062,
-     "ci": [
-      0.11205046345781526,
-      0.11674718196457327
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11504424778761062,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11504424778761062,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.10898965791567224,
-     "ci": [
-      0.1070433744528452,
-      0.1123015873015873
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.10898965791567224,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10898965791567224,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.10898965791567224,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
+   "min_speedup": 0.1093812375249501,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
   },
   "g_bilinear5_xh_a0p001_dnone": {
    "genome": {
@@ -5395,9 +4243,521 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.1139291465378422,
+     "speedup": 0.11415893505445744,
      "ci": [
-      0.11272141706924316,
+      0.11232323232323232,
+      0.11612903225806452
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11415893505445744,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11415893505445744,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11165048543689321,
+     "ci": [
+      0.10976103685702714,
+      0.11317704122877931
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11165048543689321,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11165048543689321,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11437776882803061,
+     "ci": [
+      0.11281224818694602,
+      0.11745776347546259
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11437776882803061,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11437776882803061,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11177406523468576,
+     "ci": [
+      0.10991636798088411,
+      0.11376292760540971
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11177406523468576,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11177406523468576,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11165048543689321,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_xh_a0p0001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11482675261885576,
+     "ci": [
+      0.11299435028248588,
+      0.11568573331230392
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11482675261885576,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11482675261885576,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11370967741935484,
+     "ci": [
+      0.11290322580645161,
+      0.11522965350523771
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11553945249597423,
+     "ci": [
+      0.11330645161290323,
+      0.11674718196457327
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11553945249597423,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11553945249597423,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11040255081705859,
+     "ci": [
+      0.10862619808306709,
+      0.11296738265712013
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11040255081705859,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11040255081705859,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11040255081705859,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_-h_a0p01_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11442385173247381,
+     "ci": [
+      0.11316955296012887,
+      0.11594202898550725
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11442385173247381,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11442385173247381,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11420500403551251,
+     "ci": [
+      0.11299435028248588,
+      0.11634460547504026
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11420500403551251,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11420500403551251,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11411290322580646,
+     "ci": [
+      0.11178369652945924,
+      0.11639146194120016
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11411290322580646,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11411290322580646,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.10920685532084495,
+     "ci": [
+      0.1077414205905826,
+      0.11066989164872015
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.10920685532084495,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.10920685532084495,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.10920685532084495,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_-h_a0p001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11370967741935484,
+     "ci": [
+      0.11218724778046812,
+      0.11513687600644122
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11290322580645161,
+     "ci": [
+      0.11173860427591771,
+      0.11491935483870967
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11290322580645161,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11290322580645161,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11522965350523771,
+     "ci": [
+      0.11326078194276501,
+      0.11643835616438356
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11522965350523771,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11522965350523771,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11035856573705179,
+     "ci": [
+      0.10845295055821372,
+      0.11256961018297534
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11035856573705179,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11035856573705179,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11035856573705179,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_-h_a0p0001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11402095084609186,
+     "ci": [
+      0.1125,
       0.1157556270096463
      ],
      "flip_p99": 0.006794383283704519,
@@ -5407,7 +4767,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1139291465378422,
+      "speedup": 0.11402095084609186,
       "required": 0.1
      },
      "gates_strict": {
@@ -5416,17 +4776,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1139291465378422,
+      "speedup": 0.11402095084609186,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.1143317230273752,
+     "speedup": 0.11487303506650544,
      "ci": [
-      0.11281224818694602,
-      0.11549295774647887
+      0.11290322580645161,
+      0.11594202898550725
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5435,7 +4795,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1143317230273752,
+      "speedup": 0.11487303506650544,
       "required": 0.1
      },
      "gates_strict": {
@@ -5444,17 +4804,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1143317230273752,
+      "speedup": 0.11487303506650544,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11397503020539669,
+     "speedup": 0.11326078194276501,
      "ci": [
-      0.11093182734973779,
-      0.11620426216324889
+      0.11138014527845036,
+      0.11563255439161967
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5463,7 +4823,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11397503020539669,
+      "speedup": 0.11326078194276501,
       "required": 0.1
      },
      "gates_strict": {
@@ -5472,17 +4832,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11397503020539669,
+      "speedup": 0.11326078194276501,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.1105807478122514,
+     "speedup": 0.11186305732484077,
      "ci": [
-      0.10828025477707007,
-      0.11217183770883055
+      0.10960542048624951,
+      0.11345541401273886
      ],
      "flip_p99": 0.007146922871470451,
      "gates": {
@@ -5491,7 +4851,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1105807478122514,
+      "speedup": 0.11186305732484077,
       "required": 0.1
      },
      "gates_strict": {
@@ -5500,42 +4860,42 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1105807478122514,
+      "speedup": 0.11186305732484077,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.1105807478122514,
+   "min_speedup": 0.11186305732484077,
    "worst_p99": 0.007146922871470451,
    "accepted": true,
    "predicted_p99": 0.007065445650368929
   },
-  "g_bilinear5_--_a0p001_dq2": {
+  "g_bilinear5_xh_aoff_dnone": {
    "genome": {
     "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "q2",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11026156941649899,
+     "speedup": 0.1143317230273752,
      "ci": [
-      0.10838033843674456,
-      0.11213826366559486
+      0.1124546553808948,
+      0.11584875301689461
      ],
-     "flip_p99": 0.006790504325181246,
+     "flip_p99": 0.006794383283704519,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11026156941649899,
+      "speedup": 0.1143317230273752,
       "required": 0.1
      },
      "gates_strict": {
@@ -5544,17 +4904,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11026156941649899,
+      "speedup": 0.1143317230273752,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11066398390342053,
+     "speedup": 0.11451612903225807,
      "ci": [
-      0.10878323932312652,
-      0.11182622687047465
+      0.11218724778046812,
+      0.1168412570507655
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -5563,7 +4923,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11066398390342053,
+      "speedup": 0.11451612903225807,
       "required": 0.1
      },
      "gates_strict": {
@@ -5572,54 +4932,26 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11066398390342053,
+      "speedup": 0.11451612903225807,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.1095890410958904,
+     "speedup": 0.11406690850463523,
      "ci": [
-      0.10779168348809043,
-      0.11227364185110664
+      0.11218724778046812,
+      0.11724415793714746
      ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1095890410958904,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1095890410958904,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.10859188544152745,
-     "ci": [
-      0.10637450199203187,
-      0.11119936457505956
-     ],
-     "flip_p99": 0.009723278693854809,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10859188544152745,
+      "speedup": 0.11406690850463523,
       "required": 0.1
      },
      "gates_strict": {
@@ -5628,15 +4960,555 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10859188544152745,
+      "speedup": 0.11406690850463523,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.1099601593625498,
+     "ci": [
+      0.10721367875647668,
+      0.11190760653126244
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1099601593625498,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1099601593625498,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10859188544152745,
-   "worst_p99": 0.9673883318901062,
+   "min_speedup": 0.1099601593625498,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_-h_aoff_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11397503020539669,
+     "ci": [
+      0.11209677419354838,
+      0.11584875301689461
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11397503020539669,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11397503020539669,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11370967741935484,
+     "ci": [
+      0.1122778675282714,
+      0.11558598469593234
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11370967741935484,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11522965350523771,
+     "ci": [
+      0.11451612903225807,
+      0.11861680739847205
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11522965350523771,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11522965350523771,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11004784688995216,
+     "ci": [
+      0.10853950518754989,
+      0.11226114649681529
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11004784688995216,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11004784688995216,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11004784688995216,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_--_a0p0001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11352657004830918,
+     "ci": [
+      0.11200644641418211,
+      0.11468812877263582
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11352657004830918,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11352657004830918,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11330645161290323,
+     "ci": [
+      0.11138014527845036,
+      0.11442385173247381
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11330645161290323,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11330645161290323,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11209677419354838,
+     "ci": [
+      0.1098546042003231,
+      0.11442385173247381
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11209677419354838,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11209677419354838,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11044657097288677,
+     "ci": [
+      0.1089820359281437,
+      0.11244019138755981
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11044657097288677,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11044657097288677,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11044657097288677,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_bilinear5_--_a0p001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11303298471440064,
+     "ci": [
+      0.10941271118262269,
+      0.11423974255832663
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11303298471440064,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11303298471440064,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11218724778046812,
+     "ci": [
+      0.11147011308562198,
+      0.11397503020539669
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11218724778046812,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11218724778046812,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11218724778046812,
+     "ci": [
+      0.11102139685102948,
+      0.11370967741935484
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11218724778046812,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11218724778046812,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11004784688995216,
+     "ci": [
+      0.10782747603833866,
+      0.11376292760540971
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11004784688995216,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11004784688995216,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11004784688995216,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
+  },
+  "g_baseline_-h_a0p0001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0008051529790660225,
+     "ci": [
+      -0.0028203062046736503,
+      0.0012062726176115801
+     ],
+     "flip_p99": 0.005205309484153986,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008051529790660225,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008051529790660225,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0024193548387096775,
+     "ci": [
+      -0.0036319612590799033,
+      -0.00040290088638195
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024193548387096775,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024193548387096775,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0024222850222042794,
+     "ci": [
+      -0.004850444624090542,
+      -0.00040306328093510683
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024222850222042794,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024222850222042794,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0023923444976076554,
+     "ci": [
+      -0.00558659217877095,
+      0.0
+     ],
+     "flip_p99": 0.0008324048249050975,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0023923444976076554,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0023923444976076554,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0024222850222042794,
+   "worst_p99": 0.005205309484153986,
    "accepted": false,
-   "predicted_p99": 0.007066851947456598
+   "predicted_p99": 0.0010507773840799928
   }
  },
  "gpu_budget": 8

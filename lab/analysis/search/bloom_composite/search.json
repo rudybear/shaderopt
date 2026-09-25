@@ -45,10 +45,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq2",
@@ -63,10 +63,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq1",
@@ -81,10 +81,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dall",
@@ -99,10 +99,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dnone",
@@ -118,7 +118,7 @@
    "ops": 1,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -136,7 +136,7 @@
    "ops": 1,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -153,8 +153,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq4/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -171,8 +171,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq2/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -189,8 +189,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq1/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -207,8 +207,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dall/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -249,10 +249,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq2",
@@ -267,10 +267,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq1",
@@ -285,10 +285,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dall",
@@ -303,10 +303,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dnone",
@@ -345,10 +345,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq2",
@@ -363,10 +363,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq1",
@@ -381,10 +381,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dall",
@@ -399,10 +399,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dnone",
@@ -441,10 +441,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq2",
@@ -459,10 +459,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq1",
@@ -477,10 +477,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dall",
@@ -495,10 +495,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dnone",
@@ -514,7 +514,7 @@
    "ops": 1,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -532,7 +532,7 @@
    "ops": 1,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -549,8 +549,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq4/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -567,8 +567,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq2/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -585,8 +585,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq1/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -603,8 +603,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dall/bloom_composite.spv",
    "ops": 22,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -645,10 +645,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq2",
@@ -663,10 +663,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq1",
@@ -681,10 +681,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dall",
@@ -699,10 +699,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dnone",
@@ -741,10 +741,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq4/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq2",
@@ -759,10 +759,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq2/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq1",
@@ -777,10 +777,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq1/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dall",
@@ -795,10 +795,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dall/bloom_composite.spv",
    "ops": 21,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dnone",
@@ -849,10 +849,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq4/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq2",
@@ -867,10 +867,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq2/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq1",
@@ -885,10 +885,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq1/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dall",
@@ -903,10 +903,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dall/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dnone",
@@ -922,7 +922,7 @@
    "ops": 3,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -940,7 +940,7 @@
    "ops": 3,
    "extra_u": {},
    "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06558188050985336,
+   "pred_mean": 0.06136416643857956,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -957,8 +957,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq4/bloom_composite.spv",
    "ops": 24,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -975,8 +975,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq2/bloom_composite.spv",
    "ops": 24,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -993,8 +993,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq1/bloom_composite.spv",
    "ops": 24,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -1011,8 +1011,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dall/bloom_composite.spv",
    "ops": 24,
    "extra_u": {},
-   "pred_p99": 0.36877381801605225,
-   "pred_mean": 0.06714639067649841,
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.07619969546794891,
    "pred_scenario": "bloom_extreme",
    "within": false
   },
@@ -1065,10 +1065,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq4/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq2",
@@ -1083,10 +1083,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq2/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq1",
@@ -1101,10 +1101,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq1/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dall",
@@ -1119,10 +1119,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dall/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dnone",
@@ -1173,10 +1173,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq4/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq2",
@@ -1191,10 +1191,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq2/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq1",
@@ -1209,10 +1209,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq1/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dall",
@@ -1227,1036 +1227,140 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dall/bloom_composite.spv",
    "ops": 23,
    "extra_u": {},
-   "pred_p99": 0.022230925038456917,
-   "pred_mean": 0.00694764219224453,
-   "pred_scenario": "bloom_noise",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.016613846644759178,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   }
  ],
  "measured": {
-  "g_baseline_xh_a0p001_dq4": {
+  "g_baseline_xh_a0p001_dzero": {
    "genome": {
     "source": "baseline",
     "exact": true,
     "hoist": true,
     "approx": 0.001,
-    "demote": "q4",
+    "demote": "zero",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": -0.0005336179295624333,
+     "speedup": 0.0002668801708033093,
      "ci": [
-      -0.002938819129040876,
-      0.0010660980810234541
+      -0.0016025641025641025,
+      0.0016008537886872999
      ],
-     "flip_p99": 0.018810760229825974,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005336179295624333,
+      "speedup": 0.0002668801708033093,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005336179295624333,
+      "speedup": 0.0002668801708033093,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": -0.0010660980810234541,
+     "speedup": 0.0016008537886872999,
      "ci": [
-      -0.0029364655632674853,
-      0.001597444089456869
+      0.0,
+      0.002667377967457989
      ],
-     "flip_p99": 0.019548838958144188,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0010660980810234541,
+      "speedup": 0.0016008537886872999,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0010660980810234541,
+      "speedup": 0.0016008537886872999,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": -0.000800854244527496,
+     "speedup": -0.0008014961261020571,
      "ci": [
-      -0.003206841261357563,
-      0.000800854244527496
+      -0.004002268125688051,
+      0.0018706699035104526
      ],
-     "flip_p99": 0.9673883318901062,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.000800854244527496,
+      "speedup": -0.0008014961261020571,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.000800854244527496,
+      "speedup": -0.0008014961261020571,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.001005530417295123,
+     "speedup": 0.0005037783375314861,
      "ci": [
-      -0.0010070493454179255,
-      0.004012036108324975
+      -0.0012607160867372667,
+      0.002264720684448918
      ],
-     "flip_p99": 0.027158258482813835,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001005530417295123,
+      "speedup": 0.0005037783375314861,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001005530417295123,
+      "speedup": 0.0005037783375314861,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0010660980810234541,
-   "worst_p99": 0.9673883318901062,
+   "min_speedup": -0.0008014961261020571,
+   "worst_p99": 0.0,
    "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p001_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.003205128205128205,
-     "ci": [
-      -0.005344735435595938,
-      -0.001601708489054992
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.003205128205128205,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.003205128205128205,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.0013319126265316996,
-     "ci": [
-      -0.002934898612593383,
-      0.0015961798124097695
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.004270082732852949,
-     "ci": [
-      -0.006144803633449105,
-      -0.0013336889837289945
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.004270082732852949,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.004270082732852949,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.000503651473180559,
-     "ci": [
-      -0.002772177419354839,
-      0.002513826043237808
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.000503651473180559,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.000503651473180559,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.004270082732852949,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p001_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0002664535038635758,
-     "ci": [
-      -0.002402562733582488,
-      0.0026609898882384245
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002664535038635758,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002664535038635758,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.0005319148936170213,
-     "ci": [
-      -0.002129358530742614,
-      0.001063264221158958
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0005319148936170213,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0005319148936170213,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0013319126265316996,
-     "ci": [
-      -0.0024084691301256237,
-      0.000531632110579479
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.00025150905432595576,
-     "ci": [
-      -0.0025188916876574307,
-      0.0030105746619191265
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.00025150905432595576,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.00025150905432595576,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0013319126265316996,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p001_dall": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0013319126265316996,
-     "ci": [
-      -0.0034666666666666665,
-      0.0
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0013319126265316996,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0007974481658692185,
-     "ci": [
-      -0.0010643959552953698,
-      0.0021253985122210413
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0007974481658692185,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0007974481658692185,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0010649627263045794,
-     "ci": [
-      -0.002932551319648094,
-      0.0018587360594795538
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0010649627263045794,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0010649627263045794,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0007530120481927711,
-     "ci": [
-      -0.0017583521728208992,
-      0.0030120481927710845
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0007530120481927711,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0007530120481927711,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0013319126265316996,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p0001_dq4": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.0001,
-    "demote": "q4",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0021327645961077045,
-     "ci": [
-      -0.004814234258271078,
-      -0.0005327650506126798
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0021327645961077045,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0021327645961077045,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0,
-     "ci": [
-      -0.0013319126265316996,
-      0.0015957446808510637
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.0,
-     "ci": [
-      -0.0037333333333333333,
-      0.0023942537909018356
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0,
-     "ci": [
-      -0.0025176233635448137,
-      0.0025100401606425703
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0021327645961077045,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p0001_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.0001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0029356818788364024,
-     "ci": [
-      -0.005074786324786325,
-      -0.0013326226012793177
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0029356818788364024,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0029356818788364024,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0005324813631522897,
-     "ci": [
-      -0.0018656716417910447,
-      0.002656748140276302
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0005324813631522897,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0005324813631522897,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0007995735607675906,
-     "ci": [
-      -0.0021321961620469083,
-      0.0042418096693159525
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0007995735607675906,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0007995735607675906,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.0022652907123080794,
-     "ci": [
-      -0.004031242126480222,
-      0.00025138260432378077
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0022652907123080794,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0022652907123080794,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0029356818788364024,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p0001_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.0001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.00240064017071219,
-     "ci": [
-      -0.0042689719189083035,
-      -0.0005330490405117271
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.00240064017071219,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.00240064017071219,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.0002663115845539281,
-     "ci": [
-      -0.0032,
-      0.0013312034078807242
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002663115845539281,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002663115845539281,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.0002663825253063399,
-     "ci": [
-      -0.002398736669510732,
-      0.0023955283470854403
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0002663825253063399,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0002663825253063399,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.0015090543259557343,
-     "ci": [
-      -0.0025176233635448137,
-      0.0012537848803625428
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0015090543259557343,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0015090543259557343,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.00240064017071219,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
-  },
-  "g_baseline_xh_a0p0001_dall": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.0001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0007989347536617843,
-     "ci": [
-      -0.0018661690215942416,
-      0.0013304949441192123
-     ],
-     "flip_p99": 0.018810760229825974,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0007989347536617843,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0007989347536617843,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0013304949441192123,
-     "ci": [
-      -0.0007995735607675906,
-      0.002933614099343964
-     ],
-     "flip_p99": 0.019548838958144188,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0013304949441192123,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0013304949441192123,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0002663115845539281,
-     "ci": [
-      -0.0037373198077949813,
-      0.0029247540547726668
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002663115845539281,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0002663115845539281,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0010050251256281408,
-     "ci": [
-      -0.003019627579265224,
-      0.0030105368790767687
-     ],
-     "flip_p99": 0.027158258482813835,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0010050251256281408,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0010050251256281408,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0007989347536617843,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.022230925038456917
+   "predicted_p99": 0.0
   },
   "g_baseline_xh_a0p0001_dzero": {
    "genome": {
@@ -2271,10 +1375,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.0013312034078807242,
+     "speedup": -0.001070090957731407,
      "ci": [
-      -0.0008002133902373967,
-      0.0029271083546299876
+      -0.0032171581769436996,
+      0.0
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2283,7 +1387,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0013312034078807242,
+      "speedup": -0.001070090957731407,
       "required": 0.1
      },
      "gates_strict": {
@@ -2292,17 +1396,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0013312034078807242,
+      "speedup": -0.001070090957731407,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.0,
+     "speedup": -0.0010660980810234541,
      "ci": [
-      -0.0018671645772205922,
-      0.0015965939329430547
+      -0.0021333333333333334,
+      0.0010638297872340426
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2311,7 +1415,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0010660980810234541,
       "required": 0.1
      },
      "gates_strict": {
@@ -2320,17 +1424,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0010660980810234541,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": -0.0005333333333333334,
+     "speedup": 0.0010660980810234541,
      "ci": [
-      -0.0018671645772205922,
-      0.002127659574468085
+      -0.0013344008540165466,
+      0.0021316280309086064
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2339,7 +1443,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005333333333333334,
+      "speedup": 0.0010660980810234541,
       "required": 0.1
      },
      "gates_strict": {
@@ -2348,17 +1452,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005333333333333334,
+      "speedup": 0.0010660980810234541,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": -0.001509813789632612,
+     "speedup": -0.0002518257365902795,
      "ci": [
-      -0.003526448362720403,
-      0.0017605633802816902
+      -0.0015128593040847202,
+      0.003262233375156838
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2367,7 +1471,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.001509813789632612,
+      "speedup": -0.0002518257365902795,
       "required": 0.1
      },
      "gates_strict": {
@@ -2376,22 +1480,22 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.001509813789632612,
+      "speedup": -0.0002518257365902795,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.001509813789632612,
+   "min_speedup": -0.001070090957731407,
    "worst_p99": 0.0,
    "accepted": false,
    "predicted_p99": 0.0
   },
-  "g_baseline_xh_a0p001_dzero": {
+  "g_baseline_xh_aoff_dzero": {
    "genome": {
     "source": "baseline",
     "exact": true,
     "hoist": true,
-    "approx": 0.001,
+    "approx": null,
     "demote": "zero",
     "mode": "f16"
    },
@@ -2399,10 +1503,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.0005336179295624333,
+     "speedup": -0.000800854244527496,
      "ci": [
-      -0.0010683760683760685,
-      0.002131060202450719
+      -0.002136752136752137,
+      0.0005339028296849973
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2411,7 +1515,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0005336179295624333,
+      "speedup": -0.000800854244527496,
       "required": 0.1
      },
      "gates_strict": {
@@ -2420,17 +1524,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0005336179295624333,
+      "speedup": -0.000800854244527496,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": -0.0007993605115907274,
+     "speedup": 0.0005324813631522897,
      "ci": [
-      -0.0021344717182497333,
-      0.001597444089456869
+      -0.00160001066951187,
+      0.0018626929217668972
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2439,7 +1543,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0007993605115907274,
+      "speedup": 0.0005324813631522897,
       "required": 0.1
      },
      "gates_strict": {
@@ -2448,17 +1552,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0007993605115907274,
+      "speedup": 0.0005324813631522897,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.0008004268943436499,
+     "speedup": 0.0005326231691078562,
      "ci": [
-      -0.0013358268768367619,
-      0.0024
+      -0.0018676627534685165,
+      0.003721424774056353
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2467,7 +1571,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0008004268943436499,
+      "speedup": 0.0005326231691078562,
       "required": 0.1
      },
      "gates_strict": {
@@ -2476,17 +1580,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0008004268943436499,
+      "speedup": 0.0005326231691078562,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": -0.0005033979360684622,
+     "speedup": 0.00025157232704402514,
      "ci": [
-      -0.002017145738779627,
-      0.0020110987791342946
+      -0.0030272452068617556,
+      0.0020182323552355203
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2495,7 +1599,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005033979360684622,
+      "speedup": 0.00025157232704402514,
       "required": 0.1
      },
      "gates_strict": {
@@ -2504,12 +1608,12 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005033979360684622,
+      "speedup": 0.00025157232704402514,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0007993605115907274,
+   "min_speedup": -0.000800854244527496,
    "worst_p99": 0.0,
    "accepted": false,
    "predicted_p99": 0.0
@@ -2527,10 +1631,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": -0.0002670940170940171,
+     "speedup": 0.0010660980810234541,
      "ci": [
-      -0.002136752136752137,
-      0.0013344008540165466
+      -0.00027361096280476916,
+      0.0021321961620469083
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2539,7 +1643,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0002670940170940171,
+      "speedup": 0.0010660980810234541,
       "required": 0.1
      },
      "gates_strict": {
@@ -2548,17 +1652,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0002670940170940171,
+      "speedup": 0.0010660980810234541,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.0007993605115907274,
+     "speedup": 0.0005324813631522897,
      "ci": [
-      -0.0016008537886872999,
-      0.001863697179054126
+      -0.0016,
+      0.002394890899414582
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2567,7 +1671,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0007993605115907274,
+      "speedup": 0.0005324813631522897,
       "required": 0.1
      },
      "gates_strict": {
@@ -2576,17 +1680,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0007993605115907274,
+      "speedup": 0.0005324813631522897,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": -0.00026673779674579886,
+     "speedup": -0.0005330490405117271,
      "ci": [
-      -0.001601708489054992,
-      0.003721424774056353
+      -0.003735325506937033,
+      0.0015983164510804677
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2595,7 +1699,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.00026673779674579886,
+      "speedup": -0.0005330490405117271,
       "required": 0.1
      },
      "gates_strict": {
@@ -2604,17 +1708,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.00026673779674579886,
+      "speedup": -0.0005330490405117271,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.0002516989680342311,
+     "speedup": -0.0012581781580271766,
      "ci": [
-      -0.0012594458438287153,
-      0.0032646911099949772
+      -0.003031154748223701,
+      0.0012578616352201257
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2623,7 +1727,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0002516989680342311,
+      "speedup": -0.0012581781580271766,
       "required": 0.1
      },
      "gates_strict": {
@@ -2632,12 +1736,268 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0002516989680342311,
+      "speedup": -0.0012581781580271766,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0002670940170940171,
+   "min_speedup": -0.0012581781580271766,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p0001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0015991471215351812,
+     "ci": [
+      -0.0008008595906840015,
+      0.002131060202450719
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015991471215351812,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015991471215351812,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0010655301012253596,
+     "ci": [
+      -0.002932551319648094,
+      0.0007987220447284345
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010655301012253596,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010655301012253596,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0005330490405117271,
+     "ci": [
+      -0.0037373198077949813,
+      0.0031931878658861094
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005330490405117271,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005330490405117271,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0005033979360684622,
+     "ci": [
+      -0.002266431629312516,
+      0.002512562814070352
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005033979360684622,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005033979360684622,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0010655301012253596,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_aoff_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0008002133902373967,
+     "ci": [
+      -0.002403204272363151,
+      0.0013336889837289945
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008002133902373967,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008002133902373967,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0007987220447284345,
+     "ci": [
+      -0.0013326226012793177,
+      0.0015965939329430547
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007987220447284345,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007987220447284345,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0013340448239060833,
+     "ci": [
+      -0.0037393162393162395,
+      0.0015978801484364303
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013340448239060833,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013340448239060833,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.000503651473180559,
+     "ci": [
+      -0.0035255825135253258,
+      0.003762227238525207
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000503651473180559,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000503651473180559,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0013340448239060833,
    "worst_p99": 0.0,
    "accepted": false,
    "predicted_p99": 0.0

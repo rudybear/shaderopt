@@ -18,7 +18,7 @@ Date: 2026-09-25. Device class measured: desktop, NVIDIA RTX PRO 6000 Blackwell,
 - A/A noise floors per scenario and session: 0.1..0.9% (one 2.2%); gate = max(2%, floor, budget min_speedup 10%).
 - Every variant interleaved with the baseline (B,V,B,V), median with bootstrap 95% CI, judged on train **and** holdout, on every downstream output, with the Khronos validation layer on.
 - CPU model faithful: round trip body-identical for all shaders; CPU f32 vs GPU within one storage code unit everywhere (16/16), after two documented model corrections (sampler fixed-point rounding; FMA contraction accepted as device behaviour).
-- Predictions tracked measurements once the storage model was right (blur bilinear5 predicted p99 0.0071, measured 0.0071; tonemap f16 q2 0.0228 vs 0.026). Two prediction failures were found and fixed by the holdout scenarios: f16 overflow on inputs > 65504, and NaN-to-black conversion in 8-bit stores.
+- Predictions tracked measurements once the storage model was right (blur bilinear5 predicted p99 0.0071, measured 0.0071; tonemap f16 q2 0.0228 vs 0.026). Three prediction gaps were exposed by the holdout scenarios and closed: f16 overflow on inputs > 65504 (predict on every scenario, not just the first train one), NaN-to-black conversion in 8-bit stores (modelled in the quantizer), and one-sided NaN/Inf pixels being masked instead of counted (now maximal error, and predictions chain through the downstream judged passes). Validation on the blur search: 120 of 142 genomes are now excluded by prediction before any GPU time, and all 11 genomes that were measured were accepted with predicted = measured FLIP p99 (0.0071).
 
 ## 3. Results per device class (desktop)
 

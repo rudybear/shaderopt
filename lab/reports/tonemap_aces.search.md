@@ -6,18 +6,18 @@ Genome = (source, exact, hoist, approx level, demote level, mode). 144 genomes e
 
 | genome | predicted p99 | measured worst p99 | min speedup (train) | accepted |
 |---|---|---|---|---|
-| g_onepow_xh_a0p001_dnone | 0.0000 | 0.0000 | +0.01% | no |
-| g_onepow_-h_a0p01_dnone | 0.0000 | 0.0000 | -0.01% | no |
-| g_onepow_xh_a0p01_dnone | 0.0000 | 0.0000 | -0.03% | no |
-| g_onepow_-h_aoff_dnone | 0.0000 | 0.0000 | -0.03% | no |
-| g_onepow_-h_a0p0001_dnone | 0.0000 | 0.0000 | -0.04% | no |
-| g_onepow_--_a0p01_dnone | 0.0000 | 0.0000 | -0.05% | no |
-| g_onepow_xh_aoff_dnone | 0.0000 | 0.0000 | -0.09% | no |
-| g_onepow_-h_a0p001_dnone | 0.0000 | 0.0000 | -0.13% | no |
-| g_baseline_xh_a0p001_dnone | 0.0000 | 0.0000 | -0.18% | no |
-| g_onepow_xh_a0p0001_dnone | 0.0000 | 0.0000 | -0.18% | no |
-| g_onepow_--_a0p001_dnone | 0.0000 | 0.0000 | -0.19% | no |
-| g_baseline_xh_a0p01_dnone | 0.0000 | 0.0000 | -0.20% | no |
+| g_onepow_xh_a0p01_dnone | 0.0000 | 0.0000 | +0.10% | no |
+| g_onepow_-h_aoff_dnone | 0.0000 | 0.0000 | +0.08% | no |
+| g_onepow_-h_a0p001_dnone | 0.0000 | 0.0000 | +0.05% | no |
+| g_onepow_xh_aoff_dnone | 0.0000 | 0.0000 | +0.03% | no |
+| g_onepow_-h_a0p01_dnone | 0.0000 | 0.0000 | +0.03% | no |
+| g_onepow_--_a0p01_dnone | 0.0000 | 0.0000 | +0.01% | no |
+| g_onepow_-h_a0p0001_dnone | 0.0000 | 0.0000 | +0.00% | no |
+| g_onepow_--_a0p001_dnone | 0.0000 | 0.0000 | +0.00% | no |
+| g_onepow_xh_a0p0001_dnone | 0.0000 | 0.0000 | -0.05% | no |
+| g_baseline_xh_a0p01_dnone | 0.0000 | 0.0000 | -0.18% | no |
+| g_onepow_xh_a0p001_dnone | 0.0000 | 0.0000 | -0.24% | no |
+| g_baseline_xh_aoff_dnone | 0.0000 | 0.0000 | -0.33% | no |
 
 ## Predicted but not measured (within budget)
 

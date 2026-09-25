@@ -9,31 +9,36 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | hoist | 0.0000 | +0.08% | 2/2 | no | no |
-| g_bilinear5_xh_a0p01_dnone | 0.0100 | +11.72% | 2/2 | yes | no |
-| g_bilinear5_xh_a0p01_dq4 | 0.9674 | +11.88% | 2/2 | no | no |
+| g_bilinear5_xh_a0p01_dnone | 0.0100 | +11.77% | 2/2 | yes | no |
+| g_bilinear5_xh_a0p01_dall | 0.9674 | +11.85% | 2/2 | no | no |
+| g_bilinear5_xh_a0p001_dall | 0.9674 | +11.85% | 2/2 | no | no |
+| g_bilinear5_xh_a0p0001_dq4 | 0.9674 | +11.85% | 2/2 | no | no |
 
 ### Accepted variants
 
-- **g_bilinear5_xh_a0p01_dnone**: speedup +11.72%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_xh_a0p01_dnone/variant.json`)
+- **g_bilinear5_xh_a0p01_dnone**: speedup +11.77%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_xh_a0p01_dnone/variant.json`)
 - **hyp_bilinear5**: speedup +11.42%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/hyp_bilinear5/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
-| g_bilinear5_xh_a0p01_dq4 |  |  |  | 0.9674 | +11.88% | no | no |
-| g_bilinear5_xh_a0p001_dq1 |  |  |  | 0.9674 | +11.80% | no | no |
+| g_bilinear5_xh_a0p01_dall |  |  |  | 0.9674 | +11.85% | no | no |
+| g_bilinear5_xh_a0p001_dall |  |  |  | 0.9674 | +11.85% | no | no |
+| g_bilinear5_xh_a0p0001_dq4 |  |  |  | 0.9674 | +11.85% | no | no |
 | g_bilinear5_xh_a0p0001_dq1 |  |  |  | 0.9674 | +11.80% | no | no |
-| g_bilinear5_xh_a0p01_dq2 |  |  |  | 0.9674 | +11.77% | no | no |
-| g_bilinear5_xh_a0p001_dq2 |  |  |  | 0.9674 | +11.76% | no | no |
-| g_bilinear5_xh_a0p01_dall |  |  |  | 0.9674 | +11.75% | no | no |
-| g_bilinear5_xh_a0p01_dq1 |  |  |  | 0.9674 | +11.73% | no | no |
-| g_bilinear5_xh_a0p01_dnone |  |  |  | 0.0100 | +11.72% | yes | no |
-| g_bilinear5_xh_a0p001_dq4 |  |  |  | 0.9674 | +11.69% | no | no |
-| g_bilinear5_xh_a0p001_dall |  |  |  | 0.9674 | +11.65% | no | no |
+| g_bilinear5_xh_a0p01_dq2 |  |  |  | 0.9674 | +11.78% | no | no |
+| g_bilinear5_xh_a0p01_dnone |  |  |  | 0.0100 | +11.77% | yes | no |
+| g_bilinear5_xh_a0p001_dq4 |  |  |  | 0.9674 | +11.77% | no | no |
+| g_bilinear5_xh_a0p001_dq2 |  |  |  | 0.9674 | +11.77% | no | no |
+| g_bilinear5_xh_a0p001_dq1 |  |  |  | 0.9674 | +11.77% | no | no |
+| g_bilinear5_xh_a0p01_dq4 |  |  |  | 0.9674 | +11.70% | no | no |
+| g_bilinear5_xh_a0p01_dq1 |  |  |  | 0.9674 | +11.60% | no | no |
 | hyp_bilinear5 |  |  |  | 0.0100 | +11.42% | yes | no |
 | g_bilinear5_--_a0p01_dq2 |  |  |  | 0.9674 | +11.15% | no | no |
+| g_bilinear5_--_a0p01_dall |  |  |  | 0.9674 | +11.13% | no | no |
 | g_baseline_xh_a0p01_dq1 |  |  |  | 0.9674 | +4.14% | no | no |
+| g_baseline_xh_a0p01_dq4 |  |  |  | 0.9674 | +4.11% | no | no |
 | demote_f16_q4 | f16 | q4 | 19 | 0.9674 | +4.08% | no | no |
 | demote_f16_zero | f16 | zero | 8 | 0.9674 | +3.63% | no | no |
 | hoist |  |  |  | 0.0000 | +0.08% | no | no |

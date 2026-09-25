@@ -6,18 +6,18 @@ Genome = (source, exact, hoist, approx level, demote level, mode). 144 genomes e
 
 | genome | predicted p99 | measured worst p99 | min speedup (train) | accepted |
 |---|---|---|---|---|
-| g_bilinear5_xh_a0p01_dall | 0.0102 | 0.9674 | +11.54% | no |
-| g_bilinear5_xh_a0p01_dnone | 0.0103 | 0.0100 | +11.53% | yes |
-| g_bilinear5_xh_a0p01_dq1 | 0.0102 | 0.9674 | +11.49% | no |
-| g_bilinear5_xh_a0p01_dq2 | 0.0102 | 0.9674 | +11.46% | no |
-| g_bilinear5_xh_a0p001_dq1 | 0.0102 | 0.9674 | +11.46% | no |
-| g_bilinear5_xh_a0p001_dall | 0.0102 | 0.9674 | +11.42% | no |
-| g_bilinear5_xh_a0p001_dq4 | 0.0102 | 0.9674 | +11.42% | no |
-| g_bilinear5_xh_a0p001_dq2 | 0.0102 | 0.9674 | +11.42% | no |
-| g_bilinear5_xh_a0p01_dq4 | 0.0102 | 0.9674 | +11.39% | no |
-| g_bilinear5_xh_a0p0001_dq1 | 0.0102 | 0.9674 | +11.16% | no |
-| g_bilinear5_--_a0p01_dq2 | 0.0102 | 0.9674 | +10.90% | no |
-| g_baseline_xh_a0p01_dq1 | 0.0023 | 0.9674 | +4.14% | no |
+| g_bilinear5_xh_a0p01_dq1 | 0.0102 | 0.9674 | +11.53% | no |
+| g_bilinear5_xh_a0p01_dq4 | 0.0102 | 0.9674 | +11.52% | no |
+| g_bilinear5_xh_a0p01_dnone | 0.0103 | 0.0100 | +11.49% | yes |
+| g_bilinear5_xh_a0p01_dall | 0.0102 | 0.9674 | +11.46% | no |
+| g_bilinear5_xh_a0p001_dq4 | 0.0102 | 0.9674 | +11.46% | no |
+| g_bilinear5_xh_a0p001_dq1 | 0.0102 | 0.9674 | +11.42% | no |
+| g_bilinear5_xh_a0p0001_dq4 | 0.0102 | 0.9674 | +11.39% | no |
+| g_bilinear5_xh_a0p01_dq2 | 0.0102 | 0.9674 | +11.36% | no |
+| g_bilinear5_xh_a0p001_dq2 | 0.0102 | 0.9674 | +11.31% | no |
+| g_bilinear5_xh_a0p001_dall | 0.0102 | 0.9674 | +11.27% | no |
+| g_bilinear5_--_a0p01_dall | 0.0102 | 0.9674 | +10.83% | no |
+| g_baseline_xh_a0p01_dq4 | 0.0023 | 0.9674 | +4.11% | no |
 
 ## Predicted but not measured (within budget)
 
