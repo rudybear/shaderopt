@@ -167,6 +167,21 @@ def cmd_verify(a):
         print("roundtrip: shader-ir not built, skipped")
     sys.exit(0 if ok else 1)
 
+def cmd_classify(a):
+    from .classify import classify
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = classify(sh, max_scenarios=a.max_scenarios, stride=a.stride, sensitivity=not a.no_sensitivity, device=a.device)
+        s = r["analysis"]["summary"]; print(f"{sh:18s} {s}  report lab/reports/{sh}.classification.md")
+
+def cmd_canon(a):
+    from .canon import canon
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = canon(sh, rounds=a.rounds, samples=a.samples, device=a.device)
+        for vid, e in r["variants"].items():
+            print(f"{sh:18s} {vid:12s} ops={e['ops']} {e['by_pass']}")
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="lab")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -179,6 +194,8 @@ def main(argv=None):
     p = sub.add_parser("baseline"); p.add_argument("--scenario"); p.add_argument("--split"); common(p); p.set_defaults(f=cmd_baseline)
     p = sub.add_parser("aa"); p.add_argument("scenario"); p.add_argument("--rounds", type=int, default=3); common(p); p.set_defaults(f=cmd_aa)
     p = sub.add_parser("lift-check"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--mode", default="f32"); p.add_argument("--sampler-weight-bits", type=int, default=8); common(p, samples=3); p.set_defaults(f=cmd_lift_check)
+    p = sub.add_parser("classify"); p.add_argument("--shader"); p.add_argument("--max-scenarios", type=int, default=2); p.add_argument("--stride", type=int, default=4); p.add_argument("--no-sensitivity", action="store_true"); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_classify)
+    p = sub.add_parser("canon"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_canon)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)

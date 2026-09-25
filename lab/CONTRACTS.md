@@ -108,3 +108,38 @@ shader-ir eval --spv pass.spv --width W --height H --mode f32|f64|f16 \
 ## Variants: `lab/variants/<shader>/<variant-id>/`
 
 Contains `variant.json` (the edit-op list, parent variant, tool versions), the produced `.spv`, and an `annotations.toml` sidecar when the variant depends on site annotations. Originals in `lab/shaders/` are never modified.
+
+## M2: analysis and rewrite CLIs (`shader-ir`)
+
+**Debug builds for source mapping.** `lab build` also compiles `lab/build/spv/<shader>.g.spv` with `glslang -V -g`. Its instruction body, after dropping `OpLine`/`OpNoLine`/`OpString`/`OpSource`/`OpModuleProcessed`, is the same sequence as the measured `-V` build, so the k-th body instruction of the measured build maps to the k-th of the debug build and thereby to a source line. Result IDs differ between the two builds; measured-build IDs are the canonical ones everywhere.
+
+```
+shader-ir analyze --spv x.spv [--debug-spv x.g.spv] [--ranges ranges.json] --out analysis.json
+```
+```json
+{"shader": "fxaa", "entry": "main", "bound": 349,
+ "instructions": [
+   {"id": 57, "op": "OpFMul", "ext": null, "type": "vec3<f32>", "func": "main", "block": 3, "index": 41, "line": 22,
+    "name": null, "rate": "pixel", "sinks": ["address"], "operands": [55, 56],
+    "range": {"min": 0.0, "max": 63.9, "nan": 0, "inf": 0, "samples": 129600}}
+ ],
+ "samplers": [{"name": "u_src", "binding": 0, "samples": [{"id": 60, "coord_id": 59, "coord_kind": "uv_exact", "offset": null}]}],
+ "outputs": [{"location": 0, "id": 12, "type": "vec4<f32>"}],
+ "summary": {"pixel": 120, "uniform": 20, "const": 30, "sink_sites": 14, "float_sites": 130, "candidate_sites": 90}}
+```
+- `rate`: `const` (derived only from constants), `uniform` (constants and uniform-block loads only), `pixel` (anything touching Location inputs, FragCoord, image ops, derivatives, or phi from divergent control flow).
+- `sinks`: `address` (feeds an image sample/fetch coordinate, an `OpAccessChain` index, or an array index), `control` (feeds `OpBranchConditional`/`OpSwitch`/`OpSelect` condition), `discard` (feeds a branch that dominates an `OpKill`), `convert` (feeds `OpConvertFToS/U`). A site with any sink is off-limits for lossy edits. Float-typed instructions without sinks are `candidate_sites`.
+- `coord_kind`: `uv_exact` (the coordinate is the Location-0 input itself), `uv_offset` (uv plus a per-dispatch constant/uniform offset; `offset` is the constant when known), `other`.
+- `range` comes from `--ranges`, a JSON written by `eval --profile ranges.json [--stride N]`: `{"<id>": {"min","max","nan","inf","samples"}}` over every evaluated pixel (every N-th pixel in each dimension when `--stride N`), for every float-typed result.
+
+```
+shader-ir eval ... --f16-sites 57,58,90 --out out.npy      # round the listed float results to f16 (sensitivity / demotion prediction)
+shader-ir eval ... --f16-all                               # every float site
+```
+
+```
+shader-ir rewrite --spv in.spv --out out.spv --passes fold,dce,cse,ident,unroll,divconst,powspec,select --ops ops.json [--max-unroll 16]
+```
+- Applies the named passes in the given order, repeating `fold,dce,cse,ident` to a fixed point. Untouched instructions keep their result IDs (1:1 map preserved); new instructions take fresh IDs above the old bound. Output is validated in-process with spirv-tools.
+- `ops.json`: `[{"pass": "fold", "class": "exact", "target": 57, "replaced_by": 401, "detail": "OpFMul %55 %56 -> OpConstant 0.5"}, ...]`. `class` is `exact` (bit-identical on every input by IEEE semantics) or `ulp` (identical in real arithmetic; bounded rounding difference, e.g. `x / c -> x * (1/c)`, `pow(x, 2) -> x * x`).
+- Passes: `fold` constant folding incl. GLSL.std.450 on constants; `dce` unused pure results and unreferenced variables; `cse` identical pure instructions where one dominates the other; `ident` `x*1, x+0, x-0, x/1, -(-x), select(c,x,x)`; `unroll` full unroll of loops with constant trip count `<= max-unroll`; `divconst` `x / c -> x * (1/c)` for non-zero, finite, non-denormal constants (`ulp`); `powspec` `pow(x,2)->x*x`, `pow(x,0.5)->sqrt`, `pow(x,1)->x`, `exp(log(x)*c)` untouched (`ulp`); `select` if/else whose both arms are side-effect free single blocks with no image ops, derivatives or kills -> `OpSelect` (exact).
