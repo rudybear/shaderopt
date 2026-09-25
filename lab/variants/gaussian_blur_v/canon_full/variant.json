@@ -1,6 +1,6 @@
 {
-  "shader": "gaussian_blur_h",
-  "variant_id": "canon_exact",
+  "shader": "gaussian_blur_v",
+  "variant_id": "canon_full",
   "parent": "baseline",
   "edit_ops": [
     {
@@ -561,6 +561,6 @@
     "shader_ir": "eb04cbf5bccd4aeb",
     "os": "Linux 6.17.0-20-generic"
   },
-  "created": "2026-09-25T01:44:59",
-  "passes": "fold,dce,cse,ident,unroll,select"
+  "created": "2026-09-25T01:45:33",
+  "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec"
 }

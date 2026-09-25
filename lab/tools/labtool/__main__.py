@@ -182,6 +182,31 @@ def cmd_canon(a):
         for vid, e in r["variants"].items():
             print(f"{sh:18s} {vid:12s} ops={e['ops']} {e['by_pass']}")
 
+def cmd_demote(a):
+    from .demote import demote
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = demote(sh, rounds=a.rounds, samples=a.samples, singles=a.singles, modes=tuple(a.modes.split(",")), device=a.device)
+        for e in r["results"]:
+            if "error" in e:
+                print(f"{sh:18s} {e['variant_id']:22s} ERROR {e['error'][:80]}"); continue
+            accepted = sum(1 for x in e["runs"] if x.get("gates") and all(x["gates"].get(k) for k in ("1","2","3","4")))
+            print(f"{sh:18s} {e['variant_id']:22s} sites={e['n_sites']:3d} pred_p99={e['predicted']['flip_p99']:.4f} accepted_runs={accepted}/{len(e['runs'])}")
+
+def cmd_report(a):
+    from .report import write_shader_report
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        print(write_shader_report(sh))
+
+def cmd_graph(a):
+    from .graphexp import run_graph_experiments
+    scs = [a.scenario] if a.scenario else [s.name for s in all_scenarios(a.split) if len(s.passes) > 1]
+    for sc in scs:
+        for r in run_graph_experiments(sc, rounds=a.rounds, samples=a.samples, device=a.device):
+            if "error" in r: print(f"{sc:20s} {r['experiment']:28s} ERROR {r['error'][:60]}"); continue
+            print(f"{sc:20s} {r['experiment']:28s} speedup {r['speedup']*100:+.2f}% flip p99 {list(r['metrics'].values())[0]['flip_p99']:.4f} budget={r['within_budget']} timing={r['timing_gate']}")
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="lab")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -196,6 +221,9 @@ def main(argv=None):
     p = sub.add_parser("lift-check"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--mode", default="f32"); p.add_argument("--sampler-weight-bits", type=int, default=8); common(p, samples=3); p.set_defaults(f=cmd_lift_check)
     p = sub.add_parser("classify"); p.add_argument("--shader"); p.add_argument("--max-scenarios", type=int, default=2); p.add_argument("--stride", type=int, default=4); p.add_argument("--no-sensitivity", action="store_true"); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_classify)
     p = sub.add_parser("canon"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_canon)
+    p = sub.add_parser("demote"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--singles", type=int, default=6); p.add_argument("--modes", default="f16,relaxed"); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_demote)
+    p = sub.add_parser("report"); p.add_argument("--shader"); p.set_defaults(f=cmd_report)
+    p = sub.add_parser("graph"); p.add_argument("--scenario"); p.add_argument("--split", default="train"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_graph)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)

@@ -1,0 +1,241 @@
+{
+ "shader": "color_grade",
+ "variants": {
+  "canon_exact": {
+   "passes": "fold,dce,cse,ident,unroll,select",
+   "ops": 7,
+   "classes": {
+    "exact": 7,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 4,
+    "cse": 3
+   },
+   "verify": {
+    "grade:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "grade:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "colorgrade_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005836008170411438,
+      "required": 0.02
+     },
+     "timing": {
+      "grade": {
+       "baseline_median_ns": 6854.0,
+       "variant_median_ns": 6850.0,
+       "speedup": 0.0005836008170411438,
+       "speedup_ci95": [
+        -0.0017523364485981308,
+        0.002910360884749709
+       ],
+       "baseline_ci95": [
+        6842.0,
+        6870.0
+       ],
+       "variant_ci95": [
+        6848.0,
+        6862.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "grade": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.007514450867052023
+    },
+    {
+     "scenario": "colorgrade_photo",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008883624518803672,
+      "required": 0.02
+     },
+     "timing": {
+      "grade": {
+       "baseline_median_ns": 6754.0,
+       "variant_median_ns": 6760.0,
+       "speedup": -0.0008883624518803672,
+       "speedup_ci95": [
+        -0.002372479240806643,
+        0.0008870556424559899
+       ],
+       "baseline_ci95": [
+        6744.0,
+        6760.0
+       ],
+       "variant_ci95": [
+        6754.0,
+        6766.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "grade": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.000588235294117647
+    }
+   ]
+  },
+  "canon_full": {
+   "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec",
+   "ops": 7,
+   "classes": {
+    "exact": 7,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 4,
+    "cse": 3
+   },
+   "verify": {
+    "grade:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "grade:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "colorgrade_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008761682242990654,
+      "required": 0.02
+     },
+     "timing": {
+      "grade": {
+       "baseline_median_ns": 6848.0,
+       "variant_median_ns": 6854.0,
+       "speedup": -0.0008761682242990654,
+       "speedup_ci95": [
+        -0.0023378141437755697,
+        0.0011682242990654205
+       ],
+       "baseline_ci95": [
+        6840.0,
+        6856.0
+       ],
+       "variant_ci95": [
+        6840.0,
+        6860.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "grade": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.007514450867052023
+    },
+    {
+     "scenario": "colorgrade_photo",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005918910920390648,
+      "required": 0.02
+     },
+     "timing": {
+      "grade": {
+       "baseline_median_ns": 6758.0,
+       "variant_median_ns": 6754.0,
+       "speedup": 0.0005918910920390648,
+       "speedup_ci95": [
+        -0.000888106041758821,
+        0.003250615038060557
+       ],
+       "baseline_ci95": [
+        6756.0,
+        6768.0
+       ],
+       "variant_ci95": [
+        6744.0,
+        6764.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "grade": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.000588235294117647
+    }
+   ]
+  }
+ }
+}

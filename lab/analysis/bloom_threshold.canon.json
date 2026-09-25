@@ -1,0 +1,277 @@
+{
+ "shader": "bloom_threshold",
+ "variants": {
+  "canon_exact": {
+   "passes": "fold,dce,cse,ident,unroll,select",
+   "ops": 4,
+   "classes": {
+    "exact": 4,
+    "ulp": 0
+   },
+   "by_pass": {
+    "cse": 4
+   },
+   "verify": {
+    "threshold:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "threshold:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6480.0,
+       "variant_median_ns": 6480.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.0018552875695732839,
+        0.0015432098765432098
+       ],
+       "baseline_ci95": [
+        6470.0,
+        6484.0
+       ],
+       "variant_ci95": [
+        6470.0,
+        6484.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     },
+     "noise_floor": 0.002411575562700965
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009225092250922509,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6504.0,
+       "variant_median_ns": 6498.0,
+       "speedup": 0.0009225092250922509,
+       "speedup_ci95": [
+        -0.0018472906403940886,
+        0.002458512599877074
+       ],
+       "baseline_ci95": [
+        6490.0,
+        6508.0
+       ],
+       "variant_ci95": [
+        6490.0,
+        6508.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     },
+     "noise_floor": 0.00641025641025641
+    }
+   ]
+  },
+  "canon_full": {
+   "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec",
+   "ops": 4,
+   "classes": {
+    "exact": 4,
+    "ulp": 0
+   },
+   "by_pass": {
+    "cse": 4
+   },
+   "verify": {
+    "threshold:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "threshold:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0018529956763434219,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6476.0,
+       "variant_median_ns": 6488.0,
+       "speedup": -0.0018529956763434219,
+       "speedup_ci95": [
+        -0.00401854714064915,
+        0.0006176652254478073
+       ],
+       "baseline_ci95": [
+        6464.0,
+        6488.0
+       ],
+       "variant_ci95": [
+        6474.0,
+        6496.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     },
+     "noise_floor": 0.002411575562700965
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012277470841006752,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6516.0,
+       "variant_median_ns": 6524.0,
+       "speedup": -0.0012277470841006752,
+       "speedup_ci95": [
+        -0.002458512599877074,
+        0.001226993865030675
+       ],
+       "baseline_ci95": [
+        6508.0,
+        6524.0
+       ],
+       "variant_ci95": [
+        6508.0,
+        6528.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     },
+     "noise_floor": 0.00641025641025641
+    }
+   ]
+  }
+ }
+}

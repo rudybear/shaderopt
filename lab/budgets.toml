@@ -2,7 +2,7 @@
 # variants within the A/A noise floor are accepted. See AXIOM_SHADER_LAB.md §1 and §9.
 
 [pipeline]
-allow_lossy = false
+allow_lossy = true      # enabled for the lab corpus (2026-09-25); the app-facing decision stays with the user
 min_speedup = 0.10          # a lossy variant must buy at least this speedup to spend any budget
 
 [defaults]

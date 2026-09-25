@@ -1,0 +1,69 @@
+{
+  "shader": "color_grade",
+  "variant_id": "canon_full",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "exact",
+      "detail": "OpCompositeConstruct %23 %23 %23 -> OpConstantComposite (1.0, 1.0, 1.0)",
+      "pass": "fold",
+      "replaced_by": 119,
+      "target": 92
+    },
+    {
+      "class": "exact",
+      "detail": "OpCompositeConstruct %23 %23 %23 -> OpConstantComposite (1.0, 1.0, 1.0)",
+      "pass": "fold",
+      "replaced_by": 119,
+      "target": 106
+    },
+    {
+      "class": "exact",
+      "detail": "OpCompositeConstruct %96 %96 %96 -> OpConstantComposite (0.0, 0.0, 0.0)",
+      "pass": "fold",
+      "replaced_by": 97,
+      "target": 112
+    },
+    {
+      "class": "exact",
+      "detail": "OpCompositeConstruct %23 %23 %23 -> OpConstantComposite (1.0, 1.0, 1.0)",
+      "pass": "fold",
+      "replaced_by": 119,
+      "target": 113
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %27 %29 == %31",
+      "pass": "cse",
+      "replaced_by": 31,
+      "target": 35
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %35 == %32",
+      "pass": "cse",
+      "replaced_by": 32,
+      "target": 36
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %24 %36 == %33",
+      "pass": "cse",
+      "replaced_by": 33,
+      "target": 37
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "ec866aade712d078d0b6742e54b3258e4bfb7394",
+    "runner": "490a9856b502995c",
+    "shader_ir": "eb04cbf5bccd4aeb",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:45:56",
+  "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec"
+}
