@@ -1,0 +1,16 @@
+[
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %14 %14 %14 -> OpConstantComposite (1.0, 1.0, 1.0)",
+    "pass": "fold",
+    "replaced_by": 69,
+    "target": 16
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %29 == %30",
+    "pass": "cse",
+    "replaced_by": 30,
+    "target": 46
+  }
+]
