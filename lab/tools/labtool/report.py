@@ -34,7 +34,7 @@ def pareto(points: list[tuple[float, float, dict]]) -> list[dict]:
         dominated = any((e2 <= e and s2 >= s) and (e2 < e or s2 > s) for e2, s2, _ in points)
         if not dominated:
             front.append(r)
-    return sorted(front, key=_err)
+    return sorted(front, key=lambda r: r["err"])
 
 def write_shader_report(shader: str):
     rs = load_results(shader)

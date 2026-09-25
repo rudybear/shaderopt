@@ -1,0 +1,190 @@
+{
+ "hypothesis": {
+  "shader": "color_grade",
+  "id": "foldmat",
+  "claim": "warm * M is a per-dispatch matrix; lift/gamma/gain preprocessing is per-dispatch too. Fold warm into the matrix rows on the CPU and pass 1/gamma directly: the per-pixel work drops to one 3x3 matrix, one luminance dot, one mix, one fma-chain and one pow.",
+  "class": "semantic",
+  "predicted_cost": "Removes 3 mul, 2 fma, 3 div (1/gamma) and the warm construction per pixel; needs 2 new uniform members computed on the CPU",
+  "predicted_error": "Identical in real arithmetic; <= a few ULP",
+  "exposes": [
+   "colorgrade_gradient"
+  ],
+  "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/color_grade.classification.md"
+ },
+ "variant_id": "hyp_foldmat",
+ "prediction": {
+  "grade": {
+   "flip_mean": 1.692439582257066e-06,
+   "flip_p99": 0.0,
+   "flip_max": 0.01115470752120018,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ },
+ "runs": [
+  {
+   "scenario": "colorgrade_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.011682242990654205,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.011682242990654205,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 6848.0,
+     "variant_median_ns": 6768.0,
+     "speedup": 0.011682242990654205,
+     "speedup_ci95": [
+      0.00935672514619883,
+      0.014568764568764568
+     ],
+     "baseline_ci95": [
+      6838.0,
+      6866.0
+     ],
+     "variant_ci95": [
+      6760.0,
+      6780.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 2.7021142159355804e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.01274784840643406,
+     "abs_max": 0.003921583294868469,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "colorgrade_photo",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.011249259917110717,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.011249259917110717,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 6756.0,
+     "variant_median_ns": 6680.0,
+     "speedup": 0.011249259917110717,
+     "speedup_ci95": [
+      0.00948429164196799,
+      0.012418687167356593
+     ],
+     "baseline_ci95": [
+      6744.0,
+      6764.0
+     ],
+     "variant_ci95": [
+      6676.0,
+      6684.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "colorgrade_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.01935116676152533,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.01935116676152533,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 7028.0,
+     "variant_median_ns": 6892.0,
+     "speedup": 0.01935116676152533,
+     "speedup_ci95": [
+      0.01596351197263398,
+      0.021609326130224624
+     ],
+     "baseline_ci95": [
+      7008.0,
+      7040.0
+     ],
+     "variant_ci95": [
+      6882.0,
+      6904.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 2.2707731659465935e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.014185311272740364,
+     "abs_max": 0.003921583294868469,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ]
+}

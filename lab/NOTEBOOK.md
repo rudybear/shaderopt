@@ -37,3 +37,6 @@
 - Classification: tonemap and fxaa are entirely f16-safe on candidate sites (FLIP 0); vignette fragile (0.10); color_grade near the mean budget.
 - deferred_lit baseline drifted 22.9 -> 30.8 us between sessions; A/B pairs are interleaved so verdicts hold; investigate clocks.
 - M2 report: lab/reports/M2.md. Started M4 graph experiments (formats/resolution) on the bloom chain.
+- NEGATIVE then fixed: first graph-experiment run showed exactly zero effect for every format/resolution change because make_job pointed the runner at the original scenario TOML; derived scenarios are now serialized into the job. Invalid records purged.
+- Graph experiments (bloom chain, whole-chain time): quarter-res intermediates +7.0..8.5% (FLIP 0 on the gradient scene, p99 0.33..0.56 on hdr_edges -> rejected on train); R11G11B10F intermediates +1.0..1.8% within budget (p99 <= 0.024) but below the 10% min_speedup and the 2% gate; RGBA8 for HDR intermediates destroys highlights (p99 0.9) -> rejected. Reports: lab/reports/bloom_hdr_*.graph.md.
+- Wrote 8 semantic hypotheses (blur bilinear5 x2, tonemap onepow/lut1d, deferred pcf4, vignette cheaphash, fxaa dir4, color_grade foldmat) with claims and predicted cost/error; `lab hypo` predicts in the CPU model then measures on the GPU.

@@ -1,0 +1,298 @@
+{
+ "hypothesis": {
+  "shader": "tonemap_aces",
+  "id": "onepow",
+  "claim": "pow(pow(x, contrast), 1/gamma) is applied to two different quantities here (contrast before ACES, gamma after), so they cannot merge; but the ACES fit itself is a rational function whose numerator and denominator share x: evaluate it with one division and two fma per channel, and drop the dead mix(vec3(lum), c, 1.0).",
+  "class": "ulp",
+  "predicted_cost": "Removes 1 dot, 1 mix; ACES from 6 mul/2 add/1 div to 4 fma/1 div per channel",
+  "predicted_error": "<= 2 ULP in f32; zero codes expected",
+  "exposes": [
+   "tonemap_hdr_edges"
+  ],
+  "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"
+ },
+ "variant_id": "hyp_onepow",
+ "prediction": {
+  "tonemap": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ },
+ "runs": [
+  {
+   "scenario": "tonemap_hdr_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0025933609958506223,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0025933609958506223,
+    "required": 0.02
+   },
+   "timing": {
+    "tonemap": {
+     "baseline_median_ns": 7712.0,
+     "variant_median_ns": 7692.0,
+     "speedup": 0.0025933609958506223,
+     "speedup_ci95": [
+      -0.0031233732431025507,
+      0.00673235028160662
+     ],
+     "baseline_ci95": [
+      7684.0,
+      7730.0
+     ],
+     "variant_ci95": [
+      7668.0,
+      7724.0
+     ],
+     "n": 10,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "tonemap": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "tonemap_hdr_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.00025464731347084286,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.00025464731347084286,
+    "required": 0.02
+   },
+   "timing": {
+    "tonemap": {
+     "baseline_median_ns": 7854.0,
+     "variant_median_ns": 7852.0,
+     "speedup": 0.00025464731347084286,
+     "speedup_ci95": [
+      -0.004083742245780653,
+      0.0033037058737271714
+     ],
+     "baseline_ci95": [
+      7836.0,
+      7872.0
+     ],
+     "variant_ci95": [
+      7836.0,
+      7874.0
+     ],
+     "n": 10,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "tonemap": {
+     "flip_mean": 6.985883942434157e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.017404373735189438,
+     "abs_max": 0.007012486457824707,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "tonemap_extreme",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0005112474437627812,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": -0.0005112474437627812,
+    "required": 0.02
+   },
+   "timing": {
+    "tonemap": {
+     "baseline_median_ns": 7824.0,
+     "variant_median_ns": 7828.0,
+     "speedup": -0.0005112474437627812,
+     "speedup_ci95": [
+      -0.0025575447570332483,
+      0.004591836734693878
+     ],
+     "baseline_ci95": [
+      7814.0,
+      7852.0
+     ],
+     "variant_ci95": [
+      7803.95,
+      7840.0
+     ],
+     "n": 10,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "tonemap": {
+     "flip_mean": 2.0532132793960045e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.009734992869198322,
+     "abs_max": 0.004067808389663696,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "tonemap_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0012547051442910915,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.0012547051442910915,
+    "required": 0.02
+   },
+   "timing": {
+    "tonemap": {
+     "baseline_median_ns": 7970.0,
+     "variant_median_ns": 7960.0,
+     "speedup": 0.0012547051442910915,
+     "speedup_ci95": [
+      -0.003029381178796991,
+      0.004751187796949237
+     ],
+     "baseline_ci95": [
+      7948.0,
+      7998.0
+     ],
+     "variant_ci95": [
+      7944.0,
+      7988.0
+     ],
+     "n": 10,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "tonemap": {
+     "flip_mean": 5.443562258733436e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.02337648533284664,
+     "abs_max": 0.00885164737701416,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "tonemap_ultrawide",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 9.597850081581725e-05,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 9.597850081581725e-05,
+    "required": 0.02
+   },
+   "timing": {
+    "tonemap": {
+     "baseline_median_ns": 20838.0,
+     "variant_median_ns": 20836.0,
+     "speedup": 9.597850081581725e-05,
+     "speedup_ci95": [
+      -0.0032642089093701996,
+      0.002678938767113894
+     ],
+     "baseline_ci95": [
+      20806.0,
+      20896.0
+     ],
+     "variant_ci95": [
+      20811.95,
+      20900.0
+     ],
+     "n": 10,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "tonemap": {
+     "flip_mean": 6.147915314613783e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.01638098619878292,
+     "abs_max": 0.007099330425262451,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ]
+}

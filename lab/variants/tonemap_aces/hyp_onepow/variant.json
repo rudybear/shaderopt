@@ -1,0 +1,38 @@
+{
+  "shader": "tonemap_aces",
+  "variant_id": "hyp_onepow",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "pass": "hypothesis",
+      "class": "ulp",
+      "target": 0,
+      "replaced_by": 0,
+      "detail": "pow(pow(x, contrast), 1/gamma) is applied to two different quantities here (contrast before ACES, gamma after), so they cannot merge; but the ACES fit itself is a rational function whose numerator and denominator share x: evaluate it with one division and two fma per channel, and drop the dead mix(vec3(lum), c, 1.0)."
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "d6a57346265ff4c6fa25e611051677ec62a86a6d",
+    "runner": "490a9856b502995c",
+    "shader_ir": "eb04cbf5bccd4aeb",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:53:08",
+  "hypothesis": {
+    "shader": "tonemap_aces",
+    "id": "onepow",
+    "claim": "pow(pow(x, contrast), 1/gamma) is applied to two different quantities here (contrast before ACES, gamma after), so they cannot merge; but the ACES fit itself is a rational function whose numerator and denominator share x: evaluate it with one division and two fma per channel, and drop the dead mix(vec3(lum), c, 1.0).",
+    "class": "ulp",
+    "predicted_cost": "Removes 1 dot, 1 mix; ACES from 6 mul/2 add/1 div to 4 fma/1 div per channel",
+    "predicted_error": "<= 2 ULP in f32; zero codes expected",
+    "exposes": [
+      "tonemap_hdr_edges"
+    ],
+    "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"
+  }
+}

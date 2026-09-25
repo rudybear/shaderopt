@@ -1,0 +1,38 @@
+{
+  "shader": "color_grade",
+  "variant_id": "hyp_foldmat",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "pass": "hypothesis",
+      "class": "semantic",
+      "target": 0,
+      "replaced_by": 0,
+      "detail": "warm * M is a per-dispatch matrix; lift/gamma/gain preprocessing is per-dispatch too. Fold warm into the matrix rows on the CPU and pass 1/gamma directly: the per-pixel work drops to one 3x3 matrix, one luminance dot, one mix, one fma-chain and one pow."
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "d6a57346265ff4c6fa25e611051677ec62a86a6d",
+    "runner": "490a9856b502995c",
+    "shader_ir": "eb04cbf5bccd4aeb",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:53:30",
+  "hypothesis": {
+    "shader": "color_grade",
+    "id": "foldmat",
+    "claim": "warm * M is a per-dispatch matrix; lift/gamma/gain preprocessing is per-dispatch too. Fold warm into the matrix rows on the CPU and pass 1/gamma directly: the per-pixel work drops to one 3x3 matrix, one luminance dot, one mix, one fma-chain and one pow.",
+    "class": "semantic",
+    "predicted_cost": "Removes 3 mul, 2 fma, 3 div (1/gamma) and the warm construction per pixel; needs 2 new uniform members computed on the CPU",
+    "predicted_error": "Identical in real arithmetic; <= a few ULP",
+    "exposes": [
+      "colorgrade_gradient"
+    ],
+    "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/color_grade.classification.md"
+  }
+}
