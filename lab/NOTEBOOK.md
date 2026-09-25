@@ -25,3 +25,8 @@
 - NEGATIVE then POSITIVE: sampler weight quantization by truncation made tonemap edges worse (max 101 codes); round-to-nearest 8-bit fixed-point coordinates reproduce NVIDIA exactly (max 0). Adopted as the CPU sampler model.
 - lift-check train split: 16/16 OK, max <= 1 code everywhere except vignette_grain (hash amplification, flagged fragile). M1 gates hold on desktop.
 - M1 STOP: report in lab/reports/M1.md.
+
+## 2026-09-25 (M2)
+- User: proceed through all milestones without pausing; reports still written per milestone.
+- A/A noise floors for all 19 scenarios (2 rounds x 2 x 30 samples, clocks unlocked): |rel diff| <= 0.85% everywhere except vignette_gradient at -2.17% this session (0.09% yesterday); CV 0.25% (fxaa) to 2.8% (deferred). The timing gate uses max(2%, floor) per scenario.
+- Verified: glslang -g builds have the same instruction body as -V builds (ids shift by one); source lines map by body index.
