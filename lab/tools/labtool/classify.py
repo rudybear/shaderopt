@@ -76,12 +76,13 @@ def classify(shader: str, max_scenarios: int = 2, stride: int = 4, sensitivity: 
     ref = quantize(p.format, np.load(ref_path))
     sens = {}
     if sensitivity:
-        cands = [i for i in an["instructions"] if i["id"] and i["type"].startswith(("f32", "vec2<f32>", "vec3<f32>", "vec4<f32>")) and not i["sinks"] and i["rate"] != "const"]
+        cands = [i for i in an["instructions"] if i["id"] and (i.get("type") or "").startswith(("f32", "vec2<f32>", "vec3<f32>", "vec4<f32>")) and not i["sinks"] and i["rate"] != "const"]
         def one(sites: str, key: str):
             outp = work / f"sens_{key}.npy"
             _eval(spv, w, h, _pass_inputs(sc, p, res, inputs), p.uniforms, outp, ["--f16-sites", sites] if sites != "all" else ["--f16-all"], nearest=(p.sampler == "nearest"))
             m = flip_metrics(ref, quantize(p.format, np.load(outp)), kind); outp.unlink(missing_ok=True); return m
-        sens["all"] = one("all", "all")
+        # every candidate site at once (sinks excluded: rounding uv or branch conditions is never on the table)
+        sens["all"] = one(",".join(str(i["id"]) for i in cands), "all") if cands else {"flip_mean": 0.0, "flip_p99": 0.0, "flip_max": 0.0}
         for i in cands:
             sens[str(i["id"])] = one(str(i["id"]), str(i["id"]))
     # ---- pass graph

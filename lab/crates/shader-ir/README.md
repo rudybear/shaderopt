@@ -167,6 +167,78 @@ wrong value. Known unsupported: projective/depth-compare/gather sampling, cube/3
 images, integer images, `OpSpecConstantOp`, runtime arrays and storage buffers, 8/16/64-bit
 integers, `OpImageQueryLod`, other extended instruction sets.
 
+### `analysis` (src/analysis/): the M2 static analysis
+
+`shader-ir analyze` produces the `analysis.json` of `CONTRACTS.md` ("M2: analysis and rewrite
+CLIs"): one entry per instruction of every function body (parameters and labels included, in
+layout order; `index` is the position in the function counting all of them, `block` is null for
+parameters), with the result `id` (0 when there is none), `op`, `ext` (the `GLSL.std.450` name),
+`type` (`f32`, `vec3<f32>`, `mat4<f32>`, `i32`, `bool`, `ptr(Function, f32)`, `array<f32, 4>`,
+`sampler2D`), `func`, `line`, `name` (`OpName`), `operands` (id operands only), `rate`, `sinks`
+and `range`. A top-level `functions` array adds each function's `call_sites` count.
+
+* **Rates** (`rate.rs`): forward dataflow over `const < uniform < pixel`. Constants and pointers
+  are `const`; a load from a `Uniform`/`PushConstant`/`UniformConstant` variable is `uniform`;
+  a load from an `Input` variable (Location inputs, `gl_FragCoord`, any builtin), an image
+  sample/fetch/gather/query result and a derivative are `pixel`; everything else joins its
+  operands. A `Function`/`Private` variable has the join of every store to it (all stores are
+  treated as reaching) joined with the *control rate* of the storing block, the join of the
+  branch conditions the block is control dependent on (post-dominator based, `cfg.rs`); an
+  `OpPhi` joins its incoming values with the control rate and branch condition of each
+  predecessor. This iterates to a fixed point per function and over the module, so
+  `for (int i = -4; i <= 4; ++i)` comes out `const` and `exp(-0.5*x*x/(sigma*sigma))` with a
+  uniform `sigma` comes out `uniform`, while `s = 0; if (uv.x < 0.5) s = 1;` makes `s` pixel.
+  Calls are instantiated per call site with the argument rates (pointer arguments alias the
+  caller's variables); a callee's instructions are reported once with the join over call sites.
+  Functions never called are analyzed with `pixel` parameters.
+* **Sinks** (`sinks.rs`): backward marking. Seeds: `address` = the coordinate and trailing image
+  operands (bias, lod, gradient, offset) of every sample/fetch/gather, every `OpAccessChain`
+  index, the index of `OpVectorExtractDynamic`/`OpVectorInsertDynamic`; `control` = the
+  condition of `OpBranchConditional`/`OpSelect` and the selector of `OpSwitch`; `discard` = a
+  branch condition one of whose arms dominates a block with `OpKill`/`OpTerminateInvocation`/
+  `OpDemoteToHelperInvocation` or a call to a function that may kill; `convert` = the operand of
+  `OpConvertFToS/U`. Marks propagate to the operands of pure instructions (arithmetic,
+  `GLSL.std.450`, comparisons, conversions, composites, shuffles, selects, phis, derivatives)
+  and stop at loads of `Uniform`/`PushConstant`/`Input`/`UniformConstant` variables (the load is
+  marked, its pointer is not) and at image instructions (the sample result is marked, its
+  coordinate is not). A load of a `Function`/`Private` variable propagates to every value
+  stored to that variable (glslang without `-O` routes every local through a variable, so the
+  chain `dir = clamp(...) * u.texel; texture(t, uv + dir * k)` is an address chain all the way
+  back), parameters propagate to the arguments at every call site and call results to the
+  callee's `OpReturnValue`.
+* **Samplers**: for every `UniformConstant` sampled image, each sample/fetch instruction that
+  reads it (through `OpSampledImage`, loads, parameters), its coordinate id and `coord_kind`:
+  `uv_exact` when the coordinate is a load of the Location 0 input (or a construct/shuffle that
+  reproduces it, or a local variable assigned exactly once from it), `uv_offset` when it is
+  `uv +/- e` with `e` of rate `const` or `uniform` (`offset` is `e` as a vec2 when it folds to
+  constants, negated for `-`), otherwise `other`.
+* **Lines** (`lines.rs`): with `--debug-spv x.g.spv` (`glslang -V -g`), the k-th body
+  instruction of the measured build (after dropping `OpLine`/`OpNoLine` from the debug build)
+  takes the line of the last `OpLine` before its debug twin. The opcode sequences (and
+  `GLSL.std.450` numbers) must match exactly, otherwise `analyze` fails naming the first
+  mismatch. Ids in the output are always the measured build's.
+* **Summary**: `pixel`/`uniform`/`const` count value-producing instructions (a result id whose
+  type is neither a pointer nor void); `float_sites` are those with a float scalar/vector/matrix
+  type, `sink_sites` those with any sink, `candidate_sites` float sites without sinks.
+
+#### Ranges and f16 sites (interpreter)
+
+`eval --profile ranges.json [--stride N]` records, for every float-typed result id (scalars,
+and every component of vectors/matrices), `min`/`max` over finite values, `nan` and `inf`
+component counts and `samples` (evaluations of the instruction, so a value inside a 9-tap loop
+has 9 samples per pixel). `--stride N` evaluates every N-th quad in each dimension (quads at
+`(2iN, 2jN)`, whole, so derivatives stay exact); unevaluated pixels get the discard value in the
+output image. Accumulators live per lane and are merged per quad row and once at the end.
+`analyze --ranges ranges.json` attaches them as `range` (null for ids without samples).
+
+`eval --f16-sites 57,58 | --f16-all` rounds the listed float-typed results (or all of them) to
+f16 (round to nearest even through `half::f16`) right after they are computed, in whatever
+numeric mode is selected, and continues with the rounded value. This is the prediction for
+demoting those sites to `RelaxedPrecision` / explicit f16: the site computes in f32 (or the
+mode's precision) and only its stored result loses precision. Sites feeding address/control
+sinks are rounded like any other when listed; the caller chooses the list (typically the
+`candidate_sites` of `analyze`). Listing an id that is not a float-typed result is an error.
+
 ## CLI (see `lab/CONTRACTS.md`)
 
 ```
@@ -179,6 +251,10 @@ shader-ir eval --spv pass.spv --width W --height H --mode f32|f64|f16 \
 shader-ir info <in.spv>
     # entry point, interface variables (names, locations, bindings), uniform block layout
     # (member offsets, strides), opcode histogram including GLSL.std.450 names
+shader-ir analyze --spv x.spv [--debug-spv x.g.spv] [--ranges ranges.json] --out analysis.json
+    # M2 analysis JSON: rates, sinks, samplers/coord_kind, outputs, summary, lines, ranges
+shader-ir eval ... --profile ranges.json [--stride N]     # per-result float ranges
+shader-ir eval ... --f16-sites 57,58 | --f16-all          # round listed results to f16
 ```
 
 How the lab uses it: `lab` compiles the baseline and each variant, runs `roundtrip` as the M1
@@ -210,3 +286,39 @@ against Rust f64 math in `f64` mode and Rust f32 math in `f32` mode; `f16` mode 
 structs, swizzled stores; error messages for missing/unknown uniforms and samplers; the
 stripped-name fallback keys; unsupported opcode naming; the tonemap fixture against a closed-form
 hand computation; and `info` tables and the binary's output.
+
+## M2 rewrite passes (`src/passes/`, `shader-ir rewrite`)
+
+```
+shader-ir rewrite --spv in.spv --out out.spv --passes fold,dce,cse,ident,unroll,divconst,powspec,select \
+    --ops ops.json [--max-unroll 16] [--max-select-arm 32] [--only-op ID] [--exact-only]
+```
+
+The passes edit `Lifted::module` in place (`reanalyze()` after each batch). Untouched
+instructions keep their result ids; new results take fresh ids above the old bound (the header
+bound is updated). The output is validated in-process with the `spirv-tools` crate; a failure is
+an error naming the diagnostic. Passes are applied in the listed order; the cleanup passes among
+them (`fold,dce,cse,ident`) are repeated to a fixed point (<= 10 rounds) after every other pass
+and at the end. `--only-op ID` restricts every pass except `dce` to the target id (a result id;
+the header label for `unroll`; the header label, merge label or a phi id for `select`).
+`ops.json` is the contract's list of `{"pass","class","target","replaced_by","detail"}` records.
+
+| pass | edit | class |
+|---|---|---|
+| `fold` | arithmetic, comparisons, logic, composites (Construct/Extract/Insert/Shuffle), conversions, `OpSelect` with a constant condition, GLSL.std.450 with all-constant operands; results become deduplicated `OpConstant`/`OpConstantComposite` | `exact` when no rounding happened (the f32 result equals the f64 evaluation, so the f64 reference is unchanged); `ulp` for a rounding f32 result and always for transcendentals (`exp`, `pow`, `sin`, `sqrt`, `mix`, `length`, ...: Rust's `f32` functions on the CPU may differ from the GPU's by ULPs) |
+| `dce` | unused pure results (iterated), Function variables only stored to (with their stores and access chains); interface variables and anything with side effects (stores, kills, calls, image writes, barriers, atomics) stay | `exact` |
+| `cse` | identical pure instructions (opcode, type, operands, ext-inst) where the earlier dominates the later (dominator tree over the CFG); loads only from read-only storage (Uniform, UniformConstant, PushConstant, Input); image ops and derivatives excluded | `exact` |
+| `ident` | `x*1`, `1*x`, `x+0`, `0+x`, `x-0`, `x/1`, `-(-x)`, `select(c,x,x)`, vector forms with splat constants, `OpVectorTimesScalar(v,1)`, integer forms; never `x*0` or `x-x` | `exact` (caveat: `x + (+0.0)` and `x - (-0.0)` map `-0.0` to `+0.0` before the rewrite and keep it after; the detail says so) |
+| `unroll` | loops (`OpLoopMerge`) with one exit in the check block, an integer compare of the induction value against a constant, the induction value an `OpPhi` (init/step constants) or, as glslang `-V` emits, a Function variable stored exactly twice (constant before the header, `load +/- const` in a block that dominates the continue block); trip count `<= --max-unroll`; no inner loop (inner first), contiguous blocks, single-predecessor continue block (no `continue` from a nested `if`). The check block(s) are cloned N+1 times, the body N times, induction loads/phis become per-iteration constants, the loop structure is dropped | `exact` |
+| `divconst` | `x / c -> x * (1/c)` for a constant scalar or vector `c` with finite, non-zero, normal components and reciprocals; in place, same id; the detail carries the reciprocal bits | `ulp` (`exact` when every component is a power of two) |
+| `powspec` | `pow(x,2) -> x*x`, `pow(x,0.5) -> sqrt(x)`, `pow(x,1) -> x`, `pow(x,3) -> (x*x)*x` for constant scalar/splat exponents; `pow` is undefined for negative `x`, the products are not (the defined domain only widens) | `ulp` |
+| `select` | if/else (`OpSelectionMerge` + `OpBranchConditional`) whose arms are single blocks of speculatable instructions (no stores, image ops, derivatives, kills, calls, loops; loads only through constant-index pointers; <= `--max-select-arm` each) both branching to the merge block whose phis are the only join points; one arm may be empty (glslang's `a || b`, `a && b`): arms move into the header, each phi becomes an `OpSelect` with the same id | `exact` |
+
+Notes from the corpus (`lab/build/spv`): glslang builds splat divisors with `OpCompositeConstruct`,
+so `divconst` on `v / 3.0` needs `fold` first (the full pipeline has it); glslang emits
+`OpLogicalOr`/`OpSelect` for simple conditions, so `select` only fires on short-circuit operands
+with loads (`alb.a < 0.5 || nrm.w < 0.5`); ternaries with non-trivial arms are store-based
+if/else in `-V` output and are not `select` candidates; after `unroll`, values that pass through
+Function variables (`float x = float(i)`) stay loads/stores, so the unrolled Gaussian weights do
+not fold (a store-to-load forwarding pass would be needed). `--exact-only` skips every edit that
+would be classed `ulp`, which is what the tests use for the f64 bit-identity gate.

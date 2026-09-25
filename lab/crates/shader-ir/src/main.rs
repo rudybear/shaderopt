@@ -1,5 +1,7 @@
 //! `shader-ir` command line, as specified in `lab/CONTRACTS.md`.
 
+mod cli_rewrite;
+
 use anyhow::{anyhow, Context, Result};
 use clap::{Args, Parser, Subcommand};
 use shader_ir::interp::{self, EvalConfig, Filter, Mode, SamplerSpec};
@@ -7,6 +9,8 @@ use shader_ir::lift::{self, Lifted, Type};
 use shader_ir::{bytes_from_words, npy, read_spv};
 use spirv::StorageClass;
 use std::path::PathBuf;
+
+mod cli_analyze;
 
 #[derive(Parser)]
 #[command(name = "shader-ir", version, about = "Shader lab CPU model: lossless SPIR-V lift and fragment interpreter")]
@@ -28,6 +32,10 @@ enum Cmd {
     Eval(EvalArgs),
     /// Print the entry point, interface variables, uniform block layout and an opcode histogram.
     Info { input: PathBuf },
+    /// Apply the M2 rewrite passes and validate the result (see lab/CONTRACTS.md).
+    Rewrite(cli_rewrite::RewriteArgs),
+    /// M2 static analysis: rates, sinks, sampler coordinates, source lines, ranges -> JSON.
+    Analyze(cli_analyze::AnalyzeArgs),
 }
 
 #[derive(Args)]
@@ -65,6 +73,19 @@ struct EvalArgs {
     /// Number of worker threads (default: all cores).
     #[arg(long)]
     threads: Option<usize>,
+    /// Write per-result float ranges (min/max/nan/inf/samples by result id) to this JSON file.
+    #[arg(long)]
+    profile: Option<PathBuf>,
+    /// Evaluate every N-th quad in each dimension (quads at (2iN, 2jN) run whole).
+    #[arg(long, default_value_t = 1)]
+    stride: usize,
+    /// Result ids to round to f16 after computing (comma separated): predicts demoting those
+    /// sites to RelaxedPrecision / explicit f16.
+    #[arg(long, value_delimiter = ',')]
+    f16_sites: Vec<u32>,
+    /// Round every float-typed result to f16.
+    #[arg(long)]
+    f16_all: bool,
 }
 
 fn split_kv<'a>(s: &'a str, what: &str) -> Result<(&'a str, &'a str)> {
@@ -111,12 +132,14 @@ fn run() -> Result<()> {
             }
             Ok(())
         }
+        Cmd::Rewrite(a) => cli_rewrite::run(a),
         Cmd::Info { input } => {
             let words = read_spv(&input)?;
             let lifted = Lifted::load(&words)?;
             print_info(&input, &words, &lifted);
             Ok(())
         }
+        Cmd::Analyze(a) => cli_analyze::run(&a),
         Cmd::Eval(a) => {
             if let Some(n) = a.threads {
                 rayon::ThreadPoolBuilder::new().num_threads(n).build_global().ok();
@@ -127,6 +150,10 @@ fn run() -> Result<()> {
             let mut cfg = EvalConfig::new(a.width, a.height, mode);
             cfg.label = a.spv.display().to_string();
             cfg.sampler_weight_bits = a.sampler_weight_bits;
+            cfg.profile = a.profile.is_some();
+            cfg.stride = a.stride.max(1);
+            cfg.f16_sites = a.f16_sites.clone();
+            cfg.f16_all = a.f16_all;
             cfg.discard_value = match a.discard_value.as_str() {
                 "nan" | "NaN" => f32::NAN,
                 s => s.parse().map_err(|e| anyhow!("--discard-value {s:?}: {e}"))?,
@@ -159,6 +186,11 @@ fn run() -> Result<()> {
                 )
             })?;
             npy::write(&a.out, img)?;
+            if let (Some(p), Some(r)) = (&a.profile, &out.ranges) {
+                let text = serde_json::to_string(&shader_ir::analysis::ranges_json(r))?;
+                std::fs::write(p, text).with_context(|| format!("cannot write {}", p.display()))?;
+                eprintln!("{}: wrote ranges for {} float results to {}", a.spv.display(), r.len(), p.display());
+            }
             eprintln!(
                 "{}: {}x{} mode={:?} in {:.3}s; discarded={} dead_derivatives={}; wrote {}",
                 a.spv.display(),

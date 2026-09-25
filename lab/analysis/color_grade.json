@@ -1,0 +1,2422 @@
+{
+ "shader": "color_grade",
+ "scenarios": [
+  "colorgrade_gradient",
+  "colorgrade_photo"
+ ],
+ "analysis": {
+  "bound": 119,
+  "entry": "main",
+  "functions": [
+   {
+    "call_sites": 0,
+    "id": 4,
+    "name": "main"
+   }
+  ],
+  "instructions": [
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 5,
+    "index": 0,
+    "line": null,
+    "name": null,
+    "op": "OpLabel",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 9,
+    "index": 1,
+    "line": null,
+    "name": "c",
+    "op": "OpVariable",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Function, vec3<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 22,
+    "index": 2,
+    "line": null,
+    "name": "warm",
+    "op": "OpVariable",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Function, vec3<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 43,
+    "index": 3,
+    "line": null,
+    "name": "m",
+    "op": "OpVariable",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Function, vec3<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 65,
+    "index": 4,
+    "line": null,
+    "name": "lum",
+    "op": "OpVariable",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Function, f32)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 80,
+    "index": 5,
+    "line": null,
+    "name": "g",
+    "op": "OpVariable",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Function, vec3<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 14,
+    "index": 6,
+    "line": 18,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     13
+    ],
+    "range": null,
+    "rate": "uniform",
+    "sinks": [],
+    "type": "sampler2D"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 18,
+    "index": 7,
+    "line": 18,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     17
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9966145753860474,
+     "min": 0.0002604166802484542,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [
+     "address"
+    ],
+    "type": "vec2<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 20,
+    "index": 8,
+    "line": 18,
+    "name": null,
+    "op": "OpImageSampleImplicitLod",
+    "operands": [
+     14,
+     18
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 21,
+    "index": 9,
+    "line": 18,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     20,
+     20
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 10,
+    "line": 18,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     9,
+     21
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 31,
+    "index": 11,
+    "line": 20,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     29
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, f32)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 32,
+    "index": 12,
+    "line": 20,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     31
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.30000001192092896,
+     "min": 0.30000001192092896,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 33,
+    "index": 13,
+    "line": 20,
+    "name": null,
+    "op": "OpFMul",
+    "operands": [
+     24,
+     32
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.030000001192092896,
+     "min": 0.030000001192092896,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 34,
+    "index": 14,
+    "line": 20,
+    "name": null,
+    "op": "OpFAdd",
+    "operands": [
+     23,
+     33
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 1.0299999713897705,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 35,
+    "index": 15,
+    "line": 20,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     29
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, f32)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 36,
+    "index": 16,
+    "line": 20,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     35
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.30000001192092896,
+     "min": 0.30000001192092896,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 37,
+    "index": 17,
+    "line": 20,
+    "name": null,
+    "op": "OpFMul",
+    "operands": [
+     24,
+     36
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.030000001192092896,
+     "min": 0.030000001192092896,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 38,
+    "index": 18,
+    "line": 20,
+    "name": null,
+    "op": "OpFSub",
+    "operands": [
+     23,
+     37
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9700000286102296,
+     "min": 0.9700000286102296,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 39,
+    "index": 19,
+    "line": 20,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     34,
+     23,
+     38
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.9700000286102296,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 20,
+    "line": 20,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     22,
+     39
+    ],
+    "range": null,
+    "rate": "uniform",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 40,
+    "index": 21,
+    "line": 21,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     22
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.9700000286102296,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 41,
+    "index": 22,
+    "line": 21,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     9
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 42,
+    "index": 23,
+    "line": 21,
+    "name": null,
+    "op": "OpFMul",
+    "operands": [
+     41,
+     40
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 24,
+    "line": 21,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     9,
+     42
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 46,
+    "index": 25,
+    "line": 22,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     44
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 47,
+    "index": 26,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     46
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 48,
+    "index": 27,
+    "line": 22,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     47,
+     47
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.019999999552965164,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 49,
+    "index": 28,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     9
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 50,
+    "index": 29,
+    "line": 22,
+    "name": null,
+    "op": "OpDot",
+    "operands": [
+     48,
+     49
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0226889848709106,
+     "min": 0.00028546006069518626,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 52,
+    "index": 30,
+    "line": 22,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     51
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 53,
+    "index": 31,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     52
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 54,
+    "index": 32,
+    "line": 22,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     53,
+     53
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.05000000074505806,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 55,
+    "index": 33,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     9
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 56,
+    "index": 34,
+    "line": 22,
+    "name": null,
+    "op": "OpDot",
+    "operands": [
+     54,
+     55
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9941808581352234,
+     "min": 0.0004476200556382537,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 58,
+    "index": 35,
+    "line": 22,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     57
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 59,
+    "index": 36,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     58
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 60,
+    "index": 37,
+    "line": 22,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     59,
+     59
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.8999999761581421,
+     "min": 0.019999999552965164,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 61,
+    "index": 38,
+    "line": 22,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     9
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0299999713897705,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 62,
+    "index": 39,
+    "line": 22,
+    "name": null,
+    "op": "OpDot",
+    "operands": [
+     60,
+     61
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.968944013118744,
+     "min": 0.00035815685987472534,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 63,
+    "index": 40,
+    "line": 22,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     50,
+     56,
+     62
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0226889848709106,
+     "min": 0.00028546006069518626,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 41,
+    "line": 22,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     43,
+     63
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 66,
+    "index": 42,
+    "line": 23,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     43
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0226889848709106,
+     "min": 0.00028546006069518626,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 71,
+    "index": 43,
+    "line": 23,
+    "name": null,
+    "op": "OpDot",
+    "operands": [
+     66,
+     70
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9984195828437804,
+     "min": 0.00040668557630851865,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 44,
+    "line": 23,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     65,
+     71
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 72,
+    "index": 45,
+    "line": 24,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     65
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9984195828437804,
+     "min": 0.00040668557630851865,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 73,
+    "index": 46,
+    "line": 24,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     72,
+     72,
+     72
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9984195828437804,
+     "min": 0.00040668557630851865,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 74,
+    "index": 47,
+    "line": 24,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     43
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0226889848709106,
+     "min": 0.00028546006069518626,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 76,
+    "index": 48,
+    "line": 24,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     75
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, f32)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 77,
+    "index": 49,
+    "line": 24,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     76
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.2000000476837158,
+     "min": 1.2000000476837158,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 78,
+    "index": 50,
+    "line": 24,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     77,
+     77,
+     77
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.2000000476837158,
+     "min": 1.2000000476837158,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": "FMix",
+    "func": "main",
+    "id": 79,
+    "index": 51,
+    "line": 24,
+    "name": null,
+    "op": "OpExtInst",
+    "operands": [
+     73,
+     74,
+     78
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.068231463432312,
+     "min": -0.035837046802043915,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 52,
+    "line": 24,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     43,
+     79
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 81,
+    "index": 53,
+    "line": 25,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     43
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.068231463432312,
+     "min": -0.035837046802043915,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 83,
+    "index": 54,
+    "line": 25,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     82
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 84,
+    "index": 55,
+    "line": 25,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     83
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.100000023841858,
+     "min": 0.949999988079071,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 85,
+    "index": 56,
+    "line": 25,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     84,
+     84
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.100000023841858,
+     "min": 0.949999988079071,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 86,
+    "index": 57,
+    "line": 25,
+    "name": null,
+    "op": "OpFMul",
+    "operands": [
+     81,
+     85
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.175054669380188,
+     "min": -0.039420753717422485,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 88,
+    "index": 58,
+    "line": 25,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     87
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 89,
+    "index": 59,
+    "line": 25,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     88
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.019999999552965164,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 90,
+    "index": 60,
+    "line": 25,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     89,
+     89
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.019999999552965164,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 91,
+    "index": 61,
+    "line": 25,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     43
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.068231463432312,
+     "min": -0.035837046802043915,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 92,
+    "index": 62,
+    "line": 25,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     23,
+     23,
+     23
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "const",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 93,
+    "index": 63,
+    "line": 25,
+    "name": null,
+    "op": "OpFSub",
+    "operands": [
+     92,
+     91
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0358370542526243,
+     "min": -0.06823146343231201,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 94,
+    "index": 64,
+    "line": 25,
+    "name": null,
+    "op": "OpFMul",
+    "operands": [
+     90,
+     93
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.02071673981845379,
+     "min": -0.0013646292500197887,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 95,
+    "index": 65,
+    "line": 25,
+    "name": null,
+    "op": "OpFAdd",
+    "operands": [
+     86,
+     94
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.1736900806427002,
+     "min": -0.018704013898968697,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": "FMax",
+    "func": "main",
+    "id": 98,
+    "index": 66,
+    "line": 25,
+    "name": null,
+    "op": "OpExtInst",
+    "operands": [
+     95,
+     97
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.1736900806427002,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 100,
+    "index": 67,
+    "line": 25,
+    "name": null,
+    "op": "OpAccessChain",
+    "operands": [
+     27,
+     99
+    ],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": "ptr(Uniform, vec4<f32>)"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 101,
+    "index": 68,
+    "line": 25,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     100
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.100000023841858,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 102,
+    "index": 69,
+    "line": 25,
+    "name": null,
+    "op": "OpVectorShuffle",
+    "operands": [
+     101,
+     101
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.100000023841858,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": "FMax",
+    "func": "main",
+    "id": 105,
+    "index": 70,
+    "line": 25,
+    "name": null,
+    "op": "OpExtInst",
+    "operands": [
+     102,
+     104
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.100000023841858,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 106,
+    "index": 71,
+    "line": 25,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     23,
+     23,
+     23
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "const",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 107,
+    "index": 72,
+    "line": 25,
+    "name": null,
+    "op": "OpFDiv",
+    "operands": [
+     106,
+     105
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.9090908765792848,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "uniform",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": "Pow",
+    "func": "main",
+    "id": 108,
+    "index": 73,
+    "line": 25,
+    "name": null,
+    "op": "OpExtInst",
+    "operands": [
+     98,
+     107
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.1736900806427002,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 74,
+    "line": 25,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     80,
+     108
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 111,
+    "index": 75,
+    "line": 26,
+    "name": null,
+    "op": "OpLoad",
+    "operands": [
+     80
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.1736900806427002,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 112,
+    "index": 76,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     96,
+     96,
+     96
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "const",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 113,
+    "index": 77,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     23,
+     23,
+     23
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 1.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "const",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": "FClamp",
+    "func": "main",
+    "id": 114,
+    "index": 78,
+    "line": 26,
+    "name": null,
+    "op": "OpExtInst",
+    "operands": [
+     111,
+     112,
+     113
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec3<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 115,
+    "index": 79,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeExtract",
+    "operands": [
+     114
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 116,
+    "index": 80,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeExtract",
+    "operands": [
+     114
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.9937131404876708,
+     "min": 0.012986538000404836,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 117,
+    "index": 81,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeExtract",
+    "operands": [
+     114
+    ],
+    "range": {
+     "inf": 0,
+     "max": 0.958666205406189,
+     "min": 0.0006858693668618798,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "f32"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 118,
+    "index": 82,
+    "line": 26,
+    "name": null,
+    "op": "OpCompositeConstruct",
+    "operands": [
+     115,
+     116,
+     117,
+     23
+    ],
+    "range": {
+     "inf": 0,
+     "max": 1.0,
+     "min": 0.0,
+     "nan": 0,
+     "samples": 259200
+    },
+    "rate": "pixel",
+    "sinks": [],
+    "type": "vec4<f32>"
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 83,
+    "line": 26,
+    "name": null,
+    "op": "OpStore",
+    "operands": [
+     110,
+     118
+    ],
+    "range": null,
+    "rate": "pixel",
+    "sinks": [],
+    "type": null
+   },
+   {
+    "block": 0,
+    "ext": null,
+    "func": "main",
+    "id": 0,
+    "index": 84,
+    "line": 27,
+    "name": null,
+    "op": "OpReturn",
+    "operands": [],
+    "range": null,
+    "rate": "const",
+    "sinks": [],
+    "type": null
+   }
+  ],
+  "outputs": [
+   {
+    "id": 110,
+    "location": 0,
+    "type": "vec4<f32>"
+   }
+  ],
+  "samplers": [
+   {
+    "binding": 0,
+    "id": 13,
+    "name": "u_src",
+    "samples": [
+     {
+      "coord_id": 18,
+      "coord_kind": "uv_exact",
+      "id": 20,
+      "offset": null
+     }
+    ]
+   }
+  ],
+  "shader": "color_grade",
+  "summary": {
+   "candidate_sites": 59,
+   "const": 4,
+   "float_sites": 60,
+   "pixel": 32,
+   "sink_sites": 1,
+   "uniform": 25
+  }
+ },
+ "sensitivity": {
+  "all": {
+   "flip_mean": 0.007539667189121246,
+   "flip_p99": 0.024444550275802612,
+   "flip_max": 0.05206522345542908,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "20": {
+   "flip_mean": 0.0036840802058577538,
+   "flip_p99": 0.02046993374824524,
+   "flip_max": 0.03037683665752411,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "21": {
+   "flip_mean": 0.0036840802058577538,
+   "flip_p99": 0.02046993374824524,
+   "flip_max": 0.03037683665752411,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "32": {
+   "flip_mean": 5.915257861488499e-05,
+   "flip_p99": 0.0014622092712670565,
+   "flip_max": 0.013907496817409992,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "33": {
+   "flip_mean": 1.5674197129555978e-05,
+   "flip_p99": 0.0002997003903146833,
+   "flip_max": 0.012343797832727432,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "34": {
+   "flip_mean": 0.0020378781482577324,
+   "flip_p99": 0.014184150844812393,
+   "flip_max": 0.020386546850204468,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "36": {
+   "flip_mean": 8.59610881889239e-05,
+   "flip_p99": 0.0015747523866593838,
+   "flip_max": 0.01232762448489666,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "37": {
+   "flip_mean": 2.1915906472713687e-05,
+   "flip_p99": 0.0006871481309644878,
+   "flip_max": 0.012413104064762592,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "38": {
+   "flip_mean": 0.0023048536386340857,
+   "flip_p99": 0.005861865356564522,
+   "flip_max": 0.020444216206669807,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "39": {
+   "flip_mean": 0.003070009872317314,
+   "flip_p99": 0.014480979181826115,
+   "flip_max": 0.020434536039829254,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "40": {
+   "flip_mean": 0.003070009872317314,
+   "flip_p99": 0.014480979181826115,
+   "flip_max": 0.020434536039829254,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "41": {
+   "flip_mean": 0.0036840802058577538,
+   "flip_p99": 0.02046993374824524,
+   "flip_max": 0.03037683665752411,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "42": {
+   "flip_mean": 0.003697384148836136,
+   "flip_p99": 0.02048564702272415,
+   "flip_max": 0.03295418992638588,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "47": {
+   "flip_mean": 0.0009041730663739145,
+   "flip_p99": 0.009168416261672974,
+   "flip_max": 0.017411865293979645,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "48": {
+   "flip_mean": 0.0009041730663739145,
+   "flip_p99": 0.009168416261672974,
+   "flip_max": 0.017411865293979645,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "49": {
+   "flip_mean": 0.0013736042892560363,
+   "flip_p99": 0.012460513971745968,
+   "flip_max": 0.020259235054254532,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "50": {
+   "flip_mean": 0.0013232860947027802,
+   "flip_p99": 0.00873855035752058,
+   "flip_max": 0.02153933420777321,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "53": {
+   "flip_mean": 0.0022271708585321903,
+   "flip_p99": 0.019200436770915985,
+   "flip_max": 0.047858066856861115,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "54": {
+   "flip_mean": 0.0022271708585321903,
+   "flip_p99": 0.019200436770915985,
+   "flip_max": 0.047858066856861115,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "55": {
+   "flip_mean": 0.0024210503324866295,
+   "flip_p99": 0.020313987508416176,
+   "flip_max": 0.038037292659282684,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "56": {
+   "flip_mean": 0.0024642888456583023,
+   "flip_p99": 0.01868426986038685,
+   "flip_max": 0.04568234086036682,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "59": {
+   "flip_mean": 0.0011459329398348927,
+   "flip_p99": 0.003589667147025466,
+   "flip_max": 0.020400797948241234,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "60": {
+   "flip_mean": 0.0011459329398348927,
+   "flip_p99": 0.003589667147025466,
+   "flip_max": 0.020400797948241234,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "61": {
+   "flip_mean": 0.0015301518142223358,
+   "flip_p99": 0.005203115753829479,
+   "flip_max": 0.02044576033949852,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "62": {
+   "flip_mean": 0.0013906897511333227,
+   "flip_p99": 0.004913202952593565,
+   "flip_max": 0.014427323825657368,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "63": {
+   "flip_mean": 0.0035409654956310987,
+   "flip_p99": 0.01879250444471836,
+   "flip_max": 0.04581068828701973,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "66": {
+   "flip_mean": 0.0007976819179020822,
+   "flip_p99": 0.007343223784118891,
+   "flip_max": 0.029951101168990135,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "71": {
+   "flip_mean": 0.001010676845908165,
+   "flip_p99": 0.007633047644048929,
+   "flip_max": 0.021802740171551704,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "72": {
+   "flip_mean": 0.001010676845908165,
+   "flip_p99": 0.007633047644048929,
+   "flip_max": 0.021802740171551704,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "73": {
+   "flip_mean": 0.001010676845908165,
+   "flip_p99": 0.007633047644048929,
+   "flip_max": 0.021802740171551704,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "74": {
+   "flip_mean": 0.0037269715685397387,
+   "flip_p99": 0.01914122700691223,
+   "flip_max": 0.04587716981768608,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "77": {
+   "flip_mean": 0.0011453867191448808,
+   "flip_p99": 0.00899266917258501,
+   "flip_max": 0.038436900824308395,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "78": {
+   "flip_mean": 0.0011453867191448808,
+   "flip_p99": 0.00899266917258501,
+   "flip_max": 0.038436900824308395,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "79": {
+   "flip_mean": 0.0038292089011520147,
+   "flip_p99": 0.020756591111421585,
+   "flip_max": 0.04905802384018898,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "81": {
+   "flip_mean": 0.003835370298475027,
+   "flip_p99": 0.020756132900714874,
+   "flip_max": 0.04905802384018898,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "84": {
+   "flip_mean": 0.003698105691000819,
+   "flip_p99": 0.015282281674444675,
+   "flip_max": 0.0187188982963562,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "85": {
+   "flip_mean": 0.003698105691000819,
+   "flip_p99": 0.015282281674444675,
+   "flip_max": 0.0187188982963562,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "86": {
+   "flip_mean": 0.0037595194298774004,
+   "flip_p99": 0.020786793902516365,
+   "flip_max": 0.04961927607655525,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "89": {
+   "flip_mean": 7.567188004031777e-05,
+   "flip_p99": 0.0016729754861444235,
+   "flip_max": 0.012842494994401932,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "90": {
+   "flip_mean": 7.567188004031777e-05,
+   "flip_p99": 0.0016729754861444235,
+   "flip_max": 0.012842494994401932,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "91": {
+   "flip_mean": 7.683249714318663e-05,
+   "flip_p99": 0.0017227859934791923,
+   "flip_max": 0.020384512841701508,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "93": {
+   "flip_mean": 5.976107422611676e-05,
+   "flip_p99": 0.0013285251334309578,
+   "flip_max": 0.012753559276461601,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "94": {
+   "flip_mean": 5.955080268904567e-05,
+   "flip_p99": 0.0013500183122232556,
+   "flip_max": 0.012842908501625061,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "95": {
+   "flip_mean": 0.003749047638848424,
+   "flip_p99": 0.02092832513153553,
+   "flip_max": 0.05021129176020622,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "98": {
+   "flip_mean": 0.003749047638848424,
+   "flip_p99": 0.02092832513153553,
+   "flip_max": 0.05021129176020622,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "101": {
+   "flip_mean": 0.0025866820942610502,
+   "flip_p99": 0.01417581643909216,
+   "flip_max": 0.02246965281665325,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "102": {
+   "flip_mean": 0.0025866820942610502,
+   "flip_p99": 0.01417581643909216,
+   "flip_max": 0.02246965281665325,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "105": {
+   "flip_mean": 0.0025866820942610502,
+   "flip_p99": 0.01417581643909216,
+   "flip_max": 0.02246965281665325,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "107": {
+   "flip_mean": 0.002298704581335187,
+   "flip_p99": 0.01633170247077942,
+   "flip_max": 0.023403996601700783,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "108": {
+   "flip_mean": 0.0040419986471533775,
+   "flip_p99": 0.021023929119110107,
+   "flip_max": 0.05149061605334282,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "111": {
+   "flip_mean": 0.0040419986471533775,
+   "flip_p99": 0.021023929119110107,
+   "flip_max": 0.05149061605334282,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "114": {
+   "flip_mean": 0.0040419986471533775,
+   "flip_p99": 0.021023929119110107,
+   "flip_max": 0.05149061605334282,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "115": {
+   "flip_mean": 0.001257896889001131,
+   "flip_p99": 0.012096928432583809,
+   "flip_max": 0.018525898456573486,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "116": {
+   "flip_mean": 0.002434246940538287,
+   "flip_p99": 0.020756090059876442,
+   "flip_max": 0.05004274845123291,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "117": {
+   "flip_mean": 0.0018610762199386954,
+   "flip_p99": 0.00586744025349617,
+   "flip_max": 0.009681757539510727,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  },
+  "118": {
+   "flip_mean": 0.0040419986471533775,
+   "flip_p99": 0.021023929119110107,
+   "flip_max": 0.05149061605334282,
+   "abs_max": 0.003921598196029663,
+   "abs_p99": 0.003921568393707275,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ },
+ "sensitivity_context": {
+  "scenario": "colorgrade_gradient",
+  "pass": "grade",
+  "format": "RGBA8",
+  "metric": "color"
+ },
+ "pass_graph": []
+}

@@ -69,6 +69,8 @@ pub struct Invocation<'a> {
     pub x: usize,
     pub y: usize,
     demoted: bool,
+    /// Range accumulators by result id when profiling (`EvalConfig::profile`).
+    pub profile: Option<Vec<super::RangeAcc>>,
 }
 
 impl<'a> Invocation<'a> {
@@ -81,7 +83,24 @@ impl<'a> Invocation<'a> {
             x: 0,
             y: 0,
             demoted: false,
+            profile: if prog.profile { Some(vec![super::RangeAcc::EMPTY; prog.template_vals.len()]) } else { None },
         }
+    }
+
+    /// Stores a computed result: rounds it to f16 when the id is an `--f16-sites` site (or
+    /// `--f16-all`) and records its range when profiling. Every result assignment goes through
+    /// here: `set`, derivatives, phis, call arguments and return values.
+    #[inline]
+    pub fn commit(&mut self, id: u32, mut v: Value) {
+        if self.prog.float_ids[id as usize] {
+            if self.prog.f16_sites[id as usize] {
+                super::round_f16(&mut v);
+            }
+            if let Some(p) = &mut self.profile {
+                p[id as usize].record(&v);
+            }
+        }
+        self.vals[id as usize] = v;
     }
 
     /// Prepares the invocation for pixel `(x, y)`.
@@ -138,7 +157,7 @@ impl<'a> Invocation<'a> {
                 Flow::Return(v) => {
                     let fr = self.stack.pop().unwrap();
                     if let Some(t) = fr.ret_target {
-                        self.vals[t as usize] = v.unwrap_or(Value::Undef);
+                        self.commit(t, v.unwrap_or(Value::Undef));
                     }
                     if self.stack.is_empty() {
                         return Ok(if self.demoted { Status::Discarded } else { Status::Finished });
@@ -155,7 +174,7 @@ impl<'a> Invocation<'a> {
                         bail!("{}: recursive call to function %{} is not supported", self.prog.label, info.id);
                     }
                     for (p, a) in info.params.iter().zip(args) {
-                        self.vals[*p as usize] = a;
+                        self.commit(*p, a);
                     }
                     self.stack.push(Frame { func, block: 0, pc: 0, prev_label: 0, ret_target: ret });
                 }
@@ -165,7 +184,7 @@ impl<'a> Invocation<'a> {
 
     /// Delivers a derivative result and continues.
     pub fn resume(&mut self, result: u32, v: Value) -> Result<Status> {
-        self.vals[result as usize] = v;
+        self.commit(result, v);
         self.run()
     }
 
@@ -211,7 +230,7 @@ impl<'a> Invocation<'a> {
             pc += 1;
         }
         for (id, v) in assigned {
-            self.vals[id as usize] = v;
+            self.commit(id, v);
         }
         self.stack.last_mut().unwrap().pc = pc;
         Ok(())
@@ -257,7 +276,7 @@ impl<'a> Invocation<'a> {
 
     fn set(&mut self, inst: &Instruction, v: Value) -> Result<Flow> {
         let id = inst.result_id.ok_or_else(|| anyhow!("instruction has no result id"))?;
-        self.vals[id as usize] = v;
+        self.commit(id, v);
         Ok(Flow::Next)
     }
 

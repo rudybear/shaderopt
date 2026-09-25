@@ -44,6 +44,16 @@ pub struct EvalConfig {
     pub discard_value: f32,
     /// Shader name used in error messages.
     pub label: String,
+    /// Record per-result float ranges (`EvalOutput::ranges`).
+    pub profile: bool,
+    /// Evaluate every `stride`-th quad in each dimension (1 = every pixel); quads at
+    /// `(2*i*stride, 2*j*stride)` still run whole so derivatives are exact.
+    pub stride: usize,
+    /// Result ids whose float value is rounded to f16 after it is computed (in any mode): a
+    /// prediction of demoting that site to `RelaxedPrecision`/explicit f16.
+    pub f16_sites: Vec<u32>,
+    /// Round every float-typed result to f16 (`--f16-all`).
+    pub f16_all: bool,
 }
 
 impl EvalConfig {
@@ -58,7 +68,85 @@ impl EvalConfig {
             sampler_weight_bits: 0,
             discard_value: f32::NAN,
             label: "<shader>".into(),
+            profile: false,
+            stride: 1,
+            f16_sites: Vec::new(),
+            f16_all: false,
         }
+    }
+}
+
+/// Running min/max/NaN/inf statistics of one float-typed result id over the evaluated pixels.
+/// `min`/`max` are over finite components only (vectors and matrices contribute every
+/// component); `samples` counts evaluations of the instruction, not components.
+#[derive(Clone, Copy, Debug, PartialEq)]
+pub struct RangeAcc {
+    pub min: f64,
+    pub max: f64,
+    pub nan: u64,
+    pub inf: u64,
+    pub samples: u64,
+}
+
+impl RangeAcc {
+    pub const EMPTY: RangeAcc = RangeAcc { min: f64::INFINITY, max: f64::NEG_INFINITY, nan: 0, inf: 0, samples: 0 };
+
+    #[inline]
+    pub fn record(&mut self, v: &Value) {
+        self.samples += 1;
+        self.record_leaves(v);
+    }
+
+    fn record_leaves(&mut self, v: &Value) {
+        match v {
+            Value::F(x) => {
+                if x.is_nan() {
+                    self.nan += 1;
+                } else if x.is_infinite() {
+                    self.inf += 1;
+                } else {
+                    if *x < self.min {
+                        self.min = *x;
+                    }
+                    if *x > self.max {
+                        self.max = *x;
+                    }
+                }
+            }
+            Value::V(xs) => {
+                for x in xs {
+                    self.record_leaves(x);
+                }
+            }
+            _ => {}
+        }
+    }
+
+    pub fn merge(&mut self, o: &RangeAcc) {
+        self.min = self.min.min(o.min);
+        self.max = self.max.max(o.max);
+        self.nan += o.nan;
+        self.inf += o.inf;
+        self.samples += o.samples;
+    }
+
+    pub fn to_range(&self) -> crate::analysis::Range {
+        crate::analysis::Range {
+            min: if self.min.is_finite() { self.min } else { f64::NAN },
+            max: if self.max.is_finite() { self.max } else { f64::NAN },
+            nan: self.nan,
+            inf: self.inf,
+            samples: self.samples,
+        }
+    }
+}
+
+/// Rounds every float leaf of a value to f16 (RNE through f32) and widens it back.
+pub fn round_f16(v: &mut Value) {
+    match v {
+        Value::F(x) => *x = value::r16(*x as f32),
+        Value::V(xs) => xs.iter_mut().for_each(round_f16),
+        _ => {}
     }
 }
 
@@ -72,6 +160,8 @@ pub struct EvalOutput {
     /// Derivative evaluations that had to substitute 0 because a neighbor in the quad had
     /// already been discarded.
     pub dead_derivatives: usize,
+    /// Per float-typed result id: ranges over the evaluated pixels (`EvalConfig::profile`).
+    pub ranges: Option<BTreeMap<u32, crate::analysis::Range>>,
 }
 
 #[derive(Clone, Debug)]
@@ -106,6 +196,11 @@ pub struct Program<'a> {
     pub inputs: Vec<(u32, InputKind)>,
     pub outputs: Vec<OutputVar>,
     pub glsl_set: Option<u32>,
+    /// By result id: the result type is a float scalar, vector or matrix.
+    pub float_ids: Vec<bool>,
+    /// By result id: round the result to f16 after computing it.
+    pub f16_sites: Vec<bool>,
+    pub profile: bool,
 }
 
 impl<'a> Program<'a> {
@@ -133,7 +228,25 @@ impl<'a> Program<'a> {
             inputs: Vec::new(),
             outputs: Vec::new(),
             glsl_set,
+            float_ids: vec![false; lifted.bound as usize],
+            f16_sites: vec![false; lifted.bound as usize],
+            profile: cfg.profile,
         };
+        for (id, ty) in &lifted.result_types {
+            if (*id as usize) < prog.float_ids.len() && crate::analysis::is_float_type(lifted, *ty) {
+                prog.float_ids[*id as usize] = true;
+                prog.f16_sites[*id as usize] = cfg.f16_all;
+            }
+        }
+        for id in &cfg.f16_sites {
+            if (*id as usize) >= prog.float_ids.len() {
+                bail!("{}: --f16-sites {id}: result id out of range (bound {})", cfg.label, lifted.bound);
+            }
+            if !prog.float_ids[*id as usize] {
+                bail!("{}: --f16-sites {id}: not a float-typed result id", cfg.label);
+            }
+            prog.f16_sites[*id as usize] = true;
+        }
         for id in 0..lifted.bound {
             if lifted.constants.contains_key(&id) {
                 let v = prog.const_value(id)?;
@@ -560,13 +673,17 @@ pub fn evaluate(lifted: &Lifted, cfg: &EvalConfig) -> Result<EvalOutput> {
     let n_out = prog.outputs.len();
     let quad_rows = (h + 1) / 2;
     let quad_cols = (w + 1) / 2;
+    let stride = cfg.stride.max(1);
     struct RowPair {
+        qy: usize,
         /// per output: 2 rows x w pixels
         colors: Vec<Vec<[f32; 4]>>,
         discarded: usize,
         dead_derivs: usize,
+        profile: Option<Vec<RangeAcc>>,
     }
-    let rows: Vec<RowPair> = (0..quad_rows)
+    let qys: Vec<usize> = (0..quad_rows).step_by(stride).collect();
+    let rows: Vec<RowPair> = qys
         .into_par_iter()
         .map(|qy| -> Result<RowPair> {
             let mut lanes = [Invocation::new(&prog), Invocation::new(&prog), Invocation::new(&prog), Invocation::new(&prog)];
@@ -574,7 +691,7 @@ pub fn evaluate(lifted: &Lifted, cfg: &EvalConfig) -> Result<EvalOutput> {
             let mut discarded = 0;
             let mut dead_derivs = 0;
             let y0 = qy * 2;
-            for qx in 0..quad_cols {
+            for qx in (0..quad_cols).step_by(stride) {
                 let x0 = qx * 2;
                 let res = run_quad(&mut lanes, x0, y0, &mut dead_derivs)
                     .with_context(|| format!("{}: at pixel ({x0}, {y0})", prog.label))?;
@@ -593,13 +710,31 @@ pub fn evaluate(lifted: &Lifted, cfg: &EvalConfig) -> Result<EvalOutput> {
                     }
                 }
             }
-            Ok(RowPair { colors, discarded, dead_derivs })
+            // Per-thread accumulators: the four lanes merge into one vector per quad row.
+            let mut profile: Option<Vec<RangeAcc>> = None;
+            for lane in lanes.iter_mut() {
+                if let Some(p) = lane.profile.take() {
+                    match &mut profile {
+                        None => profile = Some(p),
+                        Some(acc) => acc.iter_mut().zip(&p).for_each(|(a, b)| a.merge(b)),
+                    }
+                }
+            }
+            Ok(RowPair { qy, colors, discarded, dead_derivs, profile })
         })
         .collect::<Result<_>>()?;
     let mut outputs = BTreeMap::new();
     for (o, ov) in prog.outputs.iter().enumerate() {
         let mut img = Image::new(w, h);
-        for (qy, rp) in rows.iter().enumerate() {
+        if stride > 1 {
+            for y in 0..h {
+                for x in 0..w {
+                    img.set_texel(x, y, [cfg.discard_value; 4]);
+                }
+            }
+        }
+        for rp in rows.iter() {
+            let qy = rp.qy;
             for dy in 0..2 {
                 let y = qy * 2 + dy;
                 if y >= h {
@@ -612,11 +747,23 @@ pub fn evaluate(lifted: &Lifted, cfg: &EvalConfig) -> Result<EvalOutput> {
         }
         outputs.insert(ov.location, img);
     }
+    let ranges = if cfg.profile {
+        let mut acc = vec![RangeAcc::EMPTY; lifted.bound as usize];
+        for rp in &rows {
+            if let Some(p) = &rp.profile {
+                acc.iter_mut().zip(p).for_each(|(a, b)| a.merge(b));
+            }
+        }
+        Some(acc.iter().enumerate().filter(|(_, a)| a.samples > 0).map(|(id, a)| (id as u32, a.to_range())).collect())
+    } else {
+        None
+    };
     Ok(EvalOutput {
         width: w,
         height: h,
         outputs,
         discarded_pixels: rows.iter().map(|r| r.discarded).sum(),
         dead_derivatives: rows.iter().map(|r| r.dead_derivs).sum(),
+        ranges,
     })
 }

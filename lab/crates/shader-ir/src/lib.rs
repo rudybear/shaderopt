@@ -7,10 +7,13 @@
 //! * [`interp`]: an interpreter that executes the Fragment entry point per pixel in 2x2 quads,
 //!   in `f64`, `f32` or `f16` numeric mode.
 //! * [`npy`]: a minimal NumPy `.npy` reader/writer for float32 `(H, W, 4)` images.
+//! * [`analysis`]: M2 static analysis (rates, sinks, sampler coordinate kinds, source lines).
 
+pub mod analysis;
 pub mod interp;
 pub mod lift;
 pub mod npy;
+pub mod passes;
 
 /// Reads a `.spv` file into words (little endian).
 pub fn read_spv(path: &std::path::Path) -> anyhow::Result<Vec<u32>> {
