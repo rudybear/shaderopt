@@ -33,7 +33,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.011682242990654205,
+    "speedup": 0.013990090352666861,
     "required": 0.1
    },
    "gates_strict": {
@@ -42,25 +42,25 @@
     "3": false,
     "4": false,
     "5": null,
-    "speedup": 0.011682242990654205,
+    "speedup": 0.013990090352666861,
     "required": 0.02
    },
    "timing": {
     "grade": {
-     "baseline_median_ns": 6848.0,
-     "variant_median_ns": 6768.0,
-     "speedup": 0.011682242990654205,
+     "baseline_median_ns": 6862.0,
+     "variant_median_ns": 6766.0,
+     "speedup": 0.013990090352666861,
      "speedup_ci95": [
-      0.00935672514619883,
-      0.014568764568764568
+      0.011104617182933957,
+      0.0157251019219569
      ],
      "baseline_ci95": [
-      6838.0,
-      6866.0
+      6844.0,
+      6872.0
      ],
      "variant_ci95": [
       6760.0,
-      6780.0
+      6778.0
      ],
      "n": 40,
      "touched": true
@@ -87,7 +87,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.011249259917110717,
+    "speedup": 0.012444444444444444,
     "required": 0.1
    },
    "gates_strict": {
@@ -96,25 +96,25 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.011249259917110717,
+    "speedup": 0.012444444444444444,
     "required": 0.02
    },
    "timing": {
     "grade": {
-     "baseline_median_ns": 6756.0,
-     "variant_median_ns": 6680.0,
-     "speedup": 0.011249259917110717,
+     "baseline_median_ns": 6750.0,
+     "variant_median_ns": 6666.0,
+     "speedup": 0.012444444444444444,
      "speedup_ci95": [
-      0.00948429164196799,
-      0.012418687167356593
+      0.00830367734282325,
+      0.013909440662918023
      ],
      "baseline_ci95": [
-      6744.0,
-      6764.0
+      6740.0,
+      6756.0
      ],
      "variant_ci95": [
-      6676.0,
-      6684.0
+      6660.0,
+      6690.0
      ],
      "n": 40,
      "touched": true
@@ -141,34 +141,34 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.01935116676152533,
+    "speedup": 0.020176186416595625,
     "required": 0.1
    },
    "gates_strict": {
     "1": true,
     "2": true,
     "3": false,
-    "4": false,
+    "4": true,
     "5": null,
-    "speedup": 0.01935116676152533,
+    "speedup": 0.020176186416595625,
     "required": 0.02
    },
    "timing": {
     "grade": {
-     "baseline_median_ns": 7028.0,
-     "variant_median_ns": 6892.0,
-     "speedup": 0.01935116676152533,
+     "baseline_median_ns": 7038.0,
+     "variant_median_ns": 6896.0,
+     "speedup": 0.020176186416595625,
      "speedup_ci95": [
-      0.01596351197263398,
-      0.021609326130224624
+      0.015954415954415956,
+      0.023552948066588846
      ],
      "baseline_ci95": [
-      7008.0,
-      7040.0
+      7016.0,
+      7052.0
      ],
      "variant_ci95": [
-      6882.0,
-      6904.0
+      6880.0,
+      6912.0
      ],
      "n": 20,
      "touched": true

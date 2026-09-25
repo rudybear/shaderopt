@@ -1,0 +1,245 @@
+{
+ "hypothesis": {
+  "shader": "fxaa",
+  "id": "dir4",
+  "claim": "The edge direction estimate uses the four diagonal lumas (4 extra fetches). Using the axis-aligned N/S/E/W lumas already fetched for the range test gives a direction estimate that differs only on diagonal edges; total fetches drop from 12 to 8 on the slow path.",
+  "class": "semantic",
+  "predicted_cost": "12 -> 8 texture fetches and 4 fewer luma dots on the non-early-out path",
+  "predicted_error": "Blend direction differs on diagonal edges: visible FLIP on checker/edges, small on noise",
+  "exposes": [
+   "fxaa_checker",
+   "fxaa_edges"
+  ],
+  "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/fxaa.classification.md"
+ },
+ "variant_id": "hyp_dir4",
+ "prediction": {
+  "fxaa": {
+   "flip_mean": 7.295165414689109e-05,
+   "flip_p99": 0.0,
+   "flip_max": 0.21927209198474884,
+   "abs_max": 0.1568627506494522,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ },
+ "runs": [
+  {
+   "scenario": "fxaa_checker",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.024489442713741778,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.024489442713741778,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 23112.0,
+     "variant_median_ns": 22546.0,
+     "speedup": 0.024489442713741778,
+     "speedup_ci95": [
+      0.02338877338877339,
+      0.026197531989755742
+     ],
+     "baseline_ci95": [
+      23088.0,
+      23136.0
+     ],
+     "variant_ci95": [
+      22522.0,
+      22558.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 7.44111675885506e-05,
+     "flip_p99": 0.0,
+     "flip_max": 0.22386440634727478,
+     "abs_max": 0.16078431904315948,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.03578344699840027,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.03578344699840027,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 23754.0,
+     "variant_median_ns": 22904.0,
+     "speedup": 0.03578344699840027,
+     "speedup_ci95": [
+      0.03470935130581297,
+      0.03699966363942146
+     ],
+     "baseline_ci95": [
+      23734.0,
+      23784.05
+     ],
+     "variant_ci95": [
+      22896.0,
+      22918.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.011156586930155754,
+     "flip_p99": 0.2884339392185211,
+     "flip_max": 0.941041111946106,
+     "abs_max": 0.7490196228027344,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.2938887699007639,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.2938887699007639,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 56028.0,
+     "variant_median_ns": 39562.0,
+     "speedup": 0.2938887699007639,
+     "speedup_ci95": [
+      0.29288418946917194,
+      0.2948769370918531
+     ],
+     "baseline_ci95": [
+      55956.0,
+      56088.0
+     ],
+     "variant_ci95": [
+      39524.0,
+      39582.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.11739113181829453,
+     "flip_p99": 0.26811930537223816,
+     "flip_max": 0.6097065806388855,
+     "abs_max": 0.5686274766921997,
+     "abs_p99": 0.22745098173618317,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_ultrawide",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.01937362350218373,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.01937362350218373,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 53578.0,
+     "variant_median_ns": 52540.0,
+     "speedup": 0.01937362350218373,
+     "speedup_ci95": [
+      0.01863191695915167,
+      0.0205574002910122
+     ],
+     "baseline_ci95": [
+      53550.0,
+      53628.0
+     ],
+     "variant_ci95": [
+      52498.0,
+      52566.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.008444856852293015,
+     "flip_p99": 0.26754581928253174,
+     "flip_max": 0.9495759010314941,
+     "abs_max": 0.7490196228027344,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ]
+}

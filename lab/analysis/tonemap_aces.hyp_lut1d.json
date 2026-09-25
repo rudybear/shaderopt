@@ -1,17 +1,19 @@
 {
  "hypothesis": {
   "shader": "tonemap_aces",
-  "id": "onepow",
-  "claim": "pow(pow(x, contrast), 1/gamma) is applied to two different quantities here (contrast before ACES, gamma after), so they cannot merge; but the ACES fit itself is a rational function whose numerator and denominator share x: evaluate it with one division and two fma per channel, and drop the dead mix(vec3(lum), c, 1.0).",
-  "class": "ulp",
-  "predicted_cost": "Removes 1 dot, 1 mix; ACES from 6 mul/2 add/1 div to 4 fma/1 div per channel",
-  "predicted_error": "<= 2 ULP in f32; zero codes expected",
+  "id": "lut1d",
+  "claim": "Every channel goes through the same scalar curve f(x) = aces(pow(x*e*wb_c, contrast))^(1/gamma) of one variable, so the whole tonemapper is three 1D lookups. The LUT is built on the CPU per uniform set (256 entries over log2 x in [-10, 8]) and sampled with linear filtering; only the log2 mapping stays in the shader.",
+  "class": "semantic",
+  "predicted_cost": "2 pow + rational + clamp per channel -> 1 log2 + 1 texture fetch per channel",
+  "predicted_error": "LUT interpolation error in the toe; expected within the color budget but not zero",
   "exposes": [
-   "tonemap_hdr_edges"
+   "tonemap_hdr_gradient",
+   "tonemap_hdr_edges",
+   "tonemap_extreme"
   ],
   "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"
  },
- "variant_id": "hyp_onepow",
+ "variant_id": "hyp_lut1d",
  "prediction": {
   "tonemap": {
    "flip_mean": 0.0,
@@ -33,7 +35,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.0,
+    "speedup": -0.6104771784232366,
     "required": 0.1
    },
    "gates_strict": {
@@ -42,25 +44,25 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.0,
+    "speedup": -0.6104771784232366,
     "required": 0.02
    },
    "timing": {
     "tonemap": {
-     "baseline_median_ns": 7708.0,
-     "variant_median_ns": 7708.0,
-     "speedup": 0.0,
+     "baseline_median_ns": 7712.0,
+     "variant_median_ns": 12420.0,
+     "speedup": -0.6104771784232366,
      "speedup_ci95": [
-      -0.0012987012987012987,
-      0.0015560165975103733
+      -0.6120913336792942,
+      -0.6082901554404145
      ],
      "baseline_ci95": [
-      7700.0,
-      7712.0
+      7704.0,
+      7720.0
      ],
      "variant_ci95": [
-      7698.0,
-      7716.0
+      12412.0,
+      12426.0
      ],
      "n": 40,
      "touched": true
@@ -87,7 +89,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.0005103342689461597,
+    "speedup": -0.6057128283601122,
     "required": 0.1
    },
    "gates_strict": {
@@ -96,25 +98,25 @@
     "3": false,
     "4": false,
     "5": null,
-    "speedup": 0.0005103342689461597,
+    "speedup": -0.6057128283601122,
     "required": 0.02
    },
    "timing": {
     "tonemap": {
-     "baseline_median_ns": 7838.0,
-     "variant_median_ns": 7834.0,
-     "speedup": 0.0005103342689461597,
+     "baseline_median_ns": 7842.0,
+     "variant_median_ns": 12592.0,
+     "speedup": -0.6057128283601122,
      "speedup_ci95": [
-      -0.001277791975466394,
-      0.003827507017096198
+      -0.6078631605820781,
+      -0.6029561671763507
      ],
      "baseline_ci95": [
-      7826.0,
-      7852.0
+      7834.0,
+      7854.0
      ],
      "variant_ci95": [
-      7812.0,
-      7842.0
+      12578.0,
+      12600.0
      ],
      "n": 40,
      "touched": true
@@ -122,10 +124,10 @@
    },
    "metrics": {
     "tonemap": {
-     "flip_mean": 6.985883942434157e-07,
-     "flip_p99": 0.0,
-     "flip_max": 0.017404373735189438,
-     "abs_max": 0.007012486457824707,
+     "flip_mean": 0.0011035485658794641,
+     "flip_p99": 0.008581061847507954,
+     "flip_max": 0.029763778671622276,
+     "abs_max": 0.007449686527252197,
      "abs_p99": 0.0,
      "masked_pixels": 0,
      "metric": "flip"
@@ -138,10 +140,10 @@
    "gates": {
     "1": true,
     "2": true,
-    "3": true,
+    "3": false,
     "4": false,
     "5": null,
-    "speedup": 0.0,
+    "speedup": -0.6065950920245399,
     "required": 0.1
    },
    "gates_strict": {
@@ -150,25 +152,25 @@
     "3": false,
     "4": false,
     "5": null,
-    "speedup": 0.0,
+    "speedup": -0.6065950920245399,
     "required": 0.02
    },
    "timing": {
     "tonemap": {
-     "baseline_median_ns": 7816.0,
-     "variant_median_ns": 7816.0,
-     "speedup": 0.0,
+     "baseline_median_ns": 7824.0,
+     "variant_median_ns": 12570.0,
+     "speedup": -0.6065950920245399,
      "speedup_ci95": [
-      -0.0033282130056323605,
-      0.0025568908207619537
+      -0.6099443888044822,
+      -0.6020408163265306
      ],
      "baseline_ci95": [
       7808.0,
-      7830.0
+      7844.0
      ],
      "variant_ci95": [
-      7800.0,
-      7840.0
+      12560.0,
+      12580.0
      ],
      "n": 20,
      "touched": true
@@ -176,11 +178,11 @@
    },
    "metrics": {
     "tonemap": {
-     "flip_mean": 2.0532132793960045e-07,
-     "flip_p99": 0.0,
-     "flip_max": 0.009734992869198322,
-     "abs_max": 0.004067808389663696,
-     "abs_p99": 0.0,
+     "flip_mean": 0.02116972580552101,
+     "flip_p99": 0.9673883318901062,
+     "flip_max": 0.9939221143722534,
+     "abs_max": 1.0,
+     "abs_p99": 1.0,
      "masked_pixels": 0,
      "metric": "flip"
     }
@@ -195,7 +197,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": 0.0005027652086475615,
+    "speedup": -1.0757232704402515,
     "required": 0.1
    },
    "gates_strict": {
@@ -204,25 +206,25 @@
     "3": false,
     "4": false,
     "5": null,
-    "speedup": 0.0005027652086475615,
+    "speedup": -1.0757232704402515,
     "required": 0.02
    },
    "timing": {
     "tonemap": {
-     "baseline_median_ns": 7956.0,
-     "variant_median_ns": 7952.0,
-     "speedup": 0.0005027652086475615,
+     "baseline_median_ns": 7950.0,
+     "variant_median_ns": 16502.0,
+     "speedup": -1.0757232704402515,
      "speedup_ci95": [
-      -0.001763668430335097,
-      0.0050200803212851405
+      -1.0780463242698892,
+      -1.071320944249121
      ],
      "baseline_ci95": [
-      7938.0,
-      7972.0
+      7944.0,
+      7964.0
      ],
      "variant_ci95": [
-      7926.0,
-      7962.0
+      16494.0,
+      16512.0
      ],
      "n": 20,
      "touched": true
@@ -230,10 +232,10 @@
    },
    "metrics": {
     "tonemap": {
-     "flip_mean": 5.443562258733436e-07,
-     "flip_p99": 0.0,
-     "flip_max": 0.02337648533284664,
-     "abs_max": 0.00885164737701416,
+     "flip_mean": 0.0006174525478854775,
+     "flip_p99": 0.00884647760540247,
+     "flip_max": 0.036532867699861526,
+     "abs_max": 0.01850021816790104,
      "abs_p99": 0.0,
      "masked_pixels": 0,
      "metric": "flip"
@@ -249,7 +251,7 @@
     "3": true,
     "4": false,
     "5": null,
-    "speedup": -0.001054548940657655,
+    "speedup": -0.5352112676056338,
     "required": 0.1
    },
    "gates_strict": {
@@ -258,25 +260,25 @@
     "3": false,
     "4": false,
     "5": null,
-    "speedup": -0.001054548940657655,
+    "speedup": -0.5352112676056338,
     "required": 0.02
    },
    "timing": {
     "tonemap": {
-     "baseline_median_ns": 20862.0,
-     "variant_median_ns": 20884.0,
-     "speedup": -0.001054548940657655,
+     "baseline_median_ns": 20874.0,
+     "variant_median_ns": 32046.0,
+     "speedup": -0.5352112676056338,
      "speedup_ci95": [
-      -0.002495692532922606,
-      9.580379383023568e-05
+      -0.5407378939277478,
+      -0.5327147503348001
      ],
      "baseline_ci95": [
-      20836.0,
-      20878.0
+      20814.0,
+      20904.0
      ],
      "variant_ci95": [
-      20868.0,
-      20896.0
+      32014.0,
+      32082.0
      ],
      "n": 20,
      "touched": true
@@ -284,10 +286,10 @@
    },
    "metrics": {
     "tonemap": {
-     "flip_mean": 6.147915314613783e-07,
-     "flip_p99": 0.0,
-     "flip_max": 0.01638098619878292,
-     "abs_max": 0.007099330425262451,
+     "flip_mean": 0.0011014919728040695,
+     "flip_p99": 0.009012372232973576,
+     "flip_max": 0.029361624270677567,
+     "abs_max": 0.007449686527252197,
      "abs_p99": 0.0,
      "masked_pixels": 0,
      "metric": "flip"

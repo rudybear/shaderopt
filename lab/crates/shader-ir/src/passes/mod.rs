@@ -10,12 +10,14 @@
 //! Passes: [`fold`], [`dce`], [`cse`], [`ident`], [`unroll`], [`divconst`], [`powspec`],
 //! [`select`]; [`run_pipeline`] applies a list of them and repeats the cleanup passes
 //! `fold,dce,cse,ident` to a fixed point after every other pass. [`validate`] runs the
-//! spirv-tools validator in-process.
+//! spirv-tools validator in-process. The M3 precision demotion ([`demote`], `shader-ir demote`)
+//! is a separate transform with its own class `lossy` (the value changes by design).
 
 pub mod cfg;
 pub mod consts;
 pub mod cse;
 pub mod dce;
+pub mod demote;
 pub mod divconst;
 pub mod fold;
 pub mod ident;
@@ -36,6 +38,9 @@ pub enum Class {
     Exact,
     /// Identical in real arithmetic; bounded rounding difference.
     Ulp,
+    /// Changes the value by design (M3 precision demotion: `RelaxedPrecision`, f16); the
+    /// caller bounds the error with the interpreter's `--f16-sites` prediction and the GPU A/B.
+    Lossy,
 }
 
 impl Class {
@@ -43,6 +48,7 @@ impl Class {
         match self {
             Class::Exact => "exact",
             Class::Ulp => "ulp",
+            Class::Lossy => "lossy",
         }
     }
 }

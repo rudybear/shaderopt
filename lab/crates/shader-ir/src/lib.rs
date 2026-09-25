@@ -8,6 +8,7 @@
 //!   in `f64`, `f32` or `f16` numeric mode.
 //! * [`npy`]: a minimal NumPy `.npy` reader/writer for float32 `(H, W, 4)` images.
 //! * [`analysis`]: M2 static analysis (rates, sinks, sampler coordinate kinds, source lines).
+//! * [`passes`]: M2 rewrite passes and the M3 precision demotion (`passes::demote`).
 
 pub mod analysis;
 pub mod interp;

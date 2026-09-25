@@ -1,5 +1,6 @@
 //! `shader-ir` command line, as specified in `lab/CONTRACTS.md`.
 
+mod cli_demote;
 mod cli_rewrite;
 
 use anyhow::{anyhow, Context, Result};
@@ -36,6 +37,8 @@ enum Cmd {
     Rewrite(cli_rewrite::RewriteArgs),
     /// M2 static analysis: rates, sinks, sampler coordinates, source lines, ranges -> JSON.
     Analyze(cli_analyze::AnalyzeArgs),
+    /// M3 precision demotion: RelaxedPrecision decorations or explicit f16 for listed sites.
+    Demote(cli_demote::DemoteArgs),
 }
 
 #[derive(Args)]
@@ -140,6 +143,7 @@ fn run() -> Result<()> {
             Ok(())
         }
         Cmd::Analyze(a) => cli_analyze::run(&a),
+        Cmd::Demote(a) => cli_demote::run(a),
         Cmd::Eval(a) => {
             if let Some(n) = a.threads {
                 rayon::ThreadPoolBuilder::new().num_threads(n).build_global().ok();

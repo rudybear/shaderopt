@@ -1,0 +1,39 @@
+{
+  "shader": "vignette_grain",
+  "variant_id": "hyp_cheaphash",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "pass": "hypothesis",
+      "class": "semantic",
+      "target": 0,
+      "replaced_by": 0,
+      "detail": "The grain only needs a white-noise-looking value per pixel: a single sin-free integer-style hash (2 fract, 1 dot) replaces the 3-fract/1-dot/3-mul pcg-style hash; different noise, statistically equivalent. The vignette's length() (sqrt) is replaced by smoothstep on squared distance with squared radii, identical shape up to the smoothstep argument mapping."
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "7d416f3c2d33031e61b38a86ba1cbc9b2873bb82",
+    "runner": "490a9856b502995c",
+    "shader_ir": "47ab6e0ae2e72840",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:55:14",
+  "hypothesis": {
+    "shader": "vignette_grain",
+    "id": "cheaphash",
+    "claim": "The grain only needs a white-noise-looking value per pixel: a single sin-free integer-style hash (2 fract, 1 dot) replaces the 3-fract/1-dot/3-mul pcg-style hash; different noise, statistically equivalent. The vignette's length() (sqrt) is replaced by smoothstep on squared distance with squared radii, identical shape up to the smoothstep argument mapping.",
+    "class": "semantic",
+    "predicted_cost": "hash: 3 fract + 2 dot -> 2 fract + 1 dot; vignette: removes sqrt",
+    "predicted_error": "Grain differs per pixel by construction (FLIP mean ~ grain amplitude, like the fragile baseline itself); the vignette falloff curve differs slightly",
+    "exposes": [
+      "vignette_gradient",
+      "vignette_noise"
+    ],
+    "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/vignette_grain.classification.md"
+  }
+}

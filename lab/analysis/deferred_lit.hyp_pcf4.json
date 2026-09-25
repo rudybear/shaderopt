@@ -1,0 +1,82 @@
+{
+ "hypothesis": {
+  "shader": "deferred_lit",
+  "id": "pcf4",
+  "claim": "The 3x3 PCF is a box filter over 9 depth compares. A 2x2 bilinear-weighted compare (4 taps at half-texel offsets, weights from the fractional texel position) gives a comparable soft edge with 4 fetches; the visual difference is a slightly narrower penumbra.",
+  "class": "semantic",
+  "predicted_cost": "9 -> 4 shadow fetches and compares per lit pixel",
+  "predicted_error": "Penumbra width changes: FLIP nonzero on shadow edges; expected within budget on most scenes, not code-exact",
+  "exposes": [
+   "deferred_spheres"
+  ],
+  "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/deferred_lit.classification.md"
+ },
+ "variant_id": "hyp_pcf4",
+ "prediction": {
+  "lit": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 1079132,
+   "metric": "flip"
+  }
+ },
+ "runs": [
+  {
+   "scenario": "deferred_spheres",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11645125673832565,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11645125673832565,
+    "required": 0.02
+   },
+   "timing": {
+    "lit": {
+     "baseline_median_ns": 30794.0,
+     "variant_median_ns": 27208.0,
+     "speedup": 0.11645125673832565,
+     "speedup_ci95": [
+      0.1151494858181933,
+      0.11844155844155844
+     ],
+     "baseline_ci95": [
+      30764.0,
+      30814.0
+     ],
+     "variant_ci95": [
+      27150.0,
+      27238.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "lit": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ]
+}

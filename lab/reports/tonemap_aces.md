@@ -19,6 +19,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
 | canon_exact |  |  |  | 0.0000 | +0.03% | no | no |
-| hyp_onepow |  |  |  | 0.0000 | +0.03% | no | no |
 | canon_full |  |  |  | 0.0000 | +0.00% | no | no |
+| hyp_onepow |  |  |  | 0.0000 | +0.00% | no | no |
+| hyp_lut1d |  |  |  | 0.9674 | -61.05% | no | no |
 

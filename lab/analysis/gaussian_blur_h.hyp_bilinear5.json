@@ -1,0 +1,282 @@
+{
+ "hypothesis": {
+  "shader": "gaussian_blur_h",
+  "id": "bilinear5",
+  "claim": "A 9-tap Gaussian can be evaluated with 5 bilinear fetches: each pair of neighbouring taps is fetched once at the weight-weighted position between them, using the hardware's linear filter to do the blend. Same kernel, same weights.",
+  "class": "semantic",
+  "predicted_cost": "9 -> 5 texture fetches; weights still computed in-shader",
+  "predicted_error": "Sub-code on smooth inputs; up to ~1 code where the 8-bit bilinear weight quantization bites next to bright edges",
+  "exposes": [
+   "bloom_hdr_edges",
+   "bloom_noise"
+  ],
+  "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/gaussian_blur_h.classification.md"
+ },
+ "variant_id": "hyp_bilinear5",
+ "prediction": {
+  "blur_h": {
+   "flip_mean": 0.0006283396505750716,
+   "flip_p99": 0.007065445650368929,
+   "flip_max": 0.012570910155773163,
+   "abs_max": 0.0234375,
+   "abs_p99": 0.00390625,
+   "masked_pixels": 0,
+   "metric": "flip_hdr"
+  }
+ },
+ "runs": [
+  {
+   "scenario": "bloom_hdr_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11281224818694602,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.11281224818694602,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4964.0,
+     "variant_median_ns": 4404.0,
+     "speedup": 0.11281224818694602,
+     "speedup_ci95": [
+      0.11102139685102948,
+      0.11442385173247381
+     ],
+     "baseline_ci95": [
+      4954.0,
+      4968.0
+     ],
+     "variant_ci95": [
+      4396.0,
+      4408.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.00021661176288034767,
+     "flip_p99": 0.0051714698784053326,
+     "flip_max": 0.03600757569074631,
+     "abs_max": 0.0087127685546875,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.0011610088404268026,
+     "flip_p99": 0.006794383283704519,
+     "flip_max": 0.011429459787905216,
+     "abs_max": 0.015625,
+     "abs_p99": 0.015625,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_hdr_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11370967741935484,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11370967741935484,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4960.0,
+     "variant_median_ns": 4396.0,
+     "speedup": 0.11370967741935484,
+     "speedup_ci95": [
+      0.11173747787869719,
+      0.11442385173247381
+     ],
+     "baseline_ci95": [
+      4954.0,
+      4964.0
+     ],
+     "variant_ci95": [
+      4392.0,
+      4402.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr",
+     "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_extreme",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.11294876966518758,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.11294876966518758,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4958.0,
+     "variant_median_ns": 4398.0,
+     "speedup": 0.11294876966518758,
+     "speedup_ci95": [
+      0.11066235864297254,
+      0.11544650040225261
+     ],
+     "baseline_ci95": [
+      4952.0,
+      4970.0
+     ],
+     "variant_ci95": [
+      4392.0,
+      4408.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 2.3081047118012066e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.017355386167764664,
+     "abs_max": 0.008164584636688232,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 9.09570007934235e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.007857734337449074,
+     "abs_max": 16.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 24752,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": true,
+    "5": null,
+    "speedup": 0.1112883925009972,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": true,
+    "5": null,
+    "speedup": 0.1112883925009972,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 5014.0,
+     "variant_median_ns": 4456.0,
+     "speedup": 0.1112883925009972,
+     "speedup_ci95": [
+      0.10933758978451716,
+      0.11284004070898135
+     ],
+     "baseline_ci95": [
+      5010.0,
+      5022.0
+     ],
+     "variant_ci95": [
+      4452.0,
+      4466.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.00045403221156448126,
+     "flip_p99": 0.007146922871470451,
+     "flip_max": 0.030140643939375877,
+     "abs_max": 0.008483350276947021,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.0008245385834015906,
+     "flip_p99": 0.0017473961925134063,
+     "flip_max": 0.0034375216346234083,
+     "abs_max": 0.001953125,
+     "abs_p99": 0.0009765625,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  }
+ ]
+}

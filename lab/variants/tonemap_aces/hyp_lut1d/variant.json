@@ -1,0 +1,40 @@
+{
+  "shader": "tonemap_aces",
+  "variant_id": "hyp_lut1d",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "pass": "hypothesis",
+      "class": "semantic",
+      "target": 0,
+      "replaced_by": 0,
+      "detail": "Every channel goes through the same scalar curve f(x) = aces(pow(x*e*wb_c, contrast))^(1/gamma) of one variable, so the whole tonemapper is three 1D lookups. The LUT is built on the CPU per uniform set (256 entries over log2 x in [-10, 8]) and sampled with linear filtering; only the log2 mapping stays in the shader."
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "7d416f3c2d33031e61b38a86ba1cbc9b2873bb82",
+    "runner": "490a9856b502995c",
+    "shader_ir": "eb04cbf5bccd4aeb",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:54:39",
+  "hypothesis": {
+    "shader": "tonemap_aces",
+    "id": "lut1d",
+    "claim": "Every channel goes through the same scalar curve f(x) = aces(pow(x*e*wb_c, contrast))^(1/gamma) of one variable, so the whole tonemapper is three 1D lookups. The LUT is built on the CPU per uniform set (256 entries over log2 x in [-10, 8]) and sampled with linear filtering; only the log2 mapping stays in the shader.",
+    "class": "semantic",
+    "predicted_cost": "2 pow + rational + clamp per channel -> 1 log2 + 1 texture fetch per channel",
+    "predicted_error": "LUT interpolation error in the toe; expected within the color budget but not zero",
+    "exposes": [
+      "tonemap_hdr_gradient",
+      "tonemap_hdr_edges",
+      "tonemap_extreme"
+    ],
+    "proposed_by": "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"
+  }
+}
