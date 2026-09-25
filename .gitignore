@@ -18,5 +18,5 @@ __pycache__/
 .venv/
 /lab/analysis/search/*/genomes/
 /lab/analysis/search/*/probe/
-/lab/analysis/search/*/*.npy
+/lab/analysis/search/**/*.npy
 /lab/analysis/search/*/src_*.spv

@@ -59,3 +59,5 @@
 - Session was cut off while evicting page cache with a 120 GB allocation (do not do that again). Search restarted per shader.
 - M5 blur_h first pass: best genome = bilinear5 alone (+11.17%, p99 0.0071, ACCEPTED); every f16 genome measured p99 0.97 on bloom_extreme (holdout overflow) although the train-only prediction said 0.0071 -> predictions now cover every scenario incl. holdout before spending GPU.
 - BUG fixed: hoist appended a member whose vector type was declared after the block struct (spirv-val: "requires a previous definition"); 48 of 144 blur genomes failed to build because of it. The pass now moves the member type (and its scalar) ahead of the struct. bilinear5 + hoist: 122 -> 54 instructions.
+- M5 search (desktop, 8 measured + neighbours per shader): no composition beats the single best gene; bilinear5 (+hoist) for blur is the only accepted family. Search predictions missed f16 overflow on bloom_extreme because the CPU quantization kept NaN (masked) where the GPU 8-bit store writes 0: fixed in formats.quantize; bloom-chain and tonemap searches re-run.
+- Final report: lab/reports/FINAL.md.
