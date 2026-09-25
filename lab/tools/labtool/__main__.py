@@ -221,6 +221,29 @@ def cmd_hypo(a):
                 t = list(x["timing"].values())[0]; g = x["gates"]
                 print(f"{sh:16s} {r['variant_id']:16s} {x['scenario']:22s} speedup {t['speedup']*100:+6.2f}% CI[{t['speedup_ci95'][0]*100:+.2f},{t['speedup_ci95'][1]*100:+.2f}] flip p99 {max(m['flip_p99'] for m in x['metrics'].values() if 'flip_p99' in m):.4f} gates {g['1']}{g['2']}{g['3']}{g['4']} (pred {pred})")
 
+def _print_runs(sh, vid, runs):
+    for x in runs:
+        if "error" in x: print(f"{sh:16s} {vid:14s} {x['scenario']:22s} ERROR {x['error'][:70]}"); continue
+        t = list(x["timing"].values())[0]; g = x["gates"]
+        print(f"{sh:16s} {vid:14s} {x['scenario']:22s} speedup {t['speedup']*100:+6.2f}% CI[{t['speedup_ci95'][0]*100:+.2f},{t['speedup_ci95'][1]*100:+.2f}] flip p99 {max(m.get('flip_p99', 0) for m in x['metrics'].values()):.4f} gates {g['1']}{g['2']}{g['3']}{g['4']}")
+
+def cmd_hoist(a):
+    from .m4 import hoist
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = hoist(sh, rounds=a.rounds, samples=a.samples, device=a.device)
+        print(f"{sh:16s} hoisted {len(r['hoisted'])} members: {[x['member'] + ':' + x.get('expr', '')[:40] for x in r['hoisted']][:6]}")
+        _print_runs(sh, "hoist", r["runs"])
+
+def cmd_approx(a):
+    from .m4 import approx
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = approx(sh, max_rel_err=a.max_rel_err, rounds=a.rounds, samples=a.samples, device=a.device)
+        print(f"{sh:16s} sites {r['sites']} -> {len(r.get('ops', []))} approximations" + (f" ERROR {r['error'][:80]}" if r.get("error") else ""))
+        if r.get("log"): print("   " + r["log"].replace("\n", "\n   ")[:600])
+        _print_runs(sh, r["variant_id"], r["runs"])
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="lab")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -239,6 +262,8 @@ def main(argv=None):
     p = sub.add_parser("report"); p.add_argument("--shader"); p.set_defaults(f=cmd_report)
     p = sub.add_parser("graph"); p.add_argument("--scenario"); p.add_argument("--split", default="train"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_graph)
     p = sub.add_parser("hypo"); p.add_argument("--shader"); p.add_argument("--id"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_hypo)
+    p = sub.add_parser("hoist"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_hoist)
+    p = sub.add_parser("approx"); p.add_argument("--shader"); p.add_argument("--max-rel-err", type=float, default=1e-3); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_approx)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)
