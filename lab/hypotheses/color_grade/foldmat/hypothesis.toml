@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "color_grade"
+id = "foldmat"
+claim = "warm * M is a per-dispatch matrix; lift/gamma/gain preprocessing is per-dispatch too. Fold warm into the matrix rows on the CPU and pass 1/gamma directly: the per-pixel work drops to one 3x3 matrix, one luminance dot, one mix, one fma-chain and one pow."
+class = "semantic"
+predicted_cost = "Removes 3 mul, 2 fma, 3 div (1/gamma) and the warm construction per pixel; needs 2 new uniform members computed on the CPU"
+predicted_error = "Identical in real arithmetic; <= a few ULP"
+exposes = ["colorgrade_gradient"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/color_grade.classification.md"

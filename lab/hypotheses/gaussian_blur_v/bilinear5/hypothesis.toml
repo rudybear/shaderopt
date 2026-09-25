@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "gaussian_blur_v"
+id = "bilinear5"
+claim = "A 9-tap Gaussian can be evaluated with 5 bilinear fetches: each pair of neighbouring taps is fetched once at the weight-weighted position between them, using the hardware's linear filter to do the blend. Same kernel, same weights."
+class = "semantic"
+predicted_cost = "9 -> 5 texture fetches; weights still computed in-shader"
+predicted_error = "Sub-code on smooth inputs; up to ~1 code where the 8-bit bilinear weight quantization bites next to bright edges"
+exposes = ["bloom_hdr_edges", "bloom_noise"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/gaussian_blur_v.classification.md"

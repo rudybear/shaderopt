@@ -15,6 +15,8 @@ def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
     for inp in sc.inputs:
         p = d / f"{inp['name']}.npy"
         if force or not p.exists():
+            if "file" in inp and inp["file"].startswith("__extra__/"):
+                continue  # supplied by make_job(extra_inputs=...)
             if "file" in inp:
                 src = (sc.path.parent / inp["file"]).resolve()
                 img = np.load(src).astype(np.float32)
@@ -26,6 +28,15 @@ def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
         out[inp["name"]] = p
     return out
 
+def scenario_toml(sc: Scenario) -> str:
+    import toml
+    d = {"scenario": {"name": sc.name, "split": sc.split, "width": sc.width, "height": sc.height},
+         "inputs": [dict(i) for i in sc.inputs],
+         "passes": [{"name": p.name, "shader": p.shader, "samplers": p.samplers, "uniforms": p.uniforms,
+                     "output": {"format": p.format, "scale": p.scale}, "load": p.load, "store": p.store, "sampler": p.sampler} for p in sc.passes],
+         "quality": {"outputs": sc.quality_outputs}}
+    return toml.dumps(d)
+
 def variant_spv(shader: str, variant_id: str) -> Path:
     if variant_id == "baseline":
         return baseline_spv(shader)
@@ -35,7 +46,7 @@ def variant_spv(shader: str, variant_id: str) -> Path:
     return p
 
 def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict | None = None, samples: int = 30,
-             iterations: int = 8, warmup: int = 5, readback: str = "last", tag: str | None = None) -> Path:
+             iterations: int = 8, warmup: int = 5, readback: str = "last", tag: str | None = None, extra_inputs: dict | None = None) -> Path:
     """per_pass_variant maps pass name -> variant id (default: variant_id for every pass whose shader has it, else baseline)."""
     inputs = gen_inputs(sc)
     jid = tag or variant_id
@@ -56,7 +67,11 @@ def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict 
         dst = jd / "inputs" / f"{name}.npy"
         os.symlink(p.resolve(), dst)
         ins[name] = f"inputs/{name}.npy"
-    job = {"schema": 1, "scenario": os.path.relpath(sc.path, jd), "variant_id": variant_id, "passes": passes,
+    for name, arr in (extra_inputs or {}).items():
+        dst = jd / "inputs" / f"{name}.npy"; np.save(dst, np.asarray(arr, dtype=np.float32)); ins[name] = f"inputs/{name}.npy"
+    # Always serialize the Scenario object we were given: derived scenarios (formats, resolution, extra inputs) must reach the runner.
+    (jd / "scenario.toml").write_text(scenario_toml(sc))
+    job = {"schema": 1, "scenario": "scenario.toml", "variant_id": variant_id, "passes": passes,
            "inputs": ins, "samples": samples, "iterations": iterations, "warmup": warmup, "readback": readback}
     (jd / "job.json").write_text(json.dumps(job, indent=2))
     return jd

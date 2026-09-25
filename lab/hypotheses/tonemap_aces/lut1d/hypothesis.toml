@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "tonemap_aces"
+id = "lut1d"
+claim = "Every channel goes through the same scalar curve f(x) = aces(pow(x*e*wb_c, contrast))^(1/gamma) of one variable, so the whole tonemapper is three 1D lookups. The LUT is built on the CPU per uniform set (256 entries over log2 x in [-10, 8]) and sampled with linear filtering; only the log2 mapping stays in the shader."
+class = "semantic"
+predicted_cost = "2 pow + rational + clamp per channel -> 1 log2 + 1 texture fetch per channel"
+predicted_error = "LUT interpolation error in the toe; expected within the color budget but not zero"
+exposes = ["tonemap_hdr_gradient", "tonemap_hdr_edges", "tonemap_extreme"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"

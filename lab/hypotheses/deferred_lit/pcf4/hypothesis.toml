@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "deferred_lit"
+id = "pcf4"
+claim = "The 3x3 PCF is a box filter over 9 depth compares. A 2x2 bilinear-weighted compare (4 taps at half-texel offsets, weights from the fractional texel position) gives a comparable soft edge with 4 fetches; the visual difference is a slightly narrower penumbra."
+class = "semantic"
+predicted_cost = "9 -> 4 shadow fetches and compares per lit pixel"
+predicted_error = "Penumbra width changes: FLIP nonzero on shadow edges; expected within budget on most scenes, not code-exact"
+exposes = ["deferred_spheres"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/deferred_lit.classification.md"

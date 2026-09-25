@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "tonemap_aces"
+id = "onepow"
+claim = "pow(pow(x, contrast), 1/gamma) is applied to two different quantities here (contrast before ACES, gamma after), so they cannot merge; but the ACES fit itself is a rational function whose numerator and denominator share x: evaluate it with one division and two fma per channel, and drop the dead mix(vec3(lum), c, 1.0)."
+class = "ulp"
+predicted_cost = "Removes 1 dot, 1 mix; ACES from 6 mul/2 add/1 div to 4 fma/1 div per channel"
+predicted_error = "<= 2 ULP in f32; zero codes expected"
+exposes = ["tonemap_hdr_edges"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/tonemap_aces.classification.md"

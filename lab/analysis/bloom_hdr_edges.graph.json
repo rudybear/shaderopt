@@ -1,0 +1,308 @@
+[
+ {
+  "ts": "2026-09-25T01:48:21",
+  "experiment": "fmt_threshold_R11G11B10F",
+  "kind": "format",
+  "pass": "threshold",
+  "from": "RGBA16F",
+  "to": "R11G11B10F",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23856.0,
+  "chain_variant_ns": 23880.0,
+  "speedup": -0.001006036217303823,
+  "speedup_ci95": [
+   -0.0020967877212111044,
+   0.00016758840288252054
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_threshold_R11G11B10F/20260925-014820"
+ },
+ {
+  "ts": "2026-09-25T01:48:25",
+  "experiment": "fmt_threshold_RGBA8",
+  "kind": "format",
+  "pass": "threshold",
+  "from": "RGBA16F",
+  "to": "RGBA8",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23896.0,
+  "chain_variant_ns": 23902.0,
+  "speedup": -0.00025108804820890524,
+  "speedup_ci95": [
+   -0.001172136637642331,
+   0.0009201940772963025
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_threshold_RGBA8/20260925-014824"
+ },
+ {
+  "ts": "2026-09-25T01:48:29",
+  "experiment": "res_threshold_0.25",
+  "kind": "resolution",
+  "pass": "threshold",
+  "from": 0.5,
+  "to": 0.25,
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23896.0,
+  "chain_variant_ns": 23876.0,
+  "speedup": 0.0008369601606963508,
+  "speedup_ci95": [
+   -0.00016747613465081226,
+   0.0021742811809217183
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_res_threshold_0.25/20260925-014827"
+ },
+ {
+  "ts": "2026-09-25T01:48:32",
+  "experiment": "fmt_blur_h_R11G11B10F",
+  "kind": "format",
+  "pass": "blur_h",
+  "from": "RGBA16F",
+  "to": "R11G11B10F",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23894.0,
+  "chain_variant_ns": 23898.0,
+  "speedup": -0.00016740604335816522,
+  "speedup_ci95": [
+   -0.0019269436997319035,
+   0.0008369601606963508
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_blur_h_R11G11B10F/20260925-014831"
+ },
+ {
+  "ts": "2026-09-25T01:48:36",
+  "experiment": "fmt_blur_h_RGBA8",
+  "kind": "format",
+  "pass": "blur_h",
+  "from": "RGBA16F",
+  "to": "RGBA8",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23892.0,
+  "chain_variant_ns": 23886.0,
+  "speedup": 0.00025113008538422905,
+  "speedup_ci95": [
+   -0.0006699073438986369,
+   0.0014230734622250525
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_blur_h_RGBA8/20260925-014834"
+ },
+ {
+  "ts": "2026-09-25T01:48:39",
+  "experiment": "res_blur_h_0.25",
+  "kind": "resolution",
+  "pass": "blur_h",
+  "from": 0.5,
+  "to": 0.25,
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23904.0,
+  "chain_variant_ns": 23886.0,
+  "speedup": 0.0007530120481927711,
+  "speedup_ci95": [
+   -0.0007540246068524337,
+   0.0014222370952898854
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_res_blur_h_0.25/20260925-014838"
+ },
+ {
+  "ts": "2026-09-25T01:48:43",
+  "experiment": "fmt_blur_v_R11G11B10F",
+  "kind": "format",
+  "pass": "blur_v",
+  "from": "RGBA16F",
+  "to": "R11G11B10F",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23878.0,
+  "chain_variant_ns": 23892.0,
+  "speedup": -0.0005863137616215763,
+  "speedup_ci95": [
+   -0.001508934148632954,
+   0.0003348961821835231
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_blur_v_R11G11B10F/20260925-014842"
+ },
+ {
+  "ts": "2026-09-25T01:48:46",
+  "experiment": "fmt_blur_v_RGBA8",
+  "kind": "format",
+  "pass": "blur_v",
+  "from": "RGBA16F",
+  "to": "RGBA8",
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23908.0,
+  "chain_variant_ns": 23898.0,
+  "speedup": 0.00041827003513468297,
+  "speedup_ci95": [
+   -0.0008372474675229239,
+   0.0014210482320488173
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_fmt_blur_v_RGBA8/20260925-014845"
+ },
+ {
+  "ts": "2026-09-25T01:48:50",
+  "experiment": "res_blur_v_0.25",
+  "kind": "resolution",
+  "pass": "blur_v",
+  "from": 0.5,
+  "to": 0.25,
+  "scenario": "bloom_hdr_edges",
+  "split": "train",
+  "chain_baseline_ns": 23912.0,
+  "chain_variant_ns": 23916.0,
+  "speedup": -0.00016728002676480428,
+  "speedup_ci95": [
+   -0.0013395847287340924,
+   0.0018376211159371867
+  ],
+  "metrics": {
+   "composite": {
+    "flip_mean": 0.0,
+    "flip_p99": 0.0,
+    "flip_max": 0.0,
+    "abs_max": 0.0,
+    "abs_p99": 0.0,
+    "masked_pixels": 0,
+    "metric": "flip"
+   }
+  },
+  "within_budget": true,
+  "timing_gate": false,
+  "required": 0.1,
+  "validation_errors": 0,
+  "device": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+  "result_dir": "/home/rudybear/sources/shaderopt/lab/results/bloom_hdr_edges/graph_res_blur_v_0.25/20260925-014849"
+ }
+]

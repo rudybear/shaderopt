@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "fxaa"
+id = "dir4"
+claim = "The edge direction estimate uses the four diagonal lumas (4 extra fetches). Using the axis-aligned N/S/E/W lumas already fetched for the range test gives a direction estimate that differs only on diagonal edges; total fetches drop from 12 to 8 on the slow path."
+class = "semantic"
+predicted_cost = "12 -> 8 texture fetches and 4 fewer luma dots on the non-early-out path"
+predicted_error = "Blend direction differs on diagonal edges: visible FLIP on checker/edges, small on noise"
+exposes = ["fxaa_checker", "fxaa_edges"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/fxaa.classification.md"

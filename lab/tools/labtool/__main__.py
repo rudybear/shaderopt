@@ -207,6 +207,20 @@ def cmd_graph(a):
             if "error" in r: print(f"{sc:20s} {r['experiment']:28s} ERROR {r['error'][:60]}"); continue
             print(f"{sc:20s} {r['experiment']:28s} speedup {r['speedup']*100:+.2f}% flip p99 {list(r['metrics'].values())[0]['flip_p99']:.4f} budget={r['within_budget']} timing={r['timing_gate']}")
 
+def cmd_hypo(a):
+    from .hypo import hypotheses, run_hypothesis
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        for hdir in hypotheses(sh):
+            if a.id and hdir.parent.name != a.id:
+                continue
+            r = run_hypothesis(sh, hdir.parent, rounds=a.rounds, samples=a.samples, device=a.device)
+            pred = ", ".join(f"{k}: p99 {v['flip_p99']:.4f}" for k, v in r["prediction"].items())
+            for x in r["runs"]:
+                if "error" in x: print(f"{sh:16s} {r['variant_id']:16s} {x['scenario']:22s} ERROR {x['error'][:70]}"); continue
+                t = list(x["timing"].values())[0]; g = x["gates"]
+                print(f"{sh:16s} {r['variant_id']:16s} {x['scenario']:22s} speedup {t['speedup']*100:+6.2f}% CI[{t['speedup_ci95'][0]*100:+.2f},{t['speedup_ci95'][1]*100:+.2f}] flip p99 {max(m['flip_p99'] for m in x['metrics'].values() if 'flip_p99' in m):.4f} gates {g['1']}{g['2']}{g['3']}{g['4']} (pred {pred})")
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="lab")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -224,6 +238,7 @@ def main(argv=None):
     p = sub.add_parser("demote"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--singles", type=int, default=6); p.add_argument("--modes", default="f16,relaxed"); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_demote)
     p = sub.add_parser("report"); p.add_argument("--shader"); p.set_defaults(f=cmd_report)
     p = sub.add_parser("graph"); p.add_argument("--scenario"); p.add_argument("--split", default="train"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_graph)
+    p = sub.add_parser("hypo"); p.add_argument("--shader"); p.add_argument("--id"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_hypo)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)

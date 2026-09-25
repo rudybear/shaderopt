@@ -1,0 +1,9 @@
+[hypothesis]
+shader = "vignette_grain"
+id = "cheaphash"
+claim = "The grain only needs a white-noise-looking value per pixel: a single sin-free integer-style hash (2 fract, 1 dot) replaces the 3-fract/1-dot/3-mul pcg-style hash; different noise, statistically equivalent. The vignette's length() (sqrt) is replaced by smoothstep on squared distance with squared radii, identical shape up to the smoothstep argument mapping."
+class = "semantic"
+predicted_cost = "hash: 3 fract + 2 dot -> 2 fract + 1 dot; vignette: removes sqrt"
+predicted_error = "Grain differs per pixel by construction (FLIP mean ~ grain amplitude, like the fragile baseline itself); the vignette falloff curve differs slightly"
+exposes = ["vignette_gradient", "vignette_noise"]
+proposed_by = "Claude Fable 5.1, 2026-09-25, from lab/reports/vignette_grain.classification.md"
