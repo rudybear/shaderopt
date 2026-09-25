@@ -93,7 +93,9 @@ def _gbuffer(w, h, seed):
         albedo[m] = [*col, 1.0]; normal[m, :3] = nrm[m]; normal[m, 3] = 1.0
     shadowuv[..., 0] = u; shadowuv[..., 1] = v; shadowuv[..., 2] = 0.5 + 0.3 * v; shadowuv[..., 3] = 1.0
     shadow = np.zeros((h, w, 4), np.float32)
-    shadow[..., 0] = np.where(((np.floor(u * 6) + np.floor(v * 4)) % 2) == 0, 1.0, 0.55 + 0.3 * v)  # occluders as depth
+    # occluder depth 0.3 in checker cells (receiver depth shadowuv.z is 0.5..0.8, so those cells ARE shadowed); 1.0 elsewhere.
+    # The first version used 0.55+0.3v, which never shadowed anything and made every PCF variant look lossless.
+    shadow[..., 0] = np.where(((np.floor(u * 6) + np.floor(v * 4)) % 2) == 0, 1.0, 0.3)
     shadow[..., 3] = 1.0
     return {"albedo": albedo, "normal": normal, "shadowuv": shadowuv, "shadow": shadow}
 

@@ -47,3 +47,5 @@
   - REJECTED tonemap lut1d: 53..108% SLOWER (3 dependent texture fetches cost more than the ALU curve on this GPU) and p99 0.97 on NaN/Inf inputs. Claim falsified on desktop; may differ on mobile.
   - NO EFFECT tonemap onepow: driver already fuses. color_grade foldmat: +1.2..2.0% exact (FLIP 0) but below the 2%/10% gates.
   - REJECTED (metric-limited) vignette cheaphash: FLIP 0.34..0.46 because a different noise realization is different pixels; a statistical-equivalence metric would be needed to judge grain rewrites; parked.
+- CPU-model predictions track the GPU: blur bilinear5 predicted FLIP p99 0.0071 vs measured 0.0068; fxaa dir4 predicted max 0.219 vs 0.224 on checker; color_grade foldmat predicted max 0.0112 vs 0.0127.
+- NEGATIVE (test-design bug): deferred_spheres' shadow map never shadowed anything (occluder depth 0.55+0.3v vs receiver 0.5+0.3v), so pcf4's "lossless" +11.65% was a fetch-count win with no penumbra to judge. Generator fixed (occluder depth 0.3); deferred_lit re-classified and pcf4 re-measured below.
