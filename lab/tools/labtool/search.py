@@ -244,8 +244,8 @@ def search(shader: str, gpu_budget: int = 10, rounds: int = 2, samples: int = 20
                     # hoisted members depend on this scenario's uniforms: recompute from the plan when present
                     plan = Path(p["spv"]).parent / "plan.json"
                     if plan.exists() and json.loads(plan.read_text()):
-                        planv = json.loads(plan.read_text()); pre = Path(p["spv"]).parent / ("1_exact.spv" if (Path(p["spv"]).parent / "1_exact.spv").exists() else "")
-                        src = pre if pre.name else ctx.spv
+                        planv = json.loads(plan.read_text()); pre = Path(p["spv"]).parent / "1_exact.spv"
+                        src = pre if pre.exists() else ctx.spv   # hoist without the exact pipeline hoists from the source module
                         dump = Path(p["spv"]).parent / "dump_sc.json"
                         _eval(src, 2, 2, ctx.samplers, {**pp.uniforms, **eu}, Path(p["spv"]).parent / "d.npy", ["--dump-ids", ",".join(str(x["source_id"]) for x in planv), "--dump", dump]); (Path(p["spv"]).parent / "d.npy").unlink(missing_ok=True)
                         vals = json.loads(dump.read_text())
