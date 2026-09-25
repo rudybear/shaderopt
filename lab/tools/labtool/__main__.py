@@ -244,6 +244,14 @@ def cmd_approx(a):
         if r.get("log"): print("   " + r["log"].replace("\n", "\n   ")[:600])
         _print_runs(sh, r["variant_id"], r["runs"])
 
+def cmd_search(a):
+    from .search import search
+    shaders = [a.shader] if a.shader else sorted(p.stem for p in SPV_DIR.glob("*.spv") if not p.stem.endswith(".g"))
+    for sh in shaders:
+        r = search(sh, gpu_budget=a.gpu_budget, rounds=a.rounds, samples=a.samples, device=a.device)
+        for gid, m in sorted(r["measured"].items(), key=lambda kv: -kv[1]["min_speedup"]):
+            print(f"{sh:16s} {gid:40s} pred {m['predicted_p99']:.4f} meas {m['worst_p99']:.4f} speedup {m['min_speedup']*100:+.2f}% {'ACCEPTED' if m['accepted'] else ''}")
+
 def main(argv=None):
     ap = argparse.ArgumentParser(prog="lab")
     sub = ap.add_subparsers(dest="cmd", required=True)
@@ -264,6 +272,7 @@ def main(argv=None):
     p = sub.add_parser("hypo"); p.add_argument("--shader"); p.add_argument("--id"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_hypo)
     p = sub.add_parser("hoist"); p.add_argument("--shader"); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_hoist)
     p = sub.add_parser("approx"); p.add_argument("--shader"); p.add_argument("--max-rel-err", type=float, default=1e-3); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_approx)
+    p = sub.add_parser("search"); p.add_argument("--shader"); p.add_argument("--gpu-budget", type=int, default=10); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_search)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
     a = ap.parse_args(argv)
     a.f(a)
