@@ -23,10 +23,11 @@
 //! are redirected too, so the subtree (and the variables that only feed stores into each other
 //! afterwards, removed here) is dead code for `dce`.
 //!
-//! The CPU values come from the interpreter: `eval --dump-ids <source ids> --dump dump.json` on
-//! the module given to `hoist` (see [`crate::interp::dump`]); `plan.json` lists, per member, the
-//! type, the source id, a textual reconstruction of the expression and the uniform members it
-//! depends on.
+//! Values under a branch are hoisted too (computing them unconditionally on the CPU is
+//! harmless; the branch stays and reads the member). The CPU values come from the interpreter:
+//! `eval --dump-ids <source ids> --dump dump.json` on the module given to `hoist` (see
+//! [`crate::interp::dump`]); `plan.json` lists, per member, the type, the source id, a textual
+//! reconstruction of the expression and the uniform members it depends on.
 
 use super::cfg::Cfg;
 use super::consts::{self, CV};

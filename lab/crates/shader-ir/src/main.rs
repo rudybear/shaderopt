@@ -195,9 +195,12 @@ fn run() -> Result<()> {
                 cfg.inputs.push((n.to_string(), v.to_string()));
             }
             if let Some(p) = &a.dump {
-                let d = interp::dump::dump_first_quad(&lifted, &cfg, &a.dump_ids)?;
+                let d = interp::dump::dump_values(&lifted, &cfg, &a.dump_ids)?;
                 std::fs::write(p, serde_json::to_string_pretty(&interp::dump::dump_json(&d))?).with_context(|| format!("cannot write {}", p.display()))?;
-                eprintln!("{}: wrote {} values at pixel (0, 0) to {}", a.spv.display(), d.len(), p.display());
+                if !d.never_executed.is_empty() {
+                    eprintln!("{}: warning: ids {:?} were never executed on {}x{} (zero-filled)", a.spv.display(), d.never_executed, a.width, a.height);
+                }
+                eprintln!("{}: wrote {} values (last from pixel {:?}) to {}", a.spv.display(), d.values.len(), d.pixel, p.display());
             }
             let t0 = std::time::Instant::now();
             let out = interp::evaluate(&lifted, &cfg)?;

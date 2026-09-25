@@ -386,3 +386,33 @@ f16 spacing 8) is chaotic under any operand difference (the prediction itself is
 f32 there). Rejections in the corpus are uniform/input loads, image samples, call results,
 loads through the `param` pointer of `hash(vec2 p)`, and variables with an unlisted (sink)
 load or a component access chain (`p3.x`, `alb.a`).
+
+## M4 passes (`src/passes/hoist.rs`, `src/passes/approx.rs`; `shader-ir hoist`, `shader-ir approx`)
+
+```
+shader-ir hoist --spv in.spv --out out.spv --ops ops.json --plan plan.json [--min-ops 2]
+shader-ir eval --spv in.spv --width 2 --height 2 ... --dump-ids 57,58 --dump dump.json   # member values
+shader-ir approx --spv in.spv --out out.spv --ops ops.json --ranges ranges.json --sites 90,91 [--degree 3..7] [--max-rel-err 1e-3]
+```
+
+`hoist` reuses the M2 rate analysis: every maximal uniform-rate value (rate `uniform`, type
+`float`/`vec2`/`vec3`/`vec4`/`int`, pure subtree with `>= --min-ops` arithmetic/ext-inst
+instructions, consumed by a pixel-rate instruction, a phi, a branch or a store that cannot be
+forwarded) becomes a member `h_<id>` appended to the `Block`-decorated uniform block at std140
+offsets; loads of `Function`/`Private` variables are looked through when they have exactly one
+reaching store (reaching-definitions dataflow per variable, so loop-carried and conditional
+stores are not forwarded). `plan.json` carries the member, type, source id, a GLSL-like `expr`
+and `depends_on`; `eval --dump-ids` (`src/interp/dump.rs`) evaluates quads from (0, 0) until
+every listed id has a value and writes `{"57": [..]}` (zeros plus `"_never_executed"` for ids no
+pixel executed). After `rewrite --passes fold,dce,cse,ident,unroll`, the corpus
+`gaussian_blur_h` yields 9 weights plus the `wsum` splat (10 members, 60 bytes; 269 -> 173
+instructions), `color_grade` 2 vec3 members (77 -> 67); the hoisted modules are bit-identical
+in f32 given the dumped values. Class `exact`.
+
+`approx` fits, per listed site and from the operand's profiled range (5% padding), the
+smallest-degree polynomial (Chebyshev-basis weighted least squares, relative error, f32 `Fma`
+Horner on `t = x*A + B`) within `--max-rel-err`, componentwise for vectors, with no range
+guard; class `lossy` (a third `Class` variant). `Pow` needs a constant exponent in `(0, 4]`
+(the corpus `tonemap_aces`/`color_grade` exponents are uniforms: skipped with that reason);
+`exp(-4.41..0.21)` needs degree 7 for 1e-3, the corpus Gaussian `Exp` on `[-3.73, 0.18]`
+degree 6 (3.4e-4), `x^(1/2.2)` on `[0.25, 1]` degree 4 but never fits on `[0, 1]`.
