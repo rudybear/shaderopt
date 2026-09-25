@@ -10,7 +10,12 @@ def srgb_decode(x):
     return np.where(x <= 0.04045, x / 12.92, np.power((x + 0.055) / 1.055, 2.4))
 
 def quantize(fmt: str, img: np.ndarray) -> np.ndarray:
+    """Model what the GPU store does to the value. For UNORM/sRGB 8-bit and 10-bit targets the conversion of NaN
+    yields 0 and +/-Inf clamps (what this device does and what the runner reads back), so the CPU prediction must
+    not keep NaN there, or the comparison masks exactly the pixels that go black on the device."""
     out = img.astype(np.float32).copy()
+    if fmt in ("RGBA8", "RGBA8_SRGB", "RGB10A2"):
+        out = np.nan_to_num(out, nan=0.0, posinf=1.0, neginf=0.0)
     rgb, a = out[..., :3], out[..., 3:4]
     if fmt == "RGBA8":
         out = np.round(np.clip(out, 0, 1) * 255) / 255

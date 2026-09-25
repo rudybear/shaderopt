@@ -1,0 +1,5643 @@
+{
+ "shader": "gaussian_blur_v",
+ "tolerance": {
+  "metric": "flip_hdr",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 144,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_aoff_dall/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.00924824271351099,
+   "pred_mean": 0.0010165200801566243,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.008634566329419613,
+   "pred_mean": 0.001245924853719771,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0044416100718081,
+   "pred_mean": 0.0005541155114769936,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.0039659421890974045,
+   "pred_mean": 0.0005870761233381927,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0011468891752883792,
+   "pred_mean": 9.896063420455903e-05,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.0021279165521264076,
+   "pred_mean": 0.00028606184059754014,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_--_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_aoff_dall/gaussian_blur_v.spv",
+   "ops": 27,
+   "extra_u": {},
+   "pred_p99": 0.0030895634554326534,
+   "pred_mean": 0.0006065315683372319,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.00924824271351099,
+   "pred_mean": 0.0010165200801566243,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.008634566329419613,
+   "pred_mean": 0.001245924853719771,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.01015130802989006,
+   "pred_mean": 0.001612992724403739,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0044416100718081,
+   "pred_mean": 0.0005541155114769936,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.0039659421890974045,
+   "pred_mean": 0.0005870761233381927,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.005200579762458801,
+   "pred_mean": 0.001263986574485898,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0011468891752883792,
+   "pred_mean": 9.896063420455903e-05,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 9,
+   "extra_u": {},
+   "pred_p99": 0.0021279165521264076,
+   "pred_mean": 0.00028606184059754014,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_-h_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 28,
+   "extra_u": {},
+   "pred_p99": 0.00379389151930809,
+   "pred_mean": 0.0007846273947507143,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dnone/gaussian_blur_v.spv",
+   "ops": 185,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_aoff_dall/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 185,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 185,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 185,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_baseline_xh_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 190,
+   "extra_u": {
+    "h_106": 0.1353352814912796,
+    "h_138": 0.32465246319770813,
+    "h_170": 0.6065306663513184,
+    "h_202": 0.8824968934059143,
+    "h_234": 1.0,
+    "h_266": 0.8824968934059143,
+    "h_298": 0.6065306663513184,
+    "h_330": 0.32465246319770813,
+    "h_362": 0.1353352814912796,
+    "h_82": [
+     4.898030757904053,
+     4.898030757904053,
+     4.898030757904053
+    ]
+   },
+   "pred_p99": 0.0023482684046030045,
+   "pred_mean": 0.000325407920172438,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dnone/gaussian_blur_v.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_aoff_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_aoff_dall/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p01_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_--_a0p0001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_--_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dnone/gaussian_blur_v.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_aoff_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_aoff_dall/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p01_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_-h_a0p0001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_-h_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dnone/gaussian_blur_v.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dzero/gaussian_blur_v.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dq4/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dq2/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dq1/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_aoff_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_aoff_dall/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dnone/gaussian_blur_v.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dzero/gaussian_blur_v.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dq4/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dq2/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dq1/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p01_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p01_dall/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dnone/gaussian_blur_v.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dzero/gaussian_blur_v.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dq4/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dq2/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dq1/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p001_dall/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dnone",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dnone/gaussian_blur_v.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.0102623226121068,
+   "pred_mean": 0.0011877832002937794,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dzero",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dzero/gaussian_blur_v.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010418209247291088,
+   "pred_mean": 0.0012475168332457542,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dq4",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dq4/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dq2",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dq2/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dq1",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dq1/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_bilinear5_xh_a0p0001_dall",
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_v/genomes/g_bilinear5_xh_a0p0001_dall/gaussian_blur_v.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_117": [
+     0.0,
+     0.002606172813102603
+    ],
+    "h_132": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_142": [
+     0.0,
+     0.006100398022681475
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.010236827656626701,
+   "pred_mean": 0.0012599732726812363,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  }
+ ],
+ "measured": {
+  "g_bilinear5_xh_a0p01_dq4": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11883589329021826,
+     "ci": [
+      0.11721907841552143,
+      0.11954765751211632
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11883589329021826,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11883589329021826,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11945117029862792,
+     "ci": [
+      0.11783696529459241,
+      0.12106537530266344
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11945117029862792,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11945117029862792,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11762328213419564,
+     "ci": [
+      0.11583637100040502,
+      0.11954765751211632
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11762328213419564,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11762328213419564,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.1138633639632441,
+     "ci": [
+      0.1111111111111111,
+      0.1159824631327222
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1138633639632441,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1138633639632441,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.1138633639632441,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p01_dq2": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11954765751211632,
+     "ci": [
+      0.11767084512737566,
+      0.12106537530266344
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11767084512737566,
+     "ci": [
+      0.11578947368421053,
+      0.11883589329021826
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11767084512737566,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11767084512737566,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.1191437802907916,
+     "ci": [
+      0.11707291629920838,
+      0.12167606768734891
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1191437802907916,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1191437802907916,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11461661341853036,
+     "ci": [
+      0.11222044728434505,
+      0.11661341853035144
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11461661341853036,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11461661341853036,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11461661341853036,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p01_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11731391585760517,
+     "ci": [
+      0.11578947368421053,
+      0.1191437802907916
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11731391585760517,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11731391585760517,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11954765751211632,
+     "ci": [
+      0.11731391585760517,
+      0.12066182405165456
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11954765751211632,
+     "ci": [
+      0.11781257321774692,
+      0.1217741935483871
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11954765751211632,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.1149241819632881,
+     "ci": [
+      0.11235505797680928,
+      0.11687392221174167
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1149241819632881,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1149241819632881,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.1149241819632881,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p01_dall": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11838383838383838,
+     "ci": [
+      0.11721907841552143,
+      0.12056451612903225
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11838383838383838,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11838383838383838,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11752827140549273,
+     "ci": [
+      0.116410670978173,
+      0.11864406779661017
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11752827140549273,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11752827140549273,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11814516129032258,
+     "ci": [
+      0.11653225806451613,
+      0.11996779388083736
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11814516129032258,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11814516129032258,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11544585987261147,
+     "ci": [
+      0.11336196724181902,
+      0.11725076804672757
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11544585987261147,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11544585987261147,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11544585987261147,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dq4": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11693548387096774,
+     "ci": [
+      0.11612903225806452,
+      0.11854838709677419
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11871227364185111,
+     "ci": [
+      0.11745776347546259,
+      0.11987127916331457
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11871227364185111,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11871227364185111,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11693548387096774,
+     "ci": [
+      0.11558522396742292,
+      0.1197749196141479
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11416070007955449,
+     "ci": [
+      0.11195219123505976,
+      0.11605723370429252
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11416070007955449,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dq2": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11956521739130435,
+     "ci": [
+      0.11653225806451613,
+      0.12067578439259855
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11956521739130435,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11956521739130435,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11764705882352941,
+     "ci": [
+      0.11653225806451613,
+      0.11946902654867257
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11764705882352941,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11764705882352941,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11764705882352941,
+     "ci": [
+      0.11612903225806452,
+      0.11996779388083736
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11764705882352941,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11764705882352941,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11416070007955449,
+     "ci": [
+      0.11296738265712013,
+      0.11685214626391097
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11416070007955449,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11416070007955449,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11845286059629331,
+     "ci": [
+      0.1162227602905569,
+      0.12057999022570097
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11845286059629331,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11845286059629331,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.1180024164317358,
+     "ci": [
+      0.11653225806451613,
+      0.11946902654867257
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180024164317358,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180024164317358,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11987127916331457,
+     "ci": [
+      0.11714975845410629,
+      0.12178456591639872
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11987127916331457,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11987127916331457,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11455847255369929,
+     "ci": [
+      0.11225891377711567,
+      0.11596505162827642
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11455847255369929,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11455847255369929,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11455847255369929,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p001_dall": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11648528819024587,
+     "ci": [
+      0.11501210653753027,
+      0.11835748792270531
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11648528819024587,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11648528819024587,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.1180975413139863,
+     "ci": [
+      0.11653108381765938,
+      0.11891014220150434
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180975413139863,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180975413139863,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11951710261569416,
+     "ci": [
+      0.11764705882352941,
+      0.1218335343787696
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11951710261569416,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11951710261569416,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11420612813370473,
+     "ci": [
+      0.11269750418731743,
+      0.11575178997613365
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11420612813370473,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11420612813370473,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11420612813370473,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_baseline_xh_a0p01_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.042236524537409496,
+     "ci": [
+      0.040290088638195005,
+      0.044614147909967844
+     ],
+     "flip_p99": 0.003803710453212261,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.042236524537409496,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.042236524537409496,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.041432019308125505,
+     "ci": [
+      0.03870967741935484,
+      0.04340836012861737
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.041432019308125505,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.041432019308125505,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.04186795491143317,
+     "ci": [
+      0.03870967741935484,
+      0.04344328238133548
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.04186795491143317,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.04186795491143317,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.041766109785202864,
+     "ci": [
+      0.03830806065442937,
+      0.04335719968178202
+     ],
+     "flip_p99": 0.009322691708803177,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.041766109785202864,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.041766109785202864,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.041432019308125505,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0023482684046030045
+  },
+  "g_bilinear5_xh_a0p0001_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11987127916331457,
+     "ci": [
+      0.11774193548387096,
+      0.12107803700724054
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11987127916331457,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11987127916331457,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.1180024164317358,
+     "ci": [
+      0.11612903225806452,
+      0.1197749196141479
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180024164317358,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1180024164317358,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11693548387096774,
+     "ci": [
+      0.11612903225806452,
+      0.11987127916331457
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11693548387096774,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11155378486055777,
+     "ci": [
+      0.1107073074721723,
+      0.11446740858505565
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11155378486055777,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11155378486055777,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11155378486055777,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  },
+  "g_bilinear5_xh_a0p01_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11724415793714746,
+     "ci": [
+      0.11567916162837566,
+      0.11880789367700363
+     ],
+     "flip_p99": 0.010013850405812263,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11724415793714746,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11724415793714746,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11835748792270531,
+     "ci": [
+      0.11693548387096774,
+      0.11987127916331457
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11835748792270531,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11835748792270531,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11648528819024587,
+     "ci": [
+      0.11438734241605426,
+      0.11982308001608363
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11648528819024587,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11648528819024587,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11526232114467408,
+     "ci": [
+      0.11341026661360923,
+      0.11755361397934869
+     ],
+     "flip_p99": 0.006759203504770994,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11526232114467408,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11526232114467408,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11526232114467408,
+   "worst_p99": 0.010013850405812263,
+   "accepted": true,
+   "predicted_p99": 0.0102623226121068
+  },
+  "g_bilinear5_--_a0p01_dq2": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11151368760064412,
+     "ci": [
+      0.11039484286865431,
+      0.11263073209975864
+     ],
+     "flip_p99": 0.01001114770770073,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11151368760064412,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11151368760064412,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11191626409017713,
+     "ci": [
+      0.11079774375503626,
+      0.11343523732904263
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11191626409017713,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11191626409017713,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11146881287726358,
+     "ci": [
+      0.10887096774193548,
+      0.11263073209975864
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11146881287726358,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11146881287726358,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.10898965791567224,
+     "ci": [
+      0.10748407643312102,
+      0.11141950832672483
+     ],
+     "flip_p99": 0.011253653094172478,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.10898965791567224,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.10898965791567224,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.10898965791567224,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.010236827656626701
+  }
+ },
+ "gpu_budget": 8
+}

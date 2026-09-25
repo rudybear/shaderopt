@@ -1,0 +1,4359 @@
+{
+ "shader": "fxaa",
+ "tolerance": {
+  "metric": "flip",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 144,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_aoff_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_aoff_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_aoff_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_aoff_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_aoff_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p01_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p01_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p01_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p01_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p01_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p0001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p0001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p0001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p0001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_--_a0p0001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.034641847014427185,
+   "pred_mean": 0.005234885960817337,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dnone/fxaa.spv",
+   "ops": 8,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dzero/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dq4/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dq2/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dq1/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_aoff_dall/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dnone/fxaa.spv",
+   "ops": 8,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dzero/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dq4/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dq2/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dq1/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p01_dall/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dnone/fxaa.spv",
+   "ops": 8,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dzero/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dq4/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dq2/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dq1/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p001_dall/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dnone/fxaa.spv",
+   "ops": 8,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dzero/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dq4/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dq2/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dq1/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_-h_a0p0001_dall/fxaa.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dnone/fxaa.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dzero/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dq4/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dq2/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dq1/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_aoff_dall/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dnone/fxaa.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dzero/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dq4/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dq2/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dq1/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p01_dall/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dnone/fxaa.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dzero/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dq4/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dq2/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dq1/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p001_dall/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dnone/fxaa.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.008978546597063541,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dzero/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dq4/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dq2/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dq1/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_baseline_xh_a0p0001_dall/fxaa.spv",
+   "ops": 90,
+   "extra_u": {
+    "h_151": [
+     -0.0005208333604969084,
+     -0.0009259259095415473
+    ]
+   },
+   "pred_p99": 0.31373330950737,
+   "pred_mean": 0.014122637920081615,
+   "pred_scenario": "fxaa_ultrawide",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_aoff_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_aoff_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p01_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p01_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_--_a0p0001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_--_a0p0001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_aoff_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_aoff_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p01_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p01_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dnone/fxaa.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dzero/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dq4/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dq2/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dq1/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_-h_a0p0001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_-h_a0p0001_dall/fxaa.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dnone/fxaa.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dzero/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dq4/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dq2/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dq1/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_aoff_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_aoff_dall/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dnone/fxaa.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dzero/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dq4/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dq2/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dq1/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p01_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p01_dall/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dnone/fxaa.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dzero/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dq4/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dq2/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dq1/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p001_dall/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dnone",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dnone/fxaa.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.011156544089317322,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dzero",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dzero/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dq4",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dq4/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dq2",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dq2/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dq1",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dq1/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  },
+  {
+   "id": "g_dir4_xh_a0p0001_dall",
+   "genome": {
+    "source": "dir4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/fxaa/genomes/g_dir4_xh_a0p0001_dall/fxaa.spv",
+   "ops": 60,
+   "extra_u": {},
+   "pred_p99": 0.2884339392185211,
+   "pred_mean": 0.014915747568011284,
+   "pred_scenario": "fxaa_edges",
+   "within": false
+  }
+ ],
+ "measured": {
+  "g_baseline_--_a0p01_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.00017373175816539263,
+     "ci": [
+      -0.001477875336868643,
+      0.0013014055179593961
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00017373175816539263,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00017373175816539263,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": 0.0015179625569235959,
+     "ci": [
+      -0.00025318806035465053,
+      0.003368137420006736
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015179625569235959,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015179625569235959,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -7.154611146884167e-05,
+     "ci": [
+      -0.0019679404608558752,
+      0.001856744983217882
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -7.154611146884167e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -7.154611146884167e-05,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0014380865879503482,
+     "ci": [
+      -0.002044370409631256,
+      -0.0003780146669690784
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0014380865879503482,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0014380865879503482,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0014380865879503482,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p01_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0009566881196729866,
+     "ci": [
+      -0.002089145584524117,
+      0.0
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009566881196729866,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009566881196729866,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.0002533783783783784,
+     "ci": [
+      -0.0021116648365571418,
+      0.0013499831252109348
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002533783783783784,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002533783783783784,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.001325072520860939,
+     "ci": [
+      -0.002364659094980474,
+      0.0009293680297397769
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001325072520860939,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001325072520860939,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.001021373179496879,
+     "ci": [
+      -0.0018919327985469957,
+      -0.0001512627604530195
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001021373179496879,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001021373179496879,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001325072520860939,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p01_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0006082196541836824,
+     "ci": [
+      -0.001564945226917058,
+      0.0006946268444161995
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006082196541836824,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006082196541836824,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.00016890465332319906,
+     "ci": [
+      -0.001352839589395292,
+      0.0010126582278481013
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00016890465332319906,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00016890465332319906,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.0038286757075893657,
+     "ci": [
+      -0.004692384169078528,
+      -0.002716609385866378
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0038286757075893657,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0038286757075893657,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.004276415379957614,
+     "ci": [
+      -0.0052635564980308995,
+      -0.003102047922969055
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.004276415379957614,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.004276415379957614,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.004276415379957614,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p01_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0029495965992886266,
+     "ci": [
+      -0.003990976921742148,
+      -0.0019941043870296514
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0029495965992886266,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0029495965992886266,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": 0.0003365303718660609,
+     "ci": [
+      -0.0017682907651664283,
+      0.0011770640659155877
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003365303718660609,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003365303718660609,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.00021393425087356486,
+     "ci": [
+      -0.0024610446083416677,
+      0.0015671748112266704
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00021393425087356486,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00021393425087356486,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.005489097516656572,
+     "ci": [
+      -0.006323398285493787,
+      -0.004235337279050858
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.005489097516656572,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.005489097516656572,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.005489097516656572,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p01_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0006927006667243917,
+     "ci": [
+      -0.0017331022530329288,
+      0.0009518061605227695
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006927006667243917,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006927006667243917,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": 0.0007571296374190292,
+     "ci": [
+      -0.0011802394199966278,
+      0.0017657482676638303
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007571296374190292,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007571296374190292,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": 0.00046329294369208836,
+     "ci": [
+      -0.001534618129907209,
+      0.0019598812317433924
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00046329294369208836,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00046329294369208836,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": 0.000414562448179694,
+     "ci": [
+      -0.001094050628135964,
+      0.00214559963863585
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.000414562448179694,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.000414562448179694,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0006927006667243917,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0009528759528759529,
+     "ci": [
+      -0.0015600624024961,
+      0.00017310022503029253
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009528759528759529,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009528759528759529,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": 0.0004206629648325761,
+     "ci": [
+      -0.0007577671129072998,
+      0.0017664872139973081
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0004206629648325761,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0004206629648325761,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.0013564646248304419,
+     "ci": [
+      -0.002967146891645515,
+      0.000748983522362508
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013564646248304419,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013564646248304419,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0012073649260488982,
+     "ci": [
+      -0.0023411311257874714,
+      0.0006032738920862876
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012073649260488982,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012073649260488982,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0013564646248304419,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p001_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": 0.0009517217511680222,
+     "ci": [
+      -0.00017307101549076252,
+      0.0019027849852966616
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009517217511680222,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009517217511680222,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.0004206629648325761,
+     "ci": [
+      -0.0021063318445212046,
+      0.000672834314550042
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0004206629648325761,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0004206629648325761,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.0009631849315068493,
+     "ci": [
+      -0.002392515354949293,
+      0.0006411626415900834
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009631849315068493,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009631849315068493,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.001359362609976211,
+     "ci": [
+      -0.0021914909695458324,
+      0.00018859384429692215
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001359362609976211,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001359362609976211,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001359362609976211,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p001_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0017329520838748808,
+     "ci": [
+      -0.0028623471246422066,
+      -0.0008664009703690869
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0017329520838748808,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0017329520838748808,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.00269700800674252,
+     "ci": [
+      -0.003794298444743328,
+      -0.001095290251916758
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00269700800674252,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00269700800674252,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.00017825311942959,
+     "ci": [
+      -0.0014990376713985994,
+      0.0013190730837789662
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00017825311942959,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00017825311942959,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": 0.0009424004825090471,
+     "ci": [
+      -0.00030179625361863625,
+      0.002223729835670134
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009424004825090471,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009424004825090471,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.00269700800674252,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_aoff_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.0002597627500216469,
+     "ci": [
+      -0.0013864818024263432,
+      0.00043271404749148113
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002597627500216469,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002597627500216469,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.0002525465106490445,
+     "ci": [
+      -0.0012639082579877046,
+      0.0007574482410368624
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002525465106490445,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002525465106490445,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.0003925767309064954,
+     "ci": [
+      -0.0014995715509854327,
+      0.0010701310376783184
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003925767309064954,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003925767309064954,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0005661445555765239,
+     "ci": [
+      -0.0024214948646802802,
+      0.0009057287342440939
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005661445555765239,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005661445555765239,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0005661445555765239,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p001_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": 8.658008658008658e-05,
+     "ci": [
+      -0.0010402219140083217,
+      0.0010384215991692627
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 8.658008658008658e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 8.658008658008658e-05,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.0009264718268339931,
+     "ci": [
+      -0.002526954177897574,
+      0.00025237654580634306
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009264718268339931,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009264718268339931,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.0008920924921495861,
+     "ci": [
+      -0.003104703447291414,
+      0.000605859206664053
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008920924921495861,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008920924921495861,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0007540909433677702,
+     "ci": [
+      -0.002037436001116243,
+      0.0012049100082837563
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007540909433677702,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007540909433677702,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0009264718268339931,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_a0p001_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -0.00043308791684711995,
+     "ci": [
+      -0.001647732200156101,
+      0.00043278802042759454
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00043308791684711995,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00043308791684711995,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": -0.00042083999663328003,
+     "ci": [
+      -0.0017696132131119913,
+      0.0005887795441164101
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00042083999663328003,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00042083999663328003,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.000213903743315508,
+     "ci": [
+      -0.0025684931506849314,
+      0.001282782212086659
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000213903743315508,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000213903743315508,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.002040122407344441,
+     "ci": [
+      -0.003935518050404904,
+      -0.0006792709158836182
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.002040122407344441,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.002040122407344441,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.002040122407344441,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  },
+  "g_baseline_--_aoff_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "fxaa_checker",
+     "split": "train",
+     "speedup": -8.658008658008658e-05,
+     "ci": [
+      -0.001212546391612735,
+      0.0006924623312576292
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -8.658008658008658e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -8.658008658008658e-05,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_edges",
+     "split": "train",
+     "speedup": 0.0016818028927009755,
+     "ci": [
+      8.413861046845121e-05,
+      0.002605704391691089
+     ],
+     "flip_p99": 0.0015730542363598943,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0016818028927009755,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0016818028927009755,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_noise",
+     "split": "holdout",
+     "speedup": -0.000963150572539507,
+     "ci": [
+      -0.0027859331860099947,
+      0.0005710949494980231
+     ],
+     "flip_p99": 0.015143369324505329,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000963150572539507,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000963150572539507,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "fxaa_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0007552584872172501,
+     "ci": [
+      -0.002040662081475323,
+      0.0006033182503770739
+     ],
+     "flip_p99": 0.00013549714640248567,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007552584872172501,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007552584872172501,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.000963150572539507,
+   "worst_p99": 0.015143369324505329,
+   "accepted": false,
+   "predicted_p99": 0.034641847014427185
+  }
+ },
+ "gpu_budget": 8
+}

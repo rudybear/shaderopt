@@ -1,0 +1,2967 @@
+{
+ "shader": "bloom_threshold",
+ "tolerance": {
+  "metric": "flip_hdr",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 72,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dzero/bloom_threshold.spv",
+   "ops": 16,
+   "extra_u": {},
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq4/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq2/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq1/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dall/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dzero/bloom_threshold.spv",
+   "ops": 16,
+   "extra_u": {},
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq4/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq2/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq1/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dall/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dzero/bloom_threshold.spv",
+   "ops": 16,
+   "extra_u": {},
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq4/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq2/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq1/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dall/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dzero/bloom_threshold.spv",
+   "ops": 16,
+   "extra_u": {},
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq4/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq2/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq1/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dall/bloom_threshold.spv",
+   "ops": 44,
+   "extra_u": {},
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dnone/bloom_threshold.spv",
+   "ops": 7,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dzero/bloom_threshold.spv",
+   "ops": 18,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dq4/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dq2/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dq1/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_aoff_dall/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dnone/bloom_threshold.spv",
+   "ops": 7,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dzero/bloom_threshold.spv",
+   "ops": 18,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dq4/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dq2/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dq1/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p01_dall/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dnone/bloom_threshold.spv",
+   "ops": 7,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dzero/bloom_threshold.spv",
+   "ops": 18,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dq4/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dq2/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dq1/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p001_dall/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dnone/bloom_threshold.spv",
+   "ops": 7,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dzero/bloom_threshold.spv",
+   "ops": 18,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dq4/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dq2/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dq1/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_-h_a0p0001_dall/bloom_threshold.spv",
+   "ops": 46,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dnone/bloom_threshold.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dzero/bloom_threshold.spv",
+   "ops": 22,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dq4/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dq2/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dq1/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_aoff_dall/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dnone/bloom_threshold.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dzero/bloom_threshold.spv",
+   "ops": 22,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dq4/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dq2/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dq1/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p01_dall/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dnone/bloom_threshold.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dzero/bloom_threshold.spv",
+   "ops": 22,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dq4/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dq2/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dq1/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p001_dall/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dnone/bloom_threshold.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dzero/bloom_threshold.spv",
+   "ops": 22,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0052007040940225124,
+   "pred_mean": 0.0007795706042088568,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dq4/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dq2/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dq1/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_xh_a0p0001_dall/bloom_threshold.spv",
+   "ops": 50,
+   "extra_u": {
+    "h_57": 1.0,
+    "h_66": 2.0000100135803223
+   },
+   "pred_p99": 0.0038013027515262365,
+   "pred_mean": 0.0006143194041214883,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  }
+ ],
+ "measured": {
+  "g_baseline_xh_a0p01_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0018495684340320592,
+     "ci": [
+      -0.0009256473767812861,
+      0.0027752081406105457
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018495684340320592,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018495684340320592,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0012285012285012285,
+     "ci": [
+      -0.0012315270935960591,
+      0.0036809815950920245
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012285012285012285,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012285012285012285,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0021511985248924403,
+      0.00245398773006135
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.001524390243902439,
+     "ci": [
+      -0.0009247376660673914,
+      0.003655193420651843
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001524390243902439,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001524390243902439,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p01_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.002458512599877074,
+     "ci": [
+      0.0006150061500615006,
+      0.004301108313341396
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002458512599877074,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.002458512599877074,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0009179926560587516,
+     "ci": [
+      -0.0009193993257738277,
+      0.003056234718826406
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009179926560587516,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009179926560587516,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0006127450980392157,
+     "ci": [
+      -0.003067531738768562,
+      0.0015309246785058174
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006127450980392157,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006127450980392157,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0006095702529716549,
+     "ci": [
+      -0.0030553009471432934,
+      0.0024345894348145494
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006095702529716549,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006095702529716549,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0006127450980392157,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p01_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0024630731512680897,
+      0.00214987714987715
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.002447231569287244,
+     "ci": [
+      -0.000612369871402327,
+      0.004276114844227245
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002447231569287244,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002447231569287244,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0018365472910927456,
+     "ci": [
+      0.0,
+      0.0049062163766694904
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018365472910927456,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018365472910927456,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0006095702529716549,
+     "ci": [
+      -0.003658536585365854,
+      0.0024330900243309003
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006095702529716549,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006095702529716549,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0006095702529716549,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p01_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0009213759213759214,
+     "ci": [
+      -0.0009225092250922509,
+      0.003069367710251688
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009213759213759214,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009213759213759214,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0003061849357011635,
+     "ci": [
+      -0.0021452650934722646,
+      0.0018359853121175031
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003061849357011635,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003061849357011635,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0012221203788573174,
+     "ci": [
+      -0.0012225125800976499,
+      0.003969465648854962
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012221203788573174,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012221203788573174,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0021296014602981443,
+     "ci": [
+      -0.0009129640900791236,
+      0.005762814680012132
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0021296014602981443,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0021296014602981443,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0003061849357011635,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0012281240405280934,
+     "ci": [
+      -0.0009225092250922509,
+      0.0027598896044158236
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012281240405280934,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012281240405280934,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0015295197308045274,
+     "ci": [
+      -0.0009185548071034905,
+      0.003971891231286282
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015295197308045274,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015295197308045274,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0018343014368694588,
+     "ci": [
+      -0.001225143022394401,
+      0.004584352078239609
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018343014368694588,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018343014368694588,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0003046922608165753,
+     "ci": [
+      -0.004591545955942571,
+      0.003037667071688943
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003046922608165753,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003046922608165753,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0003046922608165753,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0009216589861751152,
+     "ci": [
+      -0.0006150061500615006,
+      0.003069367710251688
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009216589861751152,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009216589861751152,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0009179926560587516,
+     "ci": [
+      -0.0015304677909755014,
+      0.0033659730722154224
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009179926560587516,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009179926560587516,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0024449877750611247,
+     "ci": [
+      0.0003057169061449098,
+      0.004278728606356968
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0024449877750611247,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0024449877750611247,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.00030432136335970786,
+     "ci": [
+      -0.0009121382822192089,
+      0.002736394040741867
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030432136335970786,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030432136335970786,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.00030432136335970786,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0006138735420503376,
+     "ci": [
+      -0.001229256299938537,
+      0.0027607361963190185
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006138735420503376,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006138735420503376,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0009165902841429881,
+     "ci": [
+      -0.0009185618404481085,
+      0.003052549669837391
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009165902841429881,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009165902841429881,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0021380574221136223,
+     "ci": [
+      -0.0012247585041364984,
+      0.006387055798074272
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0021380574221136223,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0021380574221136223,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.001519756838905775,
+     "ci": [
+      -0.0009121313469139556,
+      0.004860304235602602
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001519756838905775,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001519756838905775,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0006138735420503376,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0006146281499692685,
+     "ci": [
+      -0.002151859821703043,
+      0.0006142506142506142
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006146281499692685,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006146281499692685,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.00030609121518212427,
+     "ci": [
+      -0.0027573529411764708,
+      0.001834862385321101
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030609121518212427,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030609121518212427,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0012228676245796392,
+     "ci": [
+      -0.001224739742804654,
+      0.0030543677458766036
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012228676245796392,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012228676245796392,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.002127013065937405,
+     "ci": [
+      0.00030432136335970786,
+      0.0048484848484848485
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002127013065937405,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.002127013065937405,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0006146281499692685,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.001841055538508745,
+     "ci": [
+      -0.0036877688998156115,
+      0.00030656039239730225
+     ],
+     "flip_p99": 0.0028719014953821898,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001841055538508745,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001841055538508745,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.001834862385321101,
+     "ci": [
+      -0.003676470588235294,
+      0.001219884111009454
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001834862385321101,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001834862385321101,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.003367003367003367,
+     "ci": [
+      -0.005206738131699847,
+      0.00091547146780592
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.003367003367003367,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.003367003367003367,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0021296014602981443,
+     "ci": [
+      -0.004875076173065204,
+      0.0006067961165048543
+     ],
+     "flip_p99": 0.012029151432216167,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0021296014602981443,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0021296014602981443,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.003367003367003367,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0052007040940225124
+  },
+  "g_baseline_xh_a0p01_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.003073140749846343,
+     "ci": [
+      -0.003997539975399754,
+      -0.0009205136550598118
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.003073140749846343,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.003073140749846343,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0003056234718826406,
+     "ci": [
+      -0.0015290519877675841,
+      0.0027472527472527475
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003056234718826406,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003056234718826406,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0018303843807199512,
+     "ci": [
+      -0.00030553009471432935,
+      0.0051766138855054815
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018303843807199512,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018303843807199512,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.002127659574468085,
+     "ci": [
+      0.00030422646686756126,
+      0.003944174757281553
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002127659574468085,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002127659574468085,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.003073140749846343,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_--_a0p001_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0006146281499692685,
+     "ci": [
+      -0.0024615384615384616,
+      0.0018404907975460123
+     ],
+     "flip_p99": 0.005871273111552,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006146281499692685,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006146281499692685,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0009174311926605505,
+     "ci": [
+      -0.0030637254901960784,
+      0.0009177118384827164
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009174311926605505,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009174311926605505,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0006112469437652812,
+     "ci": [
+      -0.002142015656281363,
+      0.003663003663003663
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006112469437652812,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006112469437652812,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0012165450121654502,
+     "ci": [
+      -0.0024390243902439024,
+      0.00425273390036452
+     ],
+     "flip_p99": 0.0099916011095047,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012165450121654502,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012165450121654502,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0009174311926605505,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0038013027515262365
+  },
+  "g_baseline_xh_a0p001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.00030703101013202335,
+     "ci": [
+      -0.0015365703749231714,
+      0.0021479146099831017
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030703101013202335,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030703101013202335,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0009168704156479218,
+     "ci": [
+      -0.0012239902080783353,
+      0.002443494196701283
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009168704156479218,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009168704156479218,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.004278761308348762,
+      0.0027514521553041885
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0030367446097783178,
+     "ci": [
+      0.0006086427267194157,
+      0.004851425106124924
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0030367446097783178,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0030367446097783178,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  }
+ },
+ "gpu_budget": 8
+}

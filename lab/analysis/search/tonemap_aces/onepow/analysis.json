@@ -1,0 +1,1176 @@
+{
+  "bound": 86,
+  "entry": "main",
+  "functions": [
+    {
+      "call_sites": 0,
+      "id": 4,
+      "name": "main"
+    }
+  ],
+  "instructions": [
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 5,
+      "index": 0,
+      "line": null,
+      "name": null,
+      "op": "OpLabel",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 9,
+      "index": 1,
+      "line": null,
+      "name": "c",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 46,
+      "index": 2,
+      "line": null,
+      "name": "num",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 55,
+      "index": 3,
+      "line": null,
+      "name": "den",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 14,
+      "index": 4,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        13
+      ],
+      "range": null,
+      "rate": "uniform",
+      "sinks": [],
+      "type": "sampler2D"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 18,
+      "index": 5,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        17
+      ],
+      "range": {
+        "inf": 0,
+        "max": 0.9966145753860474,
+        "min": 0.0002604166802484542,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [
+        "address"
+      ],
+      "type": "vec2<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 20,
+      "index": 6,
+      "line": null,
+      "name": null,
+      "op": "OpImageSampleImplicitLod",
+      "operands": [
+        14,
+        18
+      ],
+      "range": {
+        "inf": 0,
+        "max": 64.05000305175781,
+        "min": 0.05000000074505806,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 21,
+      "index": 7,
+      "line": null,
+      "name": null,
+      "op": "OpVectorShuffle",
+      "operands": [
+        20,
+        20
+      ],
+      "range": {
+        "inf": 0,
+        "max": 64.05000305175781,
+        "min": 0.05000000074505806,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 28,
+      "index": 8,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        24,
+        26
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, f32)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 29,
+      "index": 9,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        28
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.2000000476837158,
+        "min": 1.2000000476837158,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 32,
+      "index": 10,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        24,
+        30
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, vec4<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 33,
+      "index": 11,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        32
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.949999988079071,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 34,
+      "index": 12,
+      "line": null,
+      "name": null,
+      "op": "OpVectorShuffle",
+      "operands": [
+        33,
+        33
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.949999988079071,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 35,
+      "index": 13,
+      "line": null,
+      "name": null,
+      "op": "OpVectorTimesScalar",
+      "operands": [
+        34,
+        29
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.2000000476837158,
+        "min": 1.1399999856948853,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 36,
+      "index": 14,
+      "line": null,
+      "name": null,
+      "op": "OpFMul",
+      "operands": [
+        21,
+        35
+      ],
+      "range": {
+        "inf": 0,
+        "max": 76.8600082397461,
+        "min": 0.05700000002980232,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 15,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        9,
+        36
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 37,
+      "index": 16,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 76.8600082397461,
+        "min": 0.05700000002980232,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "FMax",
+      "func": "main",
+      "id": 40,
+      "index": 17,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        37,
+        39
+      ],
+      "range": {
+        "inf": 0,
+        "max": 76.8600082397461,
+        "min": 0.05700000002980232,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 42,
+      "index": 18,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        24,
+        41
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, f32)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 43,
+      "index": 19,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        42
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0499999523162842,
+        "min": 1.0499999523162842,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 44,
+      "index": 20,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        43,
+        43,
+        43
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0499999523162842,
+        "min": 1.0499999523162842,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Pow",
+      "func": "main",
+      "id": 45,
+      "index": 21,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        40,
+        44
+      ],
+      "range": {
+        "inf": 0,
+        "max": 95.49604034423828,
+        "min": 0.04939337074756622,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 22,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        9,
+        45
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 47,
+      "index": 23,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 95.49604034423828,
+        "min": 0.04939337074756622,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 48,
+      "index": 24,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 95.49604034423828,
+        "min": 0.04939337074756622,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 53,
+      "index": 25,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        48,
+        50,
+        52
+      ],
+      "range": {
+        "inf": 0,
+        "max": 239.72506713867188,
+        "min": 0.15397736430168152,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 54,
+      "index": 26,
+      "line": null,
+      "name": null,
+      "op": "OpFMul",
+      "operands": [
+        47,
+        53
+      ],
+      "range": {
+        "inf": 0,
+        "max": 22892.794921875,
+        "min": 0.007605460938066244,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 27,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        46,
+        54
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 56,
+      "index": 28,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 95.49604034423828,
+        "min": 0.04939337074756622,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 57,
+      "index": 29,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 95.49604034423828,
+        "min": 0.04939337074756622,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 62,
+      "index": 30,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        57,
+        59,
+        61
+      ],
+      "range": {
+        "inf": 0,
+        "max": 232.6453857421875,
+        "min": 0.7100258469581604,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 65,
+      "index": 31,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        56,
+        62,
+        64
+      ],
+      "range": {
+        "inf": 0,
+        "max": 22216.853515625,
+        "min": 0.17507056891918182,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 32,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        55,
+        65
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 66,
+      "index": 33,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        46
+      ],
+      "range": {
+        "inf": 0,
+        "max": 22892.794921875,
+        "min": 0.007605460938066244,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 67,
+      "index": 34,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        55
+      ],
+      "range": {
+        "inf": 0,
+        "max": 22216.853515625,
+        "min": 0.17507056891918182,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 68,
+      "index": 35,
+      "line": null,
+      "name": null,
+      "op": "OpFDiv",
+      "operands": [
+        66,
+        67
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.03042471408844,
+        "min": 0.0434422604739666,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 70,
+      "index": 36,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        38,
+        38,
+        38
+      ],
+      "range": {
+        "inf": 0,
+        "max": 0.0,
+        "min": 0.0,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "const",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 71,
+      "index": 37,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        69,
+        69,
+        69
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 1.0,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "const",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "FClamp",
+      "func": "main",
+      "id": 72,
+      "index": 38,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        68,
+        70,
+        71
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.0434422604739666,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 39,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        9,
+        72
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 75,
+      "index": 40,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        9
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.0434422604739666,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 77,
+      "index": 41,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        24,
+        76
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, f32)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 78,
+      "index": 42,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        77
+      ],
+      "range": {
+        "inf": 0,
+        "max": 2.200000047683716,
+        "min": 2.200000047683716,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 79,
+      "index": 43,
+      "line": null,
+      "name": null,
+      "op": "OpFDiv",
+      "operands": [
+        69,
+        78
+      ],
+      "range": {
+        "inf": 0,
+        "max": 0.45454543828964233,
+        "min": 0.45454543828964233,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 80,
+      "index": 44,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        79,
+        79,
+        79
+      ],
+      "range": {
+        "inf": 0,
+        "max": 0.45454543828964233,
+        "min": 0.45454543828964233,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "uniform",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Pow",
+      "func": "main",
+      "id": 81,
+      "index": 45,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        75,
+        80
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.2403639256954193,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 82,
+      "index": 46,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        81
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.24977225065231323,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 83,
+      "index": 47,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        81
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.2460273653268814,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 84,
+      "index": 48,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        81
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.2403639256954193,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 85,
+      "index": 49,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        82,
+        83,
+        84,
+        69
+      ],
+      "range": {
+        "inf": 0,
+        "max": 1.0,
+        "min": 0.2403639256954193,
+        "nan": 0,
+        "samples": 129600
+      },
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 50,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        74,
+        85
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 51,
+      "line": null,
+      "name": null,
+      "op": "OpReturn",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": 74,
+      "location": 0,
+      "type": "vec4<f32>"
+    }
+  ],
+  "samplers": [
+    {
+      "binding": 0,
+      "id": 13,
+      "name": "u_scene",
+      "samples": [
+        {
+          "coord_id": 18,
+          "coord_kind": "uv_exact",
+          "id": 20,
+          "offset": null
+        }
+      ]
+    }
+  ],
+  "shader": "src_onepow",
+  "summary": {
+    "candidate_sites": 35,
+    "const": 2,
+    "float_sites": 36,
+    "pixel": 25,
+    "sink_sites": 1,
+    "uniform": 10
+  }
+}

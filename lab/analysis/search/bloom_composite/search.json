@@ -1,0 +1,2647 @@
+{
+ "shader": "bloom_composite",
+ "tolerance": {
+  "metric": "flip",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 72,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_aoff_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dnone/bloom_composite.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dzero/bloom_composite.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq4/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq2/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dq1/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p01_dall/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p001_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_--_a0p0001_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_aoff_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dnone/bloom_composite.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dzero/bloom_composite.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq4/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq2/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dq1/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p01_dall/bloom_composite.spv",
+   "ops": 22,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p001_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq4/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq2/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dq1/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_-h_a0p0001_dall/bloom_composite.spv",
+   "ops": 21,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dnone/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dzero/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq4/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq2/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dq1/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_aoff_dall/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dnone/bloom_composite.spv",
+   "ops": 3,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dzero/bloom_composite.spv",
+   "ops": 3,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06558188050985336,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq4/bloom_composite.spv",
+   "ops": 24,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq2/bloom_composite.spv",
+   "ops": 24,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dq1/bloom_composite.spv",
+   "ops": 24,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p01_dall/bloom_composite.spv",
+   "ops": 24,
+   "extra_u": {},
+   "pred_p99": 0.36877381801605225,
+   "pred_mean": 0.06714639067649841,
+   "pred_scenario": "bloom_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dnone/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dzero/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq4/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq2/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dq1/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p001_dall/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dnone/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dzero/bloom_composite.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq4/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq2/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dq1/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_composite/genomes/g_baseline_xh_a0p0001_dall/bloom_composite.spv",
+   "ops": 23,
+   "extra_u": {},
+   "pred_p99": 0.022230925038456917,
+   "pred_mean": 0.00694764219224453,
+   "pred_scenario": "bloom_noise",
+   "within": true
+  }
+ ],
+ "measured": {
+  "g_baseline_xh_a0p001_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0005336179295624333,
+     "ci": [
+      -0.002938819129040876,
+      0.0010660980810234541
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005336179295624333,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005336179295624333,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0010660980810234541,
+     "ci": [
+      -0.0029364655632674853,
+      0.001597444089456869
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010660980810234541,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010660980810234541,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.000800854244527496,
+     "ci": [
+      -0.003206841261357563,
+      0.000800854244527496
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000800854244527496,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000800854244527496,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.001005530417295123,
+     "ci": [
+      -0.0010070493454179255,
+      0.004012036108324975
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001005530417295123,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001005530417295123,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0010660980810234541,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p001_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.003205128205128205,
+     "ci": [
+      -0.005344735435595938,
+      -0.001601708489054992
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.003205128205128205,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.003205128205128205,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0013319126265316996,
+     "ci": [
+      -0.002934898612593383,
+      0.0015961798124097695
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.004270082732852949,
+     "ci": [
+      -0.006144803633449105,
+      -0.0013336889837289945
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.004270082732852949,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.004270082732852949,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.000503651473180559,
+     "ci": [
+      -0.002772177419354839,
+      0.002513826043237808
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000503651473180559,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000503651473180559,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.004270082732852949,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p001_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0002664535038635758,
+     "ci": [
+      -0.002402562733582488,
+      0.0026609898882384245
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002664535038635758,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002664535038635758,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0005319148936170213,
+     "ci": [
+      -0.002129358530742614,
+      0.001063264221158958
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005319148936170213,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005319148936170213,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0013319126265316996,
+     "ci": [
+      -0.0024084691301256237,
+      0.000531632110579479
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.00025150905432595576,
+     "ci": [
+      -0.0025188916876574307,
+      0.0030105746619191265
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00025150905432595576,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00025150905432595576,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0013319126265316996,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p001_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0013319126265316996,
+     "ci": [
+      -0.0034666666666666665,
+      0.0
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0013319126265316996,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0007974481658692185,
+     "ci": [
+      -0.0010643959552953698,
+      0.0021253985122210413
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007974481658692185,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007974481658692185,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0010649627263045794,
+     "ci": [
+      -0.002932551319648094,
+      0.0018587360594795538
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010649627263045794,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010649627263045794,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0007530120481927711,
+     "ci": [
+      -0.0017583521728208992,
+      0.0030120481927710845
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007530120481927711,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007530120481927711,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0013319126265316996,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p0001_dq4": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0021327645961077045,
+     "ci": [
+      -0.004814234258271078,
+      -0.0005327650506126798
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0021327645961077045,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0021327645961077045,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0013319126265316996,
+      0.0015957446808510637
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0037333333333333333,
+      0.0023942537909018356
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0025176233635448137,
+      0.0025100401606425703
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0021327645961077045,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p0001_dq2": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0029356818788364024,
+     "ci": [
+      -0.005074786324786325,
+      -0.0013326226012793177
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0029356818788364024,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0029356818788364024,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0005324813631522897,
+     "ci": [
+      -0.0018656716417910447,
+      0.002656748140276302
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005324813631522897,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005324813631522897,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0007995735607675906,
+     "ci": [
+      -0.0021321961620469083,
+      0.0042418096693159525
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007995735607675906,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007995735607675906,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0022652907123080794,
+     "ci": [
+      -0.004031242126480222,
+      0.00025138260432378077
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0022652907123080794,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0022652907123080794,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0029356818788364024,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p0001_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.00240064017071219,
+     "ci": [
+      -0.0042689719189083035,
+      -0.0005330490405117271
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00240064017071219,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00240064017071219,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0002663115845539281,
+     "ci": [
+      -0.0032,
+      0.0013312034078807242
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002663115845539281,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002663115845539281,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0002663825253063399,
+     "ci": [
+      -0.002398736669510732,
+      0.0023955283470854403
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002663825253063399,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002663825253063399,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0015090543259557343,
+     "ci": [
+      -0.0025176233635448137,
+      0.0012537848803625428
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015090543259557343,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015090543259557343,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.00240064017071219,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p0001_dall": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0007989347536617843,
+     "ci": [
+      -0.0018661690215942416,
+      0.0013304949441192123
+     ],
+     "flip_p99": 0.018810760229825974,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007989347536617843,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007989347536617843,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0013304949441192123,
+     "ci": [
+      -0.0007995735607675906,
+      0.002933614099343964
+     ],
+     "flip_p99": 0.019548838958144188,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0013304949441192123,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0013304949441192123,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0002663115845539281,
+     "ci": [
+      -0.0037373198077949813,
+      0.0029247540547726668
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002663115845539281,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002663115845539281,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0010050251256281408,
+     "ci": [
+      -0.003019627579265224,
+      0.0030105368790767687
+     ],
+     "flip_p99": 0.027158258482813835,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010050251256281408,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010050251256281408,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0007989347536617843,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.022230925038456917
+  },
+  "g_baseline_xh_a0p0001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0013312034078807242,
+     "ci": [
+      -0.0008002133902373967,
+      0.0029271083546299876
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0013312034078807242,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0013312034078807242,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0018671645772205922,
+      0.0015965939329430547
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.0005333333333333334,
+     "ci": [
+      -0.0018671645772205922,
+      0.002127659574468085
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005333333333333334,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005333333333333334,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.001509813789632612,
+     "ci": [
+      -0.003526448362720403,
+      0.0017605633802816902
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001509813789632612,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001509813789632612,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001509813789632612,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0005336179295624333,
+     "ci": [
+      -0.0010683760683760685,
+      0.002131060202450719
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005336179295624333,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005336179295624333,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0007993605115907274,
+     "ci": [
+      -0.0021344717182497333,
+      0.001597444089456869
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007993605115907274,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0007993605115907274,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0008004268943436499,
+     "ci": [
+      -0.0013358268768367619,
+      0.0024
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008004268943436499,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008004268943436499,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.0005033979360684622,
+     "ci": [
+      -0.002017145738779627,
+      0.0020110987791342946
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005033979360684622,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005033979360684622,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0007993605115907274,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0002670940170940171,
+     "ci": [
+      -0.002136752136752137,
+      0.0013344008540165466
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002670940170940171,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002670940170940171,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0007993605115907274,
+     "ci": [
+      -0.0016008537886872999,
+      0.001863697179054126
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007993605115907274,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007993605115907274,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.00026673779674579886,
+     "ci": [
+      -0.001601708489054992,
+      0.003721424774056353
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00026673779674579886,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00026673779674579886,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0002516989680342311,
+     "ci": [
+      -0.0012594458438287153,
+      0.0032646911099949772
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002516989680342311,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002516989680342311,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0002670940170940171,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  }
+ },
+ "gpu_budget": 8
+}

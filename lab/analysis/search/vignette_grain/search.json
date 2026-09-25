@@ -1,0 +1,3447 @@
+{
+ "shader": "vignette_grain",
+ "tolerance": {
+  "metric": "flip",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 144,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_aoff_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_aoff_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_aoff_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_aoff_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_aoff_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p01_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p01_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p01_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p01_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p01_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p001_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p001_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p001_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p001_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p0001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p0001_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p0001_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p0001_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_--_a0p0001_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_aoff_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_aoff_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_aoff_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_aoff_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_aoff_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p01_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p01_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p01_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p01_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p01_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p001_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p001_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p001_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p001_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p0001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p0001_dq4/vignette_grain.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p0001_dq2/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p0001_dq1/vignette_grain.spv",
+   "ops": 34,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_-h_a0p0001_dall/vignette_grain.spv",
+   "ops": 46,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dnone/vignette_grain.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dzero/vignette_grain.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dq4/vignette_grain.spv",
+   "ops": 40,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dq2/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dq1/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_aoff_dall/vignette_grain.spv",
+   "ops": 53,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dnone/vignette_grain.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dzero/vignette_grain.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dq4/vignette_grain.spv",
+   "ops": 40,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dq2/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dq1/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p01_dall/vignette_grain.spv",
+   "ops": 53,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dnone/vignette_grain.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dzero/vignette_grain.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dq4/vignette_grain.spv",
+   "ops": 40,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dq2/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dq1/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p001_dall/vignette_grain.spv",
+   "ops": 53,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dnone/vignette_grain.spv",
+   "ops": 7,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dzero/vignette_grain.spv",
+   "ops": 8,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "vignette_gradient",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dq4/vignette_grain.spv",
+   "ops": 40,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dq2/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dq1/vignette_grain.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.1506761908531189,
+   "pred_mean": 0.10497485101222992,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_baseline_xh_a0p0001_dall/vignette_grain.spv",
+   "ops": 53,
+   "extra_u": {},
+   "pred_p99": 0.15046536922454834,
+   "pred_mean": 0.10438765585422516,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dnone/vignette_grain.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dq4/vignette_grain.spv",
+   "ops": 37,
+   "extra_u": {},
+   "pred_p99": 0.9847069382667542,
+   "pred_mean": 0.5708621740341187,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dq2/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dq1/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_aoff_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_aoff_dall/vignette_grain.spv",
+   "ops": 59,
+   "extra_u": {},
+   "pred_p99": 0.984552800655365,
+   "pred_mean": 0.5540266633033752,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dnone/vignette_grain.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dq4/vignette_grain.spv",
+   "ops": 37,
+   "extra_u": {},
+   "pred_p99": 0.9847069382667542,
+   "pred_mean": 0.5708621740341187,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dq2/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dq1/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p01_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p01_dall/vignette_grain.spv",
+   "ops": 59,
+   "extra_u": {},
+   "pred_p99": 0.984552800655365,
+   "pred_mean": 0.5540266633033752,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dnone/vignette_grain.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dq4/vignette_grain.spv",
+   "ops": 37,
+   "extra_u": {},
+   "pred_p99": 0.9847069382667542,
+   "pred_mean": 0.5708621740341187,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dq2/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dq1/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p001_dall/vignette_grain.spv",
+   "ops": 59,
+   "extra_u": {},
+   "pred_p99": 0.984552800655365,
+   "pred_mean": 0.5540266633033752,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dnone/vignette_grain.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dzero/vignette_grain.spv",
+   "ops": 1,
+   "extra_u": {},
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dq4/vignette_grain.spv",
+   "ops": 37,
+   "extra_u": {},
+   "pred_p99": 0.9847069382667542,
+   "pred_mean": 0.5708621740341187,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dq2/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dq1/vignette_grain.spv",
+   "ops": 48,
+   "extra_u": {},
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708655714988708,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_--_a0p0001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_--_a0p0001_dall/vignette_grain.spv",
+   "ops": 59,
+   "extra_u": {},
+   "pred_p99": 0.984552800655365,
+   "pred_mean": 0.5540266633033752,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dnone/vignette_grain.spv",
+   "ops": 10,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dzero/vignette_grain.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dq4/vignette_grain.spv",
+   "ops": 42,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dq2/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dq1/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_aoff_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_aoff_dall/vignette_grain.spv",
+   "ops": 63,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dnone/vignette_grain.spv",
+   "ops": 10,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dzero/vignette_grain.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dq4/vignette_grain.spv",
+   "ops": 42,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dq2/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dq1/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p01_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p01_dall/vignette_grain.spv",
+   "ops": 63,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dnone/vignette_grain.spv",
+   "ops": 10,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dzero/vignette_grain.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dq4/vignette_grain.spv",
+   "ops": 42,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dq2/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dq1/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p001_dall/vignette_grain.spv",
+   "ops": 63,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dnone/vignette_grain.spv",
+   "ops": 10,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dzero/vignette_grain.spv",
+   "ops": 11,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dq4/vignette_grain.spv",
+   "ops": 42,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dq2/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dq1/vignette_grain.spv",
+   "ops": 52,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_-h_a0p0001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_-h_a0p0001_dall/vignette_grain.spv",
+   "ops": 63,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dnone/vignette_grain.spv",
+   "ops": 15,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dzero/vignette_grain.spv",
+   "ops": 16,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dq4/vignette_grain.spv",
+   "ops": 47,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dq2/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dq1/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_aoff_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_aoff_dall/vignette_grain.spv",
+   "ops": 68,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dnone/vignette_grain.spv",
+   "ops": 15,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dzero/vignette_grain.spv",
+   "ops": 16,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dq4/vignette_grain.spv",
+   "ops": 47,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dq2/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dq1/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p01_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p01_dall/vignette_grain.spv",
+   "ops": 68,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dnone/vignette_grain.spv",
+   "ops": 15,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dzero/vignette_grain.spv",
+   "ops": 16,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dq4/vignette_grain.spv",
+   "ops": 47,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dq2/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dq1/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p001_dall/vignette_grain.spv",
+   "ops": 68,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dnone",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dnone/vignette_grain.spv",
+   "ops": 15,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dzero",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dzero/vignette_grain.spv",
+   "ops": 16,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.4631849229335785,
+   "pred_mean": 0.13549810647964478,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dq4",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dq4/vignette_grain.spv",
+   "ops": 47,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.5708473920822144,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dq2",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dq2/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dq1",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dq1/vignette_grain.spv",
+   "ops": 57,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9847068786621094,
+   "pred_mean": 0.570850670337677,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  },
+  {
+   "id": "g_cheaphash_xh_a0p0001_dall",
+   "genome": {
+    "source": "cheaphash",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/vignette_grain/genomes/g_cheaphash_xh_a0p0001_dall/vignette_grain.spv",
+   "ops": 68,
+   "extra_u": {
+    "h_96": 0.9024999737739563
+   },
+   "pred_p99": 0.9845526218414307,
+   "pred_mean": 0.5540037155151367,
+   "pred_scenario": "vignette_gradient",
+   "within": false
+  }
+ ],
+ "measured": {
+  "g_baseline_xh_a0p01_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.0002962962962962963,
+     "ci": [
+      -0.0029708853238265003,
+      0.0017777777777777779
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002962962962962963,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002962962962962963,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": 0.0008795074758135445,
+     "ci": [
+      -0.0017626451465199884,
+      0.003803421624538307
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008795074758135445,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008795074758135445,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0002962962962962963,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": 0.0014801657785671995,
+     "ci": [
+      -0.0002962962962962963,
+      0.0038416075650118202
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0014801657785671995,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0014801657785671995,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.0005859947260474656,
+     "ci": [
+      -0.004403992953611274,
+      0.0029291154071470417
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005859947260474656,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005859947260474656,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0005859947260474656,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p0001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.0005925925925925926,
+     "ci": [
+      -0.0017793594306049821,
+      0.001184834123222749
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005925925925925926,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005925925925925926,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.0008802816901408451,
+     "ci": [
+      -0.0032314923619271444,
+      0.0038033937975424223
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008802816901408451,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008802816901408451,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0008802816901408451,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p01_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.0005927682276229994,
+     "ci": [
+      -0.002372479240806643,
+      0.0014801657785671995
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005927682276229994,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005927682276229994,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.00029308323563892143,
+     "ci": [
+      -0.002640845070422535,
+      0.003808965719308526
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029308323563892143,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029308323563892143,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0005927682276229994,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": 0.0002960331557134399,
+     "ci": [
+      -0.0017798872738059924,
+      0.0017761989342806395
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002960331557134399,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002960331557134399,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.0014671361502347417,
+     "ci": [
+      -0.004110453799302123,
+      0.003211702281874616
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0014671361502347417,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0014671361502347417,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0014671361502347417,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p0001_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.0005918910920390648,
+     "ci": [
+      -0.0020722320899940793,
+      0.002364066193853428
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005918910920390648,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005918910920390648,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.00029282576866764275,
+     "ci": [
+      -0.003517050396564824,
+      0.004377038067432979
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029282576866764275,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029282576866764275,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0005918910920390648,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_aoff_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0017756864175712806,
+      0.002362669816893089
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.004100761570005858,
+      0.002630809704764689
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p01_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": 0.00029568302779420464,
+     "ci": [
+      -0.001776212083517642,
+      0.002952487107597218
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00029568302779420464,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00029568302779420464,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0035211267605633804,
+      0.0037956204379562043
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p0001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": 0.0002957704821058858,
+     "ci": [
+      -0.0011841326228537595,
+      0.002364066193853428
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002957704821058858,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002957704821058858,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": 0.0002925687536571094,
+     "ci": [
+      -0.0026385417714466994,
+      0.002630809704764689
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002925687536571094,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002925687536571094,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.0002925687536571094,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_aoff_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.00029568302779420464,
+     "ci": [
+      -0.002070393374741201,
+      0.0011813349084465446
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029568302779420464,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00029568302779420464,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": -0.0002927400468384075,
+     "ci": [
+      -0.0020497803806734994,
+      0.002628523870272838
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002927400468384075,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002927400468384075,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.00029568302779420464,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_--_aoff_dzero": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "vignette_gradient",
+     "split": "train",
+     "speedup": -0.001183431952662722,
+     "ci": [
+      -0.002368265245707519,
+      0.0020667409753180525
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001183431952662722,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001183431952662722,
+      "required": 0.021655295164639574
+     }
+    },
+    {
+     "scenario": "vignette_noise",
+     "split": "holdout",
+     "speedup": 0.0008777062609713282,
+     "ci": [
+      -0.0017574692442882249,
+      0.004087621086022239
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008777062609713282,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008777062609713282,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001183431952662722,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  }
+ },
+ "gpu_budget": 8
+}

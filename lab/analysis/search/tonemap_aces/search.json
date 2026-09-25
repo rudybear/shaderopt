@@ -1,0 +1,4431 @@
+{
+ "shader": "tonemap_aces",
+ "tolerance": {
+  "metric": "flip",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "space": 144,
+ "predicted": [
+  {
+   "id": "g_baseline_--_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_aoff_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_aoff_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_aoff_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_aoff_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_aoff_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p01_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p01_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p01_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p01_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p01_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p001_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p001_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p001_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p001_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p001_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_--_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_--_a0p0001_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_aoff_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_aoff_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_aoff_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_aoff_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_aoff_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p01_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p01_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p01_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p01_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p01_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p001_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p001_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p001_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p001_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p001_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "skip": "identity"
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 35,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_-h_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_-h_a0p0001_dall/tonemap_aces.spv",
+   "ops": 39,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dnone/tonemap_aces.spv",
+   "ops": 6,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "tonemap_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_aoff_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dzero/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dq4/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dq2/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dq1/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_aoff_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_aoff_dall/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dnone/tonemap_aces.spv",
+   "ops": 6,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "tonemap_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dzero/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dq4/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dq2/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dq1/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p01_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p01_dall/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dnone/tonemap_aces.spv",
+   "ops": 6,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "tonemap_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dzero/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dq4/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dq2/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dq1/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p001_dall/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dnone",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dnone/tonemap_aces.spv",
+   "ops": 6,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 0.0,
+   "pred_scenario": "tonemap_hdr_edges",
+   "within": true
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dzero",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq4",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 41,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019620858132839203,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq2",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dq1",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_baseline_xh_a0p0001_dall",
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_baseline_xh_a0p0001_dall/tonemap_aces.spv",
+   "ops": 45,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019568463787436485,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_aoff_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_--_aoff_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_aoff_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_aoff_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_aoff_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_aoff_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_aoff_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p01_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_--_a0p01_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p01_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p01_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p01_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p01_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p01_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_--_a0p001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p001_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_--_a0p0001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_--_a0p0001_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_aoff_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_-h_aoff_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_aoff_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_aoff_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_aoff_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_aoff_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_aoff_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p01_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p01_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p001_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dnone/tonemap_aces.spv",
+   "ops": 0,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 31,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_-h_a0p0001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_-h_a0p0001_dall/tonemap_aces.spv",
+   "ops": 36,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_aoff_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dnone/tonemap_aces.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_xh_aoff_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dzero/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_aoff_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dq4/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_aoff_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dq2/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_aoff_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dq1/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_aoff_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_aoff_dall/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dnone/tonemap_aces.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dzero/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dq4/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dq2/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dq1/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p01_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p01_dall/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dnone/tonemap_aces.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dzero/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dq4/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dq2/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dq1/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p001_dall/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dnone",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dnone/tonemap_aces.spv",
+   "ops": 2,
+   "extra_u": {},
+   "pred_p99": 0.0,
+   "pred_mean": 1.55336363150127e-06,
+   "pred_scenario": "tonemap_noise",
+   "within": true
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dzero",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "zero",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dzero/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dq4",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dq4/tonemap_aces.spv",
+   "ops": 33,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.019222155213356018,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dq2",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dq2/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dq1",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dq1/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  },
+  {
+   "id": "g_onepow_xh_a0p0001_dall",
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/tonemap_aces/genomes/g_onepow_xh_a0p0001_dall/tonemap_aces.spv",
+   "ops": 38,
+   "extra_u": {},
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.0190944354981184,
+   "pred_scenario": "tonemap_extreme",
+   "within": false
+  }
+ ],
+ "measured": {
+  "g_onepow_xh_a0p01_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0010381520892810796,
+     "ci": [
+      -0.00025960539979231567,
+      0.0033784705936820915
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010381520892810796,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010381520892810796,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0015337423312883436,
+      0.0017884517118037812
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": -0.0002560163850486431,
+     "ci": [
+      -0.0025614754098360654,
+      0.004589495155532891
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002560163850486431,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002560163850486431,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.002514458134272064,
+     "ci": [
+      -0.0010065615369202257,
+      0.005516549648946841
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002514458134272064,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.002514458134272064,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": 0.0001962901167926195,
+     "ci": [
+      -0.0016699574714880577,
+      0.0031366552502200646
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0001962901167926195,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0001962901167926195,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0002560163850486431,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_xh_a0p001_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0007792207792207792,
+     "ci": [
+      -0.0007790184367696703,
+      0.0038900414937759337
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007792207792207792,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007792207792207792,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0002554278416347382,
+     "ci": [
+      -0.0010230179028132991,
+      0.002297676793464386
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002554278416347382,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002554278416347382,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.001534526854219949,
+     "ci": [
+      -0.002053388090349076,
+      0.003068268984914344
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001534526854219949,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001534526854219949,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0020115665074176515,
+     "ci": [
+      -0.0022704625577700567,
+      0.007513666743281517
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0020115665074176515,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0020115665074176515,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": 9.809691975671964e-05,
+     "ci": [
+      -0.0021585663215237024,
+      0.0017645415394515719
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 9.809691975671964e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 9.809691975671964e-05,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 9.809691975671964e-05,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_xh_a0p0001_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0018172377985462098,
+     "ci": [
+      -0.0005196154845414394,
+      0.0036288467454903143
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018172377985462098,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018172377985462098,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.001276161306789178,
+     "ci": [
+      -0.0010209290454313426,
+      0.002552322613578356
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001276161306789178,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001276161306789178,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": -0.0017948717948717949,
+     "ci": [
+      -0.003847140292382662,
+      0.002052282869669573
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0017948717948717949,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0017948717948717949,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.001257229067136032,
+     "ci": [
+      -0.0020161544499211034,
+      0.004019217035445529
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001257229067136032,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001257229067136032,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0012775157232704402,
+     "ci": [
+      -0.002950432730133753,
+      0.0006907806731851667
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012775157232704402,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012775157232704402,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0017948717948717949,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_-h_a0p01_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0002594706798131811,
+     "ci": [
+      -0.0020757654385054488,
+      0.002074688796680498
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002594706798131811,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002594706798131811,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0012742099898063201,
+     "ci": [
+      -0.0005099439061703213,
+      0.0025484199796126403
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012742099898063201,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012742099898063201,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.0007653061224489796,
+     "ci": [
+      -0.0012758438132259937,
+      0.004845702626880897
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007653061224489796,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007653061224489796,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0017583521728208992,
+     "ci": [
+      -0.003267152550892184,
+      0.004518072289156626
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0017583521728208992,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0017583521728208992,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -9.812579727210283e-05,
+     "ci": [
+      -0.0016691253541609061,
+      0.0014702999411880023
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -9.812579727210283e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -9.812579727210283e-05,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -9.812579727210283e-05,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_-h_a0p001_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": -0.0012966804979253112,
+     "ci": [
+      -0.00338816125198248,
+      0.001295001295001295
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012966804979253112,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012966804979253112,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0010185892538833714,
+     "ci": [
+      -0.001026745092941635,
+      0.0025451768897938407
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010185892538833714,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010185892538833714,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.00025510204081632655,
+     "ci": [
+      -0.0020429009193054137,
+      0.0038187615816554356
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025510204081632655,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025510204081632655,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0010037641154328732,
+     "ci": [
+      -0.0027624830081685757,
+      0.00501378791677112
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010037641154328732,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010037641154328732,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.000882958893358187,
+     "ci": [
+      -0.003240424817664272,
+      0.0018625624938731497
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000882958893358187,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.000882958893358187,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0012966804979253112,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_-h_a0p0001_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.003105590062111801,
+     "ci": [
+      0.001037344398340249,
+      0.004136504653567736
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.003105590062111801,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.003105590062111801,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0015274949083503055,
+     "ci": [
+      0.0,
+      0.0033045246568378242
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015274949083503055,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015274949083503055,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.00204029584289722,
+     "ci": [
+      -0.0005102040816326531,
+      0.00509427595225039
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00204029584289722,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00204029584289722,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0012537612838515546,
+     "ci": [
+      -0.001004772670183371,
+      0.0045045045045045045
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012537612838515546,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012537612838515546,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.00039231071008238524,
+     "ci": [
+      -0.0024560369387955595,
+      0.002346958732642284
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00039231071008238524,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00039231071008238524,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.00039231071008238524,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_xh_aoff_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0010354646647683149,
+     "ci": [
+      -0.0007776049766718507,
+      0.0033574380165289257
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010354646647683149,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0010354646647683149,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0012725884448969204,
+     "ci": [
+      -0.0005091649694501018,
+      0.0030534351145038168
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012725884448969204,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012725884448969204,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.00025516713447307985,
+     "ci": [
+      -0.002301790281329923,
+      0.004834605597964376
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025516713447307985,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025516713447307985,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0022670025188916876,
+      0.0030105746619191265
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0008830455259026688,
+     "ci": [
+      -0.0033398821218074658,
+      0.0008809128562487243
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008830455259026688,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008830455259026688,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0008830455259026688,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_--_a0p01_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0007776049766718507,
+     "ci": [
+      -0.001557632398753894,
+      0.0025906735751295338
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007776049766718507,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007776049766718507,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0005099439061703213,
+     "ci": [
+      -0.001530612244897959,
+      0.0027989821882951653
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005099439061703213,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005099439061703213,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.001530612244897959,
+     "ci": [
+      -0.003066700741119346,
+      0.005089090905558395
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001530612244897959,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001530612244897959,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0035096515417397845,
+     "ci": [
+      -0.0005022633248765388,
+      0.006758448060075094
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0035096515417397845,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0035096515417397845,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": 0.0007838526357044876,
+     "ci": [
+      -0.0011780875711761242,
+      0.0026413811544012578
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007838526357044876,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007838526357044876,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0005099439061703213,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_-h_aoff_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0002591344908007256,
+     "ci": [
+      -0.001037896191250638,
+      0.0025880587648440764
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002591344908007256,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0002591344908007256,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0012735608762098828,
+     "ci": [
+      -0.0007649158592554819,
+      0.003816793893129771
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012735608762098828,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012735608762098828,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": -0.0002554278416347382,
+     "ci": [
+      -0.002300040254366834,
+      0.0020418841615737534
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002554278416347382,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002554278416347382,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0005015045135406219,
+     "ci": [
+      -0.0012559658377292139,
+      0.004272779178652641
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005015045135406219,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005015045135406219,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.0002942907592701589,
+     "ci": [
+      -0.003041004512458309,
+      0.0013734949809339095
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002942907592701589,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0002942907592701589,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0002942907592701589,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_onepow_--_a0p001_dnone": {
+   "genome": {
+    "source": "onepow",
+    "exact": false,
+    "hoist": false,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.002069857697283312,
+     "ci": [
+      -0.001037344398340249,
+      0.005170664244880647
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002069857697283312,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002069857697283312,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0015282730514518594,
+     "ci": [
+      -0.000509427595225039,
+      0.003560528992878942
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015282730514518594,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0015282730514518594,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.001786169941311559,
+     "ci": [
+      -0.00026205521174794413,
+      0.0035668789808917197
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.001786169941311559,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.001786169941311559,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.003258145363408521,
+     "ci": [
+      0.0,
+      0.005754315736802602
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.003258145363408521,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.003258145363408521,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.001865122214587219,
+     "ci": [
+      -0.004330131505006773,
+      0.0005888125613346418
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001865122214587219,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001865122214587219,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001865122214587219,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.002070393374741201,
+     "ci": [
+      0.000259000259000259,
+      0.0031039834454216243
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002070393374741201,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.002070393374741201,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0007635530669381522,
+     "ci": [
+      -0.001018855190450078,
+      0.00254323499491353
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007635530669381522,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007635530669381522,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": -0.0005104645227156713,
+     "ci": [
+      -0.0053832350679313,
+      0.002802547770700637
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005104645227156713,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0005104645227156713,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": 0.0017552657973921766,
+     "ci": [
+      -0.002007024586051179,
+      0.0045045045045045045
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0017552657973921766,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0017552657973921766,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": -0.001766264350897851,
+     "ci": [
+      -0.002847890720228385,
+      0.0006858038600960126
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001766264350897851,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001766264350897851,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.001766264350897851,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_a0p01_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "split": "train",
+     "speedup": 0.0018111254851228978,
+     "ci": [
+      -0.0005184033177812338,
+      0.0028445823635893457
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018111254851228978,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0018111254851228978,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0020387359836901123,
+     "ci": [
+      -0.0035714285714285713,
+      0.0
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0020387359836901123,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0020387359836901123,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_extreme",
+     "split": "holdout",
+     "speedup": 0.0,
+     "ci": [
+      -0.0028097601250499493,
+      0.0025497195308516064
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_noise",
+     "split": "holdout",
+     "speedup": -0.0010035122930255895,
+     "ci": [
+      -0.0035184719778838906,
+      0.0020050125313283208
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010035122930255895,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0010035122930255895,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "tonemap_ultrawide",
+     "split": "holdout",
+     "speedup": 9.799118079372857e-05,
+     "ci": [
+      -0.00186347587289133,
+      0.0023492560689115116
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 9.799118079372857e-05,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 9.799118079372857e-05,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0020387359836901123,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  }
+ },
+ "gpu_budget": 8
+}

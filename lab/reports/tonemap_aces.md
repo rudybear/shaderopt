@@ -8,7 +8,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| canon_exact | 0.0000 | +0.03% | 2/0 | no | no |
+| g_onepow_--_a0p001_dnone | 0.0000 | +0.15% | 2/3 | no | no |
 | demote_f16_q2 | 0.9674 | +1.09% | 2/3 | no | no |
 
 ### Accepted variants
@@ -20,10 +20,22 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
 | demote_f16_q2 | f16 | q2 | 32 | 0.9674 | +1.09% | no | no |
+| g_onepow_--_a0p001_dnone |  |  |  | 0.0000 | +0.15% | no | no |
+| g_onepow_-h_a0p0001_dnone |  |  |  | 0.0000 | +0.15% | no | no |
+| g_onepow_xh_a0p0001_dnone |  |  |  | 0.0000 | +0.13% | no | no |
+| g_onepow_xh_aoff_dnone |  |  |  | 0.0000 | +0.10% | no | no |
+| g_baseline_xh_a0p001_dnone |  |  |  | 0.0000 | +0.08% | no | no |
+| g_onepow_-h_a0p01_dnone |  |  |  | 0.0000 | +0.03% | no | no |
+| g_onepow_-h_aoff_dnone |  |  |  | 0.0000 | +0.03% | no | no |
+| g_onepow_xh_a0p001_dnone |  |  |  | 0.0000 | +0.03% | no | no |
 | canon_exact |  |  |  | 0.0000 | +0.03% | no | no |
 | canon_full |  |  |  | 0.0000 | +0.00% | no | no |
 | hyp_onepow |  |  |  | 0.0000 | +0.00% | no | no |
+| g_onepow_xh_a0p01_dnone |  |  |  | 0.0000 | +0.00% | no | no |
+| g_onepow_--_a0p01_dnone |  |  |  | 0.0000 | -0.05% | no | no |
 | demote_f16_s66 | f16 | s66 | 1 | 0.0000 | -0.10% | no | no |
+| g_onepow_-h_a0p001_dnone |  |  |  | 0.0000 | -0.13% | no | no |
+| g_baseline_xh_a0p01_dnone |  |  |  | 0.0000 | -0.20% | no | no |
 | demote_f16_zero | f16 | zero | 28 | 0.9674 | -0.21% | no | no |
 | demote_relaxed_zero | relaxed | zero | 28 | 0.9674 | -0.42% | no | no |
 | demote_relaxed_q2 | relaxed | q2 | 32 | 0.9674 | -0.88% | no | no |

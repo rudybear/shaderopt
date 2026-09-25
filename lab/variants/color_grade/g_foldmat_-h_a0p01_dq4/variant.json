@@ -1,0 +1,57 @@
+{
+  "shader": "color_grade",
+  "variant_id": "g_foldmat_-h_a0p01_dq4",
+  "parent": "baseline",
+  "edit_ops": [],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "02d9fa6a1acf68c226cbe427399d92c59d90b59a",
+    "runner": "490a9856b502995c",
+    "shader_ir": "6607ce44df1918df",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T09:23:56",
+  "genome": {
+    "source": "foldmat",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q4",
+    "mode": "f16"
+  },
+  "predicted": {
+    "flip_p99": 0.01640520617365837,
+    "flip_mean": 0.0043418798595666885
+  },
+  "n_ops": 14,
+  "extra_uniforms": {
+    "h_mat_r": [
+      0.927,
+      0.08,
+      0.0194,
+      0.0
+    ],
+    "h_mat_g": [
+      0.051500000000000004,
+      0.9,
+      0.0485,
+      0.0
+    ],
+    "h_mat_b": [
+      0.0206,
+      0.08,
+      0.873,
+      0.0
+    ],
+    "h_inv_gamma": [
+      1.0,
+      0.9523809523809523,
+      0.9090909090909091,
+      1.0
+    ]
+  }
+}

@@ -33,8 +33,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dzero/gaussian_blur_h.spv",
    "ops": 8,
    "extra_u": {},
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -50,8 +51,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq4/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -67,8 +69,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq2/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -84,8 +87,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dq1/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -101,8 +105,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_aoff_dall/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -120,6 +125,7 @@
    "extra_u": {},
    "pred_p99": 0.006570302881300449,
    "pred_mean": 0.0005354882450774312,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -137,6 +143,7 @@
    "extra_u": {},
    "pred_p99": 0.006015322636812925,
    "pred_mean": 0.0005360429058782756,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -154,6 +161,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -171,6 +179,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -188,6 +197,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -205,6 +215,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -222,6 +233,7 @@
    "extra_u": {},
    "pred_p99": 0.003311636857688427,
    "pred_mean": 0.00031862236210145056,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -239,6 +251,7 @@
    "extra_u": {},
    "pred_p99": 0.002808807883411646,
    "pred_mean": 0.00048239281750284135,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -256,6 +269,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -273,6 +287,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -290,6 +305,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -307,6 +323,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -324,6 +341,7 @@
    "extra_u": {},
    "pred_p99": 0.0010507773840799928,
    "pred_mean": 5.8550023823045194e-05,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -339,8 +357,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.0018014360684901476,
-   "pred_mean": 0.00034895053249783814,
+   "pred_p99": 0.0018723842222243547,
+   "pred_mean": 0.0008988195331767201,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -356,8 +375,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -373,8 +393,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -390,8 +411,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -407,8 +429,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_--_a0p0001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -436,8 +459,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dzero/gaussian_blur_h.spv",
    "ops": 8,
    "extra_u": {},
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -453,8 +477,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq4/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -470,8 +495,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq2/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -487,8 +513,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dq1/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -504,8 +531,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_aoff_dall/gaussian_blur_h.spv",
    "ops": 27,
    "extra_u": {},
-   "pred_p99": 0.002399953780695796,
-   "pred_mean": 0.00040620125946588814,
+   "pred_p99": 0.002564363181591034,
+   "pred_mean": 0.0013530862051993608,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -523,6 +551,7 @@
    "extra_u": {},
    "pred_p99": 0.006570302881300449,
    "pred_mean": 0.0005354882450774312,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -540,6 +569,7 @@
    "extra_u": {},
    "pred_p99": 0.006015322636812925,
    "pred_mean": 0.0005360429058782756,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -557,6 +587,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -574,6 +605,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -591,6 +623,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -608,6 +641,7 @@
    "extra_u": {},
    "pred_p99": 0.00728217139840126,
    "pred_mean": 0.0010715341195464134,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -625,6 +659,7 @@
    "extra_u": {},
    "pred_p99": 0.003311636857688427,
    "pred_mean": 0.00031862236210145056,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -642,6 +677,7 @@
    "extra_u": {},
    "pred_p99": 0.002808807883411646,
    "pred_mean": 0.00048239281750284135,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -659,6 +695,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -676,6 +713,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -693,6 +731,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -710,6 +749,7 @@
    "extra_u": {},
    "pred_p99": 0.005196595564484596,
    "pred_mean": 0.0009422960574738681,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -727,6 +767,7 @@
    "extra_u": {},
    "pred_p99": 0.0010507773840799928,
    "pred_mean": 5.8550023823045194e-05,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -742,8 +783,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dzero/gaussian_blur_h.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.0018014360684901476,
-   "pred_mean": 0.00034895053249783814,
+   "pred_p99": 0.0018723842222243547,
+   "pred_mean": 0.0008988195331767201,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -759,8 +801,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq4/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -776,8 +819,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq2/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -793,8 +837,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dq1/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -810,8 +855,9 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_baseline_-h_a0p0001_dall/gaussian_blur_h.spv",
    "ops": 28,
    "extra_u": {},
-   "pred_p99": 0.0025244413409382105,
-   "pred_mean": 0.00044749994412995875,
+   "pred_p99": 0.002663325984030962,
+   "pred_mean": 0.0014802491059526801,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -844,6 +890,7 @@
    },
    "pred_p99": 0.0,
    "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -874,8 +921,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -906,8 +954,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -938,8 +987,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -970,8 +1020,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1002,8 +1053,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1036,6 +1088,7 @@
    },
    "pred_p99": 0.0,
    "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1066,8 +1119,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1098,8 +1152,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1130,8 +1185,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1162,8 +1218,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1194,8 +1251,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1228,6 +1286,7 @@
    },
    "pred_p99": 0.0,
    "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1258,8 +1317,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1290,8 +1350,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1322,8 +1383,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1354,8 +1416,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1386,8 +1449,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1420,6 +1484,7 @@
    },
    "pred_p99": 0.0,
    "pred_mean": 0.0,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1450,8 +1515,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1482,8 +1548,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1514,8 +1581,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1546,8 +1614,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1578,8 +1647,9 @@
      4.898030757904053
     ]
    },
-   "pred_p99": 0.001866091275587678,
-   "pred_mean": 0.000355786265572533,
+   "pred_p99": 0.0019245491130277514,
+   "pred_mean": 0.000967003928963095,
+   "pred_scenario": "bloom_noise",
    "within": true
   },
   {
@@ -1597,6 +1667,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1614,6 +1685,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1631,6 +1703,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1648,6 +1721,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1665,6 +1739,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1682,6 +1757,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1699,6 +1775,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1716,6 +1793,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1733,6 +1811,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1750,6 +1829,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1767,6 +1847,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1784,6 +1865,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1801,6 +1883,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1818,6 +1901,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1835,6 +1919,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1852,6 +1937,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1869,6 +1955,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1886,6 +1973,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1903,6 +1991,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1920,6 +2009,7 @@
    "extra_u": {},
    "pred_p99": 0.007065445650368929,
    "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1937,6 +2027,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1954,6 +2045,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1971,6 +2063,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -1988,6 +2081,7 @@
    "extra_u": {},
    "pred_p99": 0.007066851947456598,
    "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
    "within": true
   },
   {
@@ -2000,7 +2094,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dnone/gaussian_blur_h.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_aoff_dzero",
@@ -2012,7 +2136,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dzero/gaussian_blur_h.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_aoff_dq4",
@@ -2024,7 +2178,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dq4/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_aoff_dq2",
@@ -2036,7 +2220,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dq2/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_aoff_dq1",
@@ -2048,7 +2262,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dq1/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_aoff_dall",
@@ -2060,7 +2304,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_aoff_dall/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dnone",
@@ -2072,7 +2346,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dnone/gaussian_blur_h.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dzero",
@@ -2084,7 +2388,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dzero/gaussian_blur_h.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq4",
@@ -2096,7 +2430,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dq4/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq2",
@@ -2108,7 +2472,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dq2/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dq1",
@@ -2120,7 +2514,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dq1/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p01_dall",
@@ -2132,7 +2556,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p01_dall/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dnone",
@@ -2144,7 +2598,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dnone/gaussian_blur_h.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dzero",
@@ -2156,7 +2640,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dzero/gaussian_blur_h.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq4",
@@ -2168,7 +2682,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dq4/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq2",
@@ -2180,7 +2724,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dq2/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dq1",
@@ -2192,7 +2766,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dq1/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p001_dall",
@@ -2204,7 +2808,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p001_dall/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dnone",
@@ -2216,7 +2850,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dnone/gaussian_blur_h.spv",
+   "ops": 88,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dzero",
@@ -2228,7 +2892,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dzero/gaussian_blur_h.spv",
+   "ops": 95,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq4",
@@ -2240,7 +2934,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dq4/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq2",
@@ -2252,7 +2976,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dq2/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dq1",
@@ -2264,7 +3018,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dq1/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_-h_a0p0001_dall",
@@ -2276,7 +3060,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: udybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/src_bilinear5.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_-h_a0p0001_dall/gaussian_blur_h.spv",
+   "ops": 112,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dnone",
@@ -2288,7 +3102,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dnone/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dnone/gaussian_blur_h.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dzero",
@@ -2300,7 +3144,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dzero/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dzero/gaussian_blur_h.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dq4",
@@ -2312,7 +3186,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq4/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq4/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dq2",
@@ -2324,7 +3228,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq2/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq2/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dq1",
@@ -2336,7 +3270,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq1/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dq1/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_aoff_dall",
@@ -2348,7 +3312,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: ab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dall/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_aoff_dall/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dnone",
@@ -2360,7 +3354,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dnone/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dnone/gaussian_blur_h.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dzero",
@@ -2372,7 +3396,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dzero/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dzero/gaussian_blur_h.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq4",
@@ -2384,7 +3438,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: ab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq4/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq4/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq2",
@@ -2396,7 +3480,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: ab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq2/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq2/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dq1",
@@ -2408,7 +3522,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: ab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq1/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dq1/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p01_dall",
@@ -2420,7 +3564,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dall/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p01_dall/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dnone",
@@ -2432,7 +3606,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dnone/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dnone/gaussian_blur_h.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dzero",
@@ -2444,7 +3648,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dzero/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dzero/gaussian_blur_h.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq4",
@@ -2456,7 +3690,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq4/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq4/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq2",
@@ -2468,7 +3732,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq2/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq2/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dq1",
@@ -2480,7 +3774,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: b/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq1/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dq1/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p001_dall",
@@ -2492,7 +3816,37 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dall/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p001_dall/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dnone",
@@ -2504,7 +3858,37 @@
     "demote": "none",
     "mode": "f16"
    },
-   "error": "hoist: nalysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dnone/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dnone/gaussian_blur_h.spv",
+   "ops": 96,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0006283396505750716,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dzero",
@@ -2516,7 +3900,37 @@
     "demote": "zero",
     "mode": "f16"
    },
-   "error": "hoist: nalysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dzero/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dzero/gaussian_blur_h.spv",
+   "ops": 103,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007065445650368929,
+   "pred_mean": 0.0008405601838603616,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq4",
@@ -2528,7 +3942,37 @@
     "demote": "q4",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq4/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq4/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq2",
@@ -2540,7 +3984,37 @@
     "demote": "q2",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq2/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq2/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dq1",
@@ -2552,7 +4026,37 @@
     "demote": "q1",
     "mode": "f16"
    },
-   "error": "hoist: /analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq1/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dq1/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   },
   {
    "id": "g_bilinear5_xh_a0p0001_dall",
@@ -2564,15 +4068,45 @@
     "demote": "all",
     "mode": "f16"
    },
-   "error": "hoist: analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dall/1_exact.spv: hoisted module does not validate: spirv-val: error:0:0 - Operand '81[%v3float]' requires a previous definition\n "
+   "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/gaussian_blur_h/genomes/g_bilinear5_xh_a0p0001_dall/gaussian_blur_h.spv",
+   "ops": 120,
+   "extra_u": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_117": [
+     0.0014659723965451121,
+     0.0
+    ],
+    "h_132": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_142": [
+     0.0034314740914851427,
+     0.0
+    ],
+    "h_155": [
+     4.8980302810668945,
+     4.8980302810668945,
+     4.8980302810668945
+    ]
+   },
+   "pred_p99": 0.007066851947456598,
+   "pred_mean": 0.0008608747157268226,
+   "pred_scenario": "bloom_hdr_edges",
+   "within": true
   }
  ],
  "measured": {
-  "g_bilinear5_--_a0p01_dq4": {
+  "g_bilinear5_xh_a0p01_dq4": {
    "genome": {
     "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
+    "exact": true,
+    "hoist": true,
     "approx": 0.01,
     "demote": "q4",
     "mode": "f16"
@@ -2581,10 +4115,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11165048543689321,
+     "speedup": 0.11174089068825911,
      "ci": [
-      0.10976103685702714,
-      0.11245954692556634
+      0.11021069692058347,
+      0.11371914204775395
      ],
      "flip_p99": 0.006790504325181246,
      "gates": {
@@ -2593,7 +4127,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11165048543689321,
+      "speedup": 0.11174089068825911,
       "required": 0.1
      },
      "gates_strict": {
@@ -2602,17 +4136,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11165048543689321,
+      "speedup": 0.11174089068825911,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11138112596192791,
+     "speedup": 0.11367313915857605,
      "ci": [
-      0.10948905109489052,
-      0.1125506072874494
+      0.11209923052391561,
+      0.11515151515151516
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2621,7 +4155,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11138112596192791,
+      "speedup": 0.11367313915857605,
       "required": 0.1
      },
      "gates_strict": {
@@ -2630,17 +4164,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11138112596192791,
+      "speedup": 0.11367313915857605,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11012145748987855,
+     "speedup": 0.11407766990291263,
      "ci": [
-      0.10741791649777058,
-      0.11250505868069607
+      0.1111111111111111,
+      0.11515267876828103
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -2649,7 +4183,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11012145748987855,
+      "speedup": 0.11407766990291263,
       "required": 0.1
      },
      "gates_strict": {
@@ -2658,16 +4192,16 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11012145748987855,
+      "speedup": 0.11407766990291263,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.1077724358974359,
+     "speedup": 0.10737179487179487,
      "ci": [
-      0.10612629070016125,
+      0.10545308740978349,
       0.11
      ],
      "flip_p99": 0.009723278693854809,
@@ -2677,7 +4211,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1077724358974359,
+      "speedup": 0.10737179487179487,
       "required": 0.1
      },
      "gates_strict": {
@@ -2686,21 +4220,21 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1077724358974359,
+      "speedup": 0.10737179487179487,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.1077724358974359,
+   "min_speedup": 0.10737179487179487,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.007066851947456598
   },
-  "g_bilinear5_--_a0p01_dq2": {
+  "g_bilinear5_xh_a0p01_dq2": {
    "genome": {
     "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
+    "exact": true,
+    "hoist": true,
     "approx": 0.01,
     "demote": "q2",
     "mode": "f16"
@@ -2709,10 +4243,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11012145748987855,
+     "speedup": 0.11358124494745352,
      "ci": [
-      0.1085899513776337,
-      0.11156022635408246
+      0.11165048543689321,
+      0.1147011308562197
      ],
      "flip_p99": 0.006790504325181246,
      "gates": {
@@ -2721,7 +4255,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11012145748987855,
+      "speedup": 0.11358124494745352,
       "required": 0.1
      },
      "gates_strict": {
@@ -2730,17 +4264,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11012145748987855,
+      "speedup": 0.11358124494745352,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11174089068825911,
+     "speedup": 0.11183144246353323,
      "ci": [
-      0.10976103685702714,
-      0.11245954692556634
+      0.11030008110300081,
+      0.11407766990291263
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2749,7 +4283,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11174089068825911,
+      "speedup": 0.11183144246353323,
       "required": 0.1
      },
      "gates_strict": {
@@ -2758,17 +4292,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11174089068825911,
+      "speedup": 0.11183144246353323,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11138112596192791,
+     "speedup": 0.11295546558704453,
      "ci": [
-      0.10903931901094446,
-      0.11295546558704453
+      0.11102106969205834,
+      0.11488673139158576
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -2777,7 +4311,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11138112596192791,
+      "speedup": 0.11295546558704453,
       "required": 0.1
      },
      "gates_strict": {
@@ -2786,16 +4320,16 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11138112596192791,
+      "speedup": 0.11295546558704453,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.1088871096877502,
+     "speedup": 0.10933119743692431,
      "ci": [
-      0.10772927513015619,
+      0.10648518815052041,
       0.11048839071257005
      ],
      "flip_p99": 0.009723278693854809,
@@ -2805,7 +4339,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1088871096877502,
+      "speedup": 0.10933119743692431,
       "required": 0.1
      },
      "gates_strict": {
@@ -2814,21 +4348,21 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1088871096877502,
+      "speedup": 0.10933119743692431,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.1088871096877502,
+   "min_speedup": 0.10933119743692431,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.007066851947456598
   },
-  "g_bilinear5_--_a0p01_dq1": {
+  "g_bilinear5_xh_a0p01_dq1": {
    "genome": {
     "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
+    "exact": true,
+    "hoist": true,
     "approx": 0.01,
     "demote": "q1",
     "mode": "f16"
@@ -2837,10 +4371,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.1112909753136382,
+     "speedup": 0.11398544866612773,
      "ci": [
-      0.1094003241491086,
-      0.11245954692556634
+      0.11245954692556634,
+      0.11550888529886914
      ],
      "flip_p99": 0.006790504325181246,
      "gates": {
@@ -2849,7 +4383,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.1112909753136382,
+      "speedup": 0.11398544866612773,
       "required": 0.1
      },
      "gates_strict": {
@@ -2858,17 +4392,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1112909753136382,
+      "speedup": 0.11398544866612773,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11093117408906883,
+     "speedup": 0.11438965238480193,
      "ci": [
-      0.10948905109489052,
-      0.1125506072874494
+      0.11214574898785425,
+      0.11591276252019386
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2877,7 +4411,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11093117408906883,
+      "speedup": 0.11438965238480193,
       "required": 0.1
      },
      "gates_strict": {
@@ -2886,17 +4420,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11093117408906883,
+      "speedup": 0.11438965238480193,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.10304259634888438,
+     "speedup": 0.11326860841423948,
      "ci": [
-      0.09939148073022312,
-      0.10845921187802804
+      0.11102106969205834,
+      0.1144359078042863
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -2905,7 +4439,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10304259634888438,
+      "speedup": 0.11326860841423948,
       "required": 0.1
      },
      "gates_strict": {
@@ -2914,144 +4448,16 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10304259634888438,
+      "speedup": 0.11326860841423948,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.10995601759296282,
+     "speedup": 0.11,
      "ci": [
-      0.1084,
-      0.11177644710578842
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.10995601759296282,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10995601759296282,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.10304259634888438,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_--_a0p01_dall": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.01,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11165048543689321,
-     "ci": [
-      0.11007689194658034,
-      0.1128184391427416
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11165048543689321,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11165048543689321,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11084142394822007,
-     "ci": [
-      0.1094003241491086,
-      0.11196443007275667
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11084142394822007,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11084142394822007,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.10850202429149798,
-     "ci": [
-      0.1065208586472256,
-      0.10958350181965225
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10850202429149798,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10850202429149798,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.10928742994395517,
-     "ci": [
-      0.10772819697488067,
+      0.10755697720911635,
       0.1111111111111111
      ],
      "flip_p99": 0.009723278693854809,
@@ -3061,7 +4467,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10928742994395517,
+      "speedup": 0.11,
       "required": 0.1
      },
      "gates_strict": {
@@ -3070,33 +4476,33 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10928742994395517,
+      "speedup": 0.11,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10850202429149798,
+   "min_speedup": 0.11,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.007066851947456598
   },
-  "g_bilinear5_--_a0p001_dq4": {
+  "g_bilinear5_xh_a0p01_dall": {
    "genome": {
     "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "q4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11039223615042458,
+     "speedup": 0.11326860841423948,
      "ci": [
-      0.1085899513776337,
-      0.11182882519176424
+      0.11200298445887652,
+      0.11479385610347616
      ],
      "flip_p99": 0.006790504325181246,
      "gates": {
@@ -3105,7 +4511,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11039223615042458,
+      "speedup": 0.11326860841423948,
       "required": 0.1
      },
      "gates_strict": {
@@ -3114,17 +4520,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11039223615042458,
+      "speedup": 0.11326860841423948,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11084142394822007,
+     "speedup": 0.11093117408906883,
      "ci": [
-      0.10926750303520842,
-      0.11236863379143087
+      0.10980551053484602,
+      0.11245954692556634
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -3133,7 +4539,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11084142394822007,
+      "speedup": 0.11093117408906883,
       "required": 0.1
      },
      "gates_strict": {
@@ -3142,17 +4548,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11084142394822007,
+      "speedup": 0.11093117408906883,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.11142511102139685,
+     "speedup": 0.11174089068825911,
      "ci": [
-      0.10904684975767366,
-      0.11290322580645161
+      0.10993914807302231,
+      0.11412383650343991
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -3161,7 +4567,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11142511102139685,
+      "speedup": 0.11174089068825911,
       "required": 0.1
      },
      "gates_strict": {
@@ -3170,17 +4576,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11142511102139685,
+      "speedup": 0.11174089068825911,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.10866959648421894,
+     "speedup": 0.1096,
      "ci": [
-      0.10648518815052041,
-      0.11084529505582137
+      0.108,
+      0.11142172523961662
      ],
      "flip_p99": 0.009723278693854809,
      "gates": {
@@ -3189,7 +4595,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10866959648421894,
+      "speedup": 0.1096,
       "required": 0.1
      },
      "gates_strict": {
@@ -3198,15 +4604,911 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10866959648421894,
+      "speedup": 0.1096,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10866959648421894,
+   "min_speedup": 0.1096,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.007066851947456598
+  },
+  "g_bilinear5_xh_a0p001_dq4": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11268174474959612,
+     "ci": [
+      0.11147011308562198,
+      0.1147011308562197
+     ],
+     "flip_p99": 0.006790504325181246,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11268174474959612,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11268174474959612,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11272727272727273,
+     "ci": [
+      0.11093117408906883,
+      0.11389337641357028
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11272727272727273,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11272727272727273,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11317704122877931,
+     "ci": [
+      0.1097165991902834,
+      0.11519805982215037
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11317704122877931,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11317704122877931,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11199681147867677,
+     "ci": [
+      0.11057773917448423,
+      0.11385350318471338
+     ],
+     "flip_p99": 0.009723278693854809,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11199681147867677,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11199681147867677,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11199681147867677,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.007066851947456598
+  },
+  "g_bilinear5_xh_a0p001_dq2": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11312399355877617,
+     "ci": [
+      0.11160354552780016,
+      0.1143317230273752
+     ],
+     "flip_p99": 0.006790504325181246,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11312399355877617,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11312399355877617,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11352657004830918,
+     "ci": [
+      0.11200644641418211,
+      0.11495176848874598
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11352657004830918,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11352657004830918,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11357229158276279,
+     "ci": [
+      0.11133521581282775,
+      0.1157556270096463
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11357229158276279,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11357229158276279,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11013916500994035,
+     "ci": [
+      0.10819411296738266,
+      0.11119936457505956
+     ],
+     "flip_p99": 0.009723278693854809,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11013916500994035,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11013916500994035,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11013916500994035,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.007066851947456598
+  },
+  "g_bilinear5_xh_a0p001_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11343523732904263,
+     "ci": [
+      0.11182622687047465,
+      0.11530735235034151
+     ],
+     "flip_p99": 0.006790504325181246,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11343523732904263,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11343523732904263,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11240934730056407,
+     "ci": [
+      0.11088597941126757,
+      0.1143317230273752
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11240934730056407,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11240934730056407,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11312399355877617,
+     "ci": [
+      0.11075312122432542,
+      0.11464430278156709
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11312399355877617,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11312399355877617,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.11022682053322722,
+     "ci": [
+      0.10867834394904459,
+      0.11137629276054097
+     ],
+     "flip_p99": 0.009723278693854809,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11022682053322722,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11022682053322722,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.11022682053322722,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.007066851947456598
+  },
+  "g_bilinear5_xh_a0p001_dall": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11298753518295135,
+     "ci": [
+      0.11146881287726358,
+      0.11419380780056293
+     ],
+     "flip_p99": 0.006790504325181246,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11298753518295135,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11298753518295135,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11316955296012887,
+     "ci": [
+      0.11128920115458128,
+      0.11504424778761062
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11316955296012887,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11316955296012887,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11307847082494969,
+     "ci": [
+      0.1111111111111111,
+      0.11485943775100402
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11307847082494969,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11307847082494969,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.1087216248506571,
+     "ci": [
+      0.10721189460673554,
+      0.1108473469438028
+     ],
+     "flip_p99": 0.009723278693854809,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1087216248506571,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1087216248506571,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.1087216248506571,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.007066851947456598
+  },
+  "g_baseline_xh_a0p001_dq1": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.03298471440064361,
+     "ci": [
+      0.030595813204508857,
+      0.03457981503819863
+     ],
+     "flip_p99": 0.006696125492453575,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03298471440064361,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03298471440064361,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.03459372485921158,
+     "ci": [
+      0.0322061191626409,
+      0.03578608765581021
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03459372485921158,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.03459372485921158,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.033011272141706925,
+     "ci": [
+      0.030990486875388842,
+      0.03460799418086619
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.033011272141706925,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.033011272141706925,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.03418124006359301,
+     "ci": [
+      0.03223239156386789,
+      0.03611111111111111
+     ],
+     "flip_p99": 0.006939820013940334,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03418124006359301,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03418124006359301,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.03298471440064361,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.0019245491130277514
+  },
+  "g_bilinear5_xh_a0p0001_dq1": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.11414790996784566,
+     "ci": [
+      0.11298753518295135,
+      0.11566265060240964
+     ],
+     "flip_p99": 0.006790504325181246,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11414790996784566,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11414790996784566,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.11272141706924316,
+     "ci": [
+      0.11129032258064517,
+      0.11459589867310012
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11272141706924316,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11272141706924316,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11504424778761062,
+     "ci": [
+      0.11205046345781526,
+      0.11674718196457327
+     ],
+     "flip_p99": 0.9673883318901062,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11504424778761062,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11504424778761062,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.10898965791567224,
+     "ci": [
+      0.1070433744528452,
+      0.1123015873015873
+     ],
+     "flip_p99": 0.009723278693854809,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.10898965791567224,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.10898965791567224,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.10898965791567224,
+   "worst_p99": 0.9673883318901062,
+   "accepted": false,
+   "predicted_p99": 0.007066851947456598
+  },
+  "g_bilinear5_xh_a0p001_dnone": {
+   "genome": {
+    "source": "bilinear5",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.1139291465378422,
+     "ci": [
+      0.11272141706924316,
+      0.1157556270096463
+     ],
+     "flip_p99": 0.006794383283704519,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1139291465378422,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1139291465378422,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.1143317230273752,
+     "ci": [
+      0.11281224818694602,
+      0.11549295774647887
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1143317230273752,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1143317230273752,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.11397503020539669,
+     "ci": [
+      0.11093182734973779,
+      0.11620426216324889
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.11397503020539669,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.11397503020539669,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.1105807478122514,
+     "ci": [
+      0.10828025477707007,
+      0.11217183770883055
+     ],
+     "flip_p99": 0.007146922871470451,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1105807478122514,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1105807478122514,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.1105807478122514,
+   "worst_p99": 0.007146922871470451,
+   "accepted": true,
+   "predicted_p99": 0.007065445650368929
   },
   "g_bilinear5_--_a0p001_dq2": {
    "genome": {
@@ -3221,10 +5523,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.11066235864297254,
+     "speedup": 0.11026156941649899,
      "ci": [
-      0.10881877022653721,
-      0.11218724778046812
+      0.10838033843674456,
+      0.11213826366559486
      ],
      "flip_p99": 0.006790504325181246,
      "gates": {
@@ -3233,7 +5535,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11066235864297254,
+      "speedup": 0.11026156941649899,
       "required": 0.1
      },
      "gates_strict": {
@@ -3242,17 +5544,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.11066235864297254,
+      "speedup": 0.11026156941649899,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.11156022635408246,
+     "speedup": 0.11066398390342053,
      "ci": [
-      0.11003236245954692,
-      0.11308562197092084
+      0.10878323932312652,
+      0.11182622687047465
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -3261,7 +5563,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11156022635408246,
+      "speedup": 0.11066398390342053,
       "required": 0.1
      },
      "gates_strict": {
@@ -3270,17 +5572,17 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.11156022635408246,
+      "speedup": 0.11066398390342053,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.1102139685102947,
+     "speedup": 0.1095890410958904,
      "ci": [
-      0.10823909531502424,
-      0.11169354838709677
+      0.10779168348809043,
+      0.11227364185110664
      ],
      "flip_p99": 0.9673883318901062,
      "gates": {
@@ -3289,7 +5591,7 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1102139685102947,
+      "speedup": 0.1095890410958904,
       "required": 0.1
      },
      "gates_strict": {
@@ -3298,17 +5600,17 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.1102139685102947,
+      "speedup": 0.1095890410958904,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.10862619808306709,
+     "speedup": 0.10859188544152745,
      "ci": [
-      0.10631494804156674,
-      0.1097366320830008
+      0.10637450199203187,
+      0.11119936457505956
      ],
      "flip_p99": 0.009723278693854809,
      "gates": {
@@ -3317,7 +5619,7 @@
       "3": true,
       "4": true,
       "5": null,
-      "speedup": 0.10862619808306709,
+      "speedup": 0.10859188544152745,
       "required": 0.1
      },
      "gates_strict": {
@@ -3326,783 +5628,15 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.10862619808306709,
+      "speedup": 0.10859188544152745,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.10862619808306709,
+   "min_speedup": 0.10859188544152745,
    "worst_p99": 0.9673883318901062,
    "accepted": false,
    "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_--_a0p001_dq1": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.10859911182882519,
-     "ci": [
-      0.10702746365105008,
-      0.11133521581282775
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.10859911182882519,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10859911182882519,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11218724778046812,
-     "ci": [
-      0.1102139685102947,
-      0.11321514907332796
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11218724778046812,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11218724778046812,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.1102139685102947,
-     "ci": [
-      0.10841423948220065,
-      0.1125
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1102139685102947,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1102139685102947,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.1079136690647482,
-     "ci": [
-      0.1064,
-      0.11075807570832652
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1079136690647482,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1079136690647482,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.1079136690647482,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_--_a0p001_dall": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11057304277643261,
-     "ci": [
-      0.1089588377723971,
-      0.11281224818694602
-     ],
-     "flip_p99": 0.006790504325181246,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11057304277643261,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11057304277643261,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11066235864297254,
-     "ci": [
-      0.1095392077607114,
-      0.1125
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11066235864297254,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11066235864297254,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11147011308562198,
-     "ci": [
-      0.1095392077607114,
-      0.11366384522370013
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11147011308562198,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11147011308562198,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.1097366320830008,
-     "ci": [
-      0.1072,
-      0.11155378486055777
-     ],
-     "flip_p99": 0.009723278693854809,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1097366320830008,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1097366320830008,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.1097366320830008,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007066851947456598
-  },
-  "g_bilinear5_--_a0p001_dzero": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "zero",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11048387096774194,
-     "ci": [
-      0.10886636526555882,
-      0.11129032258064517
-     ],
-     "flip_p99": 0.006775762885808945,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11048387096774194,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11048387096774194,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11066235864297254,
-     "ci": [
-      0.10913500404203719,
-      0.11250113453005244
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11066235864297254,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11066235864297254,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11129032258064517,
-     "ci": [
-      0.10841423948220065,
-      0.11627906976744186
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11129032258064517,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11129032258064517,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.10702875399361023,
-     "ci": [
-      0.10444177671068428,
-      0.10849729297472264
-     ],
-     "flip_p99": 0.008398806676268578,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.10702875399361023,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.10702875399361023,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.10702875399361023,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.007065445650368929
-  },
-  "g_bilinear5_--_a0p001_dnone": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "none",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11339790153349476,
-     "ci": [
-      0.11147011308562198,
-      0.11451612903225807
-     ],
-     "flip_p99": 0.006794383283704519,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11339790153349476,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11339790153349476,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11317704122877931,
-     "ci": [
-      0.11165048543689321,
-      0.11541565778853914
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.11335215812827754,
-     "ci": [
-      0.11147011308562198,
-      0.11657926583299717
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11335215812827754,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11335215812827754,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11173184357541899,
-     "ci": [
-      0.10946863763483819,
-      0.11350172785560267
-     ],
-     "flip_p99": 0.007146922871470451,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11173184357541899,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11173184357541899,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11173184357541899,
-   "worst_p99": 0.007146922871470451,
-   "accepted": true,
-   "predicted_p99": 0.007065445650368929
-  },
-  "g_baseline_--_a0p01_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.01,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.03509479628882614,
-     "ci": [
-      0.033144704931285365,
-      0.0362610797743755
-     ],
-     "flip_p99": 0.007936632260680199,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.03509479628882614,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.03509479628882614,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.03431570448122729,
-     "ci": [
-      0.03233629749393695,
-      0.03631961259079903
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.03431570448122729,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.03431570448122729,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.032780250910562525,
-     "ci": [
-      0.03079416531604538,
-      0.035165723524656425
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.032780250910562525,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.032780250910562525,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.030775379696243006,
-     "ci": [
-      0.0296,
-      0.034353992526994656
-     ],
-     "flip_p99": 0.012715802527964115,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.030775379696243006,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.030775379696243006,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.030775379696243006,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.00728217139840126
-  },
-  "g_bilinear5_--_a0p01_dnone": {
-   "genome": {
-    "source": "bilinear5",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.01,
-    "demote": "none",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.11339790153349476,
-     "ci": [
-      0.11182882519176424,
-      0.11451612903225807
-     ],
-     "flip_p99": 0.006794383283704519,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11339790153349476,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11339790153349476,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.11317704122877931,
-     "ci": [
-      0.11165048543689321,
-      0.1147011308562197
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11317704122877931,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.1145623235175474,
-     "ci": [
-      0.11093117408906883,
-      0.11603545527800162
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.1145623235175474,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.1145623235175474,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.11097804391217565,
-     "ci": [
-      0.1088,
-      0.11314741035856574
-     ],
-     "flip_p99": 0.007146922871470451,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": true,
-      "5": null,
-      "speedup": 0.11097804391217565,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": true,
-      "5": null,
-      "speedup": 0.11097804391217565,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.11097804391217565,
-   "worst_p99": 0.007146922871470451,
-   "accepted": true,
-   "predicted_p99": 0.007065445650368929
   }
  },
  "gpu_budget": 8

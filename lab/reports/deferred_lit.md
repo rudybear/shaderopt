@@ -22,10 +22,22 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | hyp_pcf4 |  |  |  | 0.0268 | +11.70% | yes | no |
 | demote_f16_s130 | f16 | s130 | 1 | 0.0000 | +0.05% | no | no |
 | demote_f16_s141 | f16 | s141 | 1 | 0.0000 | +0.05% | no | no |
+| g_baseline_xh_a0p01_dzero |  |  |  | 0.0000 | +0.04% | no | no |
+| g_baseline_xh_a0p001_dnone |  |  |  | 0.0000 | +0.04% | no | no |
+| g_baseline_xh_a0p01_dnone |  |  |  | 0.0000 | -0.01% | no | no |
 | demote_f16_q4 | f16 | q4 | 38 | 0.0055 | -0.07% | no | no |
 | demote_f16_zero | f16 | zero | 6 | 0.0000 | -0.07% | no | no |
 | canon_exact |  |  |  | 0.0000 | -0.08% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.08% | no | no |
+| g_baseline_xh_a0p01_dall |  |  |  | 0.0055 | -0.09% | no | no |
 | demote_relaxed_zero | relaxed | zero | 6 | 0.0000 | -0.10% | no | no |
+| g_baseline_xh_a0p001_dall |  |  |  | 0.0055 | -0.12% | no | no |
+| g_baseline_xh_a0p01_dq1 |  |  |  | 0.0055 | -0.13% | no | no |
+| g_baseline_xh_a0p001_dq2 |  |  |  | 0.0055 | -0.15% | no | no |
+| g_baseline_xh_a0p001_dq1 |  |  |  | 0.0055 | -0.15% | no | no |
+| g_baseline_xh_a0p001_dq4 |  |  |  | 0.0055 | -0.16% | no | no |
+| g_baseline_xh_a0p01_dq2 |  |  |  | 0.0055 | -0.16% | no | no |
 | demote_relaxed_q4 | relaxed | q4 | 38 | 0.0055 | -0.17% | no | no |
+| g_baseline_xh_a0p01_dq4 |  |  |  | 0.0055 | -0.31% | no | no |
+| g_baseline_--_a0p001_dall |  |  |  | 0.0055 | -0.34% | no | no |
 
