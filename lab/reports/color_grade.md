@@ -8,7 +8,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| g_foldmat_-h_a0p001_dnone | 0.0000 | +1.28% | 2/1 | no | no |
+| hyp_foldmat | 0.0000 | +1.24% | 2/1 | no | no |
 
 ### Accepted variants
 
@@ -18,24 +18,26 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
-| g_foldmat_-h_a0p001_dnone |  |  |  | 0.0000 | +1.28% | no | no |
 | hyp_foldmat |  |  |  | 0.0000 | +1.24% | no | no |
-| g_foldmat_xh_aoff_dzero |  |  |  | 0.0000 | +1.24% | no | no |
-| g_foldmat_xh_a0p001_dzero |  |  |  | 0.0000 | +1.13% | no | no |
+| g_foldmat_xh_a0p01_dzero |  |  |  | 0.0000 | +1.15% | no | no |
+| g_foldmat_-h_a0p001_dnone |  |  |  | 0.0000 | +1.09% | no | no |
 | g_foldmat_xh_a0p01_dnone |  |  |  | 0.0000 | +1.09% | no | no |
-| g_foldmat_xh_a0p01_dzero |  |  |  | 0.0000 | +1.02% | no | no |
+| g_foldmat_xh_a0p001_dnone |  |  |  | 0.0000 | +1.06% | no | no |
+| g_foldmat_xh_aoff_dzero |  |  |  | 0.0000 | +1.06% | no | no |
 | g_baseline_xh_a0p01_dzero |  |  |  | 0.0000 | +1.00% | no | no |
+| g_baseline_xh_a0p001_dzero |  |  |  | 0.0000 | +0.99% | no | no |
+| g_foldmat_xh_a0p001_dzero |  |  |  | 0.0000 | +0.97% | no | no |
 | hoist |  |  |  | 0.0000 | +0.92% | no | no |
+| g_foldmat_-h_a0p001_dq4 |  |  |  | 0.0158 | -0.06% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.09% | no | no |
 | canon_exact |  |  |  | 0.0000 | -0.09% | no | no |
-| g_foldmat_xh_a0p01_dq4 |  |  |  | 0.0158 | -0.12% | no | no |
-| g_foldmat_xh_a0p001_dq4 |  |  |  | 0.0158 | -0.15% | no | no |
-| g_foldmat_-h_a0p01_dq4 |  |  |  | 0.0158 | -0.17% | no | no |
-| g_foldmat_-h_a0p0001_dq4 |  |  |  | 0.0158 | -0.23% | no | no |
-| g_foldmat_xh_a0p0001_dq4 |  |  |  | 0.0158 | -0.26% | no | no |
-| g_foldmat_-h_a0p001_dq4 |  |  |  | 0.0158 | -0.26% | no | no |
+| g_foldmat_xh_a0p01_dq4 |  |  |  | 0.0158 | -0.17% | no | no |
+| g_foldmat_-h_a0p0001_dq4 |  |  |  | 0.0158 | -0.20% | no | no |
+| g_foldmat_xh_a0p001_dq4 |  |  |  | 0.0158 | -0.20% | no | no |
 | demote_f16_s33 | f16 | s33 | 1 | 0.0005 | -0.27% | no | no |
 | demote_f16_s37 | f16 | s37 | 1 | 0.0013 | -0.27% | no | no |
+| g_foldmat_-h_a0p01_dq4 |  |  |  | 0.0158 | -0.32% | no | no |
+| g_foldmat_xh_a0p0001_dq4 |  |  |  | 0.0158 | -0.38% | no | no |
 | demote_f16_q2 | f16 | q2 | 45 | 0.0308 | -2.68% | no | no |
 | demote_relaxed_q4 | relaxed | q4 | 20 | 0.0145 | -2.84% | no | no |
 | demote_relaxed_q2 | relaxed | q2 | 45 | 0.0308 | -3.46% | no | no |

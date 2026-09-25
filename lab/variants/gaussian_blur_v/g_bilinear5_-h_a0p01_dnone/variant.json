@@ -1,0 +1,56 @@
+{
+  "shader": "gaussian_blur_v",
+  "variant_id": "g_bilinear5_-h_a0p01_dnone",
+  "parent": "baseline",
+  "edit_ops": [],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "c6279bd0d3067d3bdb45eb7360bba5519e177216",
+    "runner": "490a9856b502995c",
+    "shader_ir": "6607ce44df1918df",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T13:19:32",
+  "genome": {
+    "source": "bilinear5",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+  },
+  "predicted": {
+    "flip_p99": 0.0102623226121068,
+    "flip_mean": 0.0011877832002937794
+  },
+  "n_ops": 88,
+  "extra_uniforms": {
+    "h_58": 1.489027500152588,
+    "h_70": 0.4599877595901489,
+    "h_107": [
+      0.0,
+      0.002606172813102603
+    ],
+    "h_117": [
+      0.0,
+      0.002606172813102603
+    ],
+    "h_132": [
+      0.0,
+      0.006100398022681475
+    ],
+    "h_142": [
+      0.0,
+      0.006100398022681475
+    ],
+    "h_155": [
+      4.8980302810668945,
+      4.8980302810668945,
+      4.8980302810668945
+    ]
+  }
+}

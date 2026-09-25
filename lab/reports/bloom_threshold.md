@@ -8,7 +8,8 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| g_baseline_xh_a0p001_dnone | 0.0000 | +0.12% | 2/2 | no | no |
+| g_baseline_xh_a0p001_dnone | 0.0000 | +0.03% | 2/2 | no | no |
+| g_baseline_xh_a0p001_dq2 | 0.9674 | +0.12% | 2/2 | no | no |
 
 ### Accepted variants
 
@@ -18,25 +19,31 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
-| g_baseline_xh_a0p001_dnone |  |  |  | 0.0000 | +0.12% | no | no |
 | g_baseline_xh_a0p001_dq2 |  |  |  | 0.9674 | +0.12% | no | no |
 | g_baseline_xh_a0p001_dq4 |  |  |  | 0.9674 | +0.12% | no | no |
 | g_baseline_xh_a0p01_dq2 |  |  |  | 0.9674 | +0.09% | no | no |
 | g_baseline_xh_a0p001_dall |  |  |  | 0.9674 | +0.09% | no | no |
 | g_baseline_xh_a0p01_dq1 |  |  |  | 0.9674 | +0.06% | no | no |
+| g_baseline_xh_a0p001_dnone |  |  |  | 0.0000 | +0.03% | no | no |
 | canon_exact |  |  |  | 0.0000 | +0.00% | no | no |
+| g_baseline_xh_a0p0001_dnone |  |  |  | 0.0000 | +0.00% | no | no |
+| g_baseline_-h_a0p0001_dnone |  |  |  | 0.0000 | +0.00% | no | no |
+| g_baseline_xh_aoff_dnone |  |  |  | 0.0000 | +0.00% | no | no |
 | g_baseline_xh_a0p01_dall |  |  |  | 0.9674 | -0.03% | no | no |
+| g_baseline_-h_aoff_dnone |  |  |  | 0.0000 | -0.03% | no | no |
 | g_baseline_xh_a0p01_dq4 |  |  |  | 0.9674 | -0.06% | no | no |
 | hoist |  |  |  | 0.0000 | -0.06% | no | no |
 | g_baseline_--_a0p001_dq2 |  |  |  | 0.9674 | -0.09% | no | no |
+| g_baseline_-h_a0p01_dnone |  |  |  | 0.0000 | -0.09% | no | no |
+| g_baseline_-h_a0p001_dnone |  |  |  | 0.0000 | -0.09% | no | no |
 | g_baseline_xh_a0p001_dq1 |  |  |  | 0.9674 | -0.09% | no | no |
 | demote_f16_q4 | f16 | q4 | 33 | 0.9674 | -0.09% | no | no |
 | demote_f16_s46 | f16 | s46 | 1 | 0.0000 | -0.12% | no | no |
+| g_baseline_xh_a0p01_dnone |  |  |  | 0.0000 | -0.15% | no | no |
 | demote_relaxed_zero | relaxed | zero | 15 | 0.9674 | -0.15% | no | no |
 | g_baseline_xh_a0p001_dzero |  |  |  | 0.9674 | -0.18% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.19% | no | no |
 | demote_relaxed_q4 | relaxed | q4 | 33 | 0.9674 | -0.22% | no | no |
 | g_baseline_--_a0p001_dq4 |  |  |  | 0.9674 | -0.31% | no | no |
-| g_baseline_xh_a0p01_dnone |  |  |  | 0.0000 | -0.31% | no | no |
 | g_baseline_xh_a0p01_dzero |  |  |  | 0.9674 | -0.34% | no | no |
 

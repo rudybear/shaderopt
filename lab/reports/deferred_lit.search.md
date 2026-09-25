@@ -6,19 +6,19 @@ Genome = (source, exact, hoist, approx level, demote level, mode). 144 genomes e
 
 | genome | predicted p99 | measured worst p99 | min speedup (train) | accepted |
 |---|---|---|---|---|
-| g_baseline_xh_a0p01_dzero | 0.0000 | 0.0000 | +0.04% | no |
-| g_baseline_xh_a0p001_dnone | 0.0000 | 0.0000 | +0.04% | no |
-| g_baseline_xh_a0p01_dnone | 0.0000 | 0.0000 | -0.01% | no |
-| g_baseline_xh_a0p01_dall | 0.0079 | 0.0055 | -0.09% | no |
-| g_baseline_xh_a0p001_dall | 0.0079 | 0.0055 | -0.12% | no |
-| g_baseline_xh_a0p01_dq1 | 0.0079 | 0.0055 | -0.13% | no |
-| g_baseline_xh_a0p001_dq2 | 0.0079 | 0.0055 | -0.15% | no |
-| g_baseline_xh_a0p001_dq1 | 0.0079 | 0.0055 | -0.15% | no |
-| g_baseline_xh_a0p001_dq4 | 0.0079 | 0.0055 | -0.16% | no |
-| g_baseline_xh_a0p01_dq2 | 0.0079 | 0.0055 | -0.16% | no |
-| g_baseline_xh_a0p01_dq4 | 0.0079 | 0.0055 | -0.31% | no |
-| g_baseline_--_a0p001_dall | 0.0079 | 0.0055 | -0.34% | no |
+| g_pcf4_xh_a0p001_dnone | 0.0269 | 0.0268 | +14.13% | yes |
+| g_pcf4_xh_a0p0001_dq1 | 0.0431 | 0.0431 | +14.11% | yes |
+| g_pcf4_--_a0p001_dall | 0.0431 | 0.0431 | +14.11% | yes |
+| g_pcf4_xh_a0p001_dq2 | 0.0431 | 0.0431 | +14.08% | yes |
+| g_pcf4_xh_a0p01_dq1 | 0.0431 | 0.0431 | +14.07% | yes |
+| g_pcf4_xh_a0p001_dall | 0.0431 | 0.0431 | +14.04% | yes |
+| g_pcf4_xh_a0p01_dall | 0.0431 | 0.0431 | +14.03% | yes |
+| g_pcf4_xh_a0p001_dq4 | 0.0431 | 0.0431 | +14.02% | yes |
+| g_pcf4_xh_a0p001_dq1 | 0.0431 | 0.0431 | +13.98% | yes |
+| g_pcf4_xh_a0p01_dq2 | 0.0431 | 0.0431 | +13.97% | yes |
+| g_pcf4_xh_a0p01_dq4 | 0.0431 | 0.0431 | +13.97% | yes |
+| g_baseline_xh_a0p01_dq1 | 0.0061 | 0.0055 | -0.09% | no |
 
 ## Predicted but not measured (within budget)
 
-52 genomes; 72 predicted over budget; 0 failed to build.
+124 genomes; 0 predicted over budget; 0 failed to build.

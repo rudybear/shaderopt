@@ -9,16 +9,38 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | demote_f16_s130 | 0.0000 | +0.05% | 1/0 | no | no |
-| hyp_pcf4 | 0.0268 | +11.70% | 1/0 | yes | no |
+| g_pcf4_xh_a0p001_dnone | 0.0268 | +14.13% | 1/0 | yes | no |
 
 ### Accepted variants
 
+- **g_pcf4_xh_a0p001_dnone**: speedup +14.13%, worst FLIP p99 0.0268, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dnone/variant.json`)
+- **g_pcf4_xh_a0p0001_dq1**: speedup +14.11%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p0001_dq1/variant.json`)
+- **g_pcf4_--_a0p001_dall**: speedup +14.11%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_--_a0p001_dall/variant.json`)
+- **g_pcf4_xh_a0p001_dq2**: speedup +14.08%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq2/variant.json`)
+- **g_pcf4_xh_a0p01_dq1**: speedup +14.07%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq1/variant.json`)
+- **g_pcf4_xh_a0p001_dall**: speedup +14.04%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dall/variant.json`)
+- **g_pcf4_xh_a0p01_dall**: speedup +14.03%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dall/variant.json`)
+- **g_pcf4_xh_a0p001_dq4**: speedup +14.02%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq4/variant.json`)
+- **g_pcf4_xh_a0p001_dq1**: speedup +13.98%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq1/variant.json`)
+- **g_pcf4_xh_a0p01_dq2**: speedup +13.97%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq2/variant.json`)
+- **g_pcf4_xh_a0p01_dq4**: speedup +13.97%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq4/variant.json`)
 - **hyp_pcf4**: speedup +11.70%, worst FLIP p99 0.0268, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| g_pcf4_xh_a0p001_dnone |  |  |  | 0.0268 | +14.13% | yes | no |
+| g_pcf4_xh_a0p0001_dq1 |  |  |  | 0.0431 | +14.11% | yes | no |
+| g_pcf4_--_a0p001_dall |  |  |  | 0.0431 | +14.11% | yes | no |
+| g_pcf4_xh_a0p001_dq2 |  |  |  | 0.0431 | +14.08% | yes | no |
+| g_pcf4_xh_a0p01_dq1 |  |  |  | 0.0431 | +14.07% | yes | no |
+| g_pcf4_xh_a0p001_dall |  |  |  | 0.0431 | +14.04% | yes | no |
+| g_pcf4_xh_a0p01_dall |  |  |  | 0.0431 | +14.03% | yes | no |
+| g_pcf4_xh_a0p001_dq4 |  |  |  | 0.0431 | +14.02% | yes | no |
+| g_pcf4_xh_a0p001_dq1 |  |  |  | 0.0431 | +13.98% | yes | no |
+| g_pcf4_xh_a0p01_dq2 |  |  |  | 0.0431 | +13.97% | yes | no |
+| g_pcf4_xh_a0p01_dq4 |  |  |  | 0.0431 | +13.97% | yes | no |
 | hyp_pcf4 |  |  |  | 0.0268 | +11.70% | yes | no |
 | demote_f16_s130 | f16 | s130 | 1 | 0.0000 | +0.05% | no | no |
 | demote_f16_s141 | f16 | s141 | 1 | 0.0000 | +0.05% | no | no |
@@ -29,10 +51,10 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | demote_f16_zero | f16 | zero | 6 | 0.0000 | -0.07% | no | no |
 | canon_exact |  |  |  | 0.0000 | -0.08% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.08% | no | no |
+| g_baseline_xh_a0p01_dq1 |  |  |  | 0.0055 | -0.09% | no | no |
 | g_baseline_xh_a0p01_dall |  |  |  | 0.0055 | -0.09% | no | no |
 | demote_relaxed_zero | relaxed | zero | 6 | 0.0000 | -0.10% | no | no |
 | g_baseline_xh_a0p001_dall |  |  |  | 0.0055 | -0.12% | no | no |
-| g_baseline_xh_a0p01_dq1 |  |  |  | 0.0055 | -0.13% | no | no |
 | g_baseline_xh_a0p001_dq2 |  |  |  | 0.0055 | -0.15% | no | no |
 | g_baseline_xh_a0p001_dq1 |  |  |  | 0.0055 | -0.15% | no | no |
 | g_baseline_xh_a0p001_dq4 |  |  |  | 0.0055 | -0.16% | no | no |

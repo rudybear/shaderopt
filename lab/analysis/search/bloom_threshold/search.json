@@ -33,10 +33,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dzero/bloom_threshold.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq4",
@@ -51,10 +51,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq4/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq2",
@@ -69,10 +69,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq2/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dq1",
@@ -87,10 +87,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dq1/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_aoff_dall",
@@ -105,10 +105,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_aoff_dall/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dnone",
@@ -135,10 +135,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dzero/bloom_threshold.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq4",
@@ -153,10 +153,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq4/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq2",
@@ -171,10 +171,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq2/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dq1",
@@ -189,10 +189,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dq1/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p01_dall",
@@ -207,10 +207,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p01_dall/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dnone",
@@ -237,10 +237,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dzero/bloom_threshold.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq4",
@@ -255,10 +255,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq4/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq2",
@@ -273,10 +273,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq2/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dq1",
@@ -291,10 +291,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dq1/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p001_dall",
@@ -309,10 +309,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p001_dall/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dnone",
@@ -339,10 +339,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dzero/bloom_threshold.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq4",
@@ -357,10 +357,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq4/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq2",
@@ -375,10 +375,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq2/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dq1",
@@ -393,10 +393,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dq1/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_--_a0p0001_dall",
@@ -411,10 +411,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/bloom_threshold/genomes/g_baseline_--_a0p0001_dall/bloom_threshold.spv",
    "ops": 44,
    "extra_u": {},
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dnone",
@@ -453,10 +453,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq4",
@@ -474,10 +474,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq2",
@@ -495,10 +495,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dq1",
@@ -516,10 +516,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_aoff_dall",
@@ -537,10 +537,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dnone",
@@ -579,10 +579,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq4",
@@ -600,10 +600,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq2",
@@ -621,10 +621,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dq1",
@@ -642,10 +642,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p01_dall",
@@ -663,10 +663,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dnone",
@@ -705,10 +705,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq4",
@@ -726,10 +726,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq2",
@@ -747,10 +747,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dq1",
@@ -768,10 +768,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p001_dall",
@@ -789,10 +789,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dnone",
@@ -831,10 +831,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq4",
@@ -852,10 +852,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq2",
@@ -873,10 +873,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dq1",
@@ -894,10 +894,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_-h_a0p0001_dall",
@@ -915,10 +915,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dnone",
@@ -957,10 +957,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq4",
@@ -978,10 +978,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq2",
@@ -999,10 +999,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dq1",
@@ -1020,10 +1020,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_aoff_dall",
@@ -1041,10 +1041,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dnone",
@@ -1083,10 +1083,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq4",
@@ -1104,10 +1104,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq2",
@@ -1125,10 +1125,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dq1",
@@ -1146,10 +1146,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p01_dall",
@@ -1167,10 +1167,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dnone",
@@ -1209,10 +1209,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq4",
@@ -1230,10 +1230,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq2",
@@ -1251,10 +1251,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dq1",
@@ -1272,10 +1272,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p001_dall",
@@ -1293,10 +1293,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dnone",
@@ -1335,10 +1335,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0052007040940225124,
-   "pred_mean": 0.0007795706042088568,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq4",
@@ -1356,10 +1356,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq2",
@@ -1377,10 +1377,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dq1",
@@ -1398,10 +1398,10 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   },
   {
    "id": "g_baseline_xh_a0p0001_dall",
@@ -1419,442 +1419,30 @@
     "h_57": 1.0,
     "h_66": 2.0000100135803223
    },
-   "pred_p99": 0.0038013027515262365,
-   "pred_mean": 0.0006143194041214883,
-   "pred_scenario": "bloom_hdr_edges",
-   "within": true
+   "pred_p99": 0.9673883318901062,
+   "pred_mean": 0.017144978046417236,
+   "pred_scenario": "bloom_extreme",
+   "within": false
   }
  ],
  "measured": {
-  "g_baseline_xh_a0p01_dq4": {
+  "g_baseline_xh_a0p01_dnone": {
    "genome": {
     "source": "baseline",
     "exact": true,
     "hoist": true,
     "approx": 0.01,
-    "demote": "q4",
+    "demote": "none",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.0015356265356265355,
-     "ci": [
-      -0.0006150061500615006,
-      0.003071253071253071
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0015356265356265355,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0015356265356265355,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.0006127450980392157,
-     "ci": [
-      -0.0021561179720506985,
-      0.0012239902080783353
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006127450980392157,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006127450980392157,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0006127450980392157,
-     "ci": [
-      -0.004297114794352364,
-      0.002450999170737863
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006127450980392157,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006127450980392157,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.0006091989034419738,
-     "ci": [
-      -0.0027546981033582736,
-      0.0036496350364963502
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006091989034419738,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006091989034419738,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0006127450980392157,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p01_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.0009222256378727329,
-     "ci": [
-      -0.0009222327275532208,
-      0.002764127764127764
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009222256378727329,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009222256378727329,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0027506112469437654,
-     "ci": [
-      0.0003061849357011635,
-      0.004886988393402566
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0027506112469437654,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0027506112469437654,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.000612369871402327,
-     "ci": [
-      -0.002146597264943758,
-      0.0021374209012016954
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.000612369871402327,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.000612369871402327,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.00182370820668693,
-     "ci": [
-      -0.0006088326408934422,
-      0.0039477679927118125
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.00182370820668693,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.00182370820668693,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.000612369871402327,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p01_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.0006125574272588055,
-     "ci": [
-      -0.0015323322096230463,
-      0.0030599755201958386
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0006125574272588055,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0006125574272588055,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.002136752136752137,
-     "ci": [
-      -0.0006119951040391676,
-      0.004875076173065204
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.002136752136752137,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.002136752136752137,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.00091547146780592,
-     "ci": [
-      -0.0015276504735716467,
-      0.0024382995963455516
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.00091547146780592,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.00091547146780592,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0015183723048891589,
-     "ci": [
-      -0.0009121313469139556,
-      0.003333358593513186
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0015183723048891589,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0015183723048891589,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.0006125574272588055,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p01_dall": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.001838235294117647,
+     "speedup": 0.001841620626151013,
      "ci": [
       0.0,
-      0.003061849357011635
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.001838235294117647,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.001838235294117647,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.0003053435114503817,
-     "ci": [
-      -0.0015276504735716467,
-      0.0024390615931784696
+      0.003683241252302026
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -1863,7 +1451,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0003053435114503817,
+      "speedup": 0.001841620626151013,
       "required": 0.1
      },
      "gates_strict": {
@@ -1872,117 +1460,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0003053435114503817,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.00030543677458766036,
-     "ci": [
-      -0.0024449877750611247,
-      0.0012224938875305623
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.00030543677458766036,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.00030543677458766036,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0,
-     "ci": [
-      -0.00364741641337386,
-      0.0030321866886079823
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.00030543677458766036,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p001_dq4": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q4",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.0018359853121175031,
-     "ci": [
-      -0.0012270032773800538,
-      0.0036719706242350062
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0018359853121175031,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0018359853121175031,
+      "speedup": 0.001841620626151013,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.001219884111009454,
+     "speedup": -0.0015304560759106215,
      "ci": [
-      -0.0006108828840400698,
-      0.0033516148689823277
+      -0.0030656039239730227,
+      0.0006119951040391676
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -1991,7 +1479,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001219884111009454,
+      "speedup": -0.0015304560759106215,
       "required": 0.1
      },
      "gates_strict": {
@@ -2000,117 +1488,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001219884111009454,
+      "speedup": -0.0015304560759106215,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.0003057169061449098,
+     "speedup": 0.0021413276231263384,
      "ci": [
-      -0.0018343014368694588,
-      0.003355704697986577
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0003057169061449098,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0003057169061449098,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0021231422505307855,
-     "ci": [
-      -0.0015192950470981465,
-      0.004239854633555421
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0021231422505307855,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0021231422505307855,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.0003057169061449098,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p001_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.0012254901960784314,
-     "ci": [
-      -0.0003066567521348226,
-      0.002458492186235505
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0012254901960784314,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0012254901960784314,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.001525320317266626,
-     "ci": [
-      -0.0006105006105006105,
-      0.003656307129798903
+      -0.0015323322096230463,
+      0.005499583724583668
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2119,35 +1507,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001525320317266626,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.001525320317266626,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0009157509157509158,
-     "ci": [
-      -0.002443494196701283,
-      0.0012202562538133007
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0009157509157509158,
+      "speedup": 0.0021413276231263384,
       "required": 0.1
      },
      "gates_strict": {
@@ -2156,89 +1516,17 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0009157509157509158,
+      "speedup": 0.0021413276231263384,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.0018198362147406734,
+     "speedup": -0.00030478512648582747,
      "ci": [
-      -0.001215066828675577,
-      0.004549590536851683
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0018198362147406734,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0018198362147406734,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0009157509157509158,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p001_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q1",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.0009225092250922509,
-     "ci": [
-      -0.0024600246002460025,
-      0.0012270126955074249
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0009225092250922509,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0009225092250922509,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0009174311926605505,
-     "ci": [
-      -0.000917999680795942,
-      0.0024449877750611247
+      -0.0036607687614399025,
+      0.0021328458257160268
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2247,7 +1535,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0009174311926605505,
+      "speedup": -0.00030478512648582747,
       "required": 0.1
      },
      "gates_strict": {
@@ -2256,327 +1544,15 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0009174311926605505,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.0,
-     "ci": [
-      -0.0024509803921568627,
-      0.003056281450244125
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.000608457560085184,
-     "ci": [
-      -0.0027413950654888823,
-      0.0018214936247723133
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.000608457560085184,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.000608457560085184,
+      "speedup": -0.00030478512648582747,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0009225092250922509,
-   "worst_p99": 0.9673883318901062,
+   "min_speedup": -0.0015304560759106215,
+   "worst_p99": 0.0,
    "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p001_dall": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": 0.0009208103130755065,
-     "ci": [
-      -0.001841620626151013,
-      0.0030656039239730227
-     ],
-     "flip_p99": 0.005871273111552,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009208103130755065,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009208103130755065,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": 0.0012232415902140672,
-     "ci": [
-      -0.0012254995853689314,
-      0.0030543677458766036
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0012232415902140672,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0012232415902140672,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": 0.0009165902841429881,
-     "ci": [
-      -0.002450248476113263,
-      0.003965832824893227
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009165902841429881,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0009165902841429881,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": 0.0,
-     "ci": [
-      -0.0027414159475353896,
-      0.003946569520340012
-     ],
-     "flip_p99": 0.0099916011095047,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.0,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0038013027515262365
-  },
-  "g_baseline_xh_a0p01_dzero": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "zero",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "speedup": -0.002148557397176182,
-     "ci": [
-      -0.00399143377823912,
-      0.00030656039239730225
-     ],
-     "flip_p99": 0.0028719014953821898,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.002148557397176182,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.002148557397176182,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "speedup": -0.003363914373088685,
-     "ci": [
-      -0.005206738131699847,
-      -0.0006114244717182906
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.003363914373088685,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.003363914373088685,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.004889975550122249,
-     "ci": [
-      -0.0073692796952426745,
-      -0.002442002442002442
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.004889975550122249,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.004889975550122249,
-      "required": 0.02
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "speedup": -0.003050640634533252,
-     "ci": [
-      -0.005501222493887531,
-      -0.00030478512648582747
-     ],
-     "flip_p99": 0.012029151432216167,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.003050640634533252,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.003050640634533252,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.004889975550122249,
-   "worst_p99": 0.9673883318901062,
-   "accepted": false,
-   "predicted_p99": 0.0052007040940225124
+   "predicted_p99": 0.0
   },
   "g_baseline_xh_a0p001_dnone": {
    "genome": {
@@ -2591,10 +1567,10 @@
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": 0.001226993865030675,
+     "speedup": 0.00030731407498463427,
      "ci": [
-      -0.0012296341838303104,
-      0.0027590435315757206
+      -0.001229256299938537,
+      0.0021478981282602025
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2603,7 +1579,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001226993865030675,
+      "speedup": 0.00030731407498463427,
       "required": 0.1
      },
      "gates_strict": {
@@ -2612,17 +1588,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.001226993865030675,
+      "speedup": 0.00030731407498463427,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
-     "speedup": 0.0018315018315018315,
+     "speedup": 0.0015276504735716467,
      "ci": [
-      -0.0003058103975535168,
-      0.0036607687614399025
+      0.0,
+      0.003971891231286282
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2631,7 +1607,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0018315018315018315,
+      "speedup": 0.0015276504735716467,
       "required": 0.1
      },
      "gates_strict": {
@@ -2640,17 +1616,17 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0018315018315018315,
+      "speedup": 0.0015276504735716467,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_extreme",
      "split": "holdout",
-     "speedup": 0.0006105006105006105,
+     "speedup": 0.0006112469437652812,
      "ci": [
-      -0.0021406727828746177,
-      0.002439768222018908
+      -0.0036809815950920245,
+      0.003658536585365854
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2659,7 +1635,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0006105006105006105,
+      "speedup": 0.0006112469437652812,
       "required": 0.1
      },
      "gates_strict": {
@@ -2668,17 +1644,17 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.0006105006105006105,
+      "speedup": 0.0006112469437652812,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": 0.0027305825242718447,
+     "speedup": 0.000911854103343465,
      "ci": [
-      0.0,
-      0.004851425106124924
+      -0.0012172854534388314,
+      0.0021257212268448226
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2687,7 +1663,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0027305825242718447,
+      "speedup": 0.000911854103343465,
       "required": 0.1
      },
      "gates_strict": {
@@ -2696,42 +1672,98 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0027305825242718447,
+      "speedup": 0.000911854103343465,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": 0.0006105006105006105,
+   "min_speedup": 0.00030731407498463427,
    "worst_p99": 0.0,
    "accepted": false,
    "predicted_p99": 0.0
   },
-  "g_baseline_--_a0p001_dq4": {
+  "g_baseline_xh_a0p0001_dnone": {
    "genome": {
     "source": "baseline",
-    "exact": false,
-    "hoist": false,
-    "approx": 0.001,
-    "demote": "q4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
     "mode": "f16"
    },
    "runs": [
     {
      "scenario": "bloom_hdr_edges",
      "split": "train",
-     "speedup": -0.003071253071253071,
+     "speedup": 0.0,
      "ci": [
-      -0.007371007371007371,
-      -0.00030703101013202335
+      -0.0018438844499078057,
+      0.0015332720024532351
      ],
-     "flip_p99": 0.005871273111552,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.003071253071253071,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0003056234718826406,
+     "ci": [
+      -0.0012232509450748061,
+      0.002443494196701283
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003056234718826406,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003056234718826406,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0006108735491753207,
+     "ci": [
+      -0.0030599755201958386,
+      0.003357753357753358
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006108735491753207,
       "required": 0.1
      },
      "gates_strict": {
@@ -2740,17 +1772,373 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.003071253071253071,
+      "speedup": 0.0006108735491753207,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": -0.000911854103343465,
+     "ci": [
+      -0.002738892270237371,
+      0.0024286766043995736
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000911854103343465,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000911854103343465,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.000911854103343465,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p01_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.00092109303039607,
+     "ci": [
+      -0.0030712766599863372,
+      0.0021452650934722646
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00092109303039607,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00092109303039607,
       "required": 0.02
      }
     },
     {
      "scenario": "bloom_hdr_gradient",
      "split": "train",
+     "speedup": -0.0003057169061449098,
+     "ci": [
+      -0.0030599755201958386,
+      0.0009168704156479218
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003057169061449098,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003057169061449098,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": -0.00030553009471432935,
+     "ci": [
+      -0.0030562580773919735,
+      0.002443494196701283
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030553009471432935,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030553009471432935,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0006077180188392585,
+     "ci": [
+      -0.0015216068167985392,
+      0.004545454545454545
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006077180188392585,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006077180188392585,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.00092109303039607,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0009213759213759214,
+     "ci": [
+      -0.002457002457002457,
+      0.001838235294117647
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009213759213759214,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0009213759213759214,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.0006116207951070336,
+     "ci": [
+      -0.0024479804161566705,
+      0.0012217470983506415
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006116207951070336,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006116207951070336,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.00030553009471432935,
+     "ci": [
+      -0.0012228769737205,
+      0.0024405125076266015
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030553009471432935,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030553009471432935,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.01201923076923077,
+     "ci": [
+      0.0024242424242424242,
+      0.014666267584555522
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.01201923076923077,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.01201923076923077,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0009213759213759214,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_a0p0001_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": 0.0001,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.002148557397176182,
+      0.0027573529411764708
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0009163103237629811,
+     "ci": [
+      -0.0009171507184347294,
+      0.003353658536585366
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009163103237629811,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009163103237629811,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
      "speedup": -0.0012232415902140672,
      "ci": [
-      -0.0030637254901960784,
-      0.0006108735491753207
+      -0.0046026388462718625,
+      0.004263093788063338
      ],
      "flip_p99": 0.0,
      "gates": {
@@ -2765,7 +2153,7 @@
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": true,
+      "3": false,
       "4": false,
       "5": null,
       "speedup": -0.0012232415902140672,
@@ -2773,49 +2161,121 @@
      }
     },
     {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "speedup": -0.0006114338122898196,
-     "ci": [
-      -0.0030581039755351682,
-      0.002748091603053435
-     ],
-     "flip_p99": 0.9673883318901062,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006114338122898196,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0006114338122898196,
-      "required": 0.02
-     }
-    },
-    {
      "scenario": "bloom_noise",
      "split": "holdout",
-     "speedup": -0.0012172854534388314,
+     "speedup": 0.00030376670716889426,
      "ci": [
-      -0.003344532479729104,
-      0.0006086427267194157
+      -0.003350593968930856,
+      0.0030358227079538553
      ],
-     "flip_p99": 0.0099916011095047,
+     "flip_p99": 0.0,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012172854534388314,
+      "speedup": 0.00030376670716889426,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030376670716889426,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0012232415902140672,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
+  },
+  "g_baseline_xh_aoff_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": true,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": 0.0006138735420503376,
+     "ci": [
+      -0.0006142506142506142,
+      0.003061849357011635
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006138735420503376,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006138735420503376,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": 0.0,
+     "ci": [
+      -0.0018359853121175031,
+      0.0018315018315018315
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0006106870229007634,
+     "ci": [
+      -0.0012217470983506415,
+      0.002443494196701283
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006106870229007634,
       "required": 0.1
      },
      "gates_strict": {
@@ -2824,15 +2284,171 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0012172854534388314,
+      "speedup": 0.0006106870229007634,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0006079027355623101,
+     "ci": [
+      -0.0015211439002129601,
+      0.0018214936247723133
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006079027355623101,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006079027355623101,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.003071253071253071,
-   "worst_p99": 0.9673883318901062,
+   "min_speedup": 0.0,
+   "worst_p99": 0.0,
    "accepted": false,
-   "predicted_p99": 0.0038013027515262365
+   "predicted_p99": 0.0
+  },
+  "g_baseline_-h_aoff_dnone": {
+   "genome": {
+    "source": "baseline",
+    "exact": false,
+    "hoist": true,
+    "approx": null,
+    "demote": "none",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "speedup": -0.0003068425897514575,
+     "ci": [
+      -0.0012277470841006752,
+      0.001226993865030675
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003068425897514575,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0003068425897514575,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "speedup": -0.00030553009471432935,
+     "ci": [
+      -0.002449479485609308,
+      0.0015257857796765334
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030553009471432935,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030553009471432935,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "speedup": 0.0009163103237629811,
+     "ci": [
+      -0.0018354377178442345,
+      0.004270896888346553
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009163103237629811,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0009163103237629811,
+      "required": 0.02
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "speedup": 0.0012135922330097086,
+     "ci": [
+      -0.0006079027355623101,
+      0.0036386240263295787
+     ],
+     "flip_p99": 0.0,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012135922330097086,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012135922330097086,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": -0.0003068425897514575,
+   "worst_p99": 0.0,
+   "accepted": false,
+   "predicted_p99": 0.0
   }
  },
  "gpu_budget": 8

@@ -29,6 +29,7 @@ Date: 2026-09-25. Device class measured: desktop, NVIDIA RTX PRO 6000 Blackwell,
 | gaussian_blur_h | bilinear5 (AI hypothesis; also with exact+hoist) | +11.1% | 0.0071 | semantic, lossy |
 | gaussian_blur_v | bilinear5 | +11.4% | 0.0100 | semantic, lossy |
 | deferred_lit | pcf4 (AI hypothesis) | +11.7% | 0.0268 | semantic, lossy |
+| deferred_lit | search: pcf4 + exact + hoist + f16 demotion (`g_pcf4_xh_a0p01_dall`) | +14.0% | 0.0431 | composed; only one (train) scenario exists for this shader, no holdout yet |
 
 **Conclusively rejected or ineffective on this device** (each with measured evidence in `lab/results.jsonl` and the per-shader reports):
 - Exact canonicalization (fold, cse, unroll, select): 0.0 +/- 0.2% on all 9 shaders. The driver already does it.
@@ -41,7 +42,7 @@ Date: 2026-09-25. Device class measured: desktop, NVIDIA RTX PRO 6000 Blackwell,
 - Resolution scaling: quarter-res bloom +7..8.5% chain, fails on edges (p99 0.33..0.56).
 - Grain hash rewrite: FLIP cannot judge a different noise realization; needs a statistical metric (parked).
 
-**Pareto frontiers** per shader are in `lab/reports/<shader>.md`; the M5 search enumerated 96..144 composed genomes per shader in the CPU model and measured 12 per shader on the device. No composition beat the single best gene on desktop: on this GPU the wins are algorithmic (fewer texture fetches), and ALU-side transforms are within noise.
+**Pareto frontiers** per shader are in `lab/reports/<shader>.md`; the M5 search (`lab/reports/<shader>.search.md`) enumerated 60..142 composed genomes per shader in the CPU model and measured 6..12 per shader on the device. The predictor excluded 54..120 genomes per shader before any GPU time (f16 overflow on the NaN/Inf holdout, or color budget), and predicted FLIP p99 equalled measured p99 on every measured genome. One composition beat its single gene: deferred_lit pcf4 + f16 demotion reaches +14.0% (pcf4 alone +11.7%) at p99 0.043, but that shader has a single train scenario and no holdout, so it is provisional until a holdout scene exists. Everywhere else the best genome is the semantic rewrite alone; ALU-side genes add nothing measurable on this GPU.
 
 ## 4. Proposals for the app (nothing applied)
 1. Bilinear-assisted 5-tap Gaussian blur (both directions): +11% per pass at FLIP p99 <= 0.01.

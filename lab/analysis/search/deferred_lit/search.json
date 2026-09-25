@@ -51,8 +51,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_aoff_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -69,8 +69,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_aoff_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -87,8 +87,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_aoff_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -105,8 +105,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_aoff_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -153,8 +153,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p01_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -171,8 +171,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p01_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -189,8 +189,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p01_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -207,8 +207,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p01_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -255,8 +255,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p001_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -273,8 +273,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p001_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -291,8 +291,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p001_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -309,8 +309,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p001_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -357,8 +357,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p0001_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -375,8 +375,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p0001_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -393,8 +393,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p0001_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -411,8 +411,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_--_a0p0001_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -459,8 +459,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_aoff_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -477,8 +477,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_aoff_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -495,8 +495,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_aoff_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -513,8 +513,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_aoff_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -561,8 +561,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p01_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -579,8 +579,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p01_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -597,8 +597,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p01_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -615,8 +615,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p01_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -663,8 +663,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p001_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -681,8 +681,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p001_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -699,8 +699,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p001_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -717,8 +717,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p001_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -765,8 +765,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p0001_dq4/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -783,8 +783,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p0001_dq2/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -801,8 +801,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p0001_dq1/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -819,8 +819,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_-h_a0p0001_dall/deferred_lit.spv",
    "ops": 52,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -873,8 +873,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_aoff_dq4/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -891,8 +891,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_aoff_dq2/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -909,8 +909,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_aoff_dq1/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -927,8 +927,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_aoff_dall/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -981,8 +981,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p01_dq4/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -999,8 +999,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p01_dq2/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1017,8 +1017,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p01_dq1/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1035,8 +1035,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p01_dall/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1089,8 +1089,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p001_dq4/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1107,8 +1107,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p001_dq2/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1125,8 +1125,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p001_dq1/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1143,8 +1143,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p001_dall/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1197,8 +1197,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p0001_dq4/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1215,8 +1215,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p0001_dq2/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1233,8 +1233,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p0001_dq1/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1251,8 +1251,8 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_baseline_xh_a0p0001_dall/deferred_lit.spv",
    "ops": 143,
    "extra_u": {},
-   "pred_p99": 0.007932780310511589,
-   "pred_mean": 0.0004340477171353996,
+   "pred_p99": 0.006076895631849766,
+   "pred_mean": 0.00021126361389178783,
    "pred_scenario": "deferred_spheres",
    "within": true
   },
@@ -1269,10 +1269,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_aoff_dzero",
@@ -1287,10 +1287,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_aoff_dq4",
@@ -1305,10 +1305,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_aoff_dq2",
@@ -1323,10 +1323,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_aoff_dq1",
@@ -1341,10 +1341,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_aoff_dall",
@@ -1359,10 +1359,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_aoff_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dnone",
@@ -1377,10 +1377,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dzero",
@@ -1395,10 +1395,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dq4",
@@ -1413,10 +1413,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dq2",
@@ -1431,10 +1431,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dq1",
@@ -1449,10 +1449,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p01_dall",
@@ -1467,10 +1467,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p01_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dnone",
@@ -1485,10 +1485,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dzero",
@@ -1503,10 +1503,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dq4",
@@ -1521,10 +1521,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dq2",
@@ -1539,10 +1539,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dq1",
@@ -1557,10 +1557,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p001_dall",
@@ -1575,10 +1575,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p001_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dnone",
@@ -1593,10 +1593,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dzero",
@@ -1611,10 +1611,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dq4",
@@ -1629,10 +1629,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dq2",
@@ -1647,10 +1647,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dq1",
@@ -1665,10 +1665,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_--_a0p0001_dall",
@@ -1683,10 +1683,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_--_a0p0001_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dnone",
@@ -1701,10 +1701,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dzero",
@@ -1719,10 +1719,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dq4",
@@ -1737,10 +1737,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dq2",
@@ -1755,10 +1755,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dq1",
@@ -1773,10 +1773,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_aoff_dall",
@@ -1791,10 +1791,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_aoff_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dnone",
@@ -1809,10 +1809,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dzero",
@@ -1827,10 +1827,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dq4",
@@ -1845,10 +1845,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dq2",
@@ -1863,10 +1863,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dq1",
@@ -1881,10 +1881,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p01_dall",
@@ -1899,10 +1899,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p01_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dnone",
@@ -1917,10 +1917,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dzero",
@@ -1935,10 +1935,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dq4",
@@ -1953,10 +1953,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dq2",
@@ -1971,10 +1971,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dq1",
@@ -1989,10 +1989,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p001_dall",
@@ -2007,10 +2007,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p001_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dnone",
@@ -2025,10 +2025,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dnone/deferred_lit.spv",
    "ops": 0,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dzero",
@@ -2043,10 +2043,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dzero/deferred_lit.spv",
    "ops": 9,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dq4",
@@ -2061,10 +2061,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dq4/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dq2",
@@ -2079,10 +2079,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dq2/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dq1",
@@ -2097,10 +2097,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dq1/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_-h_a0p0001_dall",
@@ -2115,10 +2115,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_-h_a0p0001_dall/deferred_lit.spv",
    "ops": 53,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dnone",
@@ -2133,10 +2133,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dnone/deferred_lit.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dzero",
@@ -2151,10 +2151,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dzero/deferred_lit.spv",
    "ops": 25,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dq4",
@@ -2169,10 +2169,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dq4/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dq2",
@@ -2187,10 +2187,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dq2/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dq1",
@@ -2205,10 +2205,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dq1/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_aoff_dall",
@@ -2223,10 +2223,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_aoff_dall/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dnone",
@@ -2241,10 +2241,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dnone/deferred_lit.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dzero",
@@ -2259,10 +2259,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dzero/deferred_lit.spv",
    "ops": 25,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dq4",
@@ -2277,10 +2277,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dq4/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dq2",
@@ -2295,10 +2295,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dq2/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dq1",
@@ -2313,10 +2313,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dq1/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p01_dall",
@@ -2331,10 +2331,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p01_dall/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dnone",
@@ -2349,10 +2349,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dnone/deferred_lit.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dzero",
@@ -2367,10 +2367,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dzero/deferred_lit.spv",
    "ops": 25,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dq4",
@@ -2385,10 +2385,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dq4/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dq2",
@@ -2403,10 +2403,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dq2/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dq1",
@@ -2421,10 +2421,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dq1/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p001_dall",
@@ -2439,10 +2439,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p001_dall/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dnone",
@@ -2457,10 +2457,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dnone/deferred_lit.spv",
    "ops": 16,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dzero",
@@ -2475,10 +2475,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dzero/deferred_lit.spv",
    "ops": 25,
    "extra_u": {},
-   "pred_p99": 0.059839628636837006,
-   "pred_mean": 0.0015452960506081581,
+   "pred_p99": 0.02688588760793209,
+   "pred_mean": 0.0007457233732566237,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dq4",
@@ -2493,10 +2493,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dq4/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dq2",
@@ -2511,10 +2511,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dq2/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dq1",
@@ -2529,10 +2529,10 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dq1/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   },
   {
    "id": "g_pcf4_xh_a0p0001_dall",
@@ -2547,16 +2547,16 @@
    "spv": "/home/rudybear/sources/shaderopt/lab/analysis/search/deferred_lit/genomes/g_pcf4_xh_a0p0001_dall/deferred_lit.spv",
    "ops": 69,
    "extra_u": {},
-   "pred_p99": 0.08388960361480713,
-   "pred_mean": 0.003209261456504464,
+   "pred_p99": 0.04310731217265129,
+   "pred_mean": 0.001548692467622459,
    "pred_scenario": "deferred_spheres",
-   "within": false
+   "within": true
   }
  ],
  "measured": {
-  "g_baseline_xh_a0p01_dq4": {
+  "g_pcf4_xh_a0p01_dq4": {
    "genome": {
-    "source": "baseline",
+    "source": "pcf4",
     "exact": true,
     "hoist": true,
     "approx": 0.01,
@@ -2567,40 +2567,40 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -0.0030742204655248135,
+     "speedup": 0.13966725043782838,
      "ci": [
-      -0.0045397964413853705,
-      -0.001023829639551563
+      0.13760564447400667,
+      0.1409929522542186
      ],
-     "flip_p99": 0.005496854893863201,
+     "flip_p99": 0.04310731217265129,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0030742204655248135,
+      "speedup": 0.13966725043782838,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0030742204655248135,
+      "speedup": 0.13966725043782838,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0030742204655248135,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
+   "min_speedup": 0.13966725043782838,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
   },
-  "g_baseline_xh_a0p01_dq2": {
+  "g_pcf4_xh_a0p01_dq2": {
    "genome": {
-    "source": "baseline",
+    "source": "pcf4",
     "exact": true,
     "hoist": true,
     "approx": 0.01,
@@ -2611,36 +2611,300 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -0.0016087751371115175,
+     "speedup": 0.13973002553812477,
      "ci": [
-      -0.0038089796715639083,
-      0.0005109582358053457
+      0.1378022191088573,
+      0.14224350654609402
      ],
-     "flip_p99": 0.005496854893863201,
+     "flip_p99": 0.04310731217265129,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0016087751371115175,
+      "speedup": 0.13973002553812477,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0016087751371115175,
+      "speedup": 0.13973002553812477,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0016087751371115175,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
+   "min_speedup": 0.13973002553812477,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p01_dq1": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.14071157771945172,
+     "ci": [
+      0.13883211678832116,
+      0.14178561025342265
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.14071157771945172,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.14071157771945172,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.14071157771945172,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p01_dall": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.01,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.14028567264247194,
+     "ci": [
+      0.138937130143526,
+      0.14204545454545456
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.14028567264247194,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.14028567264247194,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.14028567264247194,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p001_dq4": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q4",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.14024345797798674,
+     "ci": [
+      0.13883155848343606,
+      0.14160839160839161
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.14024345797798674,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.14024345797798674,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.14024345797798674,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p001_dq2": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q2",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.14077634549559392,
+     "ci": [
+      0.13853748871810984,
+      0.1424520069808028
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.14077634549559392,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.14077634549559392,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.14077634549559392,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p001_dq1": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "q1",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.13976377952755906,
+     "ci": [
+      0.13837000305205527,
+      0.14137096180795905
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.13976377952755906,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.13976377952755906,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.13976377952755906,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
+  },
+  "g_pcf4_xh_a0p001_dall": {
+   "genome": {
+    "source": "pcf4",
+    "exact": true,
+    "hoist": true,
+    "approx": 0.001,
+    "demote": "all",
+    "mode": "f16"
+   },
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "speedup": 0.1404007285974499,
+     "ci": [
+      0.1386781441494018,
+      0.14194304097192162
+     ],
+     "flip_p99": 0.04310731217265129,
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.1404007285974499,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.1404007285974499,
+      "required": 0.02
+     }
+    }
+   ],
+   "min_speedup": 0.1404007285974499,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
   },
   "g_baseline_xh_a0p01_dq1": {
    "genome": {
@@ -2655,10 +2919,10 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -0.0013157894736842105,
+     "speedup": -0.0009476600087476309,
      "ci": [
-      -0.0029994988657796144,
-      0.001386097500982082
+      -0.0022622783332117056,
+      0.0014566695443425234
      ],
      "flip_p99": 0.005496854893863201,
      "gates": {
@@ -2667,7 +2931,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0013157894736842105,
+      "speedup": -0.0009476600087476309,
       "required": 0.1
      },
      "gates_strict": {
@@ -2676,154 +2940,22 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0013157894736842105,
+      "speedup": -0.0009476600087476309,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0013157894736842105,
+   "min_speedup": -0.0009476600087476309,
    "worst_p99": 0.005496854893863201,
    "accepted": false,
-   "predicted_p99": 0.007932780310511589
+   "predicted_p99": 0.006076895631849766
   },
-  "g_baseline_xh_a0p01_dall": {
+  "g_pcf4_xh_a0p0001_dq1": {
    "genome": {
-    "source": "baseline",
+    "source": "pcf4",
     "exact": true,
     "hoist": true,
-    "approx": 0.01,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": -0.0009495288875903878,
-     "ci": [
-      -0.0023391812865497076,
-      0.0007296088020952645
-     ],
-     "flip_p99": 0.005496854893863201,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0009495288875903878,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0009495288875903878,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0009495288875903878,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
-  },
-  "g_baseline_xh_a0p001_dq4": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q4",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": -0.0016084222839596433,
-     "ci": [
-      -0.0032177914619367356,
-      -7.299150273170218e-05
-     ],
-     "flip_p99": 0.005496854893863201,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0016084222839596433,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0016084222839596433,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0016084222839596433,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
-  },
-  "g_baseline_xh_a0p001_dq2": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "q2",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": -0.0014623089858887184,
-     "ci": [
-      -0.003518778016319259,
-      0.0012417143123078153
-     ],
-     "flip_p99": 0.005496854893863201,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0014623089858887184,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0014623089858887184,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0014623089858887184,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
-  },
-  "g_baseline_xh_a0p001_dq1": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
+    "approx": 0.0001,
     "demote": "q1",
     "mode": "f16"
    },
@@ -2831,131 +2963,43 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -0.0015353121801432957,
+     "speedup": 0.14113020681619576,
      "ci": [
-      -0.003948284806229886,
-      0.0005846286524066182
+      0.13922891415241717,
+      0.14258680015186576
      ],
-     "flip_p99": 0.005496854893863201,
+     "flip_p99": 0.04310731217265129,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0015353121801432957,
+      "speedup": 0.14113020681619576,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0015353121801432957,
+      "speedup": 0.14113020681619576,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0015353121801432957,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
+   "min_speedup": 0.14113020681619576,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
   },
-  "g_baseline_xh_a0p001_dall": {
+  "g_pcf4_xh_a0p001_dnone": {
    "genome": {
-    "source": "baseline",
+    "source": "pcf4",
     "exact": true,
     "hoist": true,
     "approx": 0.001,
-    "demote": "all",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": -0.0011695906432748538,
-     "ci": [
-      -0.0029988297249853714,
-      0.0014615609470914938
-     ],
-     "flip_p99": 0.005496854893863201,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0011695906432748538,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": -0.0011695906432748538,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": -0.0011695906432748538,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
-  },
-  "g_baseline_xh_a0p01_dzero": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
-    "demote": "zero",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": 0.0004385964912280702,
-     "ci": [
-      -0.0011707888189667788,
-      0.0021177157879363226
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0004385964912280702,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0004385964912280702,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.0004385964912280702,
-   "worst_p99": 0.0,
-   "accepted": false,
-   "predicted_p99": 0.0
-  },
-  "g_baseline_xh_a0p01_dnone": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.01,
     "demote": "none",
     "mode": "f16"
    },
@@ -2963,40 +3007,40 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -7.305669199298655e-05,
+     "speedup": 0.1413154440717515,
      "ci": [
-      -0.0019741171309497698,
-      0.0019722533199861263
+      0.1399384951116512,
+      0.14235756957598716
      ],
-     "flip_p99": 0.0,
+     "flip_p99": 0.026780270040035248,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -7.305669199298655e-05,
+      "speedup": 0.1413154440717515,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
-      "3": true,
-      "4": false,
+      "3": false,
+      "4": true,
       "5": null,
-      "speedup": -7.305669199298655e-05,
+      "speedup": 0.1413154440717515,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -7.305669199298655e-05,
-   "worst_p99": 0.0,
-   "accepted": false,
-   "predicted_p99": 0.0
+   "min_speedup": 0.1413154440717515,
+   "worst_p99": 0.026780270040035248,
+   "accepted": true,
+   "predicted_p99": 0.02688588760793209
   },
-  "g_baseline_--_a0p001_dall": {
+  "g_pcf4_--_a0p001_dall": {
    "genome": {
-    "source": "baseline",
+    "source": "pcf4",
     "exact": false,
     "hoist": false,
     "approx": 0.001,
@@ -3007,80 +3051,36 @@
     {
      "scenario": "deferred_spheres",
      "split": "train",
-     "speedup": -0.0033613445378151263,
+     "speedup": 0.14110027652452337,
      "ci": [
-      -0.004973677907461643,
-      -0.0017523364485981308
+      0.1391479851233709,
+      0.14263915128615026
      ],
-     "flip_p99": 0.005496854893863201,
+     "flip_p99": 0.04310731217265129,
      "gates": {
       "1": true,
       "2": true,
       "3": true,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0033613445378151263,
+      "speedup": 0.14110027652452337,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": -0.0033613445378151263,
+      "speedup": 0.14110027652452337,
       "required": 0.02
      }
     }
    ],
-   "min_speedup": -0.0033613445378151263,
-   "worst_p99": 0.005496854893863201,
-   "accepted": false,
-   "predicted_p99": 0.007932780310511589
-  },
-  "g_baseline_xh_a0p001_dnone": {
-   "genome": {
-    "source": "baseline",
-    "exact": true,
-    "hoist": true,
-    "approx": 0.001,
-    "demote": "none",
-    "mode": "f16"
-   },
-   "runs": [
-    {
-     "scenario": "deferred_spheres",
-     "split": "train",
-     "speedup": 0.0003653368405670028,
-     "ci": [
-      -0.0008771929824561404,
-      0.0018994739918176504
-     ],
-     "flip_p99": 0.0,
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0003653368405670028,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0003653368405670028,
-      "required": 0.02
-     }
-    }
-   ],
-   "min_speedup": 0.0003653368405670028,
-   "worst_p99": 0.0,
-   "accepted": false,
-   "predicted_p99": 0.0
+   "min_speedup": 0.14110027652452337,
+   "worst_p99": 0.04310731217265129,
+   "accepted": true,
+   "predicted_p99": 0.04310731217265129
   }
  },
  "gpu_budget": 8
