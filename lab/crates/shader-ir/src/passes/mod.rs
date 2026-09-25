@@ -13,6 +13,7 @@
 //! spirv-tools validator in-process. The M3 precision demotion ([`demote`], `shader-ir demote`)
 //! is a separate transform with its own class `lossy` (the value changes by design).
 
+pub mod approx;
 pub mod cfg;
 pub mod consts;
 pub mod cse;
@@ -20,6 +21,7 @@ pub mod dce;
 pub mod demote;
 pub mod divconst;
 pub mod fold;
+pub mod hoist;
 pub mod ident;
 pub mod powspec;
 pub mod select;

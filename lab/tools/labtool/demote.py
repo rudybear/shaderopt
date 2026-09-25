@@ -4,8 +4,31 @@ import json
 from pathlib import Path
 from .paths import LAB, SHADER_IR, SPV_DIR, VARIANTS, run, require
 from .experiment import measure_variant, evaluate_gates, record, write_variant, scenarios_for_shader, budgets
-from .metrics import kind_for
+from .metrics import kind_for, flip_metrics
 from .report import write_shader_report
+from .classify import _eval, _pass_inputs
+from .formats import quantize
+from .jobs import make_job, run_job, gen_inputs
+import numpy as np
+
+def predict_variant(shader: str, variant_spv: Path, device=None) -> dict:
+    """Evaluate the transformed module itself in the CPU f32 model against the baseline module on the first train scenario.
+    This captures operand/constant conversions that the per-site `--f16-sites` model does not."""
+    sc = scenarios_for_shader(shader, "train")[0]
+    jd = make_job(sc, "baseline", samples=1, iterations=1, warmup=0, tag="demote_pred")
+    res, _ = run_job(jd, sc, "baseline", device=device)
+    inputs = gen_inputs(sc); out = {}
+    for p in sc.passes:
+        if p.shader != shader:
+            continue
+        w, h = sc.pass_size(p); sm = _pass_inputs(sc, p, res, inputs)
+        a = variant_spv.parent / "pred_base.npy"; b = variant_spv.parent / "pred_var.npy"
+        _eval(SPV_DIR / f"{shader}.spv", w, h, sm, p.uniforms, a, [], nearest=(p.sampler == "nearest"))
+        _eval(variant_spv, w, h, sm, p.uniforms, b, [], nearest=(p.sampler == "nearest"))
+        kind = kind_for(p.name, p.format, budgets())
+        out[p.name] = flip_metrics(quantize(p.format, np.load(a)), quantize(p.format, np.load(b)), kind)
+        a.unlink(); b.unlink()
+    return out
 
 ANALYSIS = LAB / "analysis"
 
@@ -30,6 +53,16 @@ def demote_variant(shader: str, sites: list[int], mode: str, vid: str) -> tuple[
         raise RuntimeError(f"demote failed ({shader} {mode} {len(sites)} sites): {r.stdout}{r.stderr}".strip())
     return out, json.loads(ops.read_text())
 
+def rejected_sites(shader: str, sites: list[int], mode: str) -> set[int]:
+    """Probe: ask demote for all sites and collect the ids it rejects (interface loads, image ops, call results...)."""
+    import re, tempfile
+    with tempfile.TemporaryDirectory() as td:
+        cmd = [SHADER_IR, "demote", "--spv", SPV_DIR / f"{shader}.spv", "--out", Path(td) / "o.spv", "--sites", ",".join(map(str, sites)), "--mode", mode, "--ops", Path(td) / "o.json"]
+        r = run(cmd)
+    if r.returncode == 0:
+        return set()
+    return {int(m) for m in re.findall(r"^\s+%(\d+):", r.stdout + r.stderr, flags=re.M)}
+
 def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, modes=("f16", "relaxed"), device=None) -> dict:
     require(SHADER_IR, "shader-ir")
     an = json.loads((ANALYSIS / f"{shader}.json").read_text())
@@ -38,6 +71,11 @@ def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, mo
     if not sens:
         raise SystemExit(f"no sensitivity data for {shader}; run lab classify first")
     ranked = sorted(sens.items(), key=lambda kv: (kv[1]["flip_p99"], kv[1]["flip_mean"]))
+    # drop the sites the f16 transform cannot demote (interface loads, image results, call results, pointer-param loads)
+    rej = rejected_sites(shader, [int(k) for k, _ in ranked], "f16")
+    ranked = [(k, v) for k, v in ranked if int(k) not in rej]
+    if not ranked:
+        raise SystemExit(f"{shader}: no demotable candidate sites")
     bud = budgets()
     ctx = an["sensitivity_context"]; tol, tol_src = tolerance_for(shader, ctx["pass"], ctx["format"], bud)
     p99_budget = (tol or {}).get("p99_max", 0.05)
@@ -66,6 +104,9 @@ def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, mo
             except RuntimeError as e:
                 results.append({"variant_id": vid, "mode": mode, "set": name, "sites": sites, "error": str(e)[:400]}); continue
             pred = {"flip_p99": max(sens[str(s)]["flip_p99"] for s in sites), "flip_mean_max_site": max(sens[str(s)]["flip_mean"] for s in sites)}
+            if mode == "f16":
+                pm = predict_variant(shader, spv, device=device)
+                pred["module_flip_p99"] = max(v["flip_p99"] for v in pm.values()); pred["module_flip_mean"] = max(v["flip_mean"] for v in pm.values())
             write_variant(shader, vid, spv, ops, extra={"mode": mode, "set": name, "sites": sites, "predicted": pred})
             entry = {"variant_id": vid, "mode": mode, "set": name, "sites": sites, "n_sites": len(sites), "predicted": pred, "ops": len(ops), "runs": []}
             for sc in scs_train + scs_hold:
@@ -77,7 +118,7 @@ def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, mo
                 entry["runs"].append({"scenario": sc.name, "split": sc.split, "gates": g_bud, "gates_strict": g_strict,
                                       "timing": {k: v for k, v in m["timing"].items() if v["touched"]}, "metrics": m["metrics"]})
             results.append(entry)
-    out = {"shader": shader, "tolerance": tol, "tolerance_source": tol_src, "sets": sets, "results": results}
+    out = {"shader": shader, "tolerance": tol, "tolerance_source": tol_src, "sets": sets, "rejected_sites": sorted(rej), "results": results}
     (ANALYSIS / f"{shader}.demote.json").write_text(json.dumps(out, indent=1))
     write_shader_report(shader)
     return out

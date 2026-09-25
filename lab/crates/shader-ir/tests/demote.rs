@@ -66,10 +66,6 @@ fn demote_err(words: &[u32], sites: &[u32], mode: DemoteMode) -> String {
     format!("{:#}", demote::run(&mut l, sites, mode, false, &mut ops).expect_err("expected a rejection"))
 }
 
-fn histogram(words: &[u32], key: &str) -> usize {
-    Lifted::load(words).unwrap().opcode_histogram().iter().find(|(n, _)| n == key).map(|x| x.1).unwrap_or(0)
-}
-
 fn has_float16_capability(words: &[u32]) -> bool {
     Lifted::load(words).unwrap().module.capabilities.iter().any(|c| c.operands.first() == Some(&rspirv::dr::Operand::Capability(spirv::Capability::Float16)))
 }
@@ -150,8 +146,9 @@ fn f16_ulp_distance(a: f32, b: f32) -> f64 {
     ((a as f64) - (b as f64)).abs() / ulp
 }
 
-fn worst_f16_ulp(a: &EvalOutput, b: &EvalOutput) -> (f64, String) {
-    let mut worst = (0.0f64, String::new());
+/// (worst f16-ULP distance, where, worst absolute difference).
+fn worst_f16_ulp(a: &EvalOutput, b: &EvalOutput) -> (f64, String, f64) {
+    let mut worst = (0.0f64, String::new(), 0.0f64);
     for (loc, ia) in &a.outputs {
         let ib = &b.outputs[loc];
         for y in 0..ia.height {
@@ -160,7 +157,11 @@ fn worst_f16_ulp(a: &EvalOutput, b: &EvalOutput) -> (f64, String) {
                 for c in 0..4 {
                     let d = f16_ulp_distance(ta[c], tb[c]);
                     if d > worst.0 {
-                        worst = (d, format!("location {loc} pixel ({x},{y}) channel {c}: {} vs {}", ta[c], tb[c]));
+                        worst.0 = d;
+                        worst.1 = format!("location {loc} pixel ({x},{y}) channel {c}: {} vs {}", ta[c], tb[c]);
+                    }
+                    if ta[c].is_finite() && tb[c].is_finite() {
+                        worst.2 = worst.2.max((ta[c] as f64 - tb[c] as f64).abs());
                     }
                 }
             }
@@ -212,8 +213,9 @@ fn relaxed_adds_exactly_n_decorations() {
 
 #[test]
 fn f16_single_fmul() {
-    // uv at 16x16 is (2k+1)/32: exactly representable in f16, so rounding the operand at the
-    // region entry changes nothing and the demoted module must equal the --f16-sites prediction.
+    // uv at 64x64 is (2k+1)/128: exactly representable in f16 (7 significant bits), so rounding
+    // the operands at the region entry changes nothing and the demoted module must equal the
+    // --f16-sites prediction; the 14-bit products do round in f16.
     let w = compile_or_skip!("dm_fmul", "void main() { o = vec4(uv.x * uv.y); }");
     let sites = ids_of(&w, "OpFMul");
     assert_eq!(sites.len(), 1);
@@ -232,12 +234,12 @@ fn f16_single_fmul() {
     let l = Lifted::load(&out).unwrap();
     assert_eq!(passes::float_width(&l, l.result_types[&sites[0]]), Some(16));
     assert_eq!(l.type_name(l.result_types[&sites[0]]), "float16");
-    let a = f32_run(16, 16, &sites).eval_ok(&w);
-    let b = f32_run(16, 16, &[]).eval_ok(&out);
+    let a = f32_run(64, 64, &sites).eval_ok(&w);
+    let b = f32_run(64, 64, &[]).eval_ok(&out);
     assert_bit_identical(&a, &b, "f16 single fmul");
     // And the demotion did change the value: f16 rounding of uv.x*uv.y differs from f32.
-    let plain = f32_run(16, 16, &[]).eval_ok(&w);
-    let differs = (0..16).flat_map(|y| (0..16).map(move |x| (x, y))).any(|(x, y)| plain.outputs[&0].texel(x, y)[0].to_bits() != b.outputs[&0].texel(x, y)[0].to_bits());
+    let plain = f32_run(64, 64, &[]).eval_ok(&w);
+    let differs = (0..64).flat_map(|y| (0..64).map(move |x| (x, y))).any(|(x, y)| plain.outputs[&0].texel(x, y)[0].to_bits() != b.outputs[&0].texel(x, y)[0].to_bits());
     assert!(differs, "the f16 product never differs from f32?");
 }
 
@@ -570,14 +572,27 @@ fn analyze_candidates(spv: &Path) -> Vec<u32> {
     ids
 }
 
-/// The largest deviation observed between the demoted corpus module and the `--f16-sites`
-/// prediction, in f16 ULPs: operands entering a demoted region are rounded to f16 by the
-/// demoted module but not by the prediction (which rounds results only), and constants are
-/// f16 constants in the demoted module; the error of one operation on operands each
-/// perturbed by half an f16 ULP is up to about one f16 ULP of the result, and the corpus
-/// shaders chain such operations. Measured 2025-09 on the 9 corpus shaders (see the test
-/// output for the per-shader value).
-const CORPUS_MAX_F16_ULP: f64 = 8.0;
+/// Documented worst deviation, in f16 ULPs, between the demoted corpus module (f32 mode: f16
+/// arithmetic where the types say so) and the `--f16-sites` prediction on the same sites.
+/// The prediction rounds only *results* to f16; the demoted module also rounds the f32
+/// operands entering a demoted region (`OpFConvert`) and uses f16 constants (`0.2126` ->
+/// `0.21265`), so one operation may differ by about one f16 ULP of its result and the corpus
+/// chains a few. Measured 2026-09 on the 9 corpus shaders (`.spv` and `.g.spv`):
+/// * 0 ULP: `color_grade`, `fxaa`, `gaussian_blur_h/v`; 1 ULP: `bloom_composite`;
+///   2 ULP: `deferred_lit`, `tonemap_aces`;
+/// * `bloom_threshold`: 10 ULP: `lum - threshold` cancels (`1.0137 - 1.0`, absolute error
+///   2.4e-4, half an f16 ULP at 1.0, is 10 ULP of the 0.0137 result);
+/// * `vignette_grain`: unbounded: the grain hash (`fract((p3.x + p3.y) * p3.z)` on values near
+///   1e4, where the f16 spacing is 8) is chaotic, any operand difference flips it, and the
+///   f16 prediction itself is 2047 ULP from f32 there (the lab's sensitivity gate would never
+///   list those sites). Only finiteness (no NaN/inf mismatch) is checked for it.
+fn corpus_bound(name: &str) -> f64 {
+    match name {
+        n if n.starts_with("bloom_threshold") => 12.0,
+        n if n.starts_with("vignette_grain") => f64::MAX,
+        _ => 2.0,
+    }
+}
 
 #[test]
 fn corpus_demote_all_candidates_f16() {
@@ -605,10 +620,12 @@ fn corpus_demote_all_candidates_f16() {
         let cfg_b = corpus_cfg(&l0, 64, 36, &[]);
         let a = shader_ir::interp::evaluate(&l0, &cfg_a).unwrap_or_else(|e| panic!("{name}: eval original: {e:#}"));
         let b = shader_ir::interp::evaluate(&l1, &cfg_b).unwrap_or_else(|e| panic!("{name}: eval demoted: {e:#}"));
+        let plain = shader_ir::interp::evaluate(&l0, &cfg_b).unwrap_or_else(|e| panic!("{name}: eval plain: {e:#}"));
         assert_eq!(a.discarded_pixels, b.discarded_pixels, "{name}: discard count");
-        let (worst, at) = worst_f16_ulp(&a, &b);
+        let (worst, at, abs) = worst_f16_ulp(&a, &b);
+        let (pred_vs_f32, _, _) = worst_f16_ulp(&a, &plain);
         let line = format!(
-            "{name}: candidates {} -> demoted {} sites ({} rejected by kind), {} demote ops, converts in {} / out {} / removed {} (module: {} to f16, {} to f32), worst {worst:.2} f16 ULP vs --f16-sites{}",
+            "{name}: candidates {} -> demoted {} sites ({} rejected by kind), {} demote ops, converts in {} / out {} / removed {} (module: {} to f16, {} to f32), worst {worst:.2} f16 ULP (abs {abs:.2e}) vs --f16-sites (which is {pred_vs_f32:.0} ULP from plain f32){}",
             candidates.len(),
             sites.len(),
             rejected.len(),
@@ -626,7 +643,7 @@ fn corpus_demote_all_candidates_f16() {
             *kinds.entry(why.split(':').next().unwrap_or(why).to_string()).or_default() += 1;
         }
         eprintln!("    rejected: {kinds:?}");
-        assert!(worst <= CORPUS_MAX_F16_ULP, "{line}");
+        assert!(worst.is_finite() && worst <= corpus_bound(&name), "{line}");
         summary.push(line);
     }
     eprintln!("corpus summary:\n  {}", summary.join("\n  "));

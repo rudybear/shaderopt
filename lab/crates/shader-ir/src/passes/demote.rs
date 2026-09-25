@@ -252,7 +252,13 @@ fn operand_reason(l: &Lifted, inst: &Instruction, set: &HashSet<u32>) -> Option<
 
 fn load_reason(l: &Lifted, inst: &Instruction, set: &HashSet<u32>) -> Option<String> {
     let ptr = id_op(inst, 0)?;
-    let Some((var, storage)) = pointer_root(l, ptr) else { return Some("OpLoad through an unknown pointer".into()) };
+    let Some((var, storage)) = pointer_root(l, ptr) else {
+        return Some(if matches!(l.defs.get(&ptr), Some(Site::Parameter(..))) {
+            format!("OpLoad through the pointer parameter %{ptr}: function signatures keep their f32 types")
+        } else {
+            format!("OpLoad through %{ptr}, which is not rooted in a variable")
+        });
+    };
     if storage != StorageClass::Function {
         return Some(format!("OpLoad of a {storage:?} variable {}: interface types must not change", var_name(l, var)));
     }

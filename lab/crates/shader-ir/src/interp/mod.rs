@@ -4,6 +4,7 @@
 //! advancing in lockstep at every derivative instruction (see [`exec`]). Rows of quads are
 //! distributed over threads with rayon; the quad itself never splits.
 
+pub mod dump;
 pub mod exec;
 pub mod ext;
 pub mod image;
@@ -592,13 +593,13 @@ fn to_rgba(v: &Value) -> Result<[f32; 4]> {
 }
 
 /// One pixel's result.
-enum PixelResult {
+pub(crate) enum PixelResult {
     Color(Vec<[f32; 4]>),
     Discarded,
 }
 
 /// Runs the four lanes of one quad to completion.
-fn run_quad(lanes: &mut [Invocation<'_>; 4], x0: usize, y0: usize, dead_derivs: &mut usize) -> Result<[PixelResult; 4]> {
+pub(crate) fn run_quad(lanes: &mut [Invocation<'_>; 4], x0: usize, y0: usize, dead_derivs: &mut usize) -> Result<[PixelResult; 4]> {
     let mut status: Vec<Status> = Vec::with_capacity(4);
     for (i, lane) in lanes.iter_mut().enumerate() {
         let (x, y) = (x0 + (i & 1), y0 + (i >> 1));

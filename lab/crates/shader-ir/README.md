@@ -301,7 +301,8 @@ an error naming the diagnostic. Passes are applied in the listed order; the clea
 them (`fold,dce,cse,ident`) are repeated to a fixed point (<= 10 rounds) after every other pass
 and at the end. `--only-op ID` restricts every pass except `dce` to the target id (a result id;
 the header label for `unroll`; the header label, merge label or a phi id for `select`).
-`ops.json` is the contract's list of `{"pass","class","target","replaced_by","detail"}` records.
+`ops.json` is the contract's list of `{"pass","class","target","replaced_by","detail"}` records;
+`class` is `exact`, `ulp` or (from `demote` only) `lossy`.
 
 | pass | edit | class |
 |---|---|---|
@@ -322,3 +323,66 @@ if/else in `-V` output and are not `select` candidates; after `unroll`, values t
 Function variables (`float x = float(i)`) stay loads/stores, so the unrolled Gaussian weights do
 not fold (a store-to-load forwarding pass would be needed). `--exact-only` skips every edit that
 would be classed `ulp`, which is what the tests use for the f64 bit-identity gate.
+
+## M3 precision demotion (`src/passes/demote.rs`, `shader-ir demote`)
+
+```
+shader-ir demote --spv in.spv --out out.spv --sites 57,58,90 --mode relaxed|f16 --ops ops.json [--group-converts]
+```
+
+`--sites` lists f32 float-typed result ids (scalars or vectors) of the input module; ids that
+do not exist or are not f32-typed are an error listing them. Which sites are sensible (no
+sinks, ranges inside f16) is the caller's decision (`analyze` gives `candidate_sites`, `eval
+--f16-sites` the prediction). Both modes record class `lossy` ops (the value changes by design;
+`exact`/`ulp` are the M2 classes).
+
+* `--mode relaxed`: `OpDecorate %id RelaxedPrecision` per site, nothing else (pass
+  `demote_relaxed`). Mobile drivers honor the hint (mediump), desktop drivers usually ignore
+  it; the interpreter ignores it.
+* `--mode f16` (pass `demote_f16`): each listed instruction keeps its id and computes in f16:
+  the result type becomes `f16`/`vecN<f16>`; f32 operands outside the set get an `OpFConvert`
+  to f16 right before the instruction (deduplicated per (operand, block); phi incoming values
+  convert at the end of the predecessor block, before its merge/terminator); constant operands
+  become f16 constants (`OpConstant` with the half bits, RNE, deduplicated); every use of the
+  result by an instruction outside the set goes through one `OpFConvert` back to f32 placed right
+  after the instruction (after the phis of the block for an `OpPhi`). `OpCapability Float16`,
+  `OpTypeFloat 16`, its vectors and `Function` pointer types are added when missing. Supported:
+  `OpFAdd/FSub/FMul/FDiv/FRem/FMod/FNegate`, `OpDot`, `OpVectorTimesScalar`,
+  `OpCompositeConstruct/Extract/Insert`, `OpVectorShuffle`, `OpVectorExtractDynamic/InsertDynamic`,
+  `OpSelect`, `OpPhi`, `OpCopyObject`, `OpConvertSToF/UToF`, the float `GLSL.std.450`
+  instructions whose float operands and result change together (`Exp`, `Pow`, `FMix`,
+  `SmoothStep`, `Length`, `Normalize`, ...), and `OpLoad` of a `Function` variable: listing a
+  load demotes the variable (pointer type `Function f16`, every store to it converts the stored
+  value, the variable and each store get their own op with `target` = the variable id), which
+  requires every load of that variable to be listed and the variable to be used only by
+  whole-variable loads and stores (glslang's `v.x = ...` access chains and `param` variables
+  passed to calls are rejected). A listed `OpFConvert` is skipped. Rejected with a message naming
+  the id and the reason: comparisons, image ops, derivatives, matrix ops, loads of interface
+  storage (`Uniform`, `Input`, `PushConstant`, `UniformConstant`, `Output`, `Private`), loads
+  through access chains or pointer parameters, function parameters and call results,
+  mixed-signature `GLSL.std.450` ops (`Ldexp`, `Frexp`, `Modf`, pack/unpack, matrix functions),
+  matrix/struct/array operands, specialization-constant operands. `demote::prune` applies the
+  same rules to a candidate list and returns the survivors, so "demote everything demotable"
+  is one call (the corpus test does this).
+* `--group-converts`: afterwards removes `f16 -> f32 -> f16` pairs (an `OpFConvert` of an
+  `OpFConvert` back to the original type when the intermediate has no other use; pass
+  `group_converts`, class `exact`). One `demote` call never creates such pairs (a listed operand
+  is used directly); they appear when demotion is applied incrementally to an already demoted
+  module, where a site's operand is the previous site's convert back.
+
+The interpreter needs no extension: in `f32` mode a 16-bit float type is computed at f16
+precision (`Mode::prec(16)`), `OpFConvert` rounds through `half::f16`, f16 constants are read
+from their half bits. Its `--f16-sites` prediction rounds only *results*; the demoted module
+also rounds the f32 operands entering a region and uses f16 constants, so the two differ by
+about one f16 ULP per chained operation and more under cancellation. Corpus (`tests/demote.rs`,
+every `analyze` candidate that survives `prune`, `--group-converts`, 64x36, generic inputs):
+`color_grade` 49 sites (10 converts in / 1 out), `fxaa` 29 (11/2), `gaussian_blur_h/v` 21
+(5/1), `bloom_composite` 16 (7/3), `bloom_threshold` 33 (6/1), `deferred_lit` 39 (9/2),
+`tonemap_aces` 38 (10/3), `vignette_grain` 40 (18/5); no pairs to remove (single call); the
+demoted module is within 0 ULP (`color_grade`, `fxaa`, `gaussian_blur_*`), 1 (`bloom_composite`),
+2 (`deferred_lit`, `tonemap_aces`), 10 (`bloom_threshold`: `lum - threshold` cancels) of the
+prediction, and unbounded on `vignette_grain`, whose grain hash (`fract` of values near 1e4,
+f16 spacing 8) is chaotic under any operand difference (the prediction itself is 2047 ULP from
+f32 there). Rejections in the corpus are uniform/input loads, image samples, call results,
+loads through the `param` pointer of `hash(vec2 p)`, and variables with an unlisted (sink)
+load or a component access chain (`p3.x`, `alb.a`).

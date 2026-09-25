@@ -1,0 +1,300 @@
+{
+  "shader": "tonemap_aces",
+  "variant_id": "demote_f16_zero",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "lossy",
+      "detail": "OpVariable %40 (\"c\") Function f32->f16 (demoted through its loads)",
+      "pass": "demote_f16",
+      "replaced_by": 40,
+      "target": 40
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVariable %69 (\"lum\") Function f32->f16 (demoted through its loads)",
+      "pass": "demote_f16",
+      "replaced_by": 69,
+      "target": 69
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVectorTimesScalar %52 %60 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 61,
+      "target": 61
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVectorShuffle %65 %65 0 1 2 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 66,
+      "target": 66
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFMul %61 %66 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 67,
+      "target": 67
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %40 %67 to %40 (\"c\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 40,
+      "target": 40
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %40 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 70,
+      "target": 70
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDot %70 %74 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 75,
+      "target": 75
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %69 %75 to %69 (\"lum\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 69,
+      "target": 69
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %69 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 76,
+      "target": 76
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeConstruct %76 %76 %76 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 77,
+      "target": 77
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %40 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 78,
+      "target": 78
+    },
+    {
+      "class": "lossy",
+      "detail": "OpExtInst FMix %77 %78 %79 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 80,
+      "target": 80
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %40 %80 to %40 (\"c\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 40,
+      "target": 40
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %40 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 81,
+      "target": 81
+    },
+    {
+      "class": "lossy",
+      "detail": "OpExtInst FMax %81 %82 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 83,
+      "target": 83
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeConstruct %86 %86 %86 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 87,
+      "target": 87
+    },
+    {
+      "class": "lossy",
+      "detail": "OpExtInst Pow %83 %87 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 88,
+      "target": 88
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %40 %88 to %40 (\"c\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 40,
+      "target": 40
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %40 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 90,
+      "target": 90
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %40 %91 to %40 (\"c\") f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 40,
+      "target": 40
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %40 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 94,
+      "target": 94
+    },
+    {
+      "class": "lossy",
+      "detail": "OpExtInst Pow %94 %99 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 100,
+      "target": 100
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeExtract %100 0 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 101,
+      "target": 101
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeExtract %100 1 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 102,
+      "target": 102
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeExtract %100 2 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 103,
+      "target": 103
+    },
+    {
+      "class": "lossy",
+      "detail": "OpCompositeConstruct %101 %102 %103 %34 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 104,
+      "target": 104
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVectorTimesScalar %15 %14 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 16,
+      "target": 16
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFMul %13 %19 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 20,
+      "target": 20
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVectorTimesScalar %23 %22 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 24,
+      "target": 24
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFAdd %24 %26 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 27,
+      "target": 27
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFMul %21 %27 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 28,
+      "target": 28
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFAdd %28 %30 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 31,
+      "target": 31
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFDiv %20 %31 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 32,
+      "target": 32
+    },
+    {
+      "class": "lossy",
+      "detail": "OpExtInst FClamp %32 %35 %36 f32->f16 (+3 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 37,
+      "target": 37
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "d090ae0f08f1ea2619743e49f7c4782923da2c3b",
+    "runner": "490a9856b502995c",
+    "shader_ir": "16175baa2f09a3ba",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:04:51",
+  "mode": "f16",
+  "set": "zero",
+  "sites": [
+    61,
+    66,
+    67,
+    70,
+    75,
+    76,
+    77,
+    78,
+    80,
+    81,
+    83,
+    87,
+    88,
+    90,
+    94,
+    100,
+    101,
+    102,
+    103,
+    104,
+    16,
+    20,
+    24,
+    27,
+    28,
+    31,
+    32,
+    37
+  ],
+  "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0
+  }
+}

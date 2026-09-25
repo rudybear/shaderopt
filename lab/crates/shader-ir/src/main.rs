@@ -12,6 +12,8 @@ use spirv::StorageClass;
 use std::path::PathBuf;
 
 mod cli_analyze;
+mod cli_approx;
+mod cli_hoist;
 
 #[derive(Parser)]
 #[command(name = "shader-ir", version, about = "Shader lab CPU model: lossless SPIR-V lift and fragment interpreter")]
@@ -37,6 +39,10 @@ enum Cmd {
     Rewrite(cli_rewrite::RewriteArgs),
     /// M2 static analysis: rates, sinks, sampler coordinates, source lines, ranges -> JSON.
     Analyze(cli_analyze::AnalyzeArgs),
+    /// M4: hoist maximal uniform-rate subtrees into new uniform block members (see lab/CONTRACTS.md).
+    Hoist(cli_hoist::HoistArgs),
+    /// M4: replace GLSL.std.450 transcendentals at listed sites by range-fitted polynomials.
+    Approx(cli_approx::ApproxArgs),
     /// M3 precision demotion: RelaxedPrecision decorations or explicit f16 for listed sites.
     Demote(cli_demote::DemoteArgs),
 }
@@ -89,6 +95,13 @@ struct EvalArgs {
     /// Round every float-typed result to f16.
     #[arg(long)]
     f16_all: bool,
+    /// Result ids whose values at pixel (0, 0) are written to --dump (M4 hoist values; run on
+    /// the module given to `hoist`, any tiny size such as --width 2 --height 2).
+    #[arg(long, value_delimiter = ',')]
+    dump_ids: Vec<u32>,
+    /// JSON file for --dump-ids: {"<id>": [components as f64]}.
+    #[arg(long)]
+    dump: Option<PathBuf>,
 }
 
 fn split_kv<'a>(s: &'a str, what: &str) -> Result<(&'a str, &'a str)> {
@@ -143,6 +156,8 @@ fn run() -> Result<()> {
             Ok(())
         }
         Cmd::Analyze(a) => cli_analyze::run(&a),
+        Cmd::Hoist(a) => cli_hoist::run(a),
+        Cmd::Approx(a) => cli_approx::run(a),
         Cmd::Demote(a) => cli_demote::run(a),
         Cmd::Eval(a) => {
             if let Some(n) = a.threads {
@@ -178,6 +193,11 @@ fn run() -> Result<()> {
             for u in &a.inputs {
                 let (n, v) = split_kv(u, "input")?;
                 cfg.inputs.push((n.to_string(), v.to_string()));
+            }
+            if let Some(p) = &a.dump {
+                let d = interp::dump::dump_first_quad(&lifted, &cfg, &a.dump_ids)?;
+                std::fs::write(p, serde_json::to_string_pretty(&interp::dump::dump_json(&d))?).with_context(|| format!("cannot write {}", p.display()))?;
+                eprintln!("{}: wrote {} values at pixel (0, 0) to {}", a.spv.display(), d.len(), p.display());
             }
             let t0 = std::time::Instant::now();
             let out = interp::evaluate(&lifted, &cfg)?;
