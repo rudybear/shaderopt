@@ -129,7 +129,9 @@
    "n_sites": 28,
    "predicted": {
     "flip_p99": 0.0,
-    "flip_mean_max_site": 0.0
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
    },
    "ops": 35,
    "runs": [
@@ -142,7 +144,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0046801872074883,
+      "speedup": -0.0020768431983385254,
       "required": 0.1
      },
      "gates_strict": {
@@ -151,27 +153,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0046801872074883,
+      "speedup": -0.0020768431983385254,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7692.0,
-       "variant_median_ns": 7728.0,
-       "speedup": -0.0046801872074883,
+       "baseline_median_ns": 7704.0,
+       "variant_median_ns": 7720.0,
+       "speedup": -0.0020768431983385254,
        "speedup_ci95": [
-        -0.009384775808133473,
-        -0.0020757654385054488
+        -0.0049350969892669036,
+        -0.00077780658542909
        ],
        "baseline_ci95": [
-        7672.0,
-        7710.0
+        7694.0,
+        7716.0
        ],
        "variant_ci95": [
         7716.0,
-        7756.0
+        7738.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -196,7 +198,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.00280970625798212,
+      "speedup": -0.0010209290454313426,
       "required": 0.1
      },
      "gates_strict": {
@@ -205,27 +207,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.00280970625798212,
+      "speedup": -0.0010209290454313426,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7830.0,
-       "variant_median_ns": 7852.0,
-       "speedup": -0.00280970625798212,
+       "baseline_median_ns": 7836.0,
+       "variant_median_ns": 7844.0,
+       "speedup": -0.0010209290454313426,
        "speedup_ci95": [
-        -0.007668711656441718,
-        0.001538434577099447
+        -0.0028104600391024616,
+        0.0005102040816326531
        ],
        "baseline_ci95": [
-        7816.0,
-        7852.0
+        7824.0,
+        7848.0
        ],
        "variant_ci95": [
-        7820.0,
-        7884.0
+        7836.0,
+        7854.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -250,7 +252,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.0007678525723061172,
+      "speedup": -0.001534134492457172,
       "required": 0.1
      },
      "gates_strict": {
@@ -259,27 +261,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.0007678525723061172,
+      "speedup": -0.001534134492457172,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7814.0,
-       "variant_median_ns": 7808.0,
-       "speedup": 0.0007678525723061172,
+       "baseline_median_ns": 7822.0,
+       "variant_median_ns": 7834.0,
+       "speedup": -0.001534134492457172,
        "speedup_ci95": [
-        -0.0030708212961742445,
-        0.003067484662576687
+        -0.005898948448320082,
+        0.0012758356723653994
        ],
        "baseline_ci95": [
         7792.0,
-        7828.0
+        7842.0
        ],
        "variant_ci95": [
-        7797.9,
-        7830.0
+        7828.0,
+        7854.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -304,7 +306,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0057817998994469585,
+      "speedup": -0.008054366977095394,
       "required": 0.1
      },
      "gates_strict": {
@@ -313,27 +315,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0057817998994469585,
+      "speedup": -0.008054366977095394,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7956.0,
-       "variant_median_ns": 8002.0,
-       "speedup": -0.0057817998994469585,
+       "baseline_median_ns": 7946.0,
+       "variant_median_ns": 8010.0,
+       "speedup": -0.008054366977095394,
        "speedup_ci95": [
-        -0.010339247673667236,
-        -0.0010030090270812437
+        -0.010842158345940494,
+        -0.004018030938419677
        ],
        "baseline_ci95": [
         7932.0,
-        7990.0
+        7972.0
        ],
        "variant_ci95": [
-        7980.0,
-        8028.0
+        7996.0,
+        8026.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -358,7 +360,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0038487443471567403,
+      "speedup": 0.0069084628670120895,
       "required": 0.1
      },
      "gates_strict": {
@@ -367,27 +369,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.0038487443471567403,
+      "speedup": 0.0069084628670120895,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20786.0,
-       "variant_median_ns": 20706.0,
-       "speedup": 0.0038487443471567403,
+       "baseline_median_ns": 20844.0,
+       "variant_median_ns": 20700.0,
+       "speedup": 0.0069084628670120895,
        "speedup_ci95": [
-        -0.000673659897988644,
-        0.006735950731331794
+        0.005570442101840426,
+        0.00786495300211011
        ],
        "baseline_ci95": [
-        20776.0,
-        20830.0
+        20826.0,
+        20858.0
        ],
        "variant_ci95": [
-        20660.0,
-        20796.0
+        20688.0,
+        20722.05
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -446,7 +448,9 @@
    "n_sites": 32,
    "predicted": {
     "flip_p99": 0.02279270626604557,
-    "flip_mean_max_site": 0.016225144267082214
+    "flip_mean_max_site": 0.016225144267082214,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
    },
    "ops": 39,
    "runs": [
@@ -459,7 +463,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.013010668748373666,
+      "speedup": 0.010914760914760915,
       "required": 0.1
      },
      "gates_strict": {
@@ -468,27 +472,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.013010668748373666,
+      "speedup": 0.010914760914760915,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7686.0,
-       "variant_median_ns": 7586.0,
-       "speedup": 0.013010668748373666,
+       "baseline_median_ns": 7696.0,
+       "variant_median_ns": 7612.0,
+       "speedup": 0.010914760914760915,
        "speedup_ci95": [
-        0.009370119729307652,
-        0.025705760060177132
+        0.009365244536940686,
+        0.012461059190031152
        ],
        "baseline_ci95": [
-        7672.0,
-        7794.0
+        7688.0,
+        7704.0
        ],
        "variant_ci95": [
-        7578.0,
-        7612.0
+        7604.0,
+        7620.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -513,7 +517,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.013050153531218014,
+      "speedup": 0.015832482124616958,
       "required": 0.1
      },
      "gates_strict": {
@@ -522,27 +526,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.013050153531218014,
+      "speedup": 0.015832482124616958,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7816.0,
-       "variant_median_ns": 7714.0,
-       "speedup": 0.013050153531218014,
+       "baseline_median_ns": 7832.0,
+       "variant_median_ns": 7708.0,
+       "speedup": 0.015832482124616958,
        "speedup_ci95": [
-        0.010763710917478216,
-        0.01861829384949275
+        0.013803680981595092,
+        0.017342625267398465
        ],
        "baseline_ci95": [
-        7804.0,
-        7848.0
+        7824.0,
+        7842.0
        ],
        "variant_ci95": [
-        7686.0,
-        7730.0
+        7702.0,
+        7720.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -567,7 +571,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.015625,
+      "speedup": 0.014848950332821301,
       "required": 0.1
      },
      "gates_strict": {
@@ -576,27 +580,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.015625,
+      "speedup": 0.014848950332821301,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7808.0,
-       "variant_median_ns": 7686.0,
-       "speedup": 0.015625,
+       "baseline_median_ns": 7812.0,
+       "variant_median_ns": 7696.0,
+       "speedup": 0.014848950332821301,
        "speedup_ci95": [
-        0.012270746097086971,
-        0.020673813169984685
+        0.011290664050295624,
+        0.017665130568356373
        ],
        "baseline_ci95": [
-        7798.0,
-        7846.0
+        7796.0,
+        7832.0
        ],
        "variant_ci95": [
-        7672.0,
-        7712.0
+        7684.0,
+        7716.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -621,7 +625,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.018820577164366373,
+      "speedup": 0.012314651922593617,
       "required": 0.1
      },
      "gates_strict": {
@@ -630,27 +634,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.018820577164366373,
+      "speedup": 0.012314651922593617,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7970.0,
-       "variant_median_ns": 7820.0,
-       "speedup": 0.018820577164366373,
+       "baseline_median_ns": 7958.0,
+       "variant_median_ns": 7860.0,
+       "speedup": 0.012314651922593617,
        "speedup_ci95": [
-        0.009284818067754079,
-        0.022988793103448275
+        0.009303495096806638,
+        0.017508973455696818
        ],
        "baseline_ci95": [
-        7933.85,
-        7996.099999999999
+        7948.0,
+        7988.0
        ],
        "variant_ci95": [
-        7804.0,
-        7880.199999999999
+        7836.0,
+        7882.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -675,36 +679,36 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.01924001924001924,
+      "speedup": 0.020163226116178587,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": false,
+      "4": true,
       "5": null,
-      "speedup": 0.01924001924001924,
+      "speedup": 0.020163226116178587,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20790.0,
-       "variant_median_ns": 20390.0,
-       "speedup": 0.01924001924001924,
+       "baseline_median_ns": 20830.0,
+       "variant_median_ns": 20410.0,
+       "speedup": 0.020163226116178587,
        "speedup_ci95": [
-        0.016256034113727533,
-        0.023150816522574447
+        0.018345980213236,
+        0.02235494521434108
        ],
        "baseline_ci95": [
-        20758.0,
-        20836.0
+        20812.0,
+        20862.0
        ],
        "variant_ci95": [
-        20326.0,
+        20376.0,
         20440.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -732,7 +736,9 @@
    "n_sites": 1,
    "predicted": {
     "flip_p99": 0.0,
-    "flip_mean_max_site": 0.0
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
    },
    "ops": 1,
    "runs": [
@@ -745,7 +751,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.009632908096849779,
+      "speedup": -0.00804985717995326,
       "required": 0.1
      },
      "gates_strict": {
@@ -754,27 +760,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.009632908096849779,
+      "speedup": -0.00804985717995326,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7682.0,
-       "variant_median_ns": 7756.0,
-       "speedup": -0.009632908096849779,
+       "baseline_median_ns": 7702.0,
+       "variant_median_ns": 7764.0,
+       "speedup": -0.00804985717995326,
        "speedup_ci95": [
-        -0.011470281543274244,
-        -0.006241872561768531
+        -0.009870129870129871,
+        -0.006224066390041493
        ],
        "baseline_ci95": [
-        7672.0,
-        7696.0
+        7694.0,
+        7712.0
        ],
        "variant_ci95": [
-        7736.0,
-        7768.0
+        7756.0,
+        7774.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -799,7 +805,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.008693428790590641,
+      "speedup": -0.009188361408882083,
       "required": 0.1
      },
      "gates_strict": {
@@ -808,27 +814,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.008693428790590641,
+      "speedup": -0.009188361408882083,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7822.0,
-       "variant_median_ns": 7890.0,
-       "speedup": -0.008693428790590641,
+       "baseline_median_ns": 7836.0,
+       "variant_median_ns": 7908.0,
+       "speedup": -0.009188361408882083,
        "speedup_ci95": [
-        -0.013860369609856264,
-        -0.003317934797463244
+        -0.010986203372508942,
+        -0.005864317549336716
        ],
        "baseline_ci95": [
-        7792.0,
-        7844.0
+        7828.0,
+        7854.0
        ],
        "variant_ci95": [
-        7856.0,
-        7916.0
+        7894.0,
+        7920.049999999999
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -853,7 +859,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.009489612721210567,
+      "speedup": -0.007924335378323108,
       "required": 0.1
      },
      "gates_strict": {
@@ -862,27 +868,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.009489612721210567,
+      "speedup": -0.007924335378323108,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7798.0,
-       "variant_median_ns": 7872.0,
-       "speedup": -0.009489612721210567,
+       "baseline_median_ns": 7824.0,
+       "variant_median_ns": 7886.0,
+       "speedup": -0.007924335378323108,
        "speedup_ci95": [
-        -0.013336753013593229,
-        -0.005877843087145413
+        -0.011264720942140297,
+        -0.004597701149425287
        ],
        "baseline_ci95": [
-        7776.0,
-        7820.0
+        7810.0,
+        7834.0
        ],
        "variant_ci95": [
-        7852.0,
-        7896.0
+        7866.0,
+        7904.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -907,7 +913,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.010566037735849057,
+      "speedup": -0.00501002004008016,
       "required": 0.1
      },
      "gates_strict": {
@@ -916,27 +922,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.010566037735849057,
+      "speedup": -0.00501002004008016,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7950.0,
-       "variant_median_ns": 8034.0,
-       "speedup": -0.010566037735849057,
+       "baseline_median_ns": 7984.0,
+       "variant_median_ns": 8024.0,
+       "speedup": -0.00501002004008016,
        "speedup_ci95": [
-        -0.013608870967741936,
-        -0.005530417295123178
+        -0.009819322965053076,
+        -0.0030044691662117805
        ],
        "baseline_ci95": [
-        7932.0,
-        7980.0
+        7948.0,
+        7992.0
        ],
        "variant_ci95": [
-        8006.0,
-        8046.0
+        8012.0,
+        8040.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -961,7 +967,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.009531144700105902,
+      "speedup": -0.01201691982311094,
       "required": 0.1
      },
      "gates_strict": {
@@ -970,27 +976,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.009531144700105902,
+      "speedup": -0.01201691982311094,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20774.0,
-       "variant_median_ns": 20972.0,
-       "speedup": -0.009531144700105902,
+       "baseline_median_ns": 20804.0,
+       "variant_median_ns": 21054.0,
+       "speedup": -0.01201691982311094,
        "speedup_ci95": [
-        -0.01260713488302401,
-        -0.007592503604036521
+        -0.013568129330254041,
+        -0.009512827904295185
        ],
        "baseline_ci95": [
-        20732.0,
-        20810.149999999998
+        20790.0,
+        20840.0
        ],
        "variant_ci95": [
-        20960.0,
-        21044.0
+        21016.0,
+        21084.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1018,7 +1024,9 @@
    "n_sites": 1,
    "predicted": {
     "flip_p99": 0.0,
-    "flip_mean_max_site": 0.0
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
    },
    "ops": 1,
    "runs": [
@@ -1031,7 +1039,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0010378827192527244,
       "required": 0.1
      },
      "gates_strict": {
@@ -1040,27 +1048,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0010378827192527244,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7682.0,
-       "variant_median_ns": 7682.0,
-       "speedup": 0.0,
+       "baseline_median_ns": 7708.0,
+       "variant_median_ns": 7716.0,
+       "speedup": -0.0010378827192527244,
        "speedup_ci95": [
-        -0.003907267517582704,
-        0.00673924313115604
+        -0.0036382536382536385,
+        0.001037344398340249
        ],
        "baseline_ci95": [
-        7676.0,
+        7692.0,
         7720.0
        ],
        "variant_ci95": [
-        7660.0,
-        7708.0
+        7702.0,
+        7726.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1085,7 +1093,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0007672634271099745,
+      "speedup": -0.0005104645227156713,
       "required": 0.1
      },
      "gates_strict": {
@@ -1094,27 +1102,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0007672634271099745,
+      "speedup": -0.0005104645227156713,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7820.0,
-       "variant_median_ns": 7826.0,
-       "speedup": -0.0007672634271099745,
+       "baseline_median_ns": 7836.0,
+       "variant_median_ns": 7840.0,
+       "speedup": -0.0005104645227156713,
        "speedup_ci95": [
-        -0.006158781322022553,
-        0.002043944813490036
+        -0.002551020408163265,
+        0.002037710380900156
        ],
        "baseline_ci95": [
-        7784.0,
-        7842.0
+        7828.0,
+        7854.0
        ],
        "variant_ci95": [
-        7812.0,
-        7840.0
+        7832.0,
+        7854.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1139,7 +1147,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005125576627370579,
+      "speedup": 0.0,
       "required": 0.1
      },
      "gates_strict": {
@@ -1148,27 +1156,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0005125576627370579,
+      "speedup": 0.0,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7804.0,
-       "variant_median_ns": 7808.0,
-       "speedup": -0.0005125576627370579,
+       "baseline_median_ns": 7830.0,
+       "variant_median_ns": 7830.0,
+       "speedup": 0.0,
        "speedup_ci95": [
-        -0.0051466803911477095,
-        0.002812579902838149
+        -0.0020444671607462305,
+        0.0030643905249900434
        ],
        "baseline_ci95": [
-        7772.0,
-        7828.0
+        7824.0,
+        7846.0
        ],
        "variant_ci95": [
-        7800.0,
-        7828.0
+        7812.0,
+        7844.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1193,7 +1201,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0007545271629778672,
+      "speedup": 0.0015045135406218655,
       "required": 0.1
      },
      "gates_strict": {
@@ -1202,27 +1210,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0007545271629778672,
+      "speedup": 0.0015045135406218655,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7952.0,
-       "variant_median_ns": 7946.0,
-       "speedup": 0.0007545271629778672,
+       "baseline_median_ns": 7976.0,
+       "variant_median_ns": 7964.0,
+       "speedup": 0.0015045135406218655,
        "speedup_ci95": [
-        -0.002265975349139232,
-        0.004514757676303407
+        -0.0017579216370678856,
+        0.004511278195488722
        ],
        "baseline_ci95": [
-        7928.0,
-        7976.0
+        7958.0,
+        7996.0
        ],
        "variant_ci95": [
-        7928.0,
-        7958.0
+        7950.0,
+        7976.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1247,7 +1255,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0033627978478093772,
+      "speedup": -0.0007685656643289462,
       "required": 0.1
      },
      "gates_strict": {
@@ -1256,27 +1264,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0033627978478093772,
+      "speedup": -0.0007685656643289462,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20816.0,
-       "variant_median_ns": 20746.0,
-       "speedup": 0.0033627978478093772,
+       "baseline_median_ns": 20818.0,
+       "variant_median_ns": 20834.0,
+       "speedup": -0.0007685656643289462,
        "speedup_ci95": [
-        -0.0008709522424212643,
-        0.0066091954022988505
+        -0.0035597460073119105,
+        0.002777245738364298
        ],
        "baseline_ci95": [
-        20756.0,
-        20880.0
+        20788.0,
+        20888.0
        ],
        "variant_ci95": [
-        20736.0,
-        20828.0
+        20814.0,
+        20882.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1344,7 +1352,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.003116073747078681,
+      "speedup": -0.0041515308770108976,
       "required": 0.1
      },
      "gates_strict": {
@@ -1353,27 +1361,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.003116073747078681,
+      "speedup": -0.0041515308770108976,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7702.0,
-       "variant_median_ns": 7726.0,
-       "speedup": -0.003116073747078681,
+       "baseline_median_ns": 7708.0,
+       "variant_median_ns": 7740.0,
+       "speedup": -0.0041515308770108976,
        "speedup_ci95": [
-        -0.008337675872850442,
-        0.001295672454003628
+        -0.005714285714285714,
+        -0.003110419906687403
        ],
        "baseline_ci95": [
-        7668.0,
-        7728.0
+        7700.0,
+        7716.0
        ],
        "variant_ci95": [
-        7700.0,
-        7748.0
+        7736.0,
+        7752.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1398,7 +1406,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0020429009193054137,
+      "speedup": -0.0005095541401273885,
       "required": 0.1
      },
      "gates_strict": {
@@ -1407,27 +1415,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0020429009193054137,
+      "speedup": -0.0005095541401273885,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7832.0,
-       "variant_median_ns": 7848.0,
-       "speedup": -0.0020429009193054137,
+       "baseline_median_ns": 7850.0,
+       "variant_median_ns": 7854.0,
+       "speedup": -0.0005095541401273885,
        "speedup_ci95": [
-        -0.0056352459016393444,
-        0.004314720812182741
+        -0.0028089887640449437,
+        0.0020376974019358125
        ],
        "baseline_ci95": [
-        7808.0,
-        7880.0
+        7832.0,
+        7864.0
        ],
        "variant_ci95": [
-        7832.0,
-        7856.0
+        7840.0,
+        7864.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1452,7 +1460,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.002818344862925954,
+      "speedup": 0.0005103342689461597,
       "required": 0.1
      },
      "gates_strict": {
@@ -1461,27 +1469,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.002818344862925954,
+      "speedup": 0.0005103342689461597,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7806.0,
-       "variant_median_ns": 7828.0,
-       "speedup": -0.002818344862925954,
+       "baseline_median_ns": 7838.0,
+       "variant_median_ns": 7834.0,
+       "speedup": 0.0005103342689461597,
        "speedup_ci95": [
-        -0.005636689725851908,
-        0.0012774655084312723
+        -0.0030627871362940277,
+        0.003567787971457696
        ],
        "baseline_ci95": [
-        7796.0,
-        7822.0
+        7818.0,
+        7860.0
        ],
        "variant_ci95": [
-        7802.0,
-        7844.099999999999
+        7820.0,
+        7854.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1506,7 +1514,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.009324596774193549,
+      "speedup": -0.006287726358148894,
       "required": 0.1
      },
      "gates_strict": {
@@ -1515,27 +1523,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.009324596774193549,
+      "speedup": -0.006287726358148894,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7936.0,
-       "variant_median_ns": 8010.0,
-       "speedup": -0.009324596774193549,
+       "baseline_median_ns": 7952.0,
+       "variant_median_ns": 8002.0,
+       "speedup": -0.006287726358148894,
        "speedup_ci95": [
-        -0.014112903225806451,
-        -0.003256492637165139
+        -0.00906344410876133,
+        -0.000994552376013537
        ],
        "baseline_ci95": [
-        7926.0,
-        7984.0
+        7936.0,
+        7980.0
        ],
        "variant_ci95": [
-        7980.0,
-        8048.0
+        7978.0,
+        8016.049999999999
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1560,7 +1568,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.005855812613996352,
+      "speedup": 0.005568356374807988,
       "required": 0.1
      },
      "gates_strict": {
@@ -1569,27 +1577,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.005855812613996352,
+      "speedup": 0.005568356374807988,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20834.0,
-       "variant_median_ns": 20712.0,
-       "speedup": 0.005855812613996352,
+       "baseline_median_ns": 20832.0,
+       "variant_median_ns": 20716.0,
+       "speedup": 0.005568356374807988,
        "speedup_ci95": [
-        0.003937376507711817,
-        0.008350169650315502
+        0.003937023409481308,
+        0.008897543385169744
        ],
        "baseline_ci95": [
-        20807.95,
-        20864.0
+        20796.0,
+        20870.0
        ],
        "variant_ci95": [
-        20664.0,
-        20746.0
+        20666.0,
+        20734.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1661,7 +1669,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.01015889554571503,
+      "speedup": -0.008817427385892116,
       "required": 0.1
      },
      "gates_strict": {
@@ -1670,27 +1678,27 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.01015889554571503,
+      "speedup": -0.008817427385892116,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7678.0,
-       "variant_median_ns": 7756.0,
-       "speedup": -0.01015889554571503,
+       "baseline_median_ns": 7712.0,
+       "variant_median_ns": 7780.0,
+       "speedup": -0.008817427385892116,
        "speedup_ci95": [
-        -0.012239583333333333,
-        -0.007808331541248732
+        -0.01038961038961039,
+        -0.006998444790046656
        ],
        "baseline_ci95": [
-        7672.0,
-        7692.0
+        7700.0,
+        7722.0
        ],
        "variant_ci95": [
-        7744.0,
-        7774.0
+        7770.0,
+        7788.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1715,7 +1723,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.003827507017096198,
+      "speedup": -0.005607953097119552,
       "required": 0.1
      },
      "gates_strict": {
@@ -1724,27 +1732,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.003827507017096198,
+      "speedup": -0.005607953097119552,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7838.0,
-       "variant_median_ns": 7868.0,
-       "speedup": -0.003827507017096198,
+       "baseline_median_ns": 7846.0,
+       "variant_median_ns": 7890.0,
+       "speedup": -0.005607953097119552,
        "speedup_ci95": [
-        -0.0076726342710997444,
-        0.0005081300813008131
+        -0.008171603677221655,
+        -0.0038187372708757637
        ],
        "baseline_ci95": [
-        7820.0,
-        7872.0
+        7832.0,
+        7858.0
        ],
        "variant_ci95": [
-        7852.0,
-        7894.049999999999
+        7884.0,
+        7900.0
        ],
-       "n": 10,
+       "n": 40,
        "touched": true
       }
      },
@@ -1769,7 +1777,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.003826530612244898,
+      "speedup": -0.005361245851416901,
       "required": 0.1
      },
      "gates_strict": {
@@ -1778,27 +1786,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.003826530612244898,
+      "speedup": -0.005361245851416901,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7840.0,
-       "variant_median_ns": 7870.0,
-       "speedup": -0.003826530612244898,
+       "baseline_median_ns": 7834.0,
+       "variant_median_ns": 7876.0,
+       "speedup": -0.005361245851416901,
        "speedup_ci95": [
-        -0.009193054136874362,
-        -0.0007653061224489796
+        -0.0076805407223399045,
+        -0.002548403747638248
        ],
        "baseline_ci95": [
-        7820.0,
-        7850.0
+        7818.0,
+        7848.0
        ],
        "variant_ci95": [
-        7848.0,
-        7904.0
+        7858.0,
+        7884.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1823,7 +1831,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.007280944012051218,
+      "speedup": -0.0077850326469111,
       "required": 0.1
      },
      "gates_strict": {
@@ -1832,27 +1840,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.007280944012051218,
+      "speedup": -0.0077850326469111,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 7966.0,
-       "variant_median_ns": 8024.0,
-       "speedup": -0.007280944012051218,
+       "baseline_median_ns": 7964.0,
+       "variant_median_ns": 8026.0,
+       "speedup": -0.0077850326469111,
        "speedup_ci95": [
-        -0.014063461455948754,
-        -0.001250312578144536
+        -0.011075033624864028,
+        -0.00501002004008016
        ],
        "baseline_ci95": [
-        7936.0,
-        8008.0
+        7948.0,
+        7984.0
        ],
        "variant_ci95": [
-        8000.0,
-        8072.0
+        8012.0,
+        8046.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },
@@ -1877,7 +1885,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0025946569286949836,
+      "speedup": -0.0025919170586541232,
       "required": 0.1
      },
      "gates_strict": {
@@ -1886,27 +1894,27 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0025946569286949836,
+      "speedup": -0.0025919170586541232,
       "required": 0.02
      },
      "timing": {
       "tonemap": {
-       "baseline_median_ns": 20812.0,
-       "variant_median_ns": 20866.0,
-       "speedup": -0.0025946569286949836,
+       "baseline_median_ns": 20834.0,
+       "variant_median_ns": 20888.0,
+       "speedup": -0.0025919170586541232,
        "speedup_ci95": [
-        -0.0073049529766657795,
-        0.0028763183125599234
+        -0.004227517294388932,
+        -0.00038380073143557693
        ],
        "baseline_ci95": [
-        20780.0,
-        20860.0
+        20812.0,
+        20862.0
        ],
        "variant_ci95": [
-        20788.0,
-        20952.0
+        20858.0,
+        20910.0
        ],
-       "n": 10,
+       "n": 20,
        "touched": true
       }
      },

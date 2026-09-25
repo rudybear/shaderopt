@@ -1,0 +1,112 @@
+[
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))",
+    "member": "h_106",
+    "offset": 16,
+    "ops": 5,
+    "source_id": 106,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))",
+    "member": "h_138",
+    "offset": 20,
+    "ops": 5,
+    "source_id": 138,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))",
+    "member": "h_170",
+    "offset": 24,
+    "ops": 5,
+    "source_id": 170,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))",
+    "member": "h_202",
+    "offset": 28,
+    "ops": 5,
+    "source_id": 202,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))",
+    "member": "h_234",
+    "offset": 32,
+    "ops": 5,
+    "source_id": 234,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))",
+    "member": "h_266",
+    "offset": 36,
+    "ops": 5,
+    "source_id": 266,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))",
+    "member": "h_298",
+    "offset": 40,
+    "ops": 5,
+    "source_id": 298,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))",
+    "member": "h_330",
+    "offset": 44,
+    "ops": 5,
+    "source_id": 330,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))",
+    "member": "h_362",
+    "offset": 48,
+    "ops": 5,
+    "source_id": 362,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "sigma"
+    ],
+    "expr": "vec3((((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))))",
+    "member": "h_82",
+    "offset": 64,
+    "ops": 46,
+    "source_id": 82,
+    "type": "vec3"
+  }
+]

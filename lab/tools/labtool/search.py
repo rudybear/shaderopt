@@ -129,7 +129,8 @@ def build_genome(ctx: Context, g: dict, out_dir: Path, p99_budget: float) -> tup
         an_tmp = out_dir / "an2.json"; run([SHADER_IR, "analyze", "--spv", cur, "--out", an_tmp]); an = json.loads(an_tmp.read_text())
         live = {i["id"] for i in an["instructions"] if i["id"]}
         sites = [s for s in ctx.demote_sites(g["demote"], p99_budget) if s in live]
-        sites = [s for s in sites if s not in _rejected(cur, sites, g["mode"])]
+        from .demote import close_variable_loads
+        sites = close_variable_loads(ctx.shader, [s for s in sites if s not in _rejected(cur, sites, g["mode"])], set(int(k) for k in ctx.sens), g["mode"], spv=cur)
         if sites:
             nxt = out_dir / "4_demote.spv"; o = out_dir / "4.json"
             cmd = [SHADER_IR, "demote", "--spv", cur, "--out", nxt, "--sites", ",".join(map(str, sites)), "--mode", g["mode"], "--ops", o] + (["--group-converts"] if g["mode"] == "f16" else [])

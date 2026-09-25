@@ -63,6 +63,32 @@ def rejected_sites(shader: str, sites: list[int], mode: str) -> set[int]:
         return set()
     return {int(m) for m in re.findall(r"^\s+%(\d+):", r.stdout + r.stderr, flags=re.M)}
 
+def close_variable_loads(shader: str, sites: list[int], universe: set[int], mode: str, spv: Path | None = None) -> list[int]:
+    """The f16 transform demotes a Function variable only if EVERY load of it is listed. Iterate: add the missing loads
+    when they are candidates, otherwise drop the offending site."""
+    import re, tempfile
+    sites = list(sites)
+    for _ in range(8):
+        if not sites:
+            return sites
+        with tempfile.TemporaryDirectory() as td:
+            r = run([SHADER_IR, "demote", "--spv", spv or (SPV_DIR / f"{shader}.spv"), "--out", Path(td) / "o.spv", "--sites", ",".join(map(str, sites)), "--mode", mode, "--ops", Path(td) / "o.json"])
+        if r.returncode == 0:
+            return sites
+        msg = r.stdout + r.stderr; changed = False
+        for site, loads in re.findall(r"^\s+%(\d+): variable %\d+ \(\"[^\"]*\"\): loads ([^:]*?) are not listed", msg, flags=re.M):
+            missing = [int(x) for x in re.findall(r"%(\d+)", loads)]
+            if all(m in universe for m in missing):
+                for m in missing:
+                    if m not in sites: sites.append(m); changed = True
+            else:
+                if int(site) in sites: sites.remove(int(site)); changed = True
+        for site in re.findall(r"^\s+%(\d+): (?!variable)", msg, flags=re.M):
+            if int(site) in sites: sites.remove(int(site)); changed = True
+        if not changed:
+            return []
+    return sites
+
 def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, modes=("f16", "relaxed"), device=None) -> dict:
     require(SHADER_IR, "shader-ir")
     an = json.loads((ANALYSIS / f"{shader}.json").read_text())
@@ -99,6 +125,10 @@ def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, mo
             if mode == "relaxed" and name.startswith("s"):
                 continue  # single-site RelaxedPrecision is not worth GPU time on desktop
             vid = f"demote_{mode}_{name}"
+            universe = {int(k) for k, _ in ranked}
+            sites = close_variable_loads(shader, sites, universe, mode)
+            if not sites:
+                results.append({"variant_id": vid, "mode": mode, "set": name, "sites": [], "error": "no demotable sites after closing variable loads"}); continue
             try:
                 spv, ops = demote_variant(shader, sites, mode, vid)
             except RuntimeError as e:

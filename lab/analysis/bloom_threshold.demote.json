@@ -156,7 +156,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.00030807147258163895,
+      "speedup": -0.0009244992295839754,
       "required": 0.1
      },
      "gates_strict": {
@@ -165,25 +165,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.00030807147258163895,
+      "speedup": -0.0009244992295839754,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6492.0,
-       "variant_median_ns": 6490.0,
-       "speedup": 0.00030807147258163895,
+       "baseline_median_ns": 6490.0,
+       "variant_median_ns": 6496.0,
+       "speedup": -0.0009244992295839754,
        "speedup_ci95": [
-        -0.0012338062924120913,
-        0.0024645717806531116
+        -0.002168822145432583,
+        0.0015375271985571285
        ],
        "baseline_ci95": [
-        6484.0,
-        6498.0
+        6480.0,
+        6504.0
        ],
        "variant_ci95": [
-        6476.0,
-        6496.0
+        6488.0,
+        6498.0
        ],
        "n": 40,
        "touched": true
@@ -219,7 +219,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0003068425897514575,
+      "speedup": 0.0015332720024532351,
       "required": 0.1
      },
      "gates_strict": {
@@ -228,25 +228,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0003068425897514575,
+      "speedup": 0.0015332720024532351,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6518.0,
-       "variant_median_ns": 6516.0,
-       "speedup": 0.0003068425897514575,
+       "baseline_median_ns": 6522.0,
+       "variant_median_ns": 6512.0,
+       "speedup": 0.0015332720024532351,
        "speedup_ci95": [
-        -0.0009219422249539029,
-        0.0015337540967250672
+        -0.0006146281499692685,
+        0.0030656039239730227
        ],
        "baseline_ci95": [
-        6510.0,
+        6508.0,
         6524.0
        ],
        "variant_ci95": [
-        6512.0,
-        6520.0
+        6504.0,
+        6518.0
        ],
        "n": 40,
        "touched": true
@@ -283,7 +283,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0006138735420503376,
+      "speedup": 0.002144607843137255,
       "required": 0.1
      },
      "gates_strict": {
@@ -292,25 +292,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0006138735420503376,
+      "speedup": 0.002144607843137255,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6516.0,
-       "variant_median_ns": 6520.0,
-       "speedup": -0.0006138735420503376,
+       "baseline_median_ns": 6528.0,
+       "variant_median_ns": 6514.0,
+       "speedup": 0.002144607843137255,
        "speedup_ci95": [
-        -0.0027624309392265192,
-        0.0018404907975460123
+        -0.002458512599877074,
+        0.004287901990811639
        ],
        "baseline_ci95": [
         6506.0,
-        6526.0
+        6534.0
        ],
        "variant_ci95": [
-        6508.0,
-        6532.0
+        6500.0,
+        6530.0
        ],
        "n": 20,
        "touched": true
@@ -346,7 +346,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.00030543677458766036,
+      "speedup": -0.0006106870229007634,
       "required": 0.1
      },
      "gates_strict": {
@@ -355,25 +355,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.00030543677458766036,
+      "speedup": -0.0006106870229007634,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6548.0,
-       "variant_median_ns": 6550.0,
-       "speedup": -0.00030543677458766036,
+       "baseline_median_ns": 6550.0,
+       "variant_median_ns": 6554.0,
+       "speedup": -0.0006106870229007634,
        "speedup_ci95": [
-        -0.0030525030525030525,
-        0.002745576571079927
+        -0.002748930971288943,
+        0.002136752136752137
        ],
        "baseline_ci95": [
-        6540.0,
-        6562.0
+        6544.0,
+        6560.0
        ],
        "variant_ci95": [
         6538.0,
-        6568.0
+        6566.0
        ],
        "n": 20,
        "touched": true
@@ -427,7 +427,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0012315270935960591,
+      "speedup": 0.0009250693802035153,
       "required": 0.1
      },
      "gates_strict": {
@@ -436,25 +436,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0012315270935960591,
+      "speedup": 0.0009250693802035153,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6496.0,
-       "variant_median_ns": 6488.0,
-       "speedup": 0.0012315270935960591,
+       "baseline_median_ns": 6486.0,
+       "variant_median_ns": 6480.0,
+       "speedup": 0.0009250693802035153,
        "speedup_ci95": [
-        -0.0012338062924120913,
-        0.0033836003123299337
+        -0.001541782300339192,
+        0.0030797896574894196
        ],
        "baseline_ci95": [
-        6484.0,
-        6506.0
-       ],
-       "variant_ci95": [
         6480.0,
         6496.0
+       ],
+       "variant_ci95": [
+        6470.0,
+        6494.0
        ],
        "n": 40,
        "touched": true
@@ -490,7 +490,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0012285012285012285,
       "required": 0.1
      },
      "gates_strict": {
@@ -499,25 +499,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.0012285012285012285,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6522.0,
-       "variant_median_ns": 6522.0,
-       "speedup": 0.0,
+       "baseline_median_ns": 6512.0,
+       "variant_median_ns": 6520.0,
+       "speedup": -0.0012285012285012285,
        "speedup_ci95": [
-        -0.001841620626151013,
-        0.001838235294117647
+        -0.003072220223815283,
+        0.0009289787782434427
        ],
        "baseline_ci95": [
-        6514.0,
-        6530.0
+        6508.0,
+        6524.0
        ],
        "variant_ci95": [
-        6514.0,
-        6528.0
+        6510.0,
+        6530.0
        ],
        "n": 40,
        "touched": true
@@ -554,7 +554,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.002153183635804368,
       "required": 0.1
      },
      "gates_strict": {
@@ -563,25 +563,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": 0.0,
+      "speedup": -0.002153183635804368,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6516.0,
+       "baseline_median_ns": 6502.0,
        "variant_median_ns": 6516.0,
-       "speedup": 0.0,
+       "speedup": -0.002153183635804368,
        "speedup_ci95": [
-        -0.0012285012285012285,
-        0.002449479485609308
+        -0.0046267735965453425,
+        0.0009202524580350402
        ],
        "baseline_ci95": [
-        6512.0,
-        6530.0
+        6488.0,
+        6516.0
        ],
        "variant_ci95": [
-        6508.0,
-        6524.0
+        6502.0,
+        6528.0
        ],
        "n": 20,
        "touched": true
@@ -617,7 +617,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012221203788573174,
+      "speedup": -0.0006112469437652812,
       "required": 0.1
      },
      "gates_strict": {
@@ -626,25 +626,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012221203788573174,
+      "speedup": -0.0006112469437652812,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6546.0,
-       "variant_median_ns": 6554.0,
-       "speedup": -0.0012221203788573174,
+       "baseline_median_ns": 6544.0,
+       "variant_median_ns": 6548.0,
+       "speedup": -0.0006112469437652812,
        "speedup_ci95": [
-        -0.003360831041857623,
-        0.0018326206475259622
+        -0.0033659730722154224,
+        0.0027414159475353896
        ],
        "baseline_ci95": [
-        6542.0,
-        6560.0
+        6534.0,
+        6566.0
        ],
        "variant_ci95": [
-        6540.0,
-        6568.0
+        6544.0,
+        6560.0
        ],
        "n": 20,
        "touched": true
@@ -719,7 +719,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.001539882968894364,
+      "speedup": -0.0015389350569405972,
       "required": 0.1
      },
      "gates_strict": {
@@ -728,24 +728,24 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.001539882968894364,
+      "speedup": -0.0015389350569405972,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6494.0,
-       "variant_median_ns": 6504.0,
-       "speedup": -0.001539882968894364,
+       "baseline_median_ns": 6498.0,
+       "variant_median_ns": 6508.0,
+       "speedup": -0.0015389350569405972,
        "speedup_ci95": [
-        -0.004625346901017576,
-        0.0009230769230769231
+        -0.0046282011724776305,
+        0.0
        ],
        "baseline_ci95": [
-        6482.0,
+        6480.0,
         6504.0
        ],
        "variant_ci95": [
-        6492.0,
+        6500.0,
         6516.0
        ],
        "n": 40,
@@ -782,7 +782,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0027607361963190185,
+      "speedup": -0.0006131207847946045,
       "required": 0.1
      },
      "gates_strict": {
@@ -791,25 +791,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0027607361963190185,
+      "speedup": -0.0006131207847946045,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6520.0,
-       "variant_median_ns": 6538.0,
-       "speedup": -0.0027607361963190185,
+       "baseline_median_ns": 6524.0,
+       "variant_median_ns": 6528.0,
+       "speedup": -0.0006131207847946045,
        "speedup_ci95": [
-        -0.004908013109520215,
-        -0.0006127450980392157
+        -0.0033752684872660325,
+        0.0012254901960784314
        ],
        "baseline_ci95": [
         6512.0,
-        6528.0
+        6532.0
        ],
        "variant_ci95": [
         6520.0,
-        6552.0
+        6538.0
        ],
        "n": 40,
        "touched": true
@@ -846,7 +846,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0015342129487572874,
+      "speedup": -0.005535055350553505,
       "required": 0.1
      },
      "gates_strict": {
@@ -855,25 +855,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0015342129487572874,
+      "speedup": -0.005535055350553505,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6518.0,
-       "variant_median_ns": 6528.0,
-       "speedup": -0.0015342129487572874,
+       "baseline_median_ns": 6504.0,
+       "variant_median_ns": 6540.0,
+       "speedup": -0.005535055350553505,
        "speedup_ci95": [
-        -0.004606914989979506,
-        0.002449479485609308
+        -0.007689941556444171,
+        -0.0021511985248924403
        ],
        "baseline_ci95": [
-        6508.0,
-        6532.0
+        6498.0,
+        6522.0
        ],
        "variant_ci95": [
-        6512.0,
-        6546.0
+        6522.0,
+        6552.0
        ],
        "n": 20,
        "touched": true
@@ -909,7 +909,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012202562538133007,
+      "speedup": -0.0033618581907090463,
       "required": 0.1
      },
      "gates_strict": {
@@ -918,25 +918,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0012202562538133007,
+      "speedup": -0.0033618581907090463,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6556.0,
-       "variant_median_ns": 6564.0,
-       "speedup": -0.0012202562538133007,
+       "baseline_median_ns": 6544.0,
+       "variant_median_ns": 6566.0,
+       "speedup": -0.0033618581907090463,
        "speedup_ci95": [
-        -0.003965832824893227,
-        0.0012176560121765602
+        -0.006119951040391677,
+        0.0
        ],
        "baseline_ci95": [
-        6548.0,
-        6570.0
+        6534.0,
+        6554.0
        ],
        "variant_ci95": [
-        6558.0,
-        6582.0
+        6552.0,
+        6580.0
        ],
        "n": 20,
        "touched": true
@@ -1020,7 +1020,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0015408320493066256,
+      "speedup": -0.002158495220474869,
       "required": 0.1
      },
      "gates_strict": {
@@ -1029,25 +1029,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0015408320493066256,
+      "speedup": -0.002158495220474869,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6490.0,
+       "baseline_median_ns": 6486.0,
        "variant_median_ns": 6500.0,
-       "speedup": -0.0015408320493066256,
+       "speedup": -0.002158495220474869,
        "speedup_ci95": [
-        -0.003389830508474576,
-        0.0006150061500615006
+        -0.0030864197530864196,
+        0.00030797896574894196
        ],
        "baseline_ci95": [
-        6482.0,
-        6500.0
+        6480.0,
+        6492.0
        ],
        "variant_ci95": [
-        6494.0,
-        6508.0
+        6488.0,
+        6506.0
        ],
        "n": 40,
        "touched": true
@@ -1083,7 +1083,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0015360983102918587,
+      "speedup": 0.00030703101013202335,
       "required": 0.1
      },
      "gates_strict": {
@@ -1092,25 +1092,25 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0015360983102918587,
+      "speedup": 0.00030703101013202335,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6510.0,
-       "variant_median_ns": 6520.0,
-       "speedup": -0.0015360983102918587,
+       "baseline_median_ns": 6514.0,
+       "variant_median_ns": 6512.0,
+       "speedup": 0.00030703101013202335,
        "speedup_ci95": [
-        -0.003381494005533354,
-        0.0006134969325153375
+        -0.0012296341838303104,
+        0.0015342129487572874
        ],
        "baseline_ci95": [
-        6504.0,
-        6520.0
+        6506.0,
+        6520.049999999999
        ],
        "variant_ci95": [
-        6510.0,
-        6528.0
+        6508.0,
+        6518.0
        ],
        "n": 40,
        "touched": true
@@ -1147,7 +1147,7 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0006138735420503376,
+      "speedup": -0.0012296341838303104,
       "required": 0.1
      },
      "gates_strict": {
@@ -1156,25 +1156,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0006138735420503376,
+      "speedup": -0.0012296341838303104,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6516.0,
-       "variant_median_ns": 6520.0,
-       "speedup": -0.0006138735420503376,
+       "baseline_median_ns": 6506.0,
+       "variant_median_ns": 6514.0,
+       "speedup": -0.0012296341838303104,
        "speedup_ci95": [
-        -0.003076923076923077,
-        0.002754842023755902
+        -0.0033866995073891628,
+        0.001838263470624301
        ],
        "baseline_ci95": [
-        6504.0,
-        6534.0
+        6494.0,
+        6524.0
        ],
        "variant_ci95": [
         6508.0,
-        6528.0
+        6524.0
        ],
        "n": 20,
        "touched": true
@@ -1210,7 +1210,7 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.004581551618814905,
+      "speedup": -0.013447432762836185,
       "required": 0.1
      },
      "gates_strict": {
@@ -1219,25 +1219,25 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.004581551618814905,
+      "speedup": -0.013447432762836185,
       "required": 0.02
      },
      "timing": {
       "threshold": {
-       "baseline_median_ns": 6548.0,
-       "variant_median_ns": 6578.0,
-       "speedup": -0.004581551618814905,
+       "baseline_median_ns": 6544.0,
+       "variant_median_ns": 6632.0,
+       "speedup": -0.013447432762836185,
        "speedup_ci95": [
-        -0.008865790278202385,
-        0.0006088280060882801
+        -0.017426130182282652,
+        -0.01097560975609756
        ],
        "baseline_ci95": [
-        6540.0,
-        6580.0
+        6536.0,
+        6558.0
        ],
        "variant_ci95": [
-        6558.0,
-        6600.0
+        6628.0,
+        6656.0
        ],
        "n": 20,
        "touched": true

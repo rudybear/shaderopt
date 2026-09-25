@@ -1,0 +1,13 @@
+{
+ "shader": "tonemap_aces",
+ "variant_id": "approx_0p001",
+ "sites": [
+  88,
+  100
+ ],
+ "max_rel_err": 0.001,
+ "runs": [],
+ "prediction": {},
+ "log": "/home/rudybear/sources/shaderopt/lab/build/spv/tonemap_aces.spv: 0 of 2 sites replaced (0 ops, all lossy); wrote /home/rudybear/sources/shaderopt/lab/variants/tonemap_aces/approx_0p001/tonemap_aces.spv\n  id     op             type     range                  degree rel err   status\n  88     Pow            vec3     -                      -      -         Pow exponent is not a constant scalar/splat\n  100    Pow            vec3     -                      -      -         Pow exponent is not a constant scalar/splat",
+ "ops": []
+}

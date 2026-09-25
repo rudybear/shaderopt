@@ -1,0 +1,9 @@
+{
+ "shader": "bloom_threshold",
+ "variant_id": "approx_0p001",
+ "sites": [],
+ "max_rel_err": 0.001,
+ "runs": [],
+ "prediction": {},
+ "log": ""
+}

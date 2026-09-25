@@ -1,0 +1,751 @@
+[
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_106 (float)",
+    "pass": "hoist",
+    "replaced_by": 418,
+    "target": 106
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_138 (float)",
+    "pass": "hoist",
+    "replaced_by": 416,
+    "target": 138
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_170 (float)",
+    "pass": "hoist",
+    "replaced_by": 414,
+    "target": 170
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_202 (float)",
+    "pass": "hoist",
+    "replaced_by": 412,
+    "target": 202
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_234 (float)",
+    "pass": "hoist",
+    "replaced_by": 409,
+    "target": 234
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_266 (float)",
+    "pass": "hoist",
+    "replaced_by": 406,
+    "target": 266
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_298 (float)",
+    "pass": "hoist",
+    "replaced_by": 403,
+    "target": 298
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_330 (float)",
+    "pass": "hoist",
+    "replaced_by": 400,
+    "target": 330
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 5 instructions into Params.h_362 (float)",
+    "pass": "hoist",
+    "replaced_by": 397,
+    "target": 362
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 46 instructions into Params.h_82 (vec3)",
+    "pass": "hoist",
+    "replaced_by": 394,
+    "target": 82
+  },
+  {
+    "class": "exact",
+    "detail": "OpVariable \"wsum\" only fed stores into dead variables after hoisting; removed 10 store(s)",
+    "pass": "hoist",
+    "replaced_by": null,
+    "target": 13
+  },
+  {
+    "class": "exact",
+    "detail": "OpVariable \"w\" only fed stores into dead variables after hoisting; removed 9 store(s)",
+    "pass": "hoist",
+    "replaced_by": null,
+    "target": 30
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %105 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 106
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 117
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 121
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %122 %418 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 123
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %137 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 138
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 149
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 153
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %154 %416 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 155
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %169 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 170
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 181
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 185
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %186 %414 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 187
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %201 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 202
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 213
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 217
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %218 %412 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 219
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %233 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 234
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 245
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 249
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %250 %409 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 251
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %265 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 266
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 277
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 281
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %282 %406 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 283
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %297 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 298
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 309
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 313
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %314 %403 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 315
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %329 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 330
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 341
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 345
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %346 %400 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 347
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst Exp %361 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 362
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 373
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %30 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 377
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %378 %397 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 379
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %81 %81 %81 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 82
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %101 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 105
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 122
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %133 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 137
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 154
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %165 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 169
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 186
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %197 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 201
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 218
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %229 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 233
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 250
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %261 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 265
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 282
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %293 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 297
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 314
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %325 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 329
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 346
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %357 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 361
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 378
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %13 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 81
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %99 %100 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 101
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %103 %103 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 104
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %131 %132 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 133
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %163 %164 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 165
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %195 %196 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 197
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %227 %228 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 229
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %259 %260 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 261
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %291 %292 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 293
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %323 %324 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 325
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %355 %356 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 357
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %98 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 99
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 100
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %102 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 103
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %130 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 131
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 132
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %162 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 163
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 164
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %194 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 195
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 196
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %226 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 227
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 228
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %258 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 259
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 260
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %290 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 291
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 292
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %322 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 323
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 324
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %31 %354 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 355
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 356
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 98
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %39 %40 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 102
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 130
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 162
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 194
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 226
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 258
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 290
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 322
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %27 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 354
+  }
+]

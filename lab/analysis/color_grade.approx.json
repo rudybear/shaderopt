@@ -1,0 +1,12 @@
+{
+ "shader": "color_grade",
+ "variant_id": "approx_0p001",
+ "sites": [
+  108
+ ],
+ "max_rel_err": 0.001,
+ "runs": [],
+ "prediction": {},
+ "log": "/home/rudybear/sources/shaderopt/lab/build/spv/color_grade.spv: 0 of 1 sites replaced (0 ops, all lossy); wrote /home/rudybear/sources/shaderopt/lab/variants/color_grade/approx_0p001/color_grade.spv\n  id     op             type     range                  degree rel err   status\n  108    Pow            vec3     -                      -      -         Pow exponent is not a constant scalar/splat",
+ "ops": []
+}

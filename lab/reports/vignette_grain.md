@@ -9,6 +9,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | canon_exact | 0.0000 | +0.00% | 1/0 | no | no |
+| demote_f16_all | 0.1489 | +0.06% | 1/1 | no | no |
 | hyp_cheaphash | 0.4636 | +0.15% | 1/1 | no | no |
 
 ### Accepted variants
@@ -20,6 +21,16 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
 | hyp_cheaphash |  |  |  | 0.4636 | +0.15% | no | no |
+| demote_f16_all | f16 | all | 37 | 0.1489 | +0.06% | no | no |
 | canon_exact |  |  |  | 0.0000 | +0.00% | no | no |
+| demote_relaxed_zero | relaxed | zero | 1 | 0.0000 | -0.03% | no | no |
+| demote_f16_s98 | f16 | s98 | 1 | 0.0000 | -0.03% | no | no |
+| demote_f16_zero | f16 | zero | 1 | 0.0000 | -0.03% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.09% | no | no |
+| demote_f16_q4 | f16 | q4 | 24 | 0.1491 | -0.21% | no | no |
+| demote_f16_s103 | f16 | s103 | 1 | 0.0020 | -0.27% | no | no |
+| demote_f16_q2 | f16 | q2 | 25 | 0.1491 | -0.30% | no | no |
+| demote_relaxed_q4 | relaxed | q4 | 24 | 0.0233 | -1.19% | no | no |
+| demote_relaxed_q2 | relaxed | q2 | 25 | 0.0233 | -1.28% | no | no |
+| demote_relaxed_all | relaxed | all | 37 | 0.2951 | -2.20% | no | no |
 

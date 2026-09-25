@@ -1,0 +1,247 @@
+{
+ "shader": "fxaa",
+ "variant_id": "hoist",
+ "hoisted": [
+  {
+   "depends_on": [
+    "texel"
+   ],
+   "expr": "vec2(-texel.x, -texel.y)",
+   "member": "h_151",
+   "offset": 32,
+   "ops": 2,
+   "source_id": 151,
+   "type": "vec2"
+  }
+ ],
+ "ops": 52,
+ "runs": [
+  {
+   "scenario": "fxaa_checker",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.00017326518236160444,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.00017326518236160444,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 23086.0,
+     "variant_median_ns": 23090.0,
+     "speedup": -0.00017326518236160444,
+     "speedup_ci95": [
+      -0.0011292436979535988,
+      0.0011250540891389008
+     ],
+     "baseline_ci95": [
+      23072.0,
+      23112.0
+     ],
+     "variant_ci95": [
+      23078.0,
+      23110.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 23764.0,
+     "variant_median_ns": 23764.0,
+     "speedup": 0.0,
+     "speedup_ci95": [
+      -0.001682956291465193,
+      0.0018529715691233356
+     ],
+     "baseline_ci95": [
+      23740.0,
+      23796.0
+     ],
+     "variant_ci95": [
+      23742.0,
+      23792.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.001105642342535131,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.001105642342535131,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 56076.0,
+     "variant_median_ns": 56014.0,
+     "speedup": 0.001105642342535131,
+     "speedup_ci95": [
+      -0.000785770412172298,
+      0.0023517673888255415
+     ],
+     "baseline_ci95": [
+      55996.0,
+      56142.0
+     ],
+     "variant_ci95": [
+      55996.0,
+      56080.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "fxaa_ultrawide",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0014187044987866344,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0014187044987866344,
+    "required": 0.02
+   },
+   "timing": {
+    "fxaa": {
+     "baseline_median_ns": 53570.0,
+     "variant_median_ns": 53494.0,
+     "speedup": 0.0014187044987866344,
+     "speedup_ci95": [
+      -0.0001121120223479817,
+      0.002986200024765992
+     ],
+     "baseline_ci95": [
+      53504.0,
+      53616.0
+     ],
+     "variant_ci95": [
+      53420.0,
+      53528.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "fxaa": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ],
+ "prediction": {
+  "fxaa": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ }
+}

@@ -1,0 +1,900 @@
+{
+  "bound": 90,
+  "entry": "main",
+  "functions": [
+    {
+      "call_sites": 0,
+      "id": 4,
+      "name": "main"
+    },
+    {
+      "call_sites": 1,
+      "id": 11,
+      "name": "tonemap(vf3;"
+    }
+  ],
+  "instructions": [
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 5,
+      "index": 0,
+      "line": null,
+      "name": null,
+      "op": "OpLabel",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 21,
+      "index": 1,
+      "line": null,
+      "name": "scene",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 43,
+      "index": 2,
+      "line": null,
+      "name": "bloom",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 49,
+      "index": 3,
+      "line": null,
+      "name": "c",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 57,
+      "index": 4,
+      "line": null,
+      "name": "param",
+      "op": "OpVariable",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 26,
+      "index": 5,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        25
+      ],
+      "range": null,
+      "rate": "uniform",
+      "sinks": [],
+      "type": "sampler2D"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 30,
+      "index": 6,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        29
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [
+        "address"
+      ],
+      "type": "vec2<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 32,
+      "index": 7,
+      "line": null,
+      "name": null,
+      "op": "OpImageSampleImplicitLod",
+      "operands": [
+        26,
+        30
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 33,
+      "index": 8,
+      "line": null,
+      "name": null,
+      "op": "OpVectorShuffle",
+      "operands": [
+        32,
+        32
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 40,
+      "index": 9,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        36,
+        38
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, f32)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 41,
+      "index": 10,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        40
+      ],
+      "range": null,
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 42,
+      "index": 11,
+      "line": null,
+      "name": null,
+      "op": "OpVectorTimesScalar",
+      "operands": [
+        33,
+        41
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 12,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        21,
+        42
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 45,
+      "index": 13,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        44
+      ],
+      "range": null,
+      "rate": "uniform",
+      "sinks": [],
+      "type": "sampler2D"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 46,
+      "index": 14,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        29
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [
+        "address"
+      ],
+      "type": "vec2<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 47,
+      "index": 15,
+      "line": null,
+      "name": null,
+      "op": "OpImageSampleImplicitLod",
+      "operands": [
+        45,
+        46
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 48,
+      "index": 16,
+      "line": null,
+      "name": null,
+      "op": "OpVectorShuffle",
+      "operands": [
+        47,
+        47
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 17,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        43,
+        48
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 50,
+      "index": 18,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        21
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 51,
+      "index": 19,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        43
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 53,
+      "index": 20,
+      "line": null,
+      "name": null,
+      "op": "OpAccessChain",
+      "operands": [
+        36,
+        52
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "ptr(Uniform, f32)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 54,
+      "index": 21,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        53
+      ],
+      "range": null,
+      "rate": "uniform",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 55,
+      "index": 22,
+      "line": null,
+      "name": null,
+      "op": "OpVectorTimesScalar",
+      "operands": [
+        51,
+        54
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 56,
+      "index": 23,
+      "line": null,
+      "name": null,
+      "op": "OpFAdd",
+      "operands": [
+        50,
+        55
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 24,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        57,
+        56
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 58,
+      "index": 25,
+      "line": null,
+      "name": null,
+      "op": "OpFunctionCall",
+      "operands": [
+        11,
+        57
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 26,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        49,
+        58
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 61,
+      "index": 27,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        49
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 85,
+      "index": 28,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        61,
+        70,
+        72
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 86,
+      "index": 29,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        84,
+        85,
+        82
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 87,
+      "index": 30,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        86,
+        85,
+        80
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 88,
+      "index": 31,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        87,
+        85,
+        78
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 89,
+      "index": 32,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        88,
+        85,
+        76
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": "Fma",
+      "func": "main",
+      "id": 64,
+      "index": 33,
+      "line": null,
+      "name": null,
+      "op": "OpExtInst",
+      "operands": [
+        89,
+        85,
+        74
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 65,
+      "index": 34,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        64
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 66,
+      "index": 35,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        64
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 67,
+      "index": 36,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeExtract",
+      "operands": [
+        64
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "f32"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 68,
+      "index": 37,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        65,
+        66,
+        67,
+        14
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec4<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 38,
+      "line": null,
+      "name": null,
+      "op": "OpStore",
+      "operands": [
+        60,
+        68
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "main",
+      "id": 0,
+      "index": 39,
+      "line": null,
+      "name": null,
+      "op": "OpReturn",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": null,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 10,
+      "index": 0,
+      "line": null,
+      "name": "x",
+      "op": "OpFunctionParameter",
+      "operands": [],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "ptr(Function, vec3<f32>)"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 12,
+      "index": 1,
+      "line": null,
+      "name": null,
+      "op": "OpLabel",
+      "operands": [],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": null
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 13,
+      "index": 2,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        10
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 15,
+      "index": 3,
+      "line": null,
+      "name": null,
+      "op": "OpLoad",
+      "operands": [
+        10
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 16,
+      "index": 4,
+      "line": null,
+      "name": null,
+      "op": "OpCompositeConstruct",
+      "operands": [
+        14,
+        14,
+        14
+      ],
+      "range": null,
+      "rate": "const",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 17,
+      "index": 5,
+      "line": null,
+      "name": null,
+      "op": "OpFAdd",
+      "operands": [
+        16,
+        15
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 18,
+      "index": 6,
+      "line": null,
+      "name": null,
+      "op": "OpFDiv",
+      "operands": [
+        13,
+        17
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": "vec3<f32>"
+    },
+    {
+      "block": 0,
+      "ext": null,
+      "func": "tonemap(vf3;",
+      "id": 0,
+      "index": 7,
+      "line": null,
+      "name": null,
+      "op": "OpReturnValue",
+      "operands": [
+        18
+      ],
+      "range": null,
+      "rate": "pixel",
+      "sinks": [],
+      "type": null
+    }
+  ],
+  "outputs": [
+    {
+      "id": 60,
+      "location": 0,
+      "type": "vec4<f32>"
+    }
+  ],
+  "samplers": [
+    {
+      "binding": 0,
+      "id": 25,
+      "name": "u_scene",
+      "samples": [
+        {
+          "coord_id": 30,
+          "coord_kind": "uv_exact",
+          "id": 32,
+          "offset": null
+        }
+      ]
+    },
+    {
+      "binding": 1,
+      "id": 44,
+      "name": "u_bloom",
+      "samples": [
+        {
+          "coord_id": 46,
+          "coord_kind": "uv_exact",
+          "id": 47,
+          "offset": null
+        }
+      ]
+    }
+  ],
+  "shader": "3_approx",
+  "summary": {
+    "candidate_sites": 28,
+    "const": 1,
+    "float_sites": 30,
+    "pixel": 27,
+    "sink_sites": 2,
+    "uniform": 4
+  }
+}

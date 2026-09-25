@@ -1,0 +1,12 @@
+{
+ "shader": "bloom_composite",
+ "variant_id": "approx_0p001",
+ "sites": [
+  64
+ ],
+ "max_rel_err": 0.001,
+ "runs": [],
+ "prediction": {},
+ "log": "/home/rudybear/sources/shaderopt/lab/build/spv/bloom_composite.spv: 0 of 1 sites replaced (0 ops, all lossy); wrote /home/rudybear/sources/shaderopt/lab/variants/bloom_composite/approx_0p001/bloom_composite.spv\n  id     op             type     range                  degree rel err   status\n  64     Pow(x, 0.4545) vec3     [0.0057, 1.0316]       7      5.6e-2    no degree in 3..7 reaches max rel err 1.0e-3 on [0.0057, 1.0316]: best degree 7 has 5.6e-2",
+ "ops": []
+}

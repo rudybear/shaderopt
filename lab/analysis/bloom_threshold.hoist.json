@@ -1,0 +1,297 @@
+{
+ "shader": "bloom_threshold",
+ "variant_id": "hoist",
+ "hoisted": [
+  {
+   "depends_on": [
+    "knee",
+    "threshold"
+   ],
+   "expr": "(2.0 * (knee * threshold))",
+   "member": "h_57",
+   "offset": 16,
+   "ops": 2,
+   "source_id": 57,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "knee",
+    "threshold"
+   ],
+   "expr": "((4.0 * (knee * threshold)) + 0.000009999999747378752)",
+   "member": "h_66",
+   "offset": 20,
+   "ops": 3,
+   "source_id": 66,
+   "type": "float"
+  }
+ ],
+ "ops": 11,
+ "runs": [
+  {
+   "scenario": "bloom_hdr_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0006169031462060457,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0006169031462060457,
+    "required": 0.02
+   },
+   "timing": {
+    "threshold": {
+     "baseline_median_ns": 6484.0,
+     "variant_median_ns": 6488.0,
+     "speedup": -0.0006169031462060457,
+     "speedup_ci95": [
+      -0.003703703703703704,
+      0.0018495684340320592
+     ],
+     "baseline_ci95": [
+      6478.0,
+      6492.0
+     ],
+     "variant_ci95": [
+      6472.0,
+      6504.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "threshold": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_hdr_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.000613685179502915,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.000613685179502915,
+    "required": 0.02
+   },
+   "timing": {
+    "threshold": {
+     "baseline_median_ns": 6518.0,
+     "variant_median_ns": 6522.0,
+     "speedup": -0.000613685179502915,
+     "speedup_ci95": [
+      -0.00214987714987715,
+      0.0009205277692543725
+     ],
+     "baseline_ci95": [
+      6512.0,
+      6524.0
+     ],
+     "variant_ci95": [
+      6512.0,
+      6528.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "threshold": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr",
+     "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_extreme",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.003073140749846343,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": -0.003073140749846343,
+    "required": 0.02
+   },
+   "timing": {
+    "threshold": {
+     "baseline_median_ns": 6508.0,
+     "variant_median_ns": 6528.0,
+     "speedup": -0.003073140749846343,
+     "speedup_ci95": [
+      -0.004920049200492005,
+      0.0012262603769752456
+     ],
+     "baseline_ci95": [
+      6504.0,
+      6528.0
+     ],
+     "variant_ci95": [
+      6512.0,
+      6538.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "threshold": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 24480,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0024449877750611247,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0024449877750611247,
+    "required": 0.02
+   },
+   "timing": {
+    "threshold": {
+     "baseline_median_ns": 6544.0,
+     "variant_median_ns": 6560.0,
+     "speedup": -0.0024449877750611247,
+     "speedup_ci95": [
+      -0.004900459418070444,
+      0.0012202562538133007
+     ],
+     "baseline_ci95": [
+      6530.0,
+      6562.0
+     ],
+     "variant_ci95": [
+      6546.0,
+      6566.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "threshold": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  }
+ ],
+ "prediction": {
+  "threshold": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip_hdr"
+  }
+ }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %24 %43 == %44",
+    "pass": "cse",
+    "replaced_by": 44,
+    "target": 49
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %49 == %45",
+    "pass": "cse",
+    "replaced_by": 45,
+    "target": 50
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %24 %43 == %44",
+    "pass": "cse",
+    "replaced_by": 44,
+    "target": 71
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %71 == %45",
+    "pass": "cse",
+    "replaced_by": 45,
+    "target": 72
+  }
+]

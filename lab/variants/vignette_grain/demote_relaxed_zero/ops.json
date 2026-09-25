@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %98 RelaxedPrecision (OpCompositeConstruct %97 %97)",
+    "pass": "demote_relaxed",
+    "replaced_by": 98,
+    "target": 98
+  }
+]

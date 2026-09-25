@@ -1,0 +1,26 @@
+[
+  {
+    "depends_on": [
+      "knee",
+      "threshold"
+    ],
+    "expr": "(2.0 * (knee * threshold))",
+    "member": "h_57",
+    "offset": 16,
+    "ops": 2,
+    "source_id": 57,
+    "type": "float"
+  },
+  {
+    "depends_on": [
+      "knee",
+      "threshold"
+    ],
+    "expr": "((4.0 * (knee * threshold)) + 0.000009999999747378752)",
+    "member": "h_66",
+    "offset": 20,
+    "ops": 3,
+    "source_id": 66,
+    "type": "float"
+  }
+]

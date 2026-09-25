@@ -1,0 +1,8 @@
+{
+ "shader": "bloom_composite",
+ "variant_id": "hoist",
+ "hoisted": [],
+ "ops": 2,
+ "runs": [],
+ "prediction": {}
+}

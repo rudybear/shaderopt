@@ -1,0 +1,8 @@
+{
+ "shader": "tonemap_aces",
+ "variant_id": "hoist",
+ "hoisted": [],
+ "ops": 6,
+ "runs": [],
+ "prediction": {}
+}

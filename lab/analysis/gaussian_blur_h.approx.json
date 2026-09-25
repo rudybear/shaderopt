@@ -1,0 +1,284 @@
+{
+ "shader": "gaussian_blur_h",
+ "variant_id": "approx_0p001",
+ "sites": [
+  48
+ ],
+ "max_rel_err": 0.001,
+ "runs": [
+  {
+   "scenario": "bloom_hdr_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0024164317358034634,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": -0.0024164317358034634,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4966.0,
+     "variant_median_ns": 4978.0,
+     "speedup": -0.0024164317358034634,
+     "speedup_ci95": [
+      -0.004032258064516129,
+      0.0
+     ],
+     "baseline_ci95": [
+      4960.0,
+      4976.0
+     ],
+     "variant_ci95": [
+      4976.0,
+      4984.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 9.80827899184078e-05,
+     "flip_p99": 0.0023868258576840162,
+     "flip_max": 0.02405558153986931,
+     "abs_max": 0.0087127685546875,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.0008264846401289105,
+     "flip_p99": 0.005205234512686729,
+     "flip_max": 0.005289449356496334,
+     "abs_max": 0.015625,
+     "abs_p99": 0.015625,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_hdr_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.00282258064516129,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.00282258064516129,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4960.0,
+     "variant_median_ns": 4974.0,
+     "speedup": -0.00282258064516129,
+     "speedup_ci95": [
+      -0.004035553239928406,
+      -0.0008058017727639
+     ],
+     "baseline_ci95": [
+      4956.0,
+      4966.0
+     ],
+     "variant_ci95": [
+      4968.0,
+      4980.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr",
+     "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_extreme",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0004027386226339106,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": -0.0004027386226339106,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 4966.0,
+     "variant_median_ns": 4968.0,
+     "speedup": -0.0004027386226339106,
+     "speedup_ci95": [
+      -0.0028214429665457475,
+      0.001610305958132045
+     ],
+     "baseline_ci95": [
+      4960.0,
+      4970.0
+     ],
+     "variant_ci95": [
+      4960.0,
+      4978.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 1.224902064222988e-07,
+     "flip_p99": 0.0,
+     "flip_max": 0.01422248687595129,
+     "abs_max": 0.008164584636688232,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 2.875345217034919e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.0024448465555906296,
+     "abs_max": 4.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 24752,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": -0.0031885213232363493,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": -0.0031885213232363493,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_h": {
+     "baseline_median_ns": 5018.0,
+     "variant_median_ns": 5034.0,
+     "speedup": -0.0031885213232363493,
+     "speedup_ci95": [
+      -0.0051875498802873106,
+      0.0003973062696526443
+     ],
+     "baseline_ci95": [
+      5010.0,
+      5034.0
+     ],
+     "variant_ci95": [
+      5024.0,
+      5042.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.00017954714712686837,
+     "flip_p99": 0.003676943713799119,
+     "flip_max": 0.035092152655124664,
+     "abs_max": 0.008483350276947021,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_h": {
+     "flip_mean": 0.000530943158082664,
+     "flip_p99": 0.001301936456002295,
+     "flip_max": 0.002928492845967412,
+     "abs_max": 0.0009765625,
+     "abs_p99": 0.0009765625,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  }
+ ],
+ "prediction": {
+  "blur_h": {
+   "flip_mean": 0.00031862236210145056,
+   "flip_p99": 0.003311636857688427,
+   "flip_max": 0.005946433637291193,
+   "abs_max": 0.015625,
+   "abs_p99": 0.001953125,
+   "masked_pixels": 0,
+   "metric": "flip_hdr"
+  }
+ },
+ "log": "/home/rudybear/sources/shaderopt/lab/build/spv/gaussian_blur_h.spv: 1 of 1 sites replaced (1 ops, all lossy); wrote /home/rudybear/sources/shaderopt/lab/variants/gaussian_blur_h/approx_0p001/gaussian_blur_h.spv\n  id     op             type     range                  degree rel err   status\n  48     Exp            float    [-2.1, 0.1]            4      8.8e-4    replaced",
+ "ops": [
+  {
+   "class": "lossy",
+   "detail": "Exp -> degree-4 polynomial on [-2.1, 0.1], max rel err 8.8e-4",
+   "pass": "approx",
+   "replaced_by": 48,
+   "target": 48
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "class": "exact",
+    "detail": "hoisted 2 instructions into Params.h_57 (float)",
+    "pass": "hoist",
+    "replaced_by": 93,
+    "target": 57
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 3 instructions into Params.h_66 (float)",
+    "pass": "hoist",
+    "replaced_by": 90,
+    "target": 66
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %55 %56 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 57
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %64 %65 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 66
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %39 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 56
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %62 %63 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 64
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %39 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 63
+  }
+]

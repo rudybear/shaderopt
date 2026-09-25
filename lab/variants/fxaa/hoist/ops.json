@@ -1,0 +1,16 @@
+[
+  {
+    "class": "exact",
+    "detail": "hoisted 2 instructions into Params.h_151 (vec2)",
+    "pass": "hoist",
+    "replaced_by": 351,
+    "target": 151
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %77 %53 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 151
+  }
+]

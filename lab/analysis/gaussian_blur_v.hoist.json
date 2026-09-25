@@ -1,0 +1,383 @@
+{
+ "shader": "gaussian_blur_v",
+ "variant_id": "hoist",
+ "hoisted": [
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))",
+   "member": "h_106",
+   "offset": 16,
+   "ops": 5,
+   "source_id": 106,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))",
+   "member": "h_138",
+   "offset": 20,
+   "ops": 5,
+   "source_id": 138,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))",
+   "member": "h_170",
+   "offset": 24,
+   "ops": 5,
+   "source_id": 170,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))",
+   "member": "h_202",
+   "offset": 28,
+   "ops": 5,
+   "source_id": 202,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))",
+   "member": "h_234",
+   "offset": 32,
+   "ops": 5,
+   "source_id": 234,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))",
+   "member": "h_266",
+   "offset": 36,
+   "ops": 5,
+   "source_id": 266,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))",
+   "member": "h_298",
+   "offset": 40,
+   "ops": 5,
+   "source_id": 298,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))",
+   "member": "h_330",
+   "offset": 44,
+   "ops": 5,
+   "source_id": 330,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))",
+   "member": "h_362",
+   "offset": 48,
+   "ops": 5,
+   "source_id": 362,
+   "type": "float"
+  },
+  {
+   "depends_on": [
+    "sigma"
+   ],
+   "expr": "vec3((((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))))",
+   "member": "h_82",
+   "offset": 64,
+   "ops": 46,
+   "source_id": 82,
+   "type": "vec3"
+  }
+ ],
+ "ops": 185,
+ "runs": [
+  {
+   "scenario": "bloom_hdr_edges",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0012096774193548388,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0012096774193548388,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_v": {
+     "baseline_median_ns": 4960.0,
+     "variant_median_ns": 4954.0,
+     "speedup": 0.0012096774193548388,
+     "speedup_ci95": [
+      -0.0008071025020177562,
+      0.004019413911119449
+     ],
+     "baseline_ci95": [
+      4954.0,
+      4968.0
+     ],
+     "variant_ci95": [
+      4944.0,
+      4960.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_v": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_hdr_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0008071025020177562,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0008071025020177562,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_v": {
+     "baseline_median_ns": 4956.0,
+     "variant_median_ns": 4952.0,
+     "speedup": 0.0008071025020177562,
+     "speedup_ci95": [
+      0.0,
+      0.00282258064516129
+     ],
+     "baseline_ci95": [
+      4954.0,
+      4964.0
+     ],
+     "variant_ci95": [
+      4946.0,
+      4956.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_v": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr",
+     "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_extreme",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0028203062046736503,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.0028203062046736503,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_v": {
+     "baseline_median_ns": 4964.0,
+     "variant_median_ns": 4950.0,
+     "speedup": 0.0028203062046736503,
+     "speedup_ci95": [
+      0.0,
+      0.004832863471606927
+     ],
+     "baseline_ci95": [
+      4952.0,
+      4970.0
+     ],
+     "variant_ci95": [
+      4942.0,
+      4958.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_v": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 26208,
+     "metric": "flip_hdr"
+    }
+   }
+  },
+  {
+   "scenario": "bloom_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.0011947431302270011,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.0011947431302270011,
+    "required": 0.02
+   },
+   "timing": {
+    "blur_v": {
+     "baseline_median_ns": 5022.0,
+     "variant_median_ns": 5016.0,
+     "speedup": 0.0011947431302270011,
+     "speedup_ci95": [
+      -0.0007980845969672786,
+      0.004370282081843465
+     ],
+     "baseline_ci95": [
+      5014.0,
+      5032.0
+     ],
+     "variant_ci95": [
+      5006.0,
+      5022.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "composite": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    },
+    "blur_v": {
+     "flip_mean": 7.91282275258709e-08,
+     "flip_p99": 0.0,
+     "flip_max": 0.0008752866997383535,
+     "abs_max": 0.0009765625,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip_hdr"
+    }
+   }
+  }
+ ],
+ "prediction": {
+  "blur_v": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip_hdr"
+  }
+ }
+}

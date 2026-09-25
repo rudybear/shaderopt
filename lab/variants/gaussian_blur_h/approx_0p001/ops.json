@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "Exp -> degree-4 polynomial on [-2.1, 0.1], max rel err 8.8e-4",
+    "pass": "approx",
+    "replaced_by": 48,
+    "target": 48
+  }
+]

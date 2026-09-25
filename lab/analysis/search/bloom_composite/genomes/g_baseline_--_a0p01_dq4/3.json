@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "Pow(x, 0.4545) -> degree-5 polynomial on [0.0452, 1.0295], max rel err 8.9e-3",
+    "pass": "approx",
+    "replaced_by": 64,
+    "target": 64
+  }
+]

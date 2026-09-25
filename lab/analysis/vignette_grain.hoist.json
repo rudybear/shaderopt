@@ -1,0 +1,8 @@
+{
+ "shader": "vignette_grain",
+ "variant_id": "hoist",
+ "hoisted": [],
+ "ops": 7,
+ "runs": [],
+ "prediction": {}
+}

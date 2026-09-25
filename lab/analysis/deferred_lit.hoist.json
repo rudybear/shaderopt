@@ -1,0 +1,8 @@
+{
+ "shader": "deferred_lit",
+ "variant_id": "hoist",
+ "hoisted": [],
+ "ops": 96,
+ "runs": [],
+ "prediction": {}
+}

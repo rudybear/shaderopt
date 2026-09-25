@@ -1,0 +1,204 @@
+{
+ "shader": "color_grade",
+ "variant_id": "hoist",
+ "hoisted": [
+  {
+   "depends_on": [
+    "temperature"
+   ],
+   "expr": "vec3((1.0 + (0.10000000149011612 * temperature)), 1.0, (1.0 - (0.10000000149011612 * temperature)))",
+   "member": "h_39",
+   "offset": 112,
+   "ops": 3,
+   "source_id": 39,
+   "type": "vec3"
+  },
+  {
+   "depends_on": [
+    "gamma"
+   ],
+   "expr": "(vec3(1.0, 1.0, 1.0) / max(gamma.xyz, vec3(0.0010000000474974513, 0.0010000000474974513, 0.0010000000474974513)))",
+   "member": "h_107",
+   "offset": 128,
+   "ops": 2,
+   "source_id": 107,
+   "type": "vec3"
+  }
+ ],
+ "ops": 22,
+ "runs": [
+  {
+   "scenario": "colorgrade_gradient",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.010784027980180706,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.010784027980180706,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 6862.0,
+     "variant_median_ns": 6788.0,
+     "speedup": 0.010784027980180706,
+     "speedup_ci95": [
+      0.008746355685131196,
+      0.012805587892898719
+     ],
+     "baseline_ci95": [
+      6852.0,
+      6872.0
+     ],
+     "variant_ci95": [
+      6780.0,
+      6800.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 1.8646204580363701e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.01274784840643406,
+     "abs_max": 0.003921583294868469,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "colorgrade_photo",
+   "split": "train",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.009160756501182032,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.009160756501182032,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 6768.0,
+     "variant_median_ns": 6706.0,
+     "speedup": 0.009160756501182032,
+     "speedup_ci95": [
+      0.005920663114268798,
+      0.011216056670602124
+     ],
+     "baseline_ci95": [
+      6754.0,
+      6776.0
+     ],
+     "variant_ci95": [
+      6698.0,
+      6716.0
+     ],
+     "n": 40,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 0.0,
+     "flip_p99": 0.0,
+     "flip_max": 0.0,
+     "abs_max": 0.0,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  },
+  {
+   "scenario": "colorgrade_noise",
+   "split": "holdout",
+   "gates": {
+    "1": true,
+    "2": true,
+    "3": true,
+    "4": false,
+    "5": null,
+    "speedup": 0.01478953356086462,
+    "required": 0.1
+   },
+   "gates_strict": {
+    "1": true,
+    "2": true,
+    "3": false,
+    "4": false,
+    "5": null,
+    "speedup": 0.01478953356086462,
+    "required": 0.02
+   },
+   "timing": {
+    "grade": {
+     "baseline_median_ns": 7032.0,
+     "variant_median_ns": 6928.0,
+     "speedup": 0.01478953356086462,
+     "speedup_ci95": [
+      0.011972633979475485,
+      0.01813095453358246
+     ],
+     "baseline_ci95": [
+      7014.0,
+      7052.0
+     ],
+     "variant_ci95": [
+      6914.0,
+      6934.0
+     ],
+     "n": 20,
+     "touched": true
+    }
+   },
+   "metrics": {
+    "grade": {
+     "flip_mean": 1.2138874581069103e-06,
+     "flip_p99": 0.0,
+     "flip_max": 0.009348678402602673,
+     "abs_max": 0.003921583294868469,
+     "abs_p99": 0.0,
+     "masked_pixels": 0,
+     "metric": "flip"
+    }
+   }
+  }
+ ],
+ "prediction": {
+  "grade": {
+   "flip_mean": 0.0,
+   "flip_p99": 0.0,
+   "flip_max": 0.0,
+   "abs_max": 0.0,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "metric": "flip"
+  }
+ }
+}

@@ -1,0 +1,1427 @@
+{
+  "shader": "gaussian_blur_v",
+  "variant_id": "hoist",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %42",
+      "pass": "cse",
+      "replaced_by": 42,
+      "target": 44
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %44 == %43",
+      "pass": "cse",
+      "replaced_by": 43,
+      "target": 45
+    },
+    {
+      "class": "exact",
+      "detail": "loop %18: variable %16 \"i\" = -4; exit when !(i SLessThanEqual 4); step +1; 9 iterations; 4 blocks cloned 9 times",
+      "pass": "unroll",
+      "replaced_by": null,
+      "target": 18
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %17 -> OpConstant -4.0",
+      "pass": "fold",
+      "replaced_by": 384,
+      "target": 97
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %17 %40 -> OpConstant -3",
+      "pass": "fold",
+      "replaced_by": 89,
+      "target": 125
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %89 -> OpConstant -3.0",
+      "pass": "fold",
+      "replaced_by": 385,
+      "target": 129
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %89 %40 -> OpConstant -2",
+      "pass": "fold",
+      "replaced_by": 90,
+      "target": 157
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %90 -> OpConstant -2.0",
+      "pass": "fold",
+      "replaced_by": 386,
+      "target": 161
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %90 %40 -> OpConstant -1",
+      "pass": "fold",
+      "replaced_by": 91,
+      "target": 189
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %91 -> OpConstant -1.0",
+      "pass": "fold",
+      "replaced_by": 387,
+      "target": 193
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %91 %40 -> OpConstant 0",
+      "pass": "fold",
+      "replaced_by": 58,
+      "target": 221
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %58 -> OpConstant 0.0",
+      "pass": "fold",
+      "replaced_by": 10,
+      "target": 225
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %58 %40 -> OpConstant 1",
+      "pass": "fold",
+      "replaced_by": 40,
+      "target": 253
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %40 -> OpConstant 1.0",
+      "pass": "fold",
+      "replaced_by": 84,
+      "target": 257
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %40 %40 -> OpConstant 2",
+      "pass": "fold",
+      "replaced_by": 92,
+      "target": 285
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %92 -> OpConstant 2.0",
+      "pass": "fold",
+      "replaced_by": 388,
+      "target": 289
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %92 %40 -> OpConstant 3",
+      "pass": "fold",
+      "replaced_by": 93,
+      "target": 317
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %93 -> OpConstant 3.0",
+      "pass": "fold",
+      "replaced_by": 389,
+      "target": 321
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %93 %40 -> OpConstant 4",
+      "pass": "fold",
+      "replaced_by": 24,
+      "target": 349
+    },
+    {
+      "class": "exact",
+      "detail": "OpConvertSToF %24 -> OpConstant 4.0",
+      "pass": "fold",
+      "replaced_by": 390,
+      "target": 353
+    },
+    {
+      "class": "exact",
+      "detail": "OpIAdd %24 %40 -> OpConstant 5",
+      "pass": "fold",
+      "replaced_by": 94,
+      "target": 381
+    },
+    {
+      "class": "exact",
+      "detail": "OpVariable \"i\" only stored to; removed 1 store(s)",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 16
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 134
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %134 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 135
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %135 %135 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 136
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 139
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 140
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 142
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %142 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 143
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 166
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %166 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 167
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %167 %167 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 168
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 171
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 172
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 174
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %174 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 175
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 198
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %198 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 199
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %199 %199 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 200
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 203
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 204
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 206
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %206 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 207
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 230
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %230 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 231
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %231 %231 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 232
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 235
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 236
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 238
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %238 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 239
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 262
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %262 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 263
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %263 %263 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 264
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 267
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 268
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 270
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %270 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 271
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 294
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %294 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 295
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %295 %295 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 296
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 299
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 300
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 302
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %302 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 303
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 326
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %326 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 327
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %327 %327 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 328
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 331
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 332
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 334
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %334 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 335
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 == %102",
+      "pass": "cse",
+      "replaced_by": 102,
+      "target": 358
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %358 == %103",
+      "pass": "cse",
+      "replaced_by": 103,
+      "target": 359
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %359 %359 == %104",
+      "pass": "cse",
+      "replaced_by": 104,
+      "target": 360
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %52 == %107",
+      "pass": "cse",
+      "replaced_by": 107,
+      "target": 363
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %55 == %108",
+      "pass": "cse",
+      "replaced_by": 108,
+      "target": 364
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %58 %60 == %110",
+      "pass": "cse",
+      "replaced_by": 110,
+      "target": 366
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %366 == %111",
+      "pass": "cse",
+      "replaced_by": 111,
+      "target": 367
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_106 (float)",
+      "pass": "hoist",
+      "replaced_by": 418,
+      "target": 106
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_138 (float)",
+      "pass": "hoist",
+      "replaced_by": 416,
+      "target": 138
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_170 (float)",
+      "pass": "hoist",
+      "replaced_by": 414,
+      "target": 170
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_202 (float)",
+      "pass": "hoist",
+      "replaced_by": 412,
+      "target": 202
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_234 (float)",
+      "pass": "hoist",
+      "replaced_by": 409,
+      "target": 234
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_266 (float)",
+      "pass": "hoist",
+      "replaced_by": 406,
+      "target": 266
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_298 (float)",
+      "pass": "hoist",
+      "replaced_by": 403,
+      "target": 298
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_330 (float)",
+      "pass": "hoist",
+      "replaced_by": 400,
+      "target": 330
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 5 instructions into Params.h_362 (float)",
+      "pass": "hoist",
+      "replaced_by": 397,
+      "target": 362
+    },
+    {
+      "class": "exact",
+      "detail": "hoisted 46 instructions into Params.h_82 (vec3)",
+      "pass": "hoist",
+      "replaced_by": 394,
+      "target": 82
+    },
+    {
+      "class": "exact",
+      "detail": "OpVariable \"wsum\" only fed stores into dead variables after hoisting; removed 10 store(s)",
+      "pass": "hoist",
+      "replaced_by": null,
+      "target": 13
+    },
+    {
+      "class": "exact",
+      "detail": "OpVariable \"w\" only fed stores into dead variables after hoisting; removed 9 store(s)",
+      "pass": "hoist",
+      "replaced_by": null,
+      "target": 30
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %105 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 106
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 117
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 121
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %122 %418 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 123
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %137 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 138
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 149
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 153
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %154 %416 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 155
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %169 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 170
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 181
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 185
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %186 %414 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 187
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %201 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 202
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 213
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 217
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %218 %412 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 219
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %233 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 234
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 245
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 249
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %250 %409 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 251
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %265 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 266
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 277
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 281
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %282 %406 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 283
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %297 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 298
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 309
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 313
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %314 %403 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 315
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %329 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 330
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 341
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 345
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %346 %400 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 347
+    },
+    {
+      "class": "exact",
+      "detail": "OpExtInst Exp %361 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 362
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 373
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %30 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 377
+    },
+    {
+      "class": "exact",
+      "detail": "OpFAdd %378 %397 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 379
+    },
+    {
+      "class": "exact",
+      "detail": "OpCompositeConstruct %81 %81 %81 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 82
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %101 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 105
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 122
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %133 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 137
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 154
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %165 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 169
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 186
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %197 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 201
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 218
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %229 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 233
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 250
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %261 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 265
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 282
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %293 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 297
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 314
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %325 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 329
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 346
+    },
+    {
+      "class": "exact",
+      "detail": "OpFDiv %357 %104 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 361
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 378
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %13 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 81
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %99 %100 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 101
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %103 %103 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 104
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %131 %132 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 133
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %163 %164 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 165
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %195 %196 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 197
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %227 %228 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 229
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %259 %260 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 261
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %291 %292 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 293
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %323 %324 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 325
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %355 %356 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 357
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %98 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 99
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 100
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %102 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 103
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %130 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 131
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 132
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %162 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 163
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 164
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %194 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 195
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 196
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %226 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 227
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 228
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %258 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 259
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 260
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %290 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 291
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 292
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %322 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 323
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 324
+    },
+    {
+      "class": "exact",
+      "detail": "OpFMul %31 %354 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 355
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 356
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 98
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %39 %40 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 102
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 130
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 162
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 194
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 226
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 258
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 290
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 322
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %27 unused",
+      "pass": "dce",
+      "replaced_by": null,
+      "target": 354
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "8c7f9f0c0d90706680c8e952c8457f04f012e90c",
+    "runner": "490a9856b502995c",
+    "shader_ir": "0308433335fc7770",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:26:39",
+  "plan": [
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))",
+      "member": "h_106",
+      "offset": 16,
+      "ops": 5,
+      "source_id": 106,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))",
+      "member": "h_138",
+      "offset": 20,
+      "ops": 5,
+      "source_id": 138,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))",
+      "member": "h_170",
+      "offset": 24,
+      "ops": 5,
+      "source_id": 170,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))",
+      "member": "h_202",
+      "offset": 28,
+      "ops": 5,
+      "source_id": 202,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))",
+      "member": "h_234",
+      "offset": 32,
+      "ops": 5,
+      "source_id": 234,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))",
+      "member": "h_266",
+      "offset": 36,
+      "ops": 5,
+      "source_id": 266,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))",
+      "member": "h_298",
+      "offset": 40,
+      "ops": 5,
+      "source_id": 298,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))",
+      "member": "h_330",
+      "offset": 44,
+      "ops": 5,
+      "source_id": 330,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))",
+      "member": "h_362",
+      "offset": 48,
+      "ops": 5,
+      "source_id": 362,
+      "type": "float"
+    },
+    {
+      "depends_on": [
+        "sigma"
+      ],
+      "expr": "vec3((((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))), (((((((((0.0 + exp((((-0.5 * -4.0) * -4.0) / (sigma * sigma)))) + exp((((-0.5 * -3.0) * -3.0) / (sigma * sigma)))) + exp((((-0.5 * -2.0) * -2.0) / (sigma * sigma)))) + exp((((-0.5 * -1.0) * -1.0) / (sigma * sigma)))) + exp((((-0.5 * 0.0) * 0.0) / (sigma * sigma)))) + exp((((-0.5 * 1.0) * 1.0) / (sigma * sigma)))) + exp((((-0.5 * 2.0) * 2.0) / (sigma * sigma)))) + exp((((-0.5 * 3.0) * 3.0) / (sigma * sigma)))) + exp((((-0.5 * 4.0) * 4.0) / (sigma * sigma)))))",
+      "member": "h_82",
+      "offset": 64,
+      "ops": 46,
+      "source_id": 82,
+      "type": "vec3"
+    }
+  ],
+  "pipeline": "fold,dce,cse,ident,unroll + hoist"
+}

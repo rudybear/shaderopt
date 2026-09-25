@@ -1,0 +1,107 @@
+[
+  {
+    "class": "exact",
+    "detail": "hoisted 3 instructions into Params.h_39 (vec3)",
+    "pass": "hoist",
+    "replaced_by": 126,
+    "target": 39
+  },
+  {
+    "class": "exact",
+    "detail": "hoisted 2 instructions into Params.h_107 (vec3)",
+    "pass": "hoist",
+    "replaced_by": 123,
+    "target": 107
+  },
+  {
+    "class": "exact",
+    "detail": "OpVariable \"warm\" only fed stores into dead variables after hoisting; removed 1 store(s)",
+    "pass": "hoist",
+    "replaced_by": null,
+    "target": 22
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %34 %23 %38 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 39
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %22 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 40
+  },
+  {
+    "class": "exact",
+    "detail": "OpFDiv %119 %105 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 107
+  },
+  {
+    "class": "exact",
+    "detail": "OpFAdd %23 %33 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 34
+  },
+  {
+    "class": "exact",
+    "detail": "OpFSub %23 %33 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 38
+  },
+  {
+    "class": "exact",
+    "detail": "OpExtInst FMax %102 %104 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 105
+  },
+  {
+    "class": "exact",
+    "detail": "OpFMul %24 %32 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 33
+  },
+  {
+    "class": "exact",
+    "detail": "OpVectorShuffle %101 %101 0 1 2 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 102
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %31 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 32
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %100 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 101
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %27 %29 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 31
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %27 %99 unused",
+    "pass": "dce",
+    "replaced_by": null,
+    "target": 100
+  }
+]

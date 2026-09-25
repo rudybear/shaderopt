@@ -19,11 +19,12 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
 | hyp_foldmat |  |  |  | 0.0000 | +1.24% | no | no |
+| hoist |  |  |  | 0.0000 | +0.92% | no | no |
 | canon_full |  |  |  | 0.0000 | -0.09% | no | no |
 | canon_exact |  |  |  | 0.0000 | -0.09% | no | no |
-| demote_f16_s37 | f16 | s37 | 1 | 0.0013 | -0.18% | no | no |
-| demote_f16_s33 | f16 | s33 | 1 | 0.0005 | -0.35% | no | no |
-| demote_relaxed_q4 | relaxed | q4 | 20 | 0.0145 | -2.65% | no | no |
+| demote_f16_s33 | f16 | s33 | 1 | 0.0005 | -0.27% | no | no |
+| demote_f16_s37 | f16 | s37 | 1 | 0.0013 | -0.27% | no | no |
 | demote_f16_q2 | f16 | q2 | 45 | 0.0308 | -2.68% | no | no |
-| demote_relaxed_q2 | relaxed | q2 | 45 | 0.0308 | -3.08% | no | no |
+| demote_relaxed_q4 | relaxed | q4 | 20 | 0.0145 | -2.84% | no | no |
+| demote_relaxed_q2 | relaxed | q2 | 45 | 0.0308 | -3.46% | no | no |
 
