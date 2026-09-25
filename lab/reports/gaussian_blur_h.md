@@ -9,18 +9,33 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | hoist | 0.0000 | +0.16% | 2/2 | no | no |
-| hyp_bilinear5 | 0.0071 | +11.28% | 2/2 | yes | no |
+| g_bilinear5_--_a0p001_dnone | 0.0071 | +11.32% | 2/2 | yes | no |
+| g_bilinear5_--_a0p01_dnone | 0.0071 | +11.32% | 2/2 | yes | no |
 
 ### Accepted variants
 
+- **g_bilinear5_--_a0p001_dnone**: speedup +11.32%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_--_a0p001_dnone/variant.json`)
+- **g_bilinear5_--_a0p01_dnone**: speedup +11.32%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_--_a0p01_dnone/variant.json`)
 - **hyp_bilinear5**: speedup +11.28%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/hyp_bilinear5/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| g_bilinear5_--_a0p001_dnone |  |  |  | 0.0071 | +11.32% | yes | no |
+| g_bilinear5_--_a0p01_dnone |  |  |  | 0.0071 | +11.32% | yes | no |
 | hyp_bilinear5 |  |  |  | 0.0071 | +11.28% | yes | no |
+| g_bilinear5_--_a0p01_dq4 |  |  |  | 0.9674 | +11.14% | no | no |
+| g_bilinear5_--_a0p01_dq1 |  |  |  | 0.9674 | +11.09% | no | no |
+| g_bilinear5_--_a0p01_dall |  |  |  | 0.9674 | +11.08% | no | no |
+| g_bilinear5_--_a0p001_dq2 |  |  |  | 0.9674 | +11.07% | no | no |
+| g_bilinear5_--_a0p001_dall |  |  |  | 0.9674 | +11.06% | no | no |
+| g_bilinear5_--_a0p001_dzero |  |  |  | 0.9674 | +11.05% | no | no |
+| g_bilinear5_--_a0p001_dq4 |  |  |  | 0.9674 | +11.04% | no | no |
+| g_bilinear5_--_a0p01_dq2 |  |  |  | 0.9674 | +11.01% | no | no |
+| g_bilinear5_--_a0p001_dq1 |  |  |  | 0.9674 | +10.86% | no | no |
 | demote_f16_q4 | f16 | q4 | 19 | 0.9674 | +3.56% | no | no |
+| g_baseline_--_a0p01_dq2 |  |  |  | 0.9674 | +3.43% | no | no |
 | demote_f16_zero | f16 | zero | 8 | 0.9674 | +3.19% | no | no |
 | hoist |  |  |  | 0.0000 | +0.16% | no | no |
 | canon_full |  |  |  | 0.0000 | +0.00% | no | no |

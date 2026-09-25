@@ -56,3 +56,6 @@
 - M4: hoist exact but <= 1.5%; approx only fits the blur exp and is slower; LUT slower; formats/resolution 1..8% chain. Report lab/reports/M4.md. Fast-math blocked on IGL float_controls2.
 - Fixed: demotion sets now closed over Function-variable loads (all-loads-or-none rule).
 - M5 search started (8 GPU measurements + neighbours per shader; every genome predicted in the CPU model first).
+- Session was cut off while evicting page cache with a 120 GB allocation (do not do that again). Search restarted per shader.
+- M5 blur_h first pass: best genome = bilinear5 alone (+11.17%, p99 0.0071, ACCEPTED); every f16 genome measured p99 0.97 on bloom_extreme (holdout overflow) although the train-only prediction said 0.0071 -> predictions now cover every scenario incl. holdout before spending GPU.
+- BUG fixed: hoist appended a member whose vector type was declared after the block struct (spirv-val: "requires a previous definition"); 48 of 144 blur genomes failed to build because of it. The pass now moves the member type (and its scalar) ahead of the struct. bilinear5 + hoist: 122 -> 54 instructions.
