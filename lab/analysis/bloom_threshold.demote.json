@@ -1,0 +1,1270 @@
+{
+ "shader": "bloom_threshold",
+ "tolerance": {
+  "metric": "flip_hdr",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "tolerance_source": "budgets",
+ "sets": {
+  "zero": [
+   46,
+   52,
+   56,
+   57,
+   61,
+   63,
+   64,
+   66,
+   67,
+   69,
+   82,
+   84,
+   85,
+   86,
+   87
+  ],
+  "q4": [
+   46,
+   52,
+   56,
+   57,
+   61,
+   63,
+   64,
+   66,
+   67,
+   69,
+   82,
+   84,
+   85,
+   86,
+   87,
+   59,
+   60,
+   53,
+   58,
+   51,
+   48,
+   80,
+   33,
+   21,
+   30,
+   38,
+   73,
+   74,
+   70,
+   75,
+   76,
+   77,
+   81
+  ],
+  "s46": [
+   46
+  ],
+  "s52": [
+   52
+  ]
+ },
+ "rejected_sites": [
+  20,
+  29,
+  42,
+  45,
+  50,
+  72
+ ],
+ "results": [
+  {
+   "variant_id": "demote_f16_zero",
+   "mode": "f16",
+   "set": "zero",
+   "sites": [
+    46,
+    52,
+    56,
+    57,
+    61,
+    63,
+    64,
+    66,
+    67,
+    69,
+    82,
+    84,
+    85,
+    86,
+    87
+   ],
+   "error": "demote failed (bloom_threshold f16 15 sites): error: /home/rudybear/sources/shaderopt/lab/build/spv/bloom_threshold.spv: demote f16: 1 site(s) rejected:\n  %69: variable %47 (\"soft\"): loads %59, %60 are not listed; list every load of a variable or none"
+  },
+  {
+   "variant_id": "demote_f16_q4",
+   "mode": "f16",
+   "set": "q4",
+   "sites": [
+    46,
+    52,
+    56,
+    57,
+    61,
+    63,
+    64,
+    66,
+    67,
+    69,
+    82,
+    84,
+    85,
+    86,
+    87,
+    59,
+    60,
+    53,
+    58,
+    51,
+    48,
+    80,
+    33,
+    21,
+    30,
+    38,
+    73,
+    74,
+    70,
+    75,
+    76,
+    77,
+    81
+   ],
+   "n_sites": 33,
+   "predicted": {
+    "flip_p99": 0.00516048027202487,
+    "flip_mean_max_site": 0.0006971360999159515,
+    "module_flip_p99": 0.0038013027515262365,
+    "module_flip_mean": 0.0006143194041214883
+   },
+   "ops": 44,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030807147258163895,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.00030807147258163895,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6492.0,
+       "variant_median_ns": 6490.0,
+       "speedup": 0.00030807147258163895,
+       "speedup_ci95": [
+        -0.0012338062924120913,
+        0.0024645717806531116
+       ],
+       "baseline_ci95": [
+        6484.0,
+        6498.0
+       ],
+       "variant_ci95": [
+        6476.0,
+        6496.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0002610047231428325,
+       "flip_p99": 0.005871273111552,
+       "flip_max": 0.0360073521733284,
+       "abs_max": 0.008666932582855225,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0004370719543658197,
+       "flip_p99": 0.0029564134310930967,
+       "flip_max": 0.006146721541881561,
+       "abs_max": 0.015625,
+       "abs_p99": 0.015625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003068425897514575,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0003068425897514575,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6518.0,
+       "variant_median_ns": 6516.0,
+       "speedup": 0.0003068425897514575,
+       "speedup_ci95": [
+        -0.0009219422249539029,
+        0.0015337540967250672
+       ],
+       "baseline_ci95": [
+        6510.0,
+        6524.0
+       ],
+       "variant_ci95": [
+        6512.0,
+        6520.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006138735420503376,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006138735420503376,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6516.0,
+       "variant_median_ns": 6520.0,
+       "speedup": -0.0006138735420503376,
+       "speedup_ci95": [
+        -0.0027624309392265192,
+        0.0018404907975460123
+       ],
+       "baseline_ci95": [
+        6506.0,
+        6526.0
+       ],
+       "variant_ci95": [
+        6508.0,
+        6532.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.018219828605651855,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0010928979609161615,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 48600,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030543677458766036,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.00030543677458766036,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6548.0,
+       "variant_median_ns": 6550.0,
+       "speedup": -0.00030543677458766036,
+       "speedup_ci95": [
+        -0.0030525030525030525,
+        0.002745576571079927
+       ],
+       "baseline_ci95": [
+        6540.0,
+        6562.0
+       ],
+       "variant_ci95": [
+        6538.0,
+        6568.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0007926019025035203,
+       "flip_p99": 0.0099916011095047,
+       "flip_max": 0.03509962931275368,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0017203595489263535,
+       "flip_p99": 0.0031773343216627836,
+       "flip_max": 0.005748969968408346,
+       "abs_max": 0.00390625,
+       "abs_p99": 0.001953125,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s46",
+   "mode": "f16",
+   "set": "s46",
+   "sites": [
+    46
+   ],
+   "n_sites": 1,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 1,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012315270935960591,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0012315270935960591,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6496.0,
+       "variant_median_ns": 6488.0,
+       "speedup": 0.0012315270935960591,
+       "speedup_ci95": [
+        -0.0012338062924120913,
+        0.0033836003123299337
+       ],
+       "baseline_ci95": [
+        6484.0,
+        6506.0
+       ],
+       "variant_ci95": [
+        6480.0,
+        6496.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6522.0,
+       "variant_median_ns": 6522.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.001841620626151013,
+        0.001838235294117647
+       ],
+       "baseline_ci95": [
+        6514.0,
+        6530.0
+       ],
+       "variant_ci95": [
+        6514.0,
+        6528.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6516.0,
+       "variant_median_ns": 6516.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.0012285012285012285,
+        0.002449479485609308
+       ],
+       "baseline_ci95": [
+        6512.0,
+        6530.0
+       ],
+       "variant_ci95": [
+        6508.0,
+        6524.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 24480,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012221203788573174,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012221203788573174,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6546.0,
+       "variant_median_ns": 6554.0,
+       "speedup": -0.0012221203788573174,
+       "speedup_ci95": [
+        -0.003360831041857623,
+        0.0018326206475259622
+       ],
+       "baseline_ci95": [
+        6542.0,
+        6560.0
+       ],
+       "variant_ci95": [
+        6540.0,
+        6568.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s52",
+   "mode": "f16",
+   "set": "s52",
+   "sites": [
+    52
+   ],
+   "error": "demote failed (bloom_threshold f16 1 sites): error: /home/rudybear/sources/shaderopt/lab/build/spv/bloom_threshold.spv: demote f16: 1 site(s) rejected:\n  %52: variable %39 (\"k\"): loads %56, %63 are not listed; list every load of a variable or none"
+  },
+  {
+   "variant_id": "demote_relaxed_zero",
+   "mode": "relaxed",
+   "set": "zero",
+   "sites": [
+    46,
+    52,
+    56,
+    57,
+    61,
+    63,
+    64,
+    66,
+    67,
+    69,
+    82,
+    84,
+    85,
+    86,
+    87
+   ],
+   "n_sites": 15,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0
+   },
+   "ops": 15,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.001539882968894364,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.001539882968894364,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6494.0,
+       "variant_median_ns": 6504.0,
+       "speedup": -0.001539882968894364,
+       "speedup_ci95": [
+        -0.004625346901017576,
+        0.0009230769230769231
+       ],
+       "baseline_ci95": [
+        6482.0,
+        6504.0
+       ],
+       "variant_ci95": [
+        6492.0,
+        6516.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.00011752530554076657,
+       "flip_p99": 0.0028719014953821898,
+       "flip_max": 0.02958531118929386,
+       "abs_max": 0.008666932582855225,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.00039217196172103286,
+       "flip_p99": 0.0025566292461007833,
+       "flip_max": 0.00336121185682714,
+       "abs_max": 0.03125,
+       "abs_p99": 0.015625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0027607361963190185,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0027607361963190185,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6520.0,
+       "variant_median_ns": 6538.0,
+       "speedup": -0.0027607361963190185,
+       "speedup_ci95": [
+        -0.004908013109520215,
+        -0.0006127450980392157
+       ],
+       "baseline_ci95": [
+        6512.0,
+        6528.0
+       ],
+       "variant_ci95": [
+        6520.0,
+        6552.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015342129487572874,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015342129487572874,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6518.0,
+       "variant_median_ns": 6528.0,
+       "speedup": -0.0015342129487572874,
+       "speedup_ci95": [
+        -0.004606914989979506,
+        0.002449479485609308
+       ],
+       "baseline_ci95": [
+        6508.0,
+        6532.0
+       ],
+       "variant_ci95": [
+        6512.0,
+        6546.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.01713680289685726,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0014262840850278735,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 32520,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012202562538133007,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012202562538133007,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6556.0,
+       "variant_median_ns": 6564.0,
+       "speedup": -0.0012202562538133007,
+       "speedup_ci95": [
+        -0.003965832824893227,
+        0.0012176560121765602
+       ],
+       "baseline_ci95": [
+        6548.0,
+        6570.0
+       ],
+       "variant_ci95": [
+        6558.0,
+        6582.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0011886744759976864,
+       "flip_p99": 0.012029151432216167,
+       "flip_max": 0.04365931823849678,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.002040197141468525,
+       "flip_p99": 0.003036133013665676,
+       "flip_max": 0.004513629712164402,
+       "abs_max": 0.00390625,
+       "abs_p99": 0.001953125,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_relaxed_q4",
+   "mode": "relaxed",
+   "set": "q4",
+   "sites": [
+    46,
+    52,
+    56,
+    57,
+    61,
+    63,
+    64,
+    66,
+    67,
+    69,
+    82,
+    84,
+    85,
+    86,
+    87,
+    59,
+    60,
+    53,
+    58,
+    51,
+    48,
+    80,
+    33,
+    21,
+    30,
+    38,
+    73,
+    74,
+    70,
+    75,
+    76,
+    77,
+    81
+   ],
+   "n_sites": 33,
+   "predicted": {
+    "flip_p99": 0.00516048027202487,
+    "flip_mean_max_site": 0.0006971360999159515
+   },
+   "ops": 33,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015408320493066256,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015408320493066256,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6490.0,
+       "variant_median_ns": 6500.0,
+       "speedup": -0.0015408320493066256,
+       "speedup_ci95": [
+        -0.003389830508474576,
+        0.0006150061500615006
+       ],
+       "baseline_ci95": [
+        6482.0,
+        6500.0
+       ],
+       "variant_ci95": [
+        6494.0,
+        6508.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0002610047231428325,
+       "flip_p99": 0.005871273111552,
+       "flip_max": 0.0360073521733284,
+       "abs_max": 0.008666932582855225,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0004370719543658197,
+       "flip_p99": 0.0029564134310930967,
+       "flip_max": 0.006146721541881561,
+       "abs_max": 0.015625,
+       "abs_p99": 0.015625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015360983102918587,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015360983102918587,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6510.0,
+       "variant_median_ns": 6520.0,
+       "speedup": -0.0015360983102918587,
+       "speedup_ci95": [
+        -0.003381494005533354,
+        0.0006134969325153375
+       ],
+       "baseline_ci95": [
+        6504.0,
+        6520.0
+       ],
+       "variant_ci95": [
+        6510.0,
+        6528.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006138735420503376,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006138735420503376,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6516.0,
+       "variant_median_ns": 6520.0,
+       "speedup": -0.0006138735420503376,
+       "speedup_ci95": [
+        -0.003076923076923077,
+        0.002754842023755902
+       ],
+       "baseline_ci95": [
+        6504.0,
+        6534.0
+       ],
+       "variant_ci95": [
+        6508.0,
+        6528.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.018219828605651855,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0010928979609161615,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 48600,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.004581551618814905,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.004581551618814905,
+      "required": 0.02
+     },
+     "timing": {
+      "threshold": {
+       "baseline_median_ns": 6548.0,
+       "variant_median_ns": 6578.0,
+       "speedup": -0.004581551618814905,
+       "speedup_ci95": [
+        -0.008865790278202385,
+        0.0006088280060882801
+       ],
+       "baseline_ci95": [
+        6540.0,
+        6580.0
+       ],
+       "variant_ci95": [
+        6558.0,
+        6600.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0007926019025035203,
+       "flip_p99": 0.0099916011095047,
+       "flip_max": 0.03509962931275368,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "threshold": {
+       "flip_mean": 0.0017203595489263535,
+       "flip_p99": 0.0031773343216627836,
+       "flip_max": 0.005748969968408346,
+       "abs_max": 0.00390625,
+       "abs_p99": 0.001953125,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %46 RelaxedPrecision (OpFMul %43 %45)",
+    "pass": "demote_relaxed",
+    "replaced_by": 46,
+    "target": 46
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %47 RelaxedPrecision (OpFDiv %35 %46)",
+    "pass": "demote_relaxed",
+    "replaced_by": 47,
+    "target": 47
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %68 RelaxedPrecision (OpVectorShuffle %67 %67 0 1 2)",
+    "pass": "demote_relaxed",
+    "replaced_by": 68,
+    "target": 68
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %83 RelaxedPrecision (OpFDiv %80 %82)",
+    "pass": "demote_relaxed",
+    "replaced_by": 83,
+    "target": 83
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %85 RelaxedPrecision (OpCompositeExtract %83 0)",
+    "pass": "demote_relaxed",
+    "replaced_by": 85,
+    "target": 85
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %86 RelaxedPrecision (OpCompositeExtract %83 1)",
+    "pass": "demote_relaxed",
+    "replaced_by": 86,
+    "target": 86
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %87 RelaxedPrecision (OpCompositeExtract %83 2)",
+    "pass": "demote_relaxed",
+    "replaced_by": 87,
+    "target": 87
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %88 RelaxedPrecision (OpCompositeConstruct %85 %86 %87 %84)",
+    "pass": "demote_relaxed",
+    "replaced_by": 88,
+    "target": 88
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %73 RelaxedPrecision (OpLoad %30)",
+    "pass": "demote_relaxed",
+    "replaced_by": 73,
+    "target": 73
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %75 RelaxedPrecision (OpFAdd %74 %73)",
+    "pass": "demote_relaxed",
+    "replaced_by": 75,
+    "target": 75
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %81 RelaxedPrecision (OpLoad %13)",
+    "pass": "demote_relaxed",
+    "replaced_by": 81,
+    "target": 81
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %82 RelaxedPrecision (OpCompositeConstruct %81 %81 %81)",
+    "pass": "demote_relaxed",
+    "replaced_by": 82,
+    "target": 82
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %80 RelaxedPrecision (OpLoad %9)",
+    "pass": "demote_relaxed",
+    "replaced_by": 80,
+    "target": 80
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %70 RelaxedPrecision (OpVectorTimesScalar %68 %69)",
+    "pass": "demote_relaxed",
+    "replaced_by": 70,
+    "target": 70
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %69 RelaxedPrecision (OpLoad %30)",
+    "pass": "demote_relaxed",
+    "replaced_by": 69,
+    "target": 69
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %72 RelaxedPrecision (OpFAdd %71 %70)",
+    "pass": "demote_relaxed",
+    "replaced_by": 72,
+    "target": 72
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %48 RelaxedPrecision (OpExtInst Exp %47)",
+    "pass": "demote_relaxed",
+    "replaced_by": 48,
+    "target": 48
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %74 RelaxedPrecision (OpLoad %13)",
+    "pass": "demote_relaxed",
+    "replaced_by": 74,
+    "target": 74
+  },
+  {
+    "class": "lossy",
+    "detail": "OpDecorate %71 RelaxedPrecision (OpLoad %9)",
+    "pass": "demote_relaxed",
+    "replaced_by": 71,
+    "target": 71
+  }
+]

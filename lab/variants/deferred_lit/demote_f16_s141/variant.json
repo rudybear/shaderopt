@@ -1,0 +1,37 @@
+{
+  "shader": "deferred_lit",
+  "variant_id": "demote_f16_s141",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "lossy",
+      "detail": "OpVectorShuffle %140 %140 0 1 2 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 141,
+      "target": 141
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "32873ad33b3b235cd763c68e273edcb9865e1da8",
+    "runner": "490a9856b502995c",
+    "shader_ir": "7e1edc1df1d5ac7a",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:10:18",
+  "mode": "f16",
+  "set": "s141",
+  "sites": [
+    141
+  ],
+  "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+  }
+}

@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpVectorShuffle %32 %32 0 1 2 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 33,
+    "target": 33
+  }
+]

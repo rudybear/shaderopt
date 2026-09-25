@@ -1,0 +1,58 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpFMul %43 %45 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 46,
+    "target": 46
+  },
+  {
+    "class": "lossy",
+    "detail": "OpFDiv %35 %46 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 47,
+    "target": 47
+  },
+  {
+    "class": "lossy",
+    "detail": "OpVectorShuffle %67 %67 0 1 2 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 68,
+    "target": 68
+  },
+  {
+    "class": "lossy",
+    "detail": "OpFDiv %80 %82 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 83,
+    "target": 83
+  },
+  {
+    "class": "lossy",
+    "detail": "OpCompositeExtract %83 0 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 85,
+    "target": 85
+  },
+  {
+    "class": "lossy",
+    "detail": "OpCompositeExtract %83 1 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 86,
+    "target": 86
+  },
+  {
+    "class": "lossy",
+    "detail": "OpCompositeExtract %83 2 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 87,
+    "target": 87
+  },
+  {
+    "class": "lossy",
+    "detail": "OpCompositeConstruct %85 %86 %87 %84 f32->f16 (+1 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 88,
+    "target": 88
+  }
+]

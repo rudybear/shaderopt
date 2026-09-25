@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpFMul %42 %45 f32->f16 (+3 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 46,
+    "target": 46
+  }
+]

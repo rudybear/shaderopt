@@ -6,7 +6,7 @@ import numpy as np
 from .paths import LAB, GLSLANG, SPIRV_VAL, SPV_DIR, VARIANTS, run
 from .build import compile_glsl
 from .scenarios import Scenario
-from .jobs import make_job, run_job, gen_inputs, load_result_images
+from .jobs import make_job, run_job, gen_inputs, load_result_images, drop_images
 from .experiment import measure_variant, evaluate_gates, record, write_variant, scenarios_for_shader, budgets
 from .demote import tolerance_for
 from .classify import _eval, _pass_inputs
@@ -113,4 +113,5 @@ def measure_variant_derived(shader, variant_id, sc, dsc, extra_arrays, rounds, s
     for name in dict.fromkeys(sc.quality_outputs + [p.name for p in sc.passes if p.shader == shader]):
         fmt = next(p.format for p in sc.passes if p.name == name); kind = kind_for(name, fmt, bud)
         out["metrics"][name] = exact_metrics(b_img[name], v_img[name]) if kind == "mask" else flip_metrics(b_img[name], v_img[name], kind)
+    drop_images(*base, *var)
     return out

@@ -1,0 +1,591 @@
+{
+ "shader": "deferred_lit",
+ "tolerance": {
+  "metric": "flip",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "tolerance_source": "budgets",
+ "sets": {
+  "zero": [
+   130,
+   141,
+   76,
+   77,
+   78,
+   83
+  ],
+  "q4": [
+   130,
+   141,
+   76,
+   77,
+   78,
+   83,
+   85,
+   143,
+   144,
+   147,
+   181,
+   172,
+   185,
+   142,
+   138,
+   194,
+   122,
+   192,
+   125,
+   179,
+   132,
+   133,
+   123,
+   136,
+   180,
+   182,
+   183,
+   184,
+   186,
+   118,
+   120,
+   193,
+   187,
+   188,
+   191,
+   195,
+   175,
+   131
+  ],
+  "s130": [
+   130
+  ],
+  "s141": [
+   141
+  ]
+ },
+ "rejected_sites": [
+  117,
+  129,
+  135,
+  140,
+  146,
+  168,
+  171,
+  174,
+  178
+ ],
+ "results": [
+  {
+   "variant_id": "demote_f16_zero",
+   "mode": "f16",
+   "set": "zero",
+   "sites": [
+    130,
+    141,
+    76,
+    77,
+    78,
+    83
+   ],
+   "n_sites": 6,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 9,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005841121495327102,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005841121495327102,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30816.0,
+       "variant_median_ns": 30798.0,
+       "speedup": 0.0005841121495327102,
+       "speedup_ci95": [
+        -0.0011717961298679284,
+        0.0017514299291980849
+       ],
+       "baseline_ci95": [
+        30776.0,
+        30850.0
+       ],
+       "variant_ci95": [
+        30784.0,
+        30830.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_q4",
+   "mode": "f16",
+   "set": "q4",
+   "sites": [
+    130,
+    141,
+    76,
+    77,
+    78,
+    83,
+    85,
+    143,
+    144,
+    147,
+    181,
+    172,
+    185,
+    142,
+    138,
+    194,
+    122,
+    192,
+    125,
+    179,
+    132,
+    133,
+    123,
+    136,
+    180,
+    182,
+    183,
+    184,
+    186,
+    118,
+    120,
+    193,
+    187,
+    188,
+    191,
+    195,
+    175,
+    131
+   ],
+   "n_sites": 38,
+   "predicted": {
+    "flip_p99": 0.005397087894380093,
+    "flip_mean_max_site": 0.0002538611588533968,
+    "module_flip_p99": 0.007932780310511589,
+    "module_flip_mean": 0.0004340477171353996
+   },
+   "ops": 52,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015581380250600531,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0015581380250600531,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30806.0,
+       "variant_median_ns": 30854.0,
+       "speedup": -0.0015581380250600531,
+       "speedup_ci95": [
+        -0.0023376623376623377,
+        -6.486314692785694e-05
+       ],
+       "baseline_ci95": [
+        30792.0,
+        30844.0
+       ],
+       "variant_ci95": [
+        30830.0,
+        30872.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.00019571067241486162,
+       "flip_p99": 0.005496854893863201,
+       "flip_max": 0.023295994848012924,
+       "abs_max": 0.003921598196029663,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s130",
+   "mode": "f16",
+   "set": "s130",
+   "sites": [
+    130
+   ],
+   "n_sites": 1,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 1,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006494349915573451,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0006494349915573451,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30796.0,
+       "variant_median_ns": 30816.0,
+       "speedup": -0.0006494349915573451,
+       "speedup_ci95": [
+        -0.0016261368562304201,
+        0.001037887769613066
+       ],
+       "baseline_ci95": [
+        30780.0,
+        30834.0
+       ],
+       "variant_ci95": [
+        30790.0,
+        30844.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s141",
+   "mode": "f16",
+   "set": "s141",
+   "sites": [
+    141
+   ],
+   "n_sites": 1,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 1,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005191097268185062,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0005191097268185062,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30822.0,
+       "variant_median_ns": 30806.0,
+       "speedup": 0.0005191097268185062,
+       "speedup_ci95": [
+        -0.0007141037112405955,
+        0.0018150026173548558
+       ],
+       "baseline_ci95": [
+        30794.0,
+        30854.0
+       ],
+       "variant_ci95": [
+        30792.0,
+        30830.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_relaxed_zero",
+   "mode": "relaxed",
+   "set": "zero",
+   "sites": [
+    130,
+    141,
+    76,
+    77,
+    78,
+    83
+   ],
+   "n_sites": 6,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0
+   },
+   "ops": 6,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30816.0,
+       "variant_median_ns": 30816.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.001039095986491752,
+        0.0021370427249228626
+       ],
+       "baseline_ci95": [
+        30794.0,
+        30880.0
+       ],
+       "variant_ci95": [
+        30784.0,
+        30842.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_relaxed_q4",
+   "mode": "relaxed",
+   "set": "q4",
+   "sites": [
+    130,
+    141,
+    76,
+    77,
+    78,
+    83,
+    85,
+    143,
+    144,
+    147,
+    181,
+    172,
+    185,
+    142,
+    138,
+    194,
+    122,
+    192,
+    125,
+    179,
+    132,
+    133,
+    123,
+    136,
+    180,
+    182,
+    183,
+    184,
+    186,
+    118,
+    120,
+    193,
+    187,
+    188,
+    191,
+    195,
+    175,
+    131
+   ],
+   "n_sites": 38,
+   "predicted": {
+    "flip_p99": 0.005397087894380093,
+    "flip_mean_max_site": 0.0002538611588533968
+   },
+   "ops": 38,
+   "runs": [
+    {
+     "scenario": "deferred_spheres",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0018185360784568423,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0018185360784568423,
+      "required": 0.02
+     },
+     "timing": {
+      "lit": {
+       "baseline_median_ns": 30794.0,
+       "variant_median_ns": 30850.0,
+       "speedup": -0.0018185360784568423,
+       "speedup_ci95": [
+        -0.003184873411956189,
+        -6.48381235265109e-05
+       ],
+       "baseline_ci95": [
+        30772.0,
+        30838.0
+       ],
+       "variant_ci95": [
+        30828.0,
+        30890.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "lit": {
+       "flip_mean": 0.00019571067241486162,
+       "flip_p99": 0.005496854893863201,
+       "flip_max": 0.023295994848012924,
+       "abs_max": 0.003921598196029663,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

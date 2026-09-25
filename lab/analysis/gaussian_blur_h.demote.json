@@ -1,0 +1,1728 @@
+{
+ "shader": "gaussian_blur_h",
+ "tolerance": {
+  "metric": "flip_hdr",
+  "mean_max": 0.01,
+  "p99_max": 0.05,
+  "min_speedup": 0.1
+ },
+ "tolerance_source": "budgets",
+ "sets": {
+  "zero": [
+   46,
+   47,
+   68,
+   83,
+   85,
+   86,
+   87,
+   88
+  ],
+  "q4": [
+   46,
+   47,
+   68,
+   83,
+   85,
+   86,
+   87,
+   88,
+   73,
+   75,
+   81,
+   82,
+   80,
+   70,
+   69,
+   72,
+   48,
+   74,
+   71
+  ],
+  "s46": [
+   46
+  ],
+  "s47": [
+   47
+  ]
+ },
+ "rejected_sites": [
+  43,
+  45,
+  67
+ ],
+ "results": [
+  {
+   "variant_id": "demote_f16_zero",
+   "mode": "f16",
+   "set": "zero",
+   "sites": [
+    46,
+    47,
+    68,
+    83,
+    85,
+    86,
+    87,
+    88
+   ],
+   "n_sites": 8,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.001866091275587678,
+    "module_flip_mean": 0.000355786265572533
+   },
+   "ops": 8,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.031451612903225803,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.031451612903225803,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4804.0,
+       "speedup": 0.031451612903225803,
+       "speedup_ci95": [
+        0.03064516129032258,
+        0.03340040241448692
+       ],
+       "baseline_ci95": [
+        4956.0,
+        4970.0
+       ],
+       "variant_ci95": [
+        4802.0,
+        4808.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 9.23567422432825e-05,
+       "flip_p99": 0.002389218658208847,
+       "flip_max": 0.02958531118929386,
+       "abs_max": 0.0087127685546875,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0008710171678103507,
+       "flip_p99": 0.006696125492453575,
+       "flip_max": 0.006772226188331842,
+       "abs_max": 0.015625,
+       "abs_p99": 0.00390625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0318676885841065,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.0318676885841065,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4958.0,
+       "variant_median_ns": 4800.0,
+       "speedup": 0.0318676885841065,
+       "speedup_ci95": [
+        0.030290791599353797,
+        0.033481242436466316
+       ],
+       "baseline_ci95": [
+        4952.0,
+        4960.0
+       ],
+       "variant_ci95": [
+        4792.0,
+        4804.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.03424657534246575,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03424657534246575,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4964.0,
+       "variant_median_ns": 4794.0,
+       "speedup": 0.03424657534246575,
+       "speedup_ci95": [
+        0.031048387096774193,
+        0.0365902694008846
+       ],
+       "baseline_ci95": [
+        4952.0,
+        4974.0
+       ],
+       "variant_ci95": [
+        4788.0,
+        4808.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.016435295343399048,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0012547859223559499,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 33060,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03068951773614986,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03068951773614986,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5018.0,
+       "variant_median_ns": 4864.0,
+       "speedup": 0.03068951773614986,
+       "speedup_ci95": [
+        0.028753706644219546,
+        0.0330151153540175
+       ],
+       "baseline_ci95": [
+        5008.0,
+        5030.0
+       ],
+       "variant_ci95": [
+        4862.0,
+        4868.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0004438724718056619,
+       "flip_p99": 0.006939820013940334,
+       "flip_max": 0.03501365706324577,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0009282489190809429,
+       "flip_p99": 0.00196139607578516,
+       "flip_max": 0.0034693069756031036,
+       "abs_max": 0.0009765625,
+       "abs_p99": 0.0009765625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_q4",
+   "mode": "f16",
+   "set": "q4",
+   "sites": [
+    46,
+    47,
+    68,
+    83,
+    85,
+    86,
+    87,
+    88,
+    73,
+    75,
+    81,
+    82,
+    80,
+    70,
+    69,
+    72,
+    48,
+    74,
+    71
+   ],
+   "n_sites": 19,
+   "predicted": {
+    "flip_p99": 0.003789854235947132,
+    "flip_mean_max_site": 0.0005676077562384307,
+    "module_flip_p99": 0.002399953780695796,
+    "module_flip_mean": 0.00040620125946588814
+   },
+   "ops": 27,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0354695687222894,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.0354695687222894,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4962.0,
+       "variant_median_ns": 4786.0,
+       "speedup": 0.0354695687222894,
+       "speedup_ci95": [
+        0.03387096774193549,
+        0.037409869514755466
+       ],
+       "baseline_ci95": [
+        4956.0,
+        4970.0
+       ],
+       "variant_ci95": [
+        4780.0,
+        4792.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0001544598489999771,
+       "flip_p99": 0.0036448119208216667,
+       "flip_max": 0.024111095815896988,
+       "abs_max": 0.0087127685546875,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0009788521565496922,
+       "flip_p99": 0.006696951109915972,
+       "flip_max": 0.006799567956477404,
+       "abs_max": 0.03125,
+       "abs_p99": 0.015625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03389830508474576,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": true,
+      "5": null,
+      "speedup": 0.03389830508474576,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4956.0,
+       "variant_median_ns": 4788.0,
+       "speedup": 0.03389830508474576,
+       "speedup_ci95": [
+        0.03228410008071025,
+        0.03588709677419355
+       ],
+       "baseline_ci95": [
+        4952.0,
+        4962.0
+       ],
+       "variant_ci95": [
+        4780.0,
+        4796.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": 0.03509479628882614,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03509479628882614,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4958.0,
+       "variant_median_ns": 4784.0,
+       "speedup": 0.03509479628882614,
+       "speedup_ci95": [
+        0.03389830508474576,
+        0.037484885126964934
+       ],
+       "baseline_ci95": [
+        4952.0,
+        4968.0
+       ],
+       "variant_ci95": [
+        4776.0,
+        4788.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.016435295343399048,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.001254949951544404,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 4.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 33060,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.03547229972100439,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": true,
+      "5": null,
+      "speedup": 0.03547229972100439,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5018.0,
+       "variant_median_ns": 4840.0,
+       "speedup": 0.03547229972100439,
+       "speedup_ci95": [
+        0.03232242617717478,
+        0.037420382165605094
+       ],
+       "baseline_ci95": [
+        5008.0,
+        5024.0
+       ],
+       "variant_ci95": [
+        4836.0,
+        4852.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0006110653048381209,
+       "flip_p99": 0.008817500434815884,
+       "flip_max": 0.03499123454093933,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0012048797216266394,
+       "flip_p99": 0.0022878716699779034,
+       "flip_max": 0.003718550316989422,
+       "abs_max": 0.001953125,
+       "abs_p99": 0.0009765625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s46",
+   "mode": "f16",
+   "set": "s46",
+   "sites": [
+    46
+   ],
+   "n_sites": 1,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 1,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008058017727639,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008058017727639,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4964.0,
+       "variant_median_ns": 4968.0,
+       "speedup": -0.0008058017727639,
+       "speedup_ci95": [
+        -0.002421307506053269,
+        0.0016116360375347662
+       ],
+       "baseline_ci95": [
+        4956.0,
+        4972.0
+       ],
+       "variant_ci95": [
+        4960.0,
+        4972.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0004033884630899556,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0004033884630899556,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4958.0,
+       "variant_median_ns": 4960.0,
+       "speedup": -0.0004033884630899556,
+       "speedup_ci95": [
+        -0.0016142050040355124,
+        0.0016116035455278
+       ],
+       "baseline_ci95": [
+        4956.0,
+        4964.0
+       ],
+       "variant_ci95": [
+        4956.0,
+        4964.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008064516129032258,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008064516129032258,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4964.0,
+       "speedup": -0.0008064516129032258,
+       "speedup_ci95": [
+        -0.0028282828282828283,
+        0.0012091898428053204
+       ],
+       "baseline_ci95": [
+        4950.0,
+        4964.0
+       ],
+       "variant_ci95": [
+        4956.0,
+        4970.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 24752,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.002390438247011952,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.002390438247011952,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5020.0,
+       "variant_median_ns": 5032.0,
+       "speedup": -0.002390438247011952,
+       "speedup_ci95": [
+        -0.005990702262719457,
+        0.0
+       ],
+       "baseline_ci95": [
+        5012.0,
+        5024.0
+       ],
+       "variant_ci95": [
+        5020.0,
+        5050.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_f16_s47",
+   "mode": "f16",
+   "set": "s47",
+   "sites": [
+    47
+   ],
+   "n_sites": 1,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+   },
+   "ops": 1,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008051529790660225,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008051529790660225,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4968.0,
+       "variant_median_ns": 4964.0,
+       "speedup": 0.0008051529790660225,
+       "speedup_ci95": [
+        -0.0016142050040355124,
+        0.0020129027143026687
+       ],
+       "baseline_ci95": [
+        4956.0,
+        4972.0
+       ],
+       "variant_ci95": [
+        4958.0,
+        4968.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008064516129032258,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0008064516129032258,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4956.0,
+       "speedup": 0.0008064516129032258,
+       "speedup_ci95": [
+        -0.0016161616161616162,
+        0.002013693113169553
+       ],
+       "baseline_ci95": [
+        4950.0,
+        4964.0
+       ],
+       "variant_ci95": [
+        4952.0,
+        4962.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012106537530266344,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0012106537530266344,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4956.0,
+       "variant_median_ns": 4962.0,
+       "speedup": -0.0012106537530266344,
+       "speedup_ci95": [
+        -0.002827140549273021,
+        0.0012077294685990338
+       ],
+       "baseline_ci95": [
+        4950.0,
+        4966.0
+       ],
+       "variant_ci95": [
+        4956.0,
+        4966.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 24752,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.002390438247011952,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.002390438247011952,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5020.0,
+       "variant_median_ns": 5032.0,
+       "speedup": -0.002390438247011952,
+       "speedup_ci95": [
+        -0.0043859649122807015,
+        0.0007961783439490446
+       ],
+       "baseline_ci95": [
+        5016.0,
+        5024.0
+       ],
+       "variant_ci95": [
+        5018.0,
+        5040.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_relaxed_zero",
+   "mode": "relaxed",
+   "set": "zero",
+   "sites": [
+    46,
+    47,
+    68,
+    83,
+    85,
+    86,
+    87,
+    88
+   ],
+   "n_sites": 8,
+   "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0
+   },
+   "ops": 8,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0028214429665457475,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0028214429665457475,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4962.0,
+       "variant_median_ns": 4976.0,
+       "speedup": -0.0028214429665457475,
+       "speedup_ci95": [
+        -0.004032258064516129,
+        -0.0008051529790660225
+       ],
+       "baseline_ci95": [
+        4960.0,
+        4970.0
+       ],
+       "variant_ci95": [
+        4972.0,
+        4980.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 9.23567422432825e-05,
+       "flip_p99": 0.002389218658208847,
+       "flip_max": 0.02958531118929386,
+       "abs_max": 0.0087127685546875,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0008710171678103507,
+       "flip_p99": 0.006696125492453575,
+       "flip_max": 0.006772226188331842,
+       "abs_max": 0.015625,
+       "abs_p99": 0.00390625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024193548387096775,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0024193548387096775,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4972.0,
+       "speedup": -0.0024193548387096775,
+       "speedup_ci95": [
+        -0.004032258064516129,
+        -0.0008058017727639
+       ],
+       "baseline_ci95": [
+        4960.0,
+        4966.0
+       ],
+       "variant_ci95": [
+        4968.0,
+        4980.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0036290322580645163,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0036290322580645163,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4978.0,
+       "speedup": -0.0036290322580645163,
+       "speedup_ci95": [
+        -0.006058158319870759,
+        -0.00040257648953301127
+       ],
+       "baseline_ci95": [
+        4950.0,
+        4968.0
+       ],
+       "variant_ci95": [
+        4968.0,
+        4984.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.016435295343399048,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0012547859223559499,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 33060,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.003987240829346092,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.003987240829346092,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5016.0,
+       "variant_median_ns": 5036.0,
+       "speedup": -0.003987240829346092,
+       "speedup_ci95": [
+        -0.005985634477254589,
+        -0.0015923566878980893
+       ],
+       "baseline_ci95": [
+        5010.0,
+        5024.0
+       ],
+       "variant_ci95": [
+        5030.0,
+        5042.049999999999
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0004438724718056619,
+       "flip_p99": 0.006939820013940334,
+       "flip_max": 0.03501365706324577,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0009282489190809429,
+       "flip_p99": 0.00196139607578516,
+       "flip_max": 0.0034693069756031036,
+       "abs_max": 0.0009765625,
+       "abs_p99": 0.0009765625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  },
+  {
+   "variant_id": "demote_relaxed_q4",
+   "mode": "relaxed",
+   "set": "q4",
+   "sites": [
+    46,
+    47,
+    68,
+    83,
+    85,
+    86,
+    87,
+    88,
+    73,
+    75,
+    81,
+    82,
+    80,
+    70,
+    69,
+    72,
+    48,
+    74,
+    71
+   ],
+   "n_sites": 19,
+   "predicted": {
+    "flip_p99": 0.003789854235947132,
+    "flip_mean_max_site": 0.0005676077562384307
+   },
+   "ops": 19,
+   "runs": [
+    {
+     "scenario": "bloom_hdr_edges",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0060435132957292505,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.0060435132957292505,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4964.0,
+       "variant_median_ns": 4994.0,
+       "speedup": -0.0060435132957292505,
+       "speedup_ci95": [
+        -0.007658202337767029,
+        -0.004428341384863124
+       ],
+       "baseline_ci95": [
+        4960.0,
+        4968.0
+       ],
+       "variant_ci95": [
+        4988.0,
+        5000.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0001544598489999771,
+       "flip_p99": 0.0036448119208216667,
+       "flip_max": 0.024111095815896988,
+       "abs_max": 0.0087127685546875,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0009788521565496922,
+       "flip_p99": 0.006696951109915972,
+       "flip_max": 0.006799567956477404,
+       "abs_max": 0.03125,
+       "abs_p99": 0.015625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_hdr_gradient",
+     "split": "train",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.007258064516129033,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.007258064516129033,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4960.0,
+       "variant_median_ns": 4996.0,
+       "speedup": -0.007258064516129033,
+       "speedup_ci95": [
+        -0.008885298869143781,
+        -0.0048367593712212815
+       ],
+       "baseline_ci95": [
+        4952.0,
+        4964.0
+       ],
+       "variant_ci95": [
+        4984.0,
+        5000.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_extreme",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.008071025020177562,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.008071025020177562,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 4956.0,
+       "variant_median_ns": 4996.0,
+       "speedup": -0.008071025020177562,
+       "speedup_ci95": [
+        -0.010913500404203719,
+        -0.0048367593712212815
+       ],
+       "baseline_ci95": [
+        4948.0,
+        4968.0
+       ],
+       "variant_ci95": [
+        4986.0,
+        5008.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.016435295343399048,
+       "flip_p99": 0.9673883318901062,
+       "flip_max": 0.9939436316490173,
+       "abs_max": 1.0,
+       "abs_p99": 1.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.001254949951544404,
+       "flip_p99": 0.0,
+       "flip_max": 0.9923807382583618,
+       "abs_max": 4.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 33060,
+       "metric": "flip_hdr"
+      }
+     }
+    },
+    {
+     "scenario": "bloom_noise",
+     "split": "holdout",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.006762132060461416,
+      "required": 0.1
+     },
+     "gates_strict": {
+      "1": true,
+      "2": true,
+      "3": false,
+      "4": false,
+      "5": null,
+      "speedup": -0.006762132060461416,
+      "required": 0.02
+     },
+     "timing": {
+      "blur_h": {
+       "baseline_median_ns": 5028.0,
+       "variant_median_ns": 5062.0,
+       "speedup": -0.006762132060461416,
+       "speedup_ci95": [
+        -0.009561752988047808,
+        -0.005568814638027049
+       ],
+       "baseline_ci95": [
+        5020.0,
+        5030.0
+       ],
+       "variant_ci95": [
+        5056.0,
+        5070.0
+       ],
+       "n": 20,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "composite": {
+       "flip_mean": 0.0006110653048381209,
+       "flip_p99": 0.008817500434815884,
+       "flip_max": 0.03499123454093933,
+       "abs_max": 0.008483350276947021,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      },
+      "blur_h": {
+       "flip_mean": 0.0012048797216266394,
+       "flip_p99": 0.0022878716699779034,
+       "flip_max": 0.003718550316989422,
+       "abs_max": 0.001953125,
+       "abs_p99": 0.0009765625,
+       "masked_pixels": 0,
+       "metric": "flip_hdr"
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

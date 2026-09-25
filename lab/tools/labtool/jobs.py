@@ -97,11 +97,20 @@ def run_job(job_dir: Path, sc: Scenario, variant_id: str, out_dir: Path | None =
             img = np.load(out / rel)
             fmt = next(p.format for p in sc.passes if p.name == pname)
             to_png(img, out / f"{pname}.png", hdr=fmt not in LDR_FORMATS)
-            try:
-                to_exr(img, out / f"{pname}.exr")
-            except Exception as e:  # EXR is for humans; never fail a run on it
-                (out / f"{pname}.exr.error").write_text(str(e))
+            if os.environ.get("LAB_WRITE_EXR"):
+                try:
+                    to_exr(img, out / f"{pname}.exr")
+                except Exception as e:  # EXR is for humans; never fail a run on it
+                    (out / f"{pname}.exr.error").write_text(str(e))
     return res, out
+
+def drop_images(*results: dict) -> None:
+    """Delete the raw image dumps of finished runs (they are reproducible and 33 MB each at 1080p); PNGs stay."""
+    for res in results:
+        d = Path(res.get("_dir", ""))
+        if d.is_dir():
+            for f in list(d.glob("*.npy")) + list(d.glob("*.exr")):
+                f.unlink(missing_ok=True)
 
 def load_result_images(res: dict) -> dict[str, np.ndarray]:
     d = Path(res["_dir"])

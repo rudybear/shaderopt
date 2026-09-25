@@ -6,7 +6,7 @@ from pathlib import Path
 import numpy as np
 from .paths import LAB, RESULTS_JSONL, RESULTS_DIR
 from .scenarios import Scenario, load_scenario, all_scenarios
-from .jobs import make_job, run_job, load_result_images
+from .jobs import make_job, run_job, load_result_images, drop_images
 from .stats import median_ci, speedup_ci
 from .metrics import flip_metrics, kind_for
 from .experiment import budgets, noise_floor
@@ -63,6 +63,7 @@ def run_graph_experiments(scenario: str, rounds: int = 2, samples: int = 20, dev
                    "chain_baseline_ns": float(np.median(B)), "chain_variant_ns": float(np.median(V)), "speedup": sp, "speedup_ci95": list(ci),
                    "metrics": metrics, "within_budget": within, "timing_gate": bool(sp >= need and ci[0] > 0), "required": need,
                    "validation_errors": var[-1]["validation"].get("errors"), "device": var[-1]["device"].get("name"), "result_dir": var[-1]["_dir"]}
+            drop_images(*base, *var)
             out.append(rec)
             with open(RESULTS_JSONL, "a") as f:
                 f.write(json.dumps({"variant_id": f"graph_{name}", "shader": None, "graph": True, **rec}) + "\n")

@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpFDiv %35 %46 f32->f16 (+3 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 47,
+    "target": 47
+  }
+]

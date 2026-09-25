@@ -1,0 +1,98 @@
+{
+  "shader": "deferred_lit",
+  "variant_id": "demote_f16_zero",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "lossy",
+      "detail": "OpVectorShuffle %129 %129 0 1 2 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 130,
+      "target": 130
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVectorShuffle %140 %140 0 1 2 f32->f16 (+2 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 141,
+      "target": 141
+    },
+    {
+      "class": "lossy",
+      "detail": "OpVariable %14 (\"s\") Function f32->f16 (demoted through its loads)",
+      "pass": "demote_f16",
+      "replaced_by": 14,
+      "target": 14
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %14 %15 to %14 (\"s\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 14,
+      "target": 14
+    },
+    {
+      "class": "lossy",
+      "detail": "OpSelect %74 %75 %15 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 76,
+      "target": 76
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %14 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 77,
+      "target": 77
+    },
+    {
+      "class": "lossy",
+      "detail": "OpFAdd %77 %76 f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 78,
+      "target": 78
+    },
+    {
+      "class": "lossy",
+      "detail": "OpStore %14 %78 to %14 (\"s\") f32->f16 (+0 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 14,
+      "target": 14
+    },
+    {
+      "class": "lossy",
+      "detail": "OpLoad %14 f32->f16 (+1 converts)",
+      "pass": "demote_f16",
+      "replaced_by": 83,
+      "target": 83
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "32873ad33b3b235cd763c68e273edcb9865e1da8",
+    "runner": "490a9856b502995c",
+    "shader_ir": "7e1edc1df1d5ac7a",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:09:55",
+  "mode": "f16",
+  "set": "zero",
+  "sites": [
+    130,
+    141,
+    76,
+    77,
+    78,
+    83
+  ],
+  "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0,
+    "module_flip_p99": 0.0,
+    "module_flip_mean": 0.0
+  }
+}

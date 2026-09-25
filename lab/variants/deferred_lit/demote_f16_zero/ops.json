@@ -1,0 +1,65 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpVectorShuffle %129 %129 0 1 2 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 130,
+    "target": 130
+  },
+  {
+    "class": "lossy",
+    "detail": "OpVectorShuffle %140 %140 0 1 2 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 141,
+    "target": 141
+  },
+  {
+    "class": "lossy",
+    "detail": "OpVariable %14 (\"s\") Function f32->f16 (demoted through its loads)",
+    "pass": "demote_f16",
+    "replaced_by": 14,
+    "target": 14
+  },
+  {
+    "class": "lossy",
+    "detail": "OpStore %14 %15 to %14 (\"s\") f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 14,
+    "target": 14
+  },
+  {
+    "class": "lossy",
+    "detail": "OpSelect %74 %75 %15 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 76,
+    "target": 76
+  },
+  {
+    "class": "lossy",
+    "detail": "OpLoad %14 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 77,
+    "target": 77
+  },
+  {
+    "class": "lossy",
+    "detail": "OpFAdd %77 %76 f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 78,
+    "target": 78
+  },
+  {
+    "class": "lossy",
+    "detail": "OpStore %14 %78 to %14 (\"s\") f32->f16 (+0 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 14,
+    "target": 14
+  },
+  {
+    "class": "lossy",
+    "detail": "OpLoad %14 f32->f16 (+1 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 83,
+    "target": 83
+  }
+]

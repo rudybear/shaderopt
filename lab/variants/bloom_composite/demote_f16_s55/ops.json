@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpVectorTimesScalar %51 %54 f32->f16 (+3 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 55,
+    "target": 55
+  }
+]

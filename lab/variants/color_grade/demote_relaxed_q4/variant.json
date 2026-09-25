@@ -1,0 +1,187 @@
+{
+  "shader": "color_grade",
+  "variant_id": "demote_relaxed_q4",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %33 RelaxedPrecision (OpFMul %24 %32)",
+      "pass": "demote_relaxed",
+      "replaced_by": 33,
+      "target": 33
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %37 RelaxedPrecision (OpFMul %24 %36)",
+      "pass": "demote_relaxed",
+      "replaced_by": 37,
+      "target": 37
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %93 RelaxedPrecision (OpFSub %92 %91)",
+      "pass": "demote_relaxed",
+      "replaced_by": 93,
+      "target": 93
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %94 RelaxedPrecision (OpFMul %90 %93)",
+      "pass": "demote_relaxed",
+      "replaced_by": 94,
+      "target": 94
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %90 RelaxedPrecision (OpVectorShuffle %89 %89 0 1 2)",
+      "pass": "demote_relaxed",
+      "replaced_by": 90,
+      "target": 90
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %91 RelaxedPrecision (OpLoad %43)",
+      "pass": "demote_relaxed",
+      "replaced_by": 91,
+      "target": 91
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %60 RelaxedPrecision (OpVectorShuffle %59 %59 0 1 2)",
+      "pass": "demote_relaxed",
+      "replaced_by": 60,
+      "target": 60
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %62 RelaxedPrecision (OpDot %60 %61)",
+      "pass": "demote_relaxed",
+      "replaced_by": 62,
+      "target": 62
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %61 RelaxedPrecision (OpLoad %9)",
+      "pass": "demote_relaxed",
+      "replaced_by": 61,
+      "target": 61
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %38 RelaxedPrecision (OpFSub %23 %37)",
+      "pass": "demote_relaxed",
+      "replaced_by": 38,
+      "target": 38
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %117 RelaxedPrecision (OpCompositeExtract %114 2)",
+      "pass": "demote_relaxed",
+      "replaced_by": 117,
+      "target": 117
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %66 RelaxedPrecision (OpLoad %43)",
+      "pass": "demote_relaxed",
+      "replaced_by": 66,
+      "target": 66
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %71 RelaxedPrecision (OpDot %66 %70)",
+      "pass": "demote_relaxed",
+      "replaced_by": 71,
+      "target": 71
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %72 RelaxedPrecision (OpLoad %65)",
+      "pass": "demote_relaxed",
+      "replaced_by": 72,
+      "target": 72
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %73 RelaxedPrecision (OpCompositeConstruct %72 %72 %72)",
+      "pass": "demote_relaxed",
+      "replaced_by": 73,
+      "target": 73
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %50 RelaxedPrecision (OpDot %48 %49)",
+      "pass": "demote_relaxed",
+      "replaced_by": 50,
+      "target": 50
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %78 RelaxedPrecision (OpCompositeConstruct %77 %77 %77)",
+      "pass": "demote_relaxed",
+      "replaced_by": 78,
+      "target": 78
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %48 RelaxedPrecision (OpVectorShuffle %47 %47 0 1 2)",
+      "pass": "demote_relaxed",
+      "replaced_by": 48,
+      "target": 48
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %115 RelaxedPrecision (OpCompositeExtract %114 0)",
+      "pass": "demote_relaxed",
+      "replaced_by": 115,
+      "target": 115
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %49 RelaxedPrecision (OpLoad %9)",
+      "pass": "demote_relaxed",
+      "replaced_by": 49,
+      "target": 49
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "32873ad33b3b235cd763c68e273edcb9865e1da8",
+    "runner": "490a9856b502995c",
+    "shader_ir": "7e1edc1df1d5ac7a",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:09:34",
+  "mode": "relaxed",
+  "set": "q4",
+  "sites": [
+    33,
+    37,
+    93,
+    94,
+    90,
+    91,
+    60,
+    62,
+    61,
+    38,
+    117,
+    66,
+    71,
+    72,
+    73,
+    50,
+    78,
+    48,
+    115,
+    49
+  ],
+  "predicted": {
+    "flip_p99": 0.012460513971745968,
+    "flip_mean_max_site": 0.0023048536386340857
+  }
+}

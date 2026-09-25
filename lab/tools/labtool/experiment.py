@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np
 from .paths import RESULTS_DIR, RESULTS_JSONL, VARIANTS, SPV_DIR, BUDGETS, run, SPIRV_VAL, tool_versions
 from .scenarios import Scenario, all_scenarios
-from .jobs import make_job, run_job, load_result_images
+from .jobs import make_job, run_job, load_result_images, drop_images
 from .stats import median_ci, speedup_ci
 from .metrics import flip_metrics, exact_metrics, kind_for
 
@@ -52,6 +52,7 @@ def measure_variant(shader: str, variant_id: str, sc: Scenario, rounds: int = 3,
         fmt = next(p.format for p in sc.passes if p.name == name)
         kind = kind_for(name, fmt, bud)
         out["metrics"][name] = exact_metrics(b_img[name], v_img[name]) if kind == "mask" else flip_metrics(b_img[name], v_img[name], kind)
+    drop_images(*base, *var)
     return out
 
 def evaluate_gates(m: dict, shader: str, sc: Scenario, tolerance: dict | None) -> dict:

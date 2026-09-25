@@ -1,0 +1,147 @@
+{
+  "shader": "bloom_threshold",
+  "variant_id": "demote_relaxed_zero",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %46 RelaxedPrecision (OpFMul %42 %45)",
+      "pass": "demote_relaxed",
+      "replaced_by": 46,
+      "target": 46
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %52 RelaxedPrecision (OpLoad %39)",
+      "pass": "demote_relaxed",
+      "replaced_by": 52,
+      "target": 52
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %56 RelaxedPrecision (OpLoad %39)",
+      "pass": "demote_relaxed",
+      "replaced_by": 56,
+      "target": 56
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %57 RelaxedPrecision (OpFMul %55 %56)",
+      "pass": "demote_relaxed",
+      "replaced_by": 57,
+      "target": 57
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %61 RelaxedPrecision (OpFMul %59 %60)",
+      "pass": "demote_relaxed",
+      "replaced_by": 61,
+      "target": 61
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %63 RelaxedPrecision (OpLoad %39)",
+      "pass": "demote_relaxed",
+      "replaced_by": 63,
+      "target": 63
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %64 RelaxedPrecision (OpFMul %62 %63)",
+      "pass": "demote_relaxed",
+      "replaced_by": 64,
+      "target": 64
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %66 RelaxedPrecision (OpFAdd %64 %65)",
+      "pass": "demote_relaxed",
+      "replaced_by": 66,
+      "target": 66
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %67 RelaxedPrecision (OpFDiv %61 %66)",
+      "pass": "demote_relaxed",
+      "replaced_by": 67,
+      "target": 67
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %69 RelaxedPrecision (OpLoad %47)",
+      "pass": "demote_relaxed",
+      "replaced_by": 69,
+      "target": 69
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %82 RelaxedPrecision (OpVectorTimesScalar %80 %81)",
+      "pass": "demote_relaxed",
+      "replaced_by": 82,
+      "target": 82
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %84 RelaxedPrecision (OpCompositeExtract %82 0)",
+      "pass": "demote_relaxed",
+      "replaced_by": 84,
+      "target": 84
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %85 RelaxedPrecision (OpCompositeExtract %82 1)",
+      "pass": "demote_relaxed",
+      "replaced_by": 85,
+      "target": 85
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %86 RelaxedPrecision (OpCompositeExtract %82 2)",
+      "pass": "demote_relaxed",
+      "replaced_by": 86,
+      "target": 86
+    },
+    {
+      "class": "lossy",
+      "detail": "OpDecorate %87 RelaxedPrecision (OpCompositeConstruct %84 %85 %86 %83)",
+      "pass": "demote_relaxed",
+      "replaced_by": 87,
+      "target": 87
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "32873ad33b3b235cd763c68e273edcb9865e1da8",
+    "runner": "490a9856b502995c",
+    "shader_ir": "7e1edc1df1d5ac7a",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T02:08:27",
+  "mode": "relaxed",
+  "set": "zero",
+  "sites": [
+    46,
+    52,
+    56,
+    57,
+    61,
+    63,
+    64,
+    66,
+    67,
+    69,
+    82,
+    84,
+    85,
+    86,
+    87
+  ],
+  "predicted": {
+    "flip_p99": 0.0,
+    "flip_mean_max_site": 0.0
+  }
+}

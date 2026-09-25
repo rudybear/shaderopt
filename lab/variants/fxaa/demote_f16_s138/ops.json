@@ -1,0 +1,9 @@
+[
+  {
+    "class": "lossy",
+    "detail": "OpCompositeExtract %135 1 f32->f16 (+2 converts)",
+    "pass": "demote_f16",
+    "replaced_by": 138,
+    "target": 138
+  }
+]
