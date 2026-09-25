@@ -144,6 +144,31 @@ pub fn run(l: &mut Lifted, ops: &mut Vec<EditOp>, min_ops: usize) -> Result<Hois
         ));
         members.push((m, offset, member));
     }
+    // A member type must be declared before the struct that uses it. Hoisted value types (e.g. %v3float) can sit
+    // after the block struct in glslang output, so move such declarations (and their component scalar) ahead of it.
+    {
+        let mut si_now = si;
+        let tys: Vec<u32> = hoists.iter().map(|h| h.ty).collect();
+        for ty in tys {
+            let mut chain = vec![ty];
+            if let Some(Site::Global(ti)) = l.defs.get(&ty).copied() {
+                if l.module.types_global_values[ti].class.opcode == Op::TypeVector {
+                    if let Some(Operand::IdRef(comp)) = l.module.types_global_values[ti].operands.first() {
+                        chain.insert(0, *comp);
+                    }
+                }
+            }
+            for t in chain {
+                let Some(pos) = l.module.types_global_values.iter().position(|i| i.result_id == Some(t)) else { continue };
+                if pos > si_now {
+                    let inst = l.module.types_global_values.remove(pos);
+                    l.module.types_global_values.insert(si_now, inst);
+                    si_now += 1;
+                }
+            }
+        }
+        l.reanalyze();
+    }
     // Apply in descending layout order so that insertions never shift a pending site.
     let mut order: Vec<usize> = (0..hoists.len()).collect();
     order.sort_by_key(|&i| std::cmp::Reverse(hoists[i].site));

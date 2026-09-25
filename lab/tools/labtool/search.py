@@ -37,16 +37,19 @@ class Context:
     def __init__(self, shader: str, source: str, spv: Path, extra_u, device=None):
         self.shader, self.source, self.spv, self.extra_u, self.device = shader, source, spv, extra_u, device
         self.dir = SEARCH / shader / source; self.dir.mkdir(parents=True, exist_ok=True)
-        self.sc = scenarios_for_shader(shader, "train")[0]
-        self.p = next(x for x in self.sc.passes if x.shader == shader)
-        self.w, self.h = self.sc.pass_size(self.p)
-        jd = make_job(self.sc, "baseline", samples=1, iterations=1, warmup=0, tag="search_ctx"); res, _ = run_job(jd, self.sc, "baseline", device=device)
-        self.samplers = _pass_inputs(self.sc, self.p, res, gen_inputs(self.sc))
+        self.scenes = []   # one entry per scenario using the shader: (scenario, pass, samplers, reference image)
+        for sc in scenarios_for_shader(shader, "train") + scenarios_for_shader(shader, "holdout"):
+            p = next(x for x in sc.passes if x.shader == shader); w, h = sc.pass_size(p)
+            jd = make_job(sc, "baseline", samples=1, iterations=1, warmup=0, tag="search_ctx"); res, _ = run_job(jd, sc, "baseline", device=device)
+            if not res.get("ok"):
+                continue
+            sm = _pass_inputs(sc, p, res, gen_inputs(sc)); ref = self.dir / f"ref_{sc.name}.npy"
+            _eval(SPV_DIR / f"{shader}.spv", w, h, sm, p.uniforms, ref, [], nearest=(p.sampler == "nearest"))   # reference = ORIGINAL shader
+            self.scenes.append({"sc": sc, "p": p, "w": w, "h": h, "samplers": sm, "ref_q": quantize(p.format, np.load(ref)), "kind": kind_for(p.name, p.format, budgets())})
+        s0 = self.scenes[0]
+        self.sc, self.p, self.w, self.h, self.samplers = s0["sc"], s0["p"], s0["w"], s0["h"], s0["samplers"]
         self.uniforms = {**self.p.uniforms, **(extra_u(self.p.uniforms) if extra_u else {})}
-        self.kind = kind_for(self.p.name, self.p.format, budgets())
-        self.ref = self.dir / "ref.npy"
-        self._eval(SPV_DIR / f"{shader}.spv", self.ref, uniforms=self.p.uniforms)   # the reference is always the ORIGINAL shader
-        self.ref_q = quantize(self.p.format, np.load(self.ref))
+        self.kind = s0["kind"]; self.ref_q = s0["ref_q"]
         cache = self.dir / "context.json"
         if cache.exists():
             c = json.loads(cache.read_text()); self.sens = c["sens"]; self.trans = c["trans"]
@@ -56,9 +59,22 @@ class Context:
     def _eval(self, spv: Path, out: Path, extra: list | None = None, uniforms: dict | None = None):
         _eval(spv, self.w, self.h, self.samplers, uniforms if uniforms is not None else self.uniforms, out, extra or [], nearest=(self.p.sampler == "nearest"))
 
-    def predict(self, spv: Path, uniforms: dict | None = None) -> dict:
-        tmp = self.dir / f"pred_{int(time.time()*1e6)}.npy"
-        self._eval(spv, tmp, uniforms=uniforms); m = flip_metrics(self.ref_q, quantize(self.p.format, np.load(tmp)), self.kind); tmp.unlink(); return m
+    def predict(self, spv: Path, uniforms: dict | None = None, extra_members: dict | None = None) -> dict:
+        """Worst FLIP over every scenario (train and holdout) in the CPU model. `extra_members` are per-scenario extra uniforms
+        (hoisted values, hypothesis helpers) keyed by scenario name; falls back to `uniforms` for the first scene."""
+        worst = None
+        for i, s in enumerate(self.scenes):
+            u = dict(s["p"].uniforms)
+            if self.extra_u: u.update(self.extra_u(s["p"].uniforms))
+            if extra_members and s["sc"].name in extra_members: u.update(extra_members[s["sc"].name])
+            elif i == 0 and uniforms is not None: u = uniforms
+            tmp = self.dir / f"pred_{int(time.time()*1e6)}.npy"
+            _eval(spv, s["w"], s["h"], s["samplers"], u, tmp, [], nearest=(s["p"].sampler == "nearest"))
+            m = flip_metrics(s["ref_q"], quantize(s["p"].format, np.load(tmp)), s["kind"]); tmp.unlink()
+            m["scenario"] = s["sc"].name
+            if worst is None or (m["flip_p99"], m["flip_mean"]) > (worst["flip_p99"], worst["flip_mean"]):
+                worst = m
+        return worst
 
     def _analyze(self):
         an_path = self.dir / "analysis.json"; rg = self.dir / "ranges.json"
@@ -165,8 +181,19 @@ def search(shader: str, gpu_budget: int = 10, rounds: int = 2, samples: int = 20
         n_ops = len(ops)
         if n_ops == 0 and g["source"] == "baseline":
             preds.append({"id": gid, "genome": g, "skip": "identity"}); continue
-        m = ctxs[g["source"]].predict(spv, uniforms={**ctxs[g["source"]].p.uniforms, **extra_u})
-        preds.append({"id": gid, "genome": g, "spv": str(spv), "ops": n_ops, "extra_u": extra_u, "pred_p99": m["flip_p99"], "pred_mean": m["flip_mean"], "within": m["flip_p99"] <= p99_budget and m["flip_mean"] <= (tol or {}).get("mean_max", 1e9)})
+        ctx = ctxs[g["source"]]; members = None
+        plan = gd / "plan.json"
+        if g["hoist"] and plan.exists() and json.loads(plan.read_text()):
+            planv = json.loads(plan.read_text()); pre = gd / "1_exact.spv"; members = {}
+            for s_ in ctx.scenes:
+                eu = dict(ctx.extra_u(s_["p"].uniforms) if ctx.extra_u else {}); dump = gd / "dump_pred.json"
+                _eval(pre if pre.exists() else ctx.spv, 2, 2, s_["samplers"], {**s_["p"].uniforms, **eu}, gd / "d.npy", ["--dump-ids", ",".join(str(x["source_id"]) for x in planv), "--dump", dump]); (gd / "d.npy").unlink(missing_ok=True)
+                vals = json.loads(dump.read_text())
+                for x in planv:
+                    v = vals[str(x["source_id"])]; eu[x["member"]] = v if len(v) > 1 else v[0]
+                members[s_["sc"].name] = eu
+        m = ctx.predict(spv, uniforms={**ctx.p.uniforms, **extra_u}, extra_members=members)
+        preds.append({"id": gid, "genome": g, "spv": str(spv), "ops": n_ops, "extra_u": extra_u, "pred_p99": m["flip_p99"], "pred_mean": m["flip_mean"], "pred_scenario": m.get("scenario"), "within": m["flip_p99"] <= p99_budget and m["flip_mean"] <= (tol or {}).get("mean_max", 1e9)})
     valid = [p for p in preds if "pred_p99" in p]
     # cost prior: more edit ops and lossier genes tend to be faster; measured single-gene results refine this in round 2
     def prior(p):
