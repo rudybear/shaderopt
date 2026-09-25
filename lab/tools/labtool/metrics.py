@@ -32,11 +32,17 @@ def flip_metrics(ref: np.ndarray, test: np.ndarray, kind: str) -> dict:
     emap = np.asarray(emap, dtype=np.float32)
     if emap.ndim == 3:
         emap = emap[..., 0]
-    e = emap[m] if m.any() else np.zeros(1, np.float32)
+    # A pixel that is finite in one image and NaN/Inf in the other is a real failure (the device shows garbage or black
+    # there), so it counts as the maximal FLIP error 1.0; only pixels non-finite in BOTH are masked.
+    fr = np.isfinite(ref).all(-1); ft = np.isfinite(test).all(-1)
+    one_sided = fr != ft
+    keep = m | one_sided
+    emap = np.where(one_sided, 1.0, emap).astype(np.float32)
+    e = emap[keep] if keep.any() else np.zeros(1, np.float32)
     d = np.abs(ref[..., :3] - test[..., :3])[m] if m.any() else np.zeros((1, 3), np.float32)
     return {"flip_mean": float(e.mean()), "flip_p99": float(np.quantile(e, 0.99)), "flip_max": float(e.max()),
-            "abs_max": float(d.max()), "abs_p99": float(np.quantile(d, 0.99)), "masked_pixels": int((~m).sum()),
-            "metric": "flip" if kind == "color" else "flip_hdr", **({"note": note} if note else {})}
+            "abs_max": float(d.max()), "abs_p99": float(np.quantile(d, 0.99)), "masked_pixels": int((~keep).sum()),
+            "one_sided_nonfinite": int(one_sided.sum()), "metric": "flip" if kind == "color" else "flip_hdr", **({"note": note} if note else {})}
 
 def exact_metrics(ref, test) -> dict:
     m = _mask(ref, test)

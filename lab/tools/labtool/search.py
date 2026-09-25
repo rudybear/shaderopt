@@ -43,9 +43,16 @@ class Context:
             jd = make_job(sc, "baseline", samples=1, iterations=1, warmup=0, tag="search_ctx"); res, _ = run_job(jd, sc, "baseline", device=device)
             if not res.get("ok"):
                 continue
-            sm = _pass_inputs(sc, p, res, gen_inputs(sc)); ref = self.dir / f"ref_{sc.name}.npy"
+            inputs = gen_inputs(sc); sm = _pass_inputs(sc, p, res, inputs); ref = self.dir / f"ref_{sc.name}.npy"
             _eval(SPV_DIR / f"{shader}.spv", w, h, sm, p.uniforms, ref, [], nearest=(p.sampler == "nearest"))   # reference = ORIGINAL shader
-            self.scenes.append({"sc": sc, "p": p, "w": w, "h": h, "samplers": sm, "ref_q": quantize(p.format, np.load(ref)), "kind": kind_for(p.name, p.format, budgets())})
+            idx = sc.passes.index(p)
+            downstream = [(q, _pass_inputs(sc, q, res, inputs), sc.pass_size(q)) for q in sc.passes[idx + 1:]]
+            judged = [q for q in sc.quality_outputs if q != p.name and q in [d[0].name for d in downstream]]
+            scene = {"sc": sc, "p": p, "w": w, "h": h, "samplers": sm, "res": res, "inputs": inputs, "downstream": downstream, "judged": judged,
+                     "ref_q": quantize(p.format, np.load(ref)), "kind": kind_for(p.name, p.format, budgets()), "ref_chain": {}}
+            if judged:
+                scene["ref_chain"] = self._chain(scene, ref, "ref")
+            self.scenes.append(scene)
         s0 = self.scenes[0]
         self.sc, self.p, self.w, self.h, self.samplers = s0["sc"], s0["p"], s0["w"], s0["h"], s0["samplers"]
         self.uniforms = {**self.p.uniforms, **(extra_u(self.p.uniforms) if extra_u else {})}
@@ -55,6 +62,21 @@ class Context:
             c = json.loads(cache.read_text()); self.sens = c["sens"]; self.trans = c["trans"]
         else:
             self.sens, self.trans = self._analyze(); cache.write_text(json.dumps({"sens": self.sens, "trans": self.trans}))
+
+    def _chain(self, scene: dict, pass_out: Path, tag: str) -> dict[str, np.ndarray]:
+        """Run the downstream (baseline) passes in the CPU model, feeding `pass_out` as this pass's output. Returns the judged outputs."""
+        outs = {scene["p"].name: pass_out}; result = {}
+        for q, sm, (qw, qh) in scene["downstream"]:
+            sm2 = {k: (outs[scene["sc"].passes[[x.name for x in scene["sc"].passes].index(k2)].name] if False else v) for k, v in sm.items()}
+            # replace samplers that read an output we recomputed
+            for sname, src in q.samplers.items():
+                if src in outs: sm2[sname] = outs[src]
+            o = self.dir / f"chain_{tag}_{scene['sc'].name}_{q.name}.npy"
+            _eval(SPV_DIR / f"{q.shader}.spv", qw, qh, sm2, q.uniforms, o, [], nearest=(q.sampler == "nearest"))
+            outs[q.name] = o
+            if q.name in scene["judged"]:
+                result[q.name] = quantize(q.format, np.load(o))
+        return result
 
     def _eval(self, spv: Path, out: Path, extra: list | None = None, uniforms: dict | None = None):
         _eval(spv, self.w, self.h, self.samplers, uniforms if uniforms is not None else self.uniforms, out, extra or [], nearest=(self.p.sampler == "nearest"))
@@ -70,7 +92,15 @@ class Context:
             elif i == 0 and uniforms is not None: u = uniforms
             tmp = self.dir / f"pred_{int(time.time()*1e6)}.npy"
             _eval(spv, s["w"], s["h"], s["samplers"], u, tmp, [], nearest=(s["p"].sampler == "nearest"))
-            m = flip_metrics(s["ref_q"], quantize(s["p"].format, np.load(tmp)), s["kind"]); tmp.unlink()
+            m = flip_metrics(s["ref_q"], quantize(s["p"].format, np.load(tmp)), s["kind"])
+            if s["judged"]:   # every downstream judged output, through the baseline passes in the CPU model
+                var_chain = self._chain(s, tmp, "var")
+                for q, ref_q in s["ref_chain"].items():
+                    qp = next(x for x in s["sc"].passes if x.name == q)
+                    mq = flip_metrics(ref_q, var_chain[q], kind_for(q, qp.format, budgets()))
+                    if (mq["flip_p99"], mq["flip_mean"]) > (m["flip_p99"], m["flip_mean"]):
+                        m = mq; m["output"] = q
+            tmp.unlink()
             m["scenario"] = s["sc"].name
             if worst is None or (m["flip_p99"], m["flip_mean"]) > (worst["flip_p99"], worst["flip_mean"]):
                 worst = m
