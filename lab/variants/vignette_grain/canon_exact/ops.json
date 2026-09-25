@@ -1,0 +1,51 @@
+[
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %117 %117 %117 -> OpConstantComposite (0.0, 0.0, 0.0)",
+    "pass": "fold",
+    "replaced_by": 125,
+    "target": 118
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %74 %74 %74 -> OpConstantComposite (1.0, 1.0, 1.0)",
+    "pass": "fold",
+    "replaced_by": 126,
+    "target": 119
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %24 %24 %24 -> OpConstantComposite (33.33000183105469, 33.33000183105469, 33.33000183105469)",
+    "pass": "fold",
+    "replaced_by": 127,
+    "target": 25
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %54 == %55",
+    "pass": "cse",
+    "replaced_by": 55,
+    "target": 60
+  },
+  {
+    "class": "exact",
+    "detail": "OpAccessChain %63 %78 == %79",
+    "pass": "cse",
+    "replaced_by": 79,
+    "target": 81
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %81 == %80",
+    "pass": "cse",
+    "replaced_by": 80,
+    "target": 82
+  },
+  {
+    "class": "exact",
+    "detail": "OpLoad %54 == %55",
+    "pass": "cse",
+    "replaced_by": 55,
+    "target": 92
+  }
+]

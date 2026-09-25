@@ -1,0 +1,44 @@
+[
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %34 %34 %34 -> OpConstantComposite (1.0, 1.0, 1.0)",
+    "pass": "fold",
+    "replaced_by": 105,
+    "target": 79
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %17 %17 %17 -> OpConstantComposite (0.029999999329447746, 0.029999999329447746, 0.029999999329447746)",
+    "pass": "fold",
+    "replaced_by": 106,
+    "target": 18
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %25 %25 %25 -> OpConstantComposite (0.5899999737739563, 0.5899999737739563, 0.5899999737739563)",
+    "pass": "fold",
+    "replaced_by": 107,
+    "target": 26
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %29 %29 %29 -> OpConstantComposite (0.14000000059604645, 0.14000000059604645, 0.14000000059604645)",
+    "pass": "fold",
+    "replaced_by": 108,
+    "target": 30
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %33 %33 %33 -> OpConstantComposite (0.0, 0.0, 0.0)",
+    "pass": "fold",
+    "replaced_by": 82,
+    "target": 35
+  },
+  {
+    "class": "exact",
+    "detail": "OpCompositeConstruct %34 %34 %34 -> OpConstantComposite (1.0, 1.0, 1.0)",
+    "pass": "fold",
+    "replaced_by": 105,
+    "target": 36
+  }
+]

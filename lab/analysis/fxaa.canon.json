@@ -1,0 +1,239 @@
+{
+ "shader": "fxaa",
+ "variants": {
+  "canon_exact": {
+   "passes": "fold,dce,cse,ident,unroll,select",
+   "ops": 50,
+   "classes": {
+    "exact": 50,
+    "ulp": 0
+   },
+   "by_pass": {
+    "cse": 50
+   },
+   "verify": {
+    "fxaa:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "fxaa:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "fxaa_checker",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0006059032285986324,
+      "required": 0.02
+     },
+     "timing": {
+      "fxaa": {
+       "baseline_median_ns": 23106.0,
+       "variant_median_ns": 23092.0,
+       "speedup": 0.0006059032285986324,
+       "speedup_ci95": [
+        -0.0006927636511978321,
+        0.0012975778546712802
+       ],
+       "baseline_ci95": [
+        23092.0,
+        23120.0
+       ],
+       "variant_ci95": [
+        23084.0,
+        23120.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "fxaa": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.0008652015919709292
+    },
+    {
+     "scenario": "fxaa_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.000758150113722517,
+      "required": 0.02
+     },
+     "timing": {
+      "fxaa": {
+       "baseline_median_ns": 23742.0,
+       "variant_median_ns": 23760.0,
+       "speedup": -0.000758150113722517,
+       "speedup_ci95": [
+        -0.002781523937963587,
+        0.0004208045783538125
+       ],
+       "baseline_ci95": [
+        23716.0,
+        23764.0
+       ],
+       "variant_ci95": [
+        23742.0,
+        23804.05
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "fxaa": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.0011746937405604967
+    }
+   ]
+  },
+  "canon_full": {
+   "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec",
+   "ops": 50,
+   "classes": {
+    "exact": 50,
+    "ulp": 0
+   },
+   "by_pass": {
+    "cse": 50
+   },
+   "verify": {
+    "fxaa:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "fxaa:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "fxaa_checker",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025978524419812955,
+      "required": 0.02
+     },
+     "timing": {
+      "fxaa": {
+       "baseline_median_ns": 23096.0,
+       "variant_median_ns": 23090.0,
+       "speedup": 0.00025978524419812955,
+       "speedup_ci95": [
+        -0.0008670019074041963,
+        0.001038511466897447
+       ],
+       "baseline_ci95": [
+        23072.0,
+        23110.0
+       ],
+       "variant_ci95": [
+        23084.0,
+        23104.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "fxaa": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.0008652015919709292
+    },
+    {
+     "scenario": "fxaa_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 8.421761832575375e-05,
+      "required": 0.02
+     },
+     "timing": {
+      "fxaa": {
+       "baseline_median_ns": 23748.0,
+       "variant_median_ns": 23746.0,
+       "speedup": 8.421761832575375e-05,
+       "speedup_ci95": [
+        -0.0011798415641328165,
+        0.0012624163914323975
+       ],
+       "baseline_ci95": [
+        23732.0,
+        23774.0
+       ],
+       "variant_ci95": [
+        23732.0,
+        23774.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "fxaa": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.0011746937405604967
+    }
+   ]
+  }
+ }
+}

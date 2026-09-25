@@ -1,0 +1,239 @@
+{
+ "shader": "tonemap_aces",
+ "variants": {
+  "canon_exact": {
+   "passes": "fold,dce,cse,ident,unroll,select",
+   "ops": 6,
+   "classes": {
+    "exact": 6,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 6
+   },
+   "verify": {
+    "tonemap:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "tonemap:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0007784120394395433,
+      "required": 0.02
+     },
+     "timing": {
+      "tonemap": {
+       "baseline_median_ns": 7708.0,
+       "variant_median_ns": 7702.0,
+       "speedup": 0.0007784120394395433,
+       "speedup_ci95": [
+        -0.0018210197710718003,
+        0.002592016588906169
+       ],
+       "baseline_ci95": [
+        7692.0,
+        7720.0
+       ],
+       "variant_ci95": [
+        7694.0,
+        7718.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "tonemap": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.002072538860103627
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025510204081632655,
+      "required": 0.02
+     },
+     "timing": {
+      "tonemap": {
+       "baseline_median_ns": 7840.0,
+       "variant_median_ns": 7838.0,
+       "speedup": 0.00025510204081632655,
+       "speedup_ci95": [
+        -0.0015321756894790602,
+        0.0025458248472505093
+       ],
+       "baseline_ci95": [
+        7828.0,
+        7854.0
+       ],
+       "variant_ci95": [
+        7824.0,
+        7848.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "tonemap": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.008396946564885497
+    }
+   ]
+  },
+  "canon_full": {
+   "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec",
+   "ops": 6,
+   "classes": {
+    "exact": 6,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 6
+   },
+   "verify": {
+    "tonemap:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "tonemap:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "tonemap_hdr_edges",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.02
+     },
+     "timing": {
+      "tonemap": {
+       "baseline_median_ns": 7708.0,
+       "variant_median_ns": 7708.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.002336448598130841,
+        0.0018144116122343183
+       ],
+       "baseline_ci95": [
+        7700.0,
+        7716.0
+       ],
+       "variant_ci95": [
+        7698.0,
+        7724.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "tonemap": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.002072538860103627
+    },
+    {
+     "scenario": "tonemap_hdr_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.00025516713447307985,
+      "required": 0.02
+     },
+     "timing": {
+      "tonemap": {
+       "baseline_median_ns": 7838.0,
+       "variant_median_ns": 7836.0,
+       "speedup": 0.00025516713447307985,
+       "speedup_ci95": [
+        -0.002297676793464386,
+        0.001784815051369598
+       ],
+       "baseline_ci95": [
+        7824.0,
+        7848.0
+       ],
+       "variant_ci95": [
+        7828.0,
+        7852.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "tonemap": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.008396946564885497
+    }
+   ]
+  }
+ }
+}

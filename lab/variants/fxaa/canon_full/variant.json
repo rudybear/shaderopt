@@ -1,0 +1,370 @@
+{
+  "shader": "fxaa",
+  "variant_id": "canon_full",
+  "parent": "baseline",
+  "edit_ops": [
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 40
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 41
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 61
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 62
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %49 == %51",
+      "pass": "cse",
+      "replaced_by": 51,
+      "target": 63
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %63 == %52",
+      "pass": "cse",
+      "replaced_by": 52,
+      "target": 64
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 72
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 73
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 85
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 86
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %74 == %75",
+      "pass": "cse",
+      "replaced_by": 75,
+      "target": 87
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %87 == %76",
+      "pass": "cse",
+      "replaced_by": 76,
+      "target": 88
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 143
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 144
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %74 == %75",
+      "pass": "cse",
+      "replaced_by": 75,
+      "target": 145
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %145 == %76",
+      "pass": "cse",
+      "replaced_by": 76,
+      "target": 146
+    },
+    {
+      "class": "exact",
+      "detail": "OpFNegate %146 == %77",
+      "pass": "cse",
+      "replaced_by": 77,
+      "target": 147
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %49 == %51",
+      "pass": "cse",
+      "replaced_by": 51,
+      "target": 148
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %148 == %52",
+      "pass": "cse",
+      "replaced_by": 52,
+      "target": 149
+    },
+    {
+      "class": "exact",
+      "detail": "OpFNegate %149 == %53",
+      "pass": "cse",
+      "replaced_by": 53,
+      "target": 150
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 158
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 159
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %74 == %75",
+      "pass": "cse",
+      "replaced_by": 75,
+      "target": 160
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %160 == %76",
+      "pass": "cse",
+      "replaced_by": 76,
+      "target": 161
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %49 == %51",
+      "pass": "cse",
+      "replaced_by": 51,
+      "target": 162
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %162 == %52",
+      "pass": "cse",
+      "replaced_by": 52,
+      "target": 163
+    },
+    {
+      "class": "exact",
+      "detail": "OpFNegate %163 == %53",
+      "pass": "cse",
+      "replaced_by": 53,
+      "target": 164
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 172
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 173
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %74 == %75",
+      "pass": "cse",
+      "replaced_by": 75,
+      "target": 174
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %174 == %76",
+      "pass": "cse",
+      "replaced_by": 76,
+      "target": 175
+    },
+    {
+      "class": "exact",
+      "detail": "OpFNegate %175 == %77",
+      "pass": "cse",
+      "replaced_by": 77,
+      "target": 176
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %49 == %51",
+      "pass": "cse",
+      "replaced_by": 51,
+      "target": 177
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %177 == %52",
+      "pass": "cse",
+      "replaced_by": 52,
+      "target": 178
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 186
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 187
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %74 == %75",
+      "pass": "cse",
+      "replaced_by": 75,
+      "target": 188
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %188 == %76",
+      "pass": "cse",
+      "replaced_by": 76,
+      "target": 189
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %45 %47 %49 == %51",
+      "pass": "cse",
+      "replaced_by": 51,
+      "target": 190
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %190 == %52",
+      "pass": "cse",
+      "replaced_by": 52,
+      "target": 191
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %229 %74 == %238",
+      "pass": "cse",
+      "replaced_by": 238,
+      "target": 260
+    },
+    {
+      "class": "exact",
+      "detail": "OpAccessChain %229 %49 == %246",
+      "pass": "cse",
+      "replaced_by": 246,
+      "target": 263
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 284
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 285
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 292
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 293
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 305
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 306
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %25 == %26",
+      "pass": "cse",
+      "replaced_by": 26,
+      "target": 313
+    },
+    {
+      "class": "exact",
+      "detail": "OpLoad %29 == %30",
+      "pass": "cse",
+      "replaced_by": 30,
+      "target": 314
+    }
+  ],
+  "spirv_val": true,
+  "spirv_val_output": "",
+  "tools": {
+    "glslang": "Glslang Version: 11:15.3.0",
+    "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
+    "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
+    "lab_commit": "1f6bd41d5d2cea325058794afe8dcff5304cdada",
+    "runner": "490a9856b502995c",
+    "shader_ir": "eb04cbf5bccd4aeb",
+    "os": "Linux 6.17.0-20-generic"
+  },
+  "created": "2026-09-25T01:46:38",
+  "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec"
+}

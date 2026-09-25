@@ -1,0 +1,151 @@
+{
+ "shader": "vignette_grain",
+ "variants": {
+  "canon_exact": {
+   "passes": "fold,dce,cse,ident,unroll,select",
+   "ops": 7,
+   "classes": {
+    "exact": 7,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 3,
+    "cse": 4
+   },
+   "verify": {
+    "vignette:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "vignette:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "vignette_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": 0.0,
+      "required": 0.021655295164639574
+     },
+     "timing": {
+      "vignette": {
+       "baseline_median_ns": 6724.0,
+       "variant_median_ns": 6724.0,
+       "speedup": 0.0,
+       "speedup_ci95": [
+        -0.0020870602265951103,
+        0.0017835909631391202
+       ],
+       "baseline_ci95": [
+        6710.0,
+        6732.0
+       ],
+       "variant_ci95": [
+        6716.0,
+        6730.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "vignette": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.021655295164639574
+    }
+   ]
+  },
+  "canon_full": {
+   "passes": "fold,dce,cse,ident,unroll,select,divconst,powspec",
+   "ops": 7,
+   "classes": {
+    "exact": 7,
+    "ulp": 0
+   },
+   "by_pass": {
+    "fold": 3,
+    "cse": 4
+   },
+   "verify": {
+    "vignette:f64": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    },
+    "vignette:f32": {
+     "bit_identical": true,
+     "max_ulp_f32": 0.0,
+     "abs_max": 0.0,
+     "masked": 0
+    }
+   },
+   "measure": [
+    {
+     "scenario": "vignette_gradient",
+     "gates": {
+      "1": true,
+      "2": true,
+      "3": true,
+      "4": false,
+      "5": null,
+      "speedup": -0.0008931229532598987,
+      "required": 0.021655295164639574
+     },
+     "timing": {
+      "vignette": {
+       "baseline_median_ns": 6718.0,
+       "variant_median_ns": 6724.0,
+       "speedup": -0.0008931229532598987,
+       "speedup_ci95": [
+        -0.0026841634357291978,
+        0.0008915304606240713
+       ],
+       "baseline_ci95": [
+        6708.0,
+        6728.0
+       ],
+       "variant_ci95": [
+        6716.0,
+        6732.0
+       ],
+       "n": 40,
+       "touched": true
+      }
+     },
+     "metrics": {
+      "vignette": {
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
+       "masked_pixels": 0,
+       "metric": "flip"
+      }
+     },
+     "noise_floor": 0.021655295164639574
+    }
+   ]
+  }
+ }
+}
