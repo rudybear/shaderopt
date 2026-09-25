@@ -160,8 +160,8 @@ def cmd_verify(a):
     ok = bool(res.get("ok")) and int(res.get("validation", {}).get("errors", 1)) == 0
     print(f"runner: {'ok' if ok else 'FAIL'} ({out})")
     if SHADER_IR.exists():
-        bad = [p for p in sorted(SPV_DIR.glob("*.spv")) if run([SHADER_IR, "roundtrip", p]).returncode != 0]
-        print(f"roundtrip: {len(list(SPV_DIR.glob('*.spv'))) - len(bad)} ok, {len(bad)} differ {[b.name for b in bad]}")
+        bad = [p for p in sorted(SPV_DIR.glob("*.spv")) if not p.name.endswith(".g.spv") and run([SHADER_IR, "roundtrip", p]).returncode != 0]
+        print(f"roundtrip: {len([p for p in SPV_DIR.glob('*.spv') if not p.name.endswith('.g.spv')]) - len(bad)} ok, {len(bad)} differ {[b.name for b in bad]} (debug .g.spv builds excluded: rspirv re-emits OpLine/OpSource differently)")
         ok = ok and not bad
     else:
         print("roundtrip: shader-ir not built, skipped")

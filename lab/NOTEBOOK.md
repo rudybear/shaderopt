@@ -68,3 +68,4 @@
 - Accepted: gaussian_blur_h/v bilinear5 (+11%), deferred_lit pcf4 (+11.7%, budgeted). Everything ALU-side is within noise on the RTX PRO 6000.
 - Next: mobile devices (Android headless runner via adb, iOS host), user's real shader corpus, IGL float_controls2 patch (fast-math), upstream proposals 001-P1..P5 via the guardian, backlog in FINAL.md §5.
 - Housekeeping: two earlier commits contain ~500 MB of reference npy files (now untracked, .git is 327 MB); rewrite history if clone size matters. Never evict page cache with a huge allocation in this harness.
+- Debug (.g.spv) builds do not round-trip byte-identically: rspirv re-emits an OpLine that glslang places before OpFunction inside the function (OpLine %1 14 18 moved). Measured -V builds are unaffected; `lab verify` now excludes .g.spv from the round-trip check.
