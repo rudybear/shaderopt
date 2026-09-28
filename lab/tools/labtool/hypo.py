@@ -3,6 +3,12 @@ from __future__ import annotations
 import copy, importlib.util, json, tomllib
 from pathlib import Path
 import numpy as np
+from .jobs import TARGET as _TARGET
+
+def _mobile() -> bool:
+    """On mobile every scenario, holdout included, gets the full round count: paired rounds are the only estimator that survives DVFS drift."""
+    return bool(_TARGET.get("android"))
+
 from .paths import LAB, GLSLANG, SPIRV_VAL, SPV_DIR, VARIANTS, run
 from .build import compile_glsl
 from .scenarios import Scenario
@@ -76,7 +82,7 @@ def run_hypothesis(shader: str, hdir: Path, rounds: int = 2, samples: int = 20, 
     # ---- device measurement on every scenario using the shader
     for sc in scs:
         dsc, extra_arrays = _derived_scenario(sc, shader, extra_u, extra_in)
-        m = measure_variant_derived(shader, vid, sc, dsc, extra_arrays, rounds=rounds if sc.split == "train" else 1, samples=samples, device=device)
+        m = measure_variant_derived(shader, vid, sc, dsc, extra_arrays, rounds=rounds if (sc.split == "train" or _mobile()) else 1, samples=samples, device=device)
         if not m.get("ok"):
             out["runs"].append({"scenario": sc.name, "error": m.get("error")}); continue
         p = next(x for x in sc.passes if x.shader == shader)

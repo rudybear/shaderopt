@@ -4,6 +4,12 @@ from __future__ import annotations
 import copy, json
 from pathlib import Path
 import numpy as np
+from .jobs import TARGET as _TARGET
+
+def _mobile() -> bool:
+    """On mobile every scenario, holdout included, gets the full round count: paired rounds are the only estimator that survives DVFS drift."""
+    return bool(_TARGET.get("android"))
+
 from .paths import LAB, SHADER_IR, SPV_DIR, VARIANTS, run, require
 from .scenarios import Scenario
 from .jobs import make_job, run_job, gen_inputs
@@ -40,7 +46,7 @@ def _measure_all(shader: str, vid: str, ops: list, extra_u_fn, rounds, samples, 
         for p in dsc.passes:
             if p.shader == shader and extra_u_fn:
                 p.uniforms = {**p.uniforms, **extra_u_fn(p.uniforms)}
-        m = measure_variant_derived(shader, vid, sc, dsc, {}, rounds=rounds if sc.split == "train" else 1, samples=samples, device=device)
+        m = measure_variant_derived(shader, vid, sc, dsc, {}, rounds=rounds if (sc.split == "train" or _mobile()) else 1, samples=samples, device=device)
         if not m.get("ok"):
             runs.append({"scenario": sc.name, "error": m.get("error")}); continue
         p = next(x for x in sc.passes if x.shader == shader); tol, src = tolerance_for(shader, p.name, p.format, bud)

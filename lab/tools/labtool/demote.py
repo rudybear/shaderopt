@@ -2,6 +2,12 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+from .jobs import TARGET as _TARGET
+
+def _mobile() -> bool:
+    """On mobile every scenario, holdout included, gets the full round count: paired rounds are the only estimator that survives DVFS drift."""
+    return bool(_TARGET.get("android"))
+
 from .paths import LAB, SHADER_IR, SPV_DIR, VARIANTS, run, require
 from .experiment import measure_variant, evaluate_gates, record, write_variant, scenarios_for_shader, budgets
 from .metrics import kind_for, flip_metrics
@@ -140,7 +146,7 @@ def demote(shader: str, rounds: int = 2, samples: int = 20, singles: int = 6, mo
             write_variant(shader, vid, spv, ops, extra={"mode": mode, "set": name, "sites": sites, "predicted": pred})
             entry = {"variant_id": vid, "mode": mode, "set": name, "sites": sites, "n_sites": len(sites), "predicted": pred, "ops": len(ops), "runs": []}
             for sc in scs_train + scs_hold:
-                m = measure_variant(shader, vid, sc, rounds=rounds if sc.split == "train" else 1, samples=samples, device=device)
+                m = measure_variant(shader, vid, sc, rounds=rounds if (sc.split == "train" or _mobile()) else 1, samples=samples, device=device)
                 if not m.get("ok"):
                     entry["runs"].append({"scenario": sc.name, "error": m.get("error")}); continue
                 g_strict = evaluate_gates(m, shader, sc, None); g_bud = evaluate_gates(m, shader, sc, tol)

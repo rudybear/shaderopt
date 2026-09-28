@@ -5,6 +5,12 @@ from __future__ import annotations
 import copy, itertools, json, random, re, shutil, time
 from pathlib import Path
 import numpy as np
+from .jobs import TARGET as _TARGET
+
+def _mobile() -> bool:
+    """On mobile every scenario, holdout included, gets the full round count: paired rounds are the only estimator that survives DVFS drift."""
+    return bool(_TARGET.get("android"))
+
 from .paths import LAB, SHADER_IR, SPV_DIR, VARIANTS, run, require
 from .build import compile_glsl
 from .jobs import make_job, run_job, gen_inputs
@@ -252,7 +258,7 @@ def search(shader: str, gpu_budget: int = 10, rounds: int = 2, samples: int = 20
                         for x in planv:
                             v = vals[str(x["source_id"])]; eu[x["member"]] = v if len(v) > 1 else v[0]
                     pp.uniforms = {**pp.uniforms, **eu}
-            m = measure_variant_derived(shader, gid, sc, dsc, {}, rounds=rounds if sc.split == "train" else 1, samples=samples, device=device)
+            m = measure_variant_derived(shader, gid, sc, dsc, {}, rounds=rounds if (sc.split == "train" or _mobile()) else 1, samples=samples, device=device)
             if not m.get("ok"):
                 runs.append({"scenario": sc.name, "error": m.get("error")}); continue
             pp = next(x for x in sc.passes if x.shader == shader); t, src_t = tolerance_for(shader, pp.name, pp.format, bud)
