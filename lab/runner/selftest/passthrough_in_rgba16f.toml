@@ -1,0 +1,20 @@
+[scenario]
+name = "selftest_passthrough_in_rgba16f"
+split = "train"
+width = 256
+height = 128
+
+# The input is uploaded as RGBA16F; the .npy already holds RGBA16F-quantized values (gen_input.py), so the RGBA32F
+# copy must reproduce the file exactly (tolerance 1e-6): proves the runner's RGBA16F encoder and the format upload.
+[[inputs]]
+name = "src"
+format = "RGBA16F"
+file = "src_rgba16f.npy"
+
+[[passes]]
+name = "copy"
+shader = "copy"
+samplers = { u_src = "src" }
+output = { format = "RGBA32F", scale = 1.0 }
+load = "dont_care"
+store = "store"

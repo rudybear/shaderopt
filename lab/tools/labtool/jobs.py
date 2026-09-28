@@ -7,13 +7,21 @@ from .scenarios import Scenario
 from .generators import generate
 from .build import baseline_spv
 from .images import to_png, to_exr
-from .formats import LDR_FORMATS
+from .formats import LDR_FORMATS, quantize
+
+def input_npy_name(inp: dict) -> str:
+    """Cache file name of an input: the format is part of the name unless it is the RGBA32F default, so caches
+    written before per-input formats existed (and inputs whose format changes) never collide."""
+    fmt = inp.get("format", "RGBA32F")
+    return f"{inp['name']}.npy" if fmt == "RGBA32F" else f"{inp['name']}.{fmt}.npy"
 
 def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
+    """Generates (or loads) every input of the scenario and saves it as float32 .npy, quantized to the input's
+    declared format (formats.quantize), so the CPU model and the GPU upload see identical values."""
     out = {}
     d = INPUTS_DIR / sc.name; d.mkdir(parents=True, exist_ok=True)
     for inp in sc.inputs:
-        p = d / f"{inp['name']}.npy"
+        p = d / input_npy_name(inp)
         if force or not p.exists():
             if "file" in inp and inp["file"].startswith("__extra__/"):
                 continue  # supplied by make_job(extra_inputs=...)
@@ -24,14 +32,14 @@ def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
                     raise SystemExit(f"input {src} is {img.shape[:2]}, scenario is {(sc.height, sc.width)}")
             else:
                 img = generate(inp["generator"], sc.width, sc.height, int(inp.get("seed", 0)), inp.get("params", {}))
-            np.save(p, img)
+            np.save(p, quantize(inp.get("format", "RGBA32F"), img))
         out[inp["name"]] = p
     return out
 
 def scenario_toml(sc: Scenario) -> str:
     import toml
     d = {"scenario": {"name": sc.name, "split": sc.split, "width": sc.width, "height": sc.height},
-         "inputs": [dict(i) for i in sc.inputs],
+         "inputs": [{**i, "format": i.get("format", "RGBA32F")} for i in sc.inputs],
          "passes": [{"name": p.name, "shader": p.shader, "samplers": p.samplers, "uniforms": p.uniforms,
                      "output": {"format": p.format, "scale": p.scale}, "load": p.load, "store": p.store, "sampler": p.sampler} for p in sc.passes],
          "quality": {"outputs": sc.quality_outputs}}

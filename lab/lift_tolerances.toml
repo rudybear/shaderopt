@@ -13,3 +13,8 @@ fragile = true
 reason = "hash() chains fract() of large products; a 1-ULP difference flips the whole grain value (up to grain_amount)"
 p99_codes = 16
 max_codes = 255
+
+[shaders.deferred_lit]
+reason = "the 3x3 PCF compares (shadowuv.z + bias <= bilinear(shadow depth)) at coordinates read from an RGBA16F g-buffer; where an f16-rounded coordinate puts a tap on a shadow-map checker edge, the filtered step lands within rounding of the threshold and one tap flips between the CPU model and the GPU (0.7/9 of the lighting, up to ~21 codes) on a handful of pixels (4 of 994k at 1080p, all in the x = 960 edge column); with shadowuv in RGBA32F the taps sit on texel centers and max is 1 code"
+p99_codes = 1
+max_codes = 32

@@ -6,6 +6,7 @@ height = 1080
 
 [[inputs]]
 name = "scene"
+format = "RGBA16F"
 generator = "noise"
 seed = 13
 params = {scale=8.0}

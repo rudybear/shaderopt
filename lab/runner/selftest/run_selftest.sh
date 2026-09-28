@@ -30,23 +30,29 @@ done
 
 echo "== input"
 "$PY" "$HERE/gen_input.py" "$WORK/src.npy" $W $H
+"$PY" "$HERE/gen_input.py" "$WORK/src_rgba8.npy" $W $H RGBA8
+"$PY" "$HERE/gen_input.py" "$WORK/src_rgba16f.npy" $W $H RGBA16F
 
 fail=0
-run_case() { # name scenario spvname mode
-  local name=$1 scenario=$2 spv=$3 mode=$4
+run_case() { # name scenario spvname mode [input.npy]
+  local name=$1 scenario=$2 spv=$3 mode=$4 src=${5:-$WORK/src.npy}
   echo; echo "== case $name"
-  "$PY" "$HERE/make_job.py" "$WORK/$name/job" "$HERE/$scenario" "$WORK/src.npy" "copy=$WORK/$spv.spv" \
+  "$PY" "$HERE/make_job.py" "$WORK/$name/job" "$HERE/$scenario" "$src" "copy=$WORK/$spv.spv" \
       --samples $SAMPLES --iterations $ITER --warmup $WARMUP >/dev/null
   set +e
   "$RUNNER" --job "$WORK/$name/job/job.json" --out "$WORK/$name/result" "${EXTRA_ARGS[@]}"
   local rc=$?
   set -e
   echo "runner exit code: $rc"
-  if ! "$PY" "$HERE/check.py" "$WORK/$name/result" "$WORK/src.npy" copy "$mode" --samples $SAMPLES; then fail=1; fi
+  if ! "$PY" "$HERE/check.py" "$WORK/$name/result" "$src" copy "$mode" --samples $SAMPLES; then fail=1; fi
 }
-run_case rgba32f passthrough.toml      copy     exact
-run_case srgb    passthrough_srgb.toml copy     srgb
-run_case ubo     passthrough_ubo.toml  copy_ubo ubo
+run_case rgba32f    passthrough.toml            copy     exact
+run_case srgb       passthrough_srgb.toml       copy     srgb
+run_case ubo        passthrough_ubo.toml        copy_ubo ubo
+# per-input texture formats: the input is uploaded as RGBA8 / RGBA16F and copied to RGBA32F; the output must equal
+# the (already quantized) input file exactly
+run_case in_rgba8   passthrough_in_rgba8.toml   copy     exact "$WORK/src_rgba8.npy"
+run_case in_rgba16f passthrough_in_rgba16f.toml copy     exact "$WORK/src_rgba16f.npy"
 
 echo; echo "== case g0 (negative: -g0 SPIR-V must fail with a clear message, exit 1, result.json ok=false)"
 "$PY" "$HERE/make_job.py" "$WORK/g0/job" "$HERE/passthrough.toml" "$WORK/src.npy" "copy=$WORK/copy_g0.spv" >/dev/null

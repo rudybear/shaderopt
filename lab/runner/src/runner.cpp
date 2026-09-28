@@ -400,16 +400,35 @@ RunResult runJob(const Job& job,
     check(res, "createSamplerState(nearest)");
   }
 
-  // ---- inputs: .npy -> RGBA32F sampled textures ----
-  for (const auto& name : scenario.inputs) {
+  // ---- inputs: float32 .npy -> sampled textures in the input's declared format ----
+  // The .npy (already quantized to the format by `lab gen-inputs`) is encoded to the format's texel
+  // bytes here (formats.cpp, the mirror of the readback decode), so the shader samples exactly the
+  // values the CPU model reads from the file. `_SRGB` inputs are decoded by the hardware on sampling.
+  for (const auto& in : scenario.inputs) {
+    const std::string& name = in.name;
     const NpyImage img = npyRead(job.inputs.at(name));
-    TextureDesc td = TextureDesc::new2D(TextureFormat::RGBA_F32, img.width, img.height,
+    const FormatInfo& fmt = lookupFormat(in.format);
+    {
+      const auto caps = gpu.device->getTextureFormatCapabilities(fmt.format);
+      if ((caps & ICapabilities::TextureFormatCapabilityBits::Sampled) == 0) {
+        fail("input '" + name + "': format " + in.format +
+             " is not samplable on this device/IGL (caps=" + std::to_string(static_cast<int>(caps)) + ")");
+      }
+      if ((caps & ICapabilities::TextureFormatCapabilityBits::SampledFiltered) == 0) {
+        out.notes.push_back("WARNING: input '" + name + "' format " + in.format +
+                            " does not support linear filtering on this device");
+      }
+    }
+    const size_t pixels = size_t(img.width) * img.height;
+    std::vector<uint8_t> texels(pixels * fmt.bytesPerPixel);
+    encodeFromFloatRGBA(fmt, img.data.data(), pixels, texels.data());
+    TextureDesc td = TextureDesc::new2D(fmt.format, img.width, img.height,
                                         TextureDesc::TextureUsageBits::Sampled, name.c_str());
     auto tex = gpu.device->createTexture(td, &res);
-    check(res, "createTexture(input " + name + ")");
+    check(res, "createTexture(input " + name + ", " + in.format + ")");
     const Result up = tex->upload(TextureRangeDesc::new2D(0, 0, img.width, img.height),
-                                  img.data.data(), img.width * 16);
-    check(up, "upload(input " + name + ")");
+                                  texels.data(), size_t(img.width) * fmt.bytesPerPixel);
+    check(up, "upload(input " + name + ", " + in.format + ")");
     gpu.inputs[name] = std::move(tex);
   }
 

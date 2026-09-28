@@ -4,8 +4,12 @@ split = "holdout"
 width = 1920
 height = 1080
 
+# The nan_inf generator writes blocks of NaN, +/-Inf, negatives, denormals and 2*65504. Uploaded as RGBA16F
+# (the HDR format an app would use), 2*65504 becomes +Inf and the denormal block rounds to 0: that is the
+# realistic input, and `lab gen-inputs` bakes the same rounding into the .npy the CPU model reads.
 [[inputs]]
 name = "scene"
+format = "RGBA16F"
 generator = "nan_inf"
 seed = 14
 params = {}

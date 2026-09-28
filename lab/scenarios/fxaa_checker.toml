@@ -6,6 +6,7 @@ height = 1080
 
 [[inputs]]
 name = "scene"
+format = "RGBA8"
 generator = "checker"
 seed = 32
 params = {cells=8}

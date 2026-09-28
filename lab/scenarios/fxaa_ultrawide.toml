@@ -6,6 +6,7 @@ height = 1440
 
 [[inputs]]
 name = "scene"
+format = "RGBA8"
 generator = "edges"
 seed = 34
 params = {}

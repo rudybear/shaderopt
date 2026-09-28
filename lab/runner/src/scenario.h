@@ -28,12 +28,17 @@ struct PassDesc {
   std::string sampler = "linear"; // linear | nearest
 };
 
+struct InputDesc {
+  std::string name;
+  std::string format = "RGBA32F"; // texture format the input is uploaded in (contract spelling)
+};
+
 struct Scenario {
   std::string name;
   std::string split;
   uint32_t width = 0;
   uint32_t height = 0;
-  std::vector<std::string> inputs; // input names, in declaration order
+  std::vector<InputDesc> inputs; // in declaration order
   std::vector<PassDesc> passes;
   std::vector<std::string> qualityOutputs;
 };

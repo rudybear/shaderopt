@@ -6,6 +6,7 @@ height = 1440
 
 [[inputs]]
 name = "scene"
+format = "RGBA16F"
 generator = "hdr_gradient"
 seed = 15
 params = {peak=16.0}

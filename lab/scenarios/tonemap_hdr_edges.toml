@@ -6,6 +6,7 @@ height = 1080
 
 [[inputs]]
 name = "scene"
+format = "RGBA16F"
 generator = "hdr_edges"
 seed = 12
 params = {peak=64.0}

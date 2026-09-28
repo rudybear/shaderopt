@@ -23,6 +23,7 @@ height = 1080
 
 [[inputs]]                 # source images, produced by `lab gen-inputs` before the run
 name = "scene"
+format = "RGBA16F"         # texture format the input is uploaded in (optional, default RGBA32F); same set as outputs
 generator = "hdr_gradient" # or: file = "relative/path.npy"
 seed = 1
 params = { peak = 16.0 }
@@ -47,7 +48,14 @@ output = { format = "RGBA8_SRGB", scale = 1.0 }
 outputs = ["composite"]    # downstream outputs judged by the gates; default: the last pass
 ```
 
-Accepted `format` values: `RGBA8`, `RGBA8_SRGB`, `RGBA16F`, `RGBA32F`, `R11G11B10F`, `RGB10A2`, `R16F`, `R32F`. Uniform member types: `float`, `int`, `vec2/3/4` (array of numbers), `mat4` (16 numbers, column-major).
+Accepted `format` values (inputs and pass outputs): `RGBA8`, `RGBA8_SRGB`, `RGBA16F`, `RGBA32F`, `R11G11B10F`, `RGB10A2`, `R16F`, `R32F`. Uniform member types: `float`, `int`, `vec2/3/4` (array of numbers), `mat4` (16 numbers, column-major).
+
+**Input formats.** Every `[[inputs]]` entry may declare `format` (default `RGBA32F`, the previous behaviour), so a scenario can mirror the formats an app really samples from instead of feeding every shader float32 data.
+- The image on disk stays a float32 `.npy`. `lab gen-inputs` quantizes the generated (or `file`) image to the declared format before saving it (`labtool.formats.quantize`, which models each format's precision: 8-bit/10-bit UNORM rounding with NaN -> 0 and Inf clamped, f16 rounding with overflow to Inf, R11G11B10F packing, single-channel `R16F`/`R32F` stored as `(r, 0, 0, 1)`), so the CPU model reads from the file exactly the values the GPU samples. The cache file carries the format when it is not `RGBA32F` (`lab/build/inputs/<scenario>/scene.RGBA16F.npy`), so caches written before this existed, or with another format, never collide; the job bundle's `inputs` map (`inputs/<name>.npy`, a symlink) is unchanged.
+- The runner uploads each input in its declared format: the float32 RGBA data is encoded to the format's texel bytes (`runner/src/formats.cpp` `encodeFromFloatRGBA`, the mirror of the readback decoders: RGBA8 unorm, RGBA8_SRGB through the sRGB OETF on rgb, RGBA16F/R16F half, R11G11B10F/RGB10A2 packing, R32F single channel) and the texture is created with the matching IGL `TextureFormat` and sampled usage. The encoder is exact on already-quantized values (checked bit-for-bit against `quantize` for all eight formats), so upload adds no second rounding.
+- `_SRGB` inputs: the shader reads linear values, the hardware applies the sRGB EOTF when sampling (the app-realistic behaviour). The CPU model's `quantize("RGBA8_SRGB", x)` = `srgb_decode(round(srgb_encode(x) * 255) / 255)` is exactly this decode(encode(x)) rounding, so the CPU model and the GPU see the same 8-bit code per texel; the GPU's EOTF is a hardware function whose deviation from the formula is at the float32 noise level.
+- Single-channel inputs (`R16F`, `R32F`) sample as `(r, 0, 0, 1)`; a shader may only rely on `.r` of such an input. HDR inputs uploaded as `RGBA16F` turn values above 65504 into `+Inf` and round denormals to 0, which is what an app's HDR buffer would hold (the `nan_inf` scenes rely on this).
+- `scenario.toml` written into a job bundle (`labtool.jobs.scenario_toml`) always spells the input format out; the runner (`scenario.cpp`) rejects a format outside the accepted set.
 
 ## Job bundle: a directory with `job.json`
 

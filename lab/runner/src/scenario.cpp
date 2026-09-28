@@ -9,6 +9,8 @@
 #include <nlohmann/json.hpp>
 #include <toml.hpp>
 
+#include "formats.h"
+
 namespace shaderlab {
 
 namespace fs = std::filesystem;
@@ -115,7 +117,15 @@ Scenario loadScenario(const std::string& path) {
       if (!it) {
         fail("[[inputs]] entries must be tables");
       }
-      s.inputs.push_back(req<std::string>(*it, "name", "[[inputs]]"));
+      InputDesc in;
+      in.name = req<std::string>(*it, "name", "[[inputs]]");
+      in.format = (*it)["format"].value_or(std::string("RGBA32F"));
+      try {
+        lookupFormat(in.format); // same accepted set as pass outputs
+      } catch (const std::runtime_error& e) {
+        fail("[[inputs]] '" + in.name + "': " + e.what());
+      }
+      s.inputs.push_back(std::move(in));
     }
   }
 
@@ -260,17 +270,18 @@ void validateJob(const Job& job, const Scenario& scenario) {
       fail("job.json: passes entry '" + k + "' is not a pass of scenario '" + scenario.name + "'");
     }
   }
-  for (const auto& name : scenario.inputs) {
-    const auto it = job.inputs.find(name);
+  std::set<std::string> available;
+  for (const auto& in : scenario.inputs) {
+    const auto it = job.inputs.find(in.name);
     if (it == job.inputs.end()) {
-      fail("job.json: inputs has no entry for scenario input '" + name + "'");
+      fail("job.json: inputs has no entry for scenario input '" + in.name + "'");
     }
     if (!fs::exists(it->second)) {
-      fail("job.json: input '" + name + "' not found: " + it->second);
+      fail("job.json: input '" + in.name + "' not found: " + it->second);
     }
+    available.insert(in.name);
   }
   // sampler sources must be an input or an earlier pass
-  std::set<std::string> available(scenario.inputs.begin(), scenario.inputs.end());
   for (const auto& p : scenario.passes) {
     for (const auto& [sname, src] : p.samplers) {
       if (!available.count(src)) {
