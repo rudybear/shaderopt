@@ -31,7 +31,7 @@ bash lab/runner/selftest/run_selftest.sh
 |---|---|---|---|---|
 | gaussian_blur_h | hyp_bilinear5 | +11.1% | 0.0071 | `./lab/lab hypo --shader gaussian_blur_h --id bilinear5` |
 | gaussian_blur_v | hyp_bilinear5 | +11.4% | 0.0100 | `./lab/lab hypo --shader gaussian_blur_v --id bilinear5` |
-| deferred_lit | hyp_pcf4 | +11.7% | 0.0268 | `./lab/lab hypo --shader deferred_lit --id pcf4` |
+| deferred_lit | hyp_pcf4 | +20.7% (RGBA8/RGBA16F/R16F inputs; +11.7% with RGBA32F) | 0.0269 | `./lab/lab hypo --shader deferred_lit --id pcf4` |
 | deferred_lit | g_pcf4_xh_a0p01_dall (search, provisional: no holdout scene) | +14.0% | 0.0431 | `./lab/lab search --shader deferred_lit` |
 
 ```

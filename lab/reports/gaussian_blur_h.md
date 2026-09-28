@@ -22,7 +22,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 - **g_bilinear5_--_a0p0001_dnone**: speedup +11.33%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_--_a0p0001_dnone/variant.json`)
 - **g_bilinear5_--_a0p01_dnone**: speedup +11.32%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_--_a0p01_dnone/variant.json`)
 - **g_bilinear5_-h_a0p001_dnone**: speedup +11.29%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_-h_a0p001_dnone/variant.json`)
-- **hyp_bilinear5**: speedup +11.28%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/hyp_bilinear5/variant.json`)
+- **hyp_bilinear5**: speedup +11.29%, worst FLIP p99 0.0072, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/hyp_bilinear5/variant.json`)
 - **g_bilinear5_--_a0p001_dnone**: speedup +11.22%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_--_a0p001_dnone/variant.json`)
 - **g_bilinear5_xh_a0p001_dnone**: speedup +11.17%, worst FLIP p99 0.0071, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_h/g_bilinear5_xh_a0p001_dnone/variant.json`)
 
@@ -45,7 +45,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | g_bilinear5_--_a0p01_dnone |  |  |  | 0.0071 | +11.32% | yes | no |
 | g_bilinear5_xh_a0p001_dall |  |  |  | 0.9674 | +11.30% | no | no |
 | g_bilinear5_-h_a0p001_dnone |  |  |  | 0.0071 | +11.29% | yes | no |
-| hyp_bilinear5 |  |  |  | 0.0071 | +11.28% | yes | no |
+| hyp_bilinear5 |  |  |  | 0.0072 | +11.29% | yes | no |
 | g_bilinear5_xh_a0p0001_dq1 |  |  |  | 0.9674 | +11.27% | no | no |
 | g_bilinear5_xh_a0p0001_dq4 |  |  |  | 0.9674 | +11.26% | no | no |
 | g_bilinear5_xh_a0p01_dq4 |  |  |  | 0.9674 | +11.25% | no | no |

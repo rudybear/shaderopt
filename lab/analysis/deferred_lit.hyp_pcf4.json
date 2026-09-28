@@ -14,12 +14,13 @@
  "variant_id": "hyp_pcf4",
  "prediction": {
   "lit": {
-   "flip_mean": 0.0015452960506081581,
-   "flip_p99": 0.059839628636837006,
-   "flip_max": 0.20849628746509552,
+   "flip_mean": 0.0007294679526239634,
+   "flip_p99": 0.026861846446990967,
+   "flip_max": 0.18438859283924103,
    "abs_max": 0.11764705181121826,
-   "abs_p99": 0.011764705181121826,
-   "masked_pixels": 1079132,
+   "abs_p99": 0.0,
+   "masked_pixels": 0,
+   "one_sided_nonfinite": 0,
    "metric": "flip"
   }
  },
@@ -33,7 +34,7 @@
     "3": true,
     "4": true,
     "5": null,
-    "speedup": 0.1169624861842533,
+    "speedup": 0.20698551299861084,
     "required": 0.1
    },
    "gates_strict": {
@@ -42,38 +43,81 @@
     "3": false,
     "4": true,
     "5": null,
-    "speedup": 0.1169624861842533,
+    "speedup": 0.20698551299861084,
     "required": 0.02
    },
    "timing": {
     "lit": {
-     "baseline_median_ns": 30762.0,
-     "variant_median_ns": 27164.0,
-     "speedup": 0.1169624861842533,
+     "baseline_median_ns": 10078.0,
+     "variant_median_ns": 7992.0,
+     "speedup": 0.20698551299861084,
      "speedup_ci95": [
-      0.11469376684409723,
-      0.11821667641515565
+      0.20493434142459213,
+      0.20825069416898057
      ],
      "baseline_ci95": [
-      30722.0,
-      30786.0
+      10054.0,
+      10090.0
      ],
      "variant_ci95": [
-      27134.0,
-      27224.0
+      7984.0,
+      8000.0
      ],
      "n": 40,
-     "touched": true
+     "touched": true,
+     "clock": {
+      "baseline": [
+       {
+        "steady": false,
+        "reason": "only 0 samples at the top clock nan MHz",
+        "top_clock_mhz": NaN,
+        "n_top": 0,
+        "raw_median_ns": 10078.0
+       },
+       {
+        "steady": false,
+        "reason": "only 0 samples at the top clock nan MHz",
+        "top_clock_mhz": NaN,
+        "n_top": 0,
+        "raw_median_ns": 10072.0
+       }
+      ],
+      "variant": [
+       {
+        "steady": false,
+        "reason": "only 0 samples at the top clock nan MHz",
+        "top_clock_mhz": NaN,
+        "n_top": 0,
+        "raw_median_ns": 7992.0
+       },
+       {
+        "steady": false,
+        "reason": "only 0 samples at the top clock nan MHz",
+        "top_clock_mhz": NaN,
+        "n_top": 0,
+        "raw_median_ns": 7992.0
+       }
+      ]
+     },
+     "paired": {
+      "speedup": 0.2067493093190036,
+      "ci95": null,
+      "rounds": [
+       0.20698551299861084,
+       0.20651310563939634
+      ]
+     }
     }
    },
    "metrics": {
     "lit": {
-     "flip_mean": 0.0007415344589389861,
-     "flip_p99": 0.026780270040035248,
-     "flip_max": 0.2301035225391388,
+     "flip_mean": 0.0007296546828001738,
+     "flip_p99": 0.026873545721173286,
+     "flip_max": 0.18575771152973175,
      "abs_max": 0.11764705181121826,
      "abs_p99": 0.0,
      "masked_pixels": 0,
+     "one_sided_nonfinite": 0,
      "metric": "flip"
     }
    }

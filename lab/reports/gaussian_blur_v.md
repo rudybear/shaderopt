@@ -22,8 +22,8 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 - **g_bilinear5_-h_aoff_dnone**: speedup +11.73%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_-h_aoff_dnone/variant.json`)
 - **g_bilinear5_xh_a0p0001_dnone**: speedup +11.64%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_xh_a0p0001_dnone/variant.json`)
 - **g_bilinear5_--_a0p0001_dnone**: speedup +11.43%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_--_a0p0001_dnone/variant.json`)
-- **hyp_bilinear5**: speedup +11.42%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/hyp_bilinear5/variant.json`)
 - **g_bilinear5_--_aoff_dnone**: speedup +11.28%, worst FLIP p99 0.0100, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/g_bilinear5_--_aoff_dnone/variant.json`)
+- **hyp_bilinear5**: speedup +11.17%, worst FLIP p99 0.0101, tolerance budgets, 1 edit ops (`lab/variants/gaussian_blur_v/hyp_bilinear5/variant.json`)
 
 ### All variants
 
@@ -48,8 +48,8 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | g_bilinear5_xh_a0p0001_dnone |  |  |  | 0.0100 | +11.64% | yes | no |
 | g_bilinear5_xh_a0p01_dq1 |  |  |  | 0.9674 | +11.60% | no | no |
 | g_bilinear5_--_a0p0001_dnone |  |  |  | 0.0100 | +11.43% | yes | no |
-| hyp_bilinear5 |  |  |  | 0.0100 | +11.42% | yes | no |
 | g_bilinear5_--_aoff_dnone |  |  |  | 0.0100 | +11.28% | yes | no |
+| hyp_bilinear5 |  |  |  | 0.0101 | +11.17% | yes | no |
 | g_bilinear5_--_a0p01_dq2 |  |  |  | 0.9674 | +11.15% | no | no |
 | g_bilinear5_--_a0p01_dall |  |  |  | 0.9674 | +11.13% | no | no |
 | g_baseline_xh_a0p01_dq1 |  |  |  | 0.9674 | +4.14% | no | no |

@@ -10,9 +10,11 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 |---|---|---|---|---|---|
 | demote_f16_s130 | 0.0000 | +0.05% | 1/0 | no | no |
 | g_pcf4_xh_a0p001_dnone | 0.0268 | +14.13% | 1/0 | yes | no |
+| hyp_pcf4 | 0.0269 | +20.70% | 1/0 | yes | no |
 
 ### Accepted variants
 
+- **hyp_pcf4**: speedup +20.70%, worst FLIP p99 0.0269, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
 - **g_pcf4_xh_a0p001_dnone**: speedup +14.13%, worst FLIP p99 0.0268, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dnone/variant.json`)
 - **g_pcf4_xh_a0p0001_dq1**: speedup +14.11%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p0001_dq1/variant.json`)
 - **g_pcf4_--_a0p001_dall**: speedup +14.11%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_--_a0p001_dall/variant.json`)
@@ -24,12 +26,12 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 - **g_pcf4_xh_a0p001_dq1**: speedup +13.98%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq1/variant.json`)
 - **g_pcf4_xh_a0p01_dq2**: speedup +13.97%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq2/variant.json`)
 - **g_pcf4_xh_a0p01_dq4**: speedup +13.97%, worst FLIP p99 0.0431, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq4/variant.json`)
-- **hyp_pcf4**: speedup +11.70%, worst FLIP p99 0.0268, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| hyp_pcf4 |  |  |  | 0.0269 | +20.70% | yes | no |
 | g_pcf4_xh_a0p001_dnone |  |  |  | 0.0268 | +14.13% | yes | no |
 | g_pcf4_xh_a0p0001_dq1 |  |  |  | 0.0431 | +14.11% | yes | no |
 | g_pcf4_--_a0p001_dall |  |  |  | 0.0431 | +14.11% | yes | no |
@@ -41,7 +43,6 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | g_pcf4_xh_a0p001_dq1 |  |  |  | 0.0431 | +13.98% | yes | no |
 | g_pcf4_xh_a0p01_dq2 |  |  |  | 0.0431 | +13.97% | yes | no |
 | g_pcf4_xh_a0p01_dq4 |  |  |  | 0.0431 | +13.97% | yes | no |
-| hyp_pcf4 |  |  |  | 0.0268 | +11.70% | yes | no |
 | demote_f16_s130 | f16 | s130 | 1 | 0.0000 | +0.05% | no | no |
 | demote_f16_s141 | f16 | s141 | 1 | 0.0000 | +0.05% | no | no |
 | g_baseline_xh_a0p01_dzero |  |  |  | 0.0000 | +0.04% | no | no |
