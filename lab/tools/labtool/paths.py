@@ -16,6 +16,16 @@ RUNNER = LAB / "runner/build/shaderlab-runner"
 RUNNER_ANDROID = LAB / "runner/build-android/shaderlab-runner"   # arm64-v8a, pushed to the device by labtool.android
 SHADER_IR = LAB / "crates/shader-ir/target/release/shader-ir"
 SHADERS = LAB / "shaders"
+
+def _project() -> dict:
+    """Optional lab/project.toml: external shader directories, an input-image directory and a budgets file."""
+    import tomllib
+    f = LAB / "project.toml"
+    return tomllib.loads(f.read_text()).get("project", {}) if f.exists() else {}
+
+PROJECT = _project()
+SHADER_DIRS = [SHADERS] + [Path(d).expanduser() if Path(d).expanduser().is_absolute() else (ROOT / d) for d in PROJECT.get("shaders", [])]
+INPUT_IMAGES = (Path(PROJECT["inputs"]).expanduser() if PROJECT.get("inputs") else None)
 SCENARIOS = LAB / "scenarios"
 VARIANTS = LAB / "variants"
 BUILD = LAB / "build"
@@ -24,7 +34,7 @@ INPUTS_DIR = BUILD / "inputs"
 JOBS_DIR = BUILD / "jobs"
 RESULTS_DIR = LAB / "results"
 RESULTS_JSONL = LAB / "results.jsonl"
-BUDGETS = LAB / "budgets.toml"
+BUDGETS = (ROOT / PROJECT["budgets"]) if PROJECT.get("budgets") else (LAB / "budgets.toml")
 
 def sha256_file(p: Path) -> str:
     h = hashlib.sha256()

@@ -35,8 +35,26 @@ def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
             if "file" in inp and inp["file"].startswith("__extra__/"):
                 continue  # supplied by make_job(extra_inputs=...)
             if "file" in inp:
-                src = (sc.path.parent / inp["file"]).resolve()
-                img = np.load(src).astype(np.float32)
+                from .paths import INPUT_IMAGES
+                cand = Path(inp["file"]).expanduser()
+                src = cand if cand.is_absolute() else ((INPUT_IMAGES / cand) if INPUT_IMAGES and (INPUT_IMAGES / cand).exists() else (sc.path.parent / cand)).resolve()
+                if src.suffix.lower() in (".png", ".jpg", ".jpeg", ".exr", ".hdr", ".tif", ".tiff"):
+                    import imageio.v3 as iio
+                    raw = iio.imread(src)
+                    img = np.asarray(raw).astype(np.float32)
+                    if raw.dtype == np.uint8: img /= 255.0
+                    elif raw.dtype == np.uint16: img /= 65535.0
+                    if img.ndim == 2: img = np.stack([img, img, img, np.ones_like(img)], -1)
+                    if img.shape[-1] == 3: img = np.concatenate([img, np.ones_like(img[..., :1])], -1)
+                    if inp.get("srgb", src.suffix.lower() in (".png", ".jpg", ".jpeg")):
+                        from .formats import srgb_decode
+                        img[..., :3] = srgb_decode(img[..., :3])
+                    if img.shape[:2] != (sc.height, sc.width):
+                        import cv2
+                        img = cv2.resize(img, (sc.width, sc.height), interpolation=cv2.INTER_AREA).astype(np.float32)
+                    img = np.ascontiguousarray(img[..., :4])
+                else:
+                    img = np.load(src).astype(np.float32)
                 if img.shape[:2] != (sc.height, sc.width):
                     raise SystemExit(f"input {src} is {img.shape[:2]}, scenario is {(sc.height, sc.width)}")
             else:

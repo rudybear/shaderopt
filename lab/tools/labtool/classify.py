@@ -108,7 +108,11 @@ def classify(shader: str, max_scenarios: int = 2, stride: int = 4, sensitivity: 
 
 def write_classification_report(r: dict) -> Path:
     an = r["analysis"]; shader = r["shader"]
-    src_lines = (SHADERS / f"{shader}.frag").read_text().splitlines()
+    src_path = SHADERS / f"{shader}.frag"
+    man = SPV_DIR / "manifest.json"
+    if man.exists():
+        src_path = Path(json.loads(man.read_text())["shaders"].get(shader, {}).get("src", src_path))
+    src_lines = Path(src_path).read_text().splitlines() if Path(src_path).exists() else []
     def src(line):
         return src_lines[line - 1].strip() if line and 0 < line <= len(src_lines) else ""
     ins = an["instructions"]
