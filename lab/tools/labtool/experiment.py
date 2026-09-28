@@ -6,7 +6,7 @@ import numpy as np
 from .paths import RESULTS_DIR, RESULTS_JSONL, VARIANTS, SPV_DIR, BUDGETS, run, SPIRV_VAL, tool_versions
 from .scenarios import Scenario, all_scenarios
 from .jobs import make_job, run_job, load_result_images, drop_images
-from .stats import median_ci, speedup_ci, timings_steady
+from .stats import median_ci, speedup_ci, timings_steady, paired_speedup
 from .metrics import flip_metrics, exact_metrics, kind_for
 
 def budgets() -> dict:
@@ -55,7 +55,8 @@ def measure_variant(shader: str, variant_id: str, sc: Scenario, rounds: int = 3,
         sp, ci = speedup_ci(B, V); mb, cb = median_ci(B); mv, cv = median_ci(V)
         out["timing"][p.name] = {"baseline_median_ns": mb, "variant_median_ns": mv, "speedup": sp, "speedup_ci95": list(ci),
                                  "baseline_ci95": list(cb), "variant_ci95": list(cv), "n": int(B.size), "touched": p.shader == shader,
-                                 "clock": {"baseline": [b[1] for b in Bs], "variant": [v[1] for v in Vs]}}
+                                 "clock": {"baseline": [b[1] for b in Bs], "variant": [v[1] for v in Vs]},
+                                 "paired": dict(zip(("speedup", "ci95", "rounds"), paired_speedup([b[0] for b in Bs], [v[0] for v in Vs])))}
     for name in sc.quality_outputs + [p.name for p in sc.passes if p.shader == shader]:
         if name in out["metrics"]:
             continue
@@ -90,6 +91,10 @@ def evaluate_gates(m: dict, shader: str, sc: Scenario, tolerance: dict | None) -
             need = max(need, float(tolerance["min_speedup"]))
         sp = sum(t["baseline_median_ns"] - t["variant_median_ns"] for t in touched) / sum(t["baseline_median_ns"] for t in touched)
         lo = min(t["speedup_ci95"][0] for t in touched)
+        mobile = (m.get("state") or {}).get("source") == "android"
+        if mobile and all(t.get("paired", {}).get("ci95") for t in touched):
+            sp = min(t["paired"]["speedup"] for t in touched); lo = min(t["paired"]["ci95"][0] for t in touched)
+            g["estimator"] = "paired-rounds"
         g["4"] = bool(sp >= need and lo > 0.0)
         g["speedup"] = sp; g["required"] = need
     return g

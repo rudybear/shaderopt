@@ -103,9 +103,11 @@ def cmd_aa(a):
         clock_info = As[0][1]
         d, ci = speedup_ci(A, B)
         mA, cA = median_ci(A); mB, cB = median_ci(B)
+        from .stats import paired_speedup
+        pd_, pci, per = paired_speedup([x[0] for x in As], [x[0] for x in Bs])
         floor[p.name] = {"median_a_ns": mA, "median_b_ns": mB, "rel_diff": d, "rel_diff_ci95": list(ci),
-                         "cv_a": float(np.std(A) / np.mean(A)), "n": int(A.size), "clock": clock_info}
-        print(f"{sc.name} {p.name:12s} A {mA/1e3:9.2f} us  B {mB/1e3:9.2f} us  rel diff {d*100:+.2f}%  CI [{ci[0]*100:+.2f}%, {ci[1]*100:+.2f}%]  CV {floor[p.name]['cv_a']*100:.2f}%  n={A.size} {('steady @' + str(int(clock_info.get('top_clock_mhz', 0))) + ' MHz') if clock_info.get('steady') else clock_info.get('reason', '')}")
+                         "cv_a": float(np.std(A) / np.mean(A)), "n": int(A.size), "clock": clock_info, "paired": {"rel_diff": pd_, "ci95": pci, "rounds": per}}
+        print(f"{sc.name} {p.name:12s} A {mA/1e3:9.2f} us  B {mB/1e3:9.2f} us  rel diff {d*100:+.2f}%  CI [{ci[0]*100:+.2f}%, {ci[1]*100:+.2f}%]  CV {floor[p.name]['cv_a']*100:.2f}%  n={A.size} {('steady @' + str(int(clock_info.get('top_clock_mhz', 0))) + ' MHz') if clock_info.get('steady') else clock_info.get('reason', '')}{(' plateau ' + str(clock_info.get('n_plateau')) + '/' + str(clock_info.get('n_steady'))) if clock_info.get('plateau') else ''}  paired {pd_*100:+.2f}%{(' CI [' + f'{pci[0]*100:+.2f}%, {pci[1]*100:+.2f}%' + ']') if pci else ''}")
     fp = paths.RESULTS_DIR / sc.name / "aa_noise_floor.json"
     fp.parent.mkdir(parents=True, exist_ok=True)
     fp.write_text(json.dumps({"scenario": sc.name, "rounds": a.rounds, "samples": a.samples, "iterations": a.iterations,
