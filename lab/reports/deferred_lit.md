@@ -64,3 +64,21 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | g_baseline_xh_a0p01_dq4 |  |  |  | 0.0055 | -0.31% | no | no |
 | g_baseline_--_a0p001_dall |  |  |  | 0.0055 | -0.34% | no | no |
 
+## Device c59fe355f04b781f
+
+### Pareto frontier (error vs speedup)
+
+| variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
+|---|---|---|---|---|---|
+| hyp_pcf4 | 0.0269 | +24.11% | 1/0 | yes | no |
+
+### Accepted variants
+
+- **hyp_pcf4**: speedup +24.11%, worst FLIP p99 0.0269, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
+
+### All variants
+
+| variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
+|---|---|---|---|---|---|---|---|
+| hyp_pcf4 |  |  |  | 0.0269 | +24.11% | yes | no |
+

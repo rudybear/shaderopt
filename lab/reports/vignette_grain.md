@@ -46,3 +46,21 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | demote_relaxed_q2 | relaxed | q2 | 25 | 0.0233 | -1.28% | no | no |
 | demote_relaxed_all | relaxed | all | 37 | 0.2951 | -2.20% | no | no |
 
+## Device c59fe355f04b781f
+
+### Pareto frontier (error vs speedup)
+
+| variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
+|---|---|---|---|---|---|
+| hyp_cheaphash | 0.4641 | +5.63% | 1/1 | no | no |
+
+### Accepted variants
+
+- none
+
+### All variants
+
+| variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
+|---|---|---|---|---|---|---|---|
+| hyp_cheaphash |  |  |  | 0.4641 | +5.63% | no | no |
+

@@ -41,3 +41,21 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | g_baseline_--_a0p01_dq4 |  |  |  | 0.0151 | -0.16% | no | no |
 | g_baseline_--_a0p01_dq1 |  |  |  | 0.0151 | -0.16% | no | no |
 
+## Device c59fe355f04b781f
+
+### Pareto frontier (error vs speedup)
+
+| variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
+|---|---|---|---|---|---|
+| hyp_dir4 | 0.2884 | +2.63% | 2/2 | no | no |
+
+### Accepted variants
+
+- none
+
+### All variants
+
+| variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
+|---|---|---|---|---|---|---|---|
+| hyp_dir4 |  |  |  | 0.2884 | +2.63% | no | no |
+

@@ -44,3 +44,30 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | demote_f16_s61 | f16 | s61 | 1 | 0.9674 | -0.92% | no | no |
 | hyp_lut1d |  |  |  | 0.9674 | -61.05% | no | no |
 
+## Device c59fe355f04b781f
+
+### Pareto frontier (error vs speedup)
+
+| variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
+|---|---|---|---|---|---|
+| hyp_onepow | 0.0000 | -13.73% | 2/3 | no | no |
+| demote_f16_s61 | 0.0160 | +3.30% | 2/3 | no | no |
+| demote_f16_zero | 0.0300 | +21.55% | 2/3 | no | no |
+| demote_relaxed_q2 | 0.0335 | +36.62% | 2/3 | no | no |
+
+### Accepted variants
+
+- none
+
+### All variants
+
+| variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
+|---|---|---|---|---|---|---|---|
+| demote_relaxed_q2 | relaxed | q2 | 32 | 0.0335 | +36.62% | no | no |
+| demote_f16_q2 | f16 | q2 | 32 | 0.0335 | +33.01% | no | no |
+| demote_f16_zero | f16 | zero | 28 | 0.0300 | +21.55% | no | no |
+| hyp_lut1d |  |  |  | 0.9674 | +9.14% | no | no |
+| demote_f16_s61 | f16 | s61 | 1 | 0.0160 | +3.30% | no | no |
+| hyp_onepow |  |  |  | 0.0000 | -13.73% | no | no |
+| demote_relaxed_zero | relaxed | zero | 28 | 0.0300 | -24.68% | no | no |
+
