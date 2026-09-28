@@ -135,6 +135,16 @@ struct PassGpu {
 };
 
 // Members are declared in creation order so destruction runs in reverse (device last).
+// One ring slot: a timestamp-query object and the command buffer it is bound to for the current
+// reset cycle (igl::vulkan::TimestampQueries binds itself to the first command buffer that records
+// into it and rejects any other until reset(), so every in-flight buffer needs its own object /
+// VkQueryPool). `submit` is the submit index the buffer carries, -1 when the slot is free.
+struct InflightSlot {
+  std::shared_ptr<igl::ITimestampQueries> queries;
+  std::shared_ptr<igl::ICommandBuffer> cmd;
+  int submit = -1;
+};
+
 struct Gpu {
   std::unique_ptr<igl::vulkan::Device> device;
   std::shared_ptr<igl::ICommandQueue> queue;
@@ -143,7 +153,7 @@ struct Gpu {
   std::shared_ptr<igl::ISamplerState> samplerNearest;
   std::map<std::string, std::shared_ptr<igl::ITexture>> inputs;
   std::vector<PassGpu> passes;
-  std::shared_ptr<igl::ITimestampQueries> timestamps;
+  std::vector<InflightSlot> ring; // job.inflight slots, each with its own query pool
 };
 
 std::vector<uint8_t> buildUniformBuffer(const PassDesc& pass, const UniformBlock& block) {
@@ -607,19 +617,65 @@ RunResult runJob(const Job& job,
   const uint32_t P = static_cast<uint32_t>(gpu.passes.size());
   const uint32_t K = static_cast<uint32_t>(job.iterations);
   const uint32_t slots = P * K;
-  gpu.timestamps = gpu.device->createTimestampQueries(slots, &res);
-  check(res, "createTimestampQueries(" + std::to_string(slots) + ")");
-  if (!gpu.timestamps || !gpu.timestamps->isValid() || gpu.timestamps->capacity() < slots) {
-    fail("timestamp queries unavailable or too small (need " + std::to_string(slots) + " slots)");
+  const int inflight = std::max(1, job.inflight);
+  gpu.ring.resize(static_cast<size_t>(inflight));
+  for (int i = 0; i < inflight; ++i) {
+    auto& q = gpu.ring[static_cast<size_t>(i)].queries;
+    q = gpu.device->createTimestampQueries(slots, &res);
+    check(res, "createTimestampQueries(" + std::to_string(slots) + ") for ring slot " + std::to_string(i));
+    if (!q || !q->isValid() || q->capacity() < slots) {
+      fail("timestamp queries unavailable or too small (need " + std::to_string(slots) + " slots)");
+    }
+    q->setTimingFidelity(TimestampQueryFidelity::Accurate);
   }
-  gpu.timestamps->setTimingFidelity(TimestampQueryFidelity::Accurate);
 
   for (const auto& pg : gpu.passes) {
     out.timingsNs[pg.desc->name] = {};
   }
+
+  // Wait for the slot's command buffer, read its GPU clock and (for a non-warmup submit) its
+  // timings, then free the slot. Called in submit order, so timingsNs stays in submit order.
+  // Only this buffer's fence is waited on (VulkanImmediateCommands::wait); the other slots'
+  // buffers stay queued on the GPU behind it, and their query pools are untouched.
+  const auto collect = [&](InflightSlot& sl) {
+    sl.cmd->waitUntilCompleted();
+    const double clockMhz = gpuClockMhzNow(); // right after this submit finished on the GPU
+    if (!sl.queries->resultsAvailable()) {
+      fail("timestamp results not available after waitUntilCompleted (sample " +
+           std::to_string(sl.submit) + ")");
+    }
+    if (sl.submit >= job.warmup) {
+      for (uint32_t p = 0; p < P; ++p) {
+        double total = 0.0;
+        for (uint32_t it = 0; it < K; ++it) {
+          const TimestampQueryResult r = sl.queries->getElapsedNanosResult(it * P + p);
+          if (!r.valid) {
+            fail("timestamp slot " + std::to_string(it * P + p) + " invalid in sample " +
+                 std::to_string(sl.submit));
+          }
+          total += static_cast<double>(r.elapsedNanos);
+        }
+        out.timingsNs[gpu.passes[p].desc->name].push_back(total / static_cast<double>(K));
+      }
+      out.sampleClockMhz.push_back(clockMhz);
+    }
+    sl.cmd.reset();
+    sl.submit = -1;
+  };
+
+  // Ring of `inflight` command buffers: submit s goes into slot s % inflight; before reusing a
+  // slot we wait for the buffer it holds (submit s - inflight), so up to inflight-1 buffers stay
+  // queued while the CPU records the next one and the GPU never idles between samples.
+  // IGL's CommandQueue::submit never blocks the CPU: it vkQueueSubmits with a per-buffer fence
+  // and a GPU-side wait on the previous submit's semaphore, so buffers execute strictly in submit
+  // order, back to back (no overlap between samples, no gap). inflight = 1 is submit-then-wait.
   const int totalSubmits = job.warmup + job.samples;
   for (int s = 0; s < totalSubmits; ++s) {
-    gpu.timestamps->reset();
+    InflightSlot& sl = gpu.ring[static_cast<size_t>(s % inflight)];
+    if (sl.cmd) {
+      collect(sl);
+    }
+    sl.queries->reset();
     CommandBufferDesc cbd;
     cbd.debugName = "sample " + std::to_string(s);
     auto cmd = gpu.queue->createCommandBuffer(cbd, &res);
@@ -631,7 +687,7 @@ RunResult runJob(const Job& job,
         rp.colorAttachments.push_back({.loadAction = toLoad(pg.desc->load),
                                        .storeAction = toStore(pg.desc->store),
                                        .clearColor = {0.0f, 0.0f, 0.0f, 0.0f}});
-        rp.timestampQuery.queries = gpu.timestamps;
+        rp.timestampQuery.queries = sl.queries;
         rp.timestampQuery.slotIndex = it * P + p;
         auto enc = cmd->createRenderCommandEncoder(rp, pg.framebuffer, &res);
         check(res, "createRenderCommandEncoder(" + pg.desc->name + ")");
@@ -651,28 +707,24 @@ RunResult runJob(const Job& job,
       }
     }
     gpu.queue->submit(*cmd);
-    cmd->waitUntilCompleted();
-    if (!gpu.timestamps->resultsAvailable()) {
-      fail("timestamp results not available after waitUntilCompleted (sample " + std::to_string(s) + ")");
+    sl.cmd = std::move(cmd);
+    sl.submit = s;
+  }
+  // Drain the outstanding buffers in submit order (the last min(total, inflight) submits).
+  for (int s = std::max(0, totalSubmits - inflight); s < totalSubmits; ++s) {
+    InflightSlot& sl = gpu.ring[static_cast<size_t>(s % inflight)];
+    if (sl.cmd) {
+      collect(sl);
     }
-    if (s < job.warmup) {
-      continue;
+  }
+  for (const auto& [name, t] : out.timingsNs) {
+    if (t.size() != static_cast<size_t>(job.samples)) {
+      fail("internal: pass '" + name + "' has " + std::to_string(t.size()) + " timings, expected " +
+           std::to_string(job.samples));
     }
-    for (uint32_t p = 0; p < P; ++p) {
-      double total = 0.0;
-      for (uint32_t it = 0; it < K; ++it) {
-        const TimestampQueryResult r = gpu.timestamps->getElapsedNanosResult(it * P + p);
-        if (!r.valid) {
-          fail("timestamp slot " + std::to_string(it * P + p) + " invalid in sample " + std::to_string(s));
-        }
-        total += static_cast<double>(r.elapsedNanos);
-      }
-      out.timingsNs[gpu.passes[p].desc->name].push_back(total / static_cast<double>(K));
-    }
-    out.sampleClockMhz.push_back(gpuClockMhzNow());
   }
 
-  // ---- readback (after the final sample) ----
+  // ---- readback (after the final sample; every slot has been drained above) ----
   if (job.readback == "last") {
     for (const PassGpu& pg : gpu.passes) {
       const uint32_t bpp = pg.format->bytesPerPixel;

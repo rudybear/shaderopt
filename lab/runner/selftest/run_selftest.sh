@@ -12,6 +12,7 @@ GLSLANG=/home/rudybear/sources/igl/third-party/deps/src/glslang/build/StandAlone
 SPIRV_VAL=/home/rudybear/sources/igl/third-party/deps/src/glslang/build/External/spirv-tools/tools/spirv-val
 W=256; H=128
 SAMPLES=5; ITER=4; WARMUP=2
+INFLIGHT=${INFLIGHT:-3}   # command buffers in flight (job.json inflight); INFLIGHT=1 tests submit-then-wait
 
 EXTRA_ARGS=("$@")
 [ -x "$RUNNER" ] || { echo "runner not built: $RUNNER (cmake -G Ninja -B $BUILD $RUNNER_DIR && ninja -C $BUILD)"; exit 1; }
@@ -38,7 +39,7 @@ run_case() { # name scenario spvname mode [input.npy]
   local name=$1 scenario=$2 spv=$3 mode=$4 src=${5:-$WORK/src.npy}
   echo; echo "== case $name"
   "$PY" "$HERE/make_job.py" "$WORK/$name/job" "$HERE/$scenario" "$src" "copy=$WORK/$spv.spv" \
-      --samples $SAMPLES --iterations $ITER --warmup $WARMUP >/dev/null
+      --samples $SAMPLES --iterations $ITER --warmup $WARMUP --inflight $INFLIGHT >/dev/null
   set +e
   "$RUNNER" --job "$WORK/$name/job/job.json" --out "$WORK/$name/result" "${EXTRA_ARGS[@]}"
   local rc=$?

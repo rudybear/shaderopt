@@ -40,7 +40,8 @@ def cmd_gen_inputs(a):
             print(f"{sc.name:24s} {name:10s} {p}")
 
 def _run_one(sc: Scenario, variant_id: str, a, tag=None, per_pass=None):
-    jd = make_job(sc, variant_id, per_pass_variant=per_pass, samples=a.samples, iterations=a.iterations, warmup=a.warmup, tag=tag)
+    jd = make_job(sc, variant_id, per_pass_variant=per_pass, samples=a.samples, iterations=a.iterations, warmup=a.warmup, tag=tag,
+                  inflight=getattr(a, "inflight", 3))
     res, out = run_job(jd, sc, variant_id, device=a.device, android=getattr(a, "android", None))
     if any(isinstance(res.get(k), dict) and res[k].get("throttled") for k in ("state", "state_after")):
         print(f"WARNING: {sc.name} {variant_id}: device thermally throttled (state.throttled), sample is unreliable ({out})")
@@ -110,7 +111,7 @@ def cmd_aa(a):
         print(f"{sc.name} {p.name:12s} A {mA/1e3:9.2f} us  B {mB/1e3:9.2f} us  rel diff {d*100:+.2f}%  CI [{ci[0]*100:+.2f}%, {ci[1]*100:+.2f}%]  CV {floor[p.name]['cv_a']*100:.2f}%  n={A.size} {('steady @' + str(int(clock_info.get('top_clock_mhz', 0))) + ' MHz') if clock_info.get('steady') else clock_info.get('reason', '')}{(' plateau ' + str(clock_info.get('n_plateau')) + '/' + str(clock_info.get('n_steady'))) if clock_info.get('plateau') else ''}  paired {pd_*100:+.2f}%{(' CI [' + f'{pci[0]*100:+.2f}%, {pci[1]*100:+.2f}%' + ']') if pci else ''}")
     fp = paths.RESULTS_DIR / sc.name / "aa_noise_floor.json"
     fp.parent.mkdir(parents=True, exist_ok=True)
-    fp.write_text(json.dumps({"scenario": sc.name, "rounds": a.rounds, "samples": a.samples, "iterations": a.iterations,
+    fp.write_text(json.dumps({"scenario": sc.name, "rounds": a.rounds, "samples": a.samples, "iterations": a.iterations, "inflight": a.inflight,
                               "device": runs["A"][0].get("device"), "state": runs["A"][0].get("state"), "floor": floor}, indent=2))
     print(f"noise floor written: {fp}")
 
@@ -268,6 +269,7 @@ def main(argv=None):
     def common(p, samples=30):
         p.add_argument("--samples", type=int, default=samples); p.add_argument("--iterations", type=int, default=8)
         p.add_argument("--warmup", type=int, default=5); p.add_argument("--device", type=int, default=None)
+        p.add_argument("--inflight", type=int, default=3, help="command buffers kept in flight per run (job.json inflight; 1 = submit-then-wait)")
         p.add_argument("--android", metavar="SERIAL", default=None, help="run on this Android device through adb (labtool.android)")
     sub.add_parser("build").set_defaults(f=cmd_build)
     p = sub.add_parser("gen-inputs"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--force", action="store_true"); p.set_defaults(f=cmd_gen_inputs)

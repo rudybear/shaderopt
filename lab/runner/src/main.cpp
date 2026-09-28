@@ -147,6 +147,7 @@ int main(int argc, char** argv) {
   try {
     const shaderlab::Job job = shaderlab::loadJob(jobPath);
     result["variant_id"] = job.variantId;
+    result["inflight"] = job.inflight;
     const shaderlab::Scenario scenario = shaderlab::loadScenario(job.scenarioPath);
     result["scenario"] = scenario.name;
     shaderlab::validateJob(job, scenario);

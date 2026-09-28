@@ -94,10 +94,26 @@ build/shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] [--n
   before the first render pass of the command buffer. Fidelity is set to `Accurate` (start
   timestamp at `BOTTOM_OF_PIPE`, so consecutive passes do not overlap in the measurement). Each
   sample is one command buffer with K back-to-back executions of the whole chain, slot
-  `it*P + p`; the runner submits, `waitUntilCompleted`, then reads `getElapsedNanosResult` for every
-  slot (already converted with `timestampPeriod`; an unavailable slot is an error, never 0) and
+  `it*P + p`; the runner reads `getElapsedNanosResult` for every slot after the buffer's fence
+  (already converted with `timestampPeriod`; an unavailable slot is an error, never 0) and
   records `sum over K / K` per pass. `warmup` submits are discarded. One query object holds all
-  `K*P` slots, so no submit splitting is needed.
+  `K*P` slots of a sample, so no submit splitting is needed.
+- **Command buffers in flight.** The job's `inflight` (default 3) sets a ring of slots, each with
+  its own `ITimestampQueries` and command buffer. `igl::vulkan::TimestampQueries` binds itself to
+  the first command buffer that records into it and rejects any other until `reset()`
+  (`commandBuffer_` / `resetRecorded_`, and the `vkCmdResetQueryPool` is recorded inside that
+  buffer), so one query object (one `VkQueryPool`) per slot is required; results are read with
+  `vkGetQueryPoolResults` on that pool alone, unaffected by the other buffers still queued. Submit
+  `s` uses slot `s mod inflight`; before the slot is reused the runner calls `waitUntilCompleted`
+  on the buffer it holds (submit `s - inflight`; `VulkanImmediateCommands::wait` waits only that
+  buffer's fence), reads the GPU clock and the timings, then resets the queries, records and
+  submits. `CommandQueue::submit` never blocks the CPU: it `vkQueueSubmit`s with a per-buffer
+  fence and a GPU-side wait on the previous submit's semaphore (`lastSubmitSemaphore_`), so
+  buffers run strictly in order, back to back, and the GPU never idles between samples while the
+  CPU waits. Timing semantics are unchanged from `inflight = 1` (the old submit-then-wait loop);
+  the remaining slots are drained in submit order before the readback. IGL's pool has 32
+  command buffers (`kMaxCommandBuffers`; `acquire()` stalls when all are busy), so `inflight` is
+  capped at 16.
 - **Readback.** `IFramebuffer::copyBytesColorAttachment` (Vulkan: `vkCmdCopyImageToBuffer` into
   IGL's staging buffer; it flips the image vertically, which the runner undoes), then the raw texels
   are decoded to float32 RGBA: RGBA8 to [0,1]; RGBA8_SRGB decoded with the sRGB EOTF; RGBA16F
@@ -142,9 +158,10 @@ build/shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] [--n
 - Uniform member types are the contract's (float, int, vec2/3/4, mat4); arrays, structs, bool,
   ivec, 16-bit members are rejected.
 - `state.locked_clocks` is never asserted; timing runs share the GPU with whatever else is running.
-- Android: state is sampled before and after the run, not per sample, so a short job can report
-  the idle GPU clock (150 MHz on the Pixel 9 Pro XL) on both sides while DVFS ramped during the
-  samples. Per-sample state would need the runner to poll sysfs between submits.
+- Android: state is sampled before and after the run, not per sample (the GPU clock alone is
+  sampled per recorded sample, `sample_clock_mhz`, right after that sample's fence), so a short
+  job can report the idle GPU clock (150 MHz on the Pixel 9 Pro XL) on both sides while DVFS
+  ramped during the samples.
 - Android: no validation layer (production devices do not expose one to `/data/local/tmp`
   binaries); `lab` passes `--no-validation`.
 - IGL's `copyBytesColorAttachment` reads back through a staging buffer with a synchronous wait per

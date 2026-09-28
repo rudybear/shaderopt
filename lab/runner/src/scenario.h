@@ -53,6 +53,7 @@ struct Job {
   int samples = 0;
   int iterations = 0;
   int warmup = 0;
+  int inflight = 3;              // command buffers kept in flight (1 = submit-then-wait)
   std::string readback = "last"; // last | none
 };
 

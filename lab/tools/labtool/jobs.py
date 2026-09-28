@@ -54,7 +54,8 @@ def variant_spv(shader: str, variant_id: str) -> Path:
     return p
 
 def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict | None = None, samples: int = 30,
-             iterations: int = 8, warmup: int = 5, readback: str = "last", tag: str | None = None, extra_inputs: dict | None = None) -> Path:
+             iterations: int = 8, warmup: int = 5, readback: str = "last", tag: str | None = None, extra_inputs: dict | None = None,
+             inflight: int = 3) -> Path:
     """per_pass_variant maps pass name -> variant id (default: variant_id for every pass whose shader has it, else baseline)."""
     inputs = gen_inputs(sc)
     jid = tag or variant_id
@@ -80,7 +81,7 @@ def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict 
     # Always serialize the Scenario object we were given: derived scenarios (formats, resolution, extra inputs) must reach the runner.
     (jd / "scenario.toml").write_text(scenario_toml(sc))
     job = {"schema": 1, "scenario": "scenario.toml", "variant_id": variant_id, "passes": passes,
-           "inputs": ins, "samples": samples, "iterations": iterations, "warmup": warmup, "readback": readback}
+           "inputs": ins, "samples": samples, "iterations": iterations, "warmup": warmup, "inflight": inflight, "readback": readback}
     (jd / "job.json").write_text(json.dumps(job, indent=2))
     return jd
 

@@ -235,6 +235,7 @@ Job loadJob(const std::string& jobJsonPath) {
     job.samples = j.at("samples").get<int>();
     job.iterations = j.at("iterations").get<int>();
     job.warmup = j.at("warmup").get<int>();
+    job.inflight = j.value("inflight", 3);
     job.readback = j.value("readback", std::string("last"));
   } catch (const nlohmann::json::exception& e) {
     fail("job.json: " + std::string(e.what()));
@@ -244,6 +245,9 @@ Job loadJob(const std::string& jobJsonPath) {
   }
   if (job.samples < 1 || job.iterations < 1 || job.warmup < 0) {
     fail("job.json: samples >= 1, iterations >= 1, warmup >= 0 required");
+  }
+  if (job.inflight < 1 || job.inflight > 16) {
+    fail("job.json: inflight must be in 1..16 (IGL's command pool holds 32 buffers)");
   }
   if (job.readback != "last" && job.readback != "none") {
     fail("job.json: readback must be 'last' or 'none'");

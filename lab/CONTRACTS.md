@@ -69,11 +69,13 @@ Accepted `format` values (inputs and pass outputs): `RGBA8`, `RGBA8_SRGB`, `RGBA
   "samples": 30,
   "iterations": 8,
   "warmup": 5,
+  "inflight": 3,
   "readback": "last"
 }
 ```
 - `passes` maps every pass name in the scenario to a SPIR-V file (baseline or variant). Paths are relative to the job directory.
 - `iterations` = K back-to-back executions of the whole chain inside one command buffer per sample. `samples` = N submits, each giving one timing per pass (already divided by K). `warmup` submits are executed and discarded.
+- `inflight` (optional, default 3, range 1..16) = command buffers kept in flight. The runner keeps a ring of `inflight` slots, each with its own command buffer and timestamp-query pool; submit `s` goes into slot `s mod inflight`, and before a slot is reused the runner waits for the buffer it holds (submit `s - inflight`), reads its timestamps and GPU clock, then records and submits the next one. Buffers execute strictly in submit order (IGL chains each submit behind the previous one's semaphore), so per-pass timings mean the same as with `inflight = 1` (submit, wait, read: the old behaviour); the difference is that the GPU has the next `inflight - 1` samples queued while the CPU waits, so it never idles between samples (DVFS on phones sees a continuous load). The last sample's images are read back only after every slot has been drained. `lab run|baseline|aa|lift-check|verify --inflight N` sets it; `result.json` echoes it as `inflight`.
 - `readback` = `last` (images from the final sample only) or `none`.
 
 ## Result bundle: a directory with `result.json` and images

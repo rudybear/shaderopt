@@ -27,14 +27,14 @@ def throttled(res: dict) -> bool:
     return any(isinstance(res.get(k), dict) and res[k].get("throttled") for k in ("state", "state_after"))
 
 def measure_variant(shader: str, variant_id: str, sc: Scenario, rounds: int = 3, samples: int = 30, iterations: int = 8,
-                    warmup: int = 5, device=None, android: str | None = None) -> dict:
+                    warmup: int = 5, device=None, android: str | None = None, inflight: int = 3) -> dict:
     """Interleave baseline and variant runs (B, V, B, V, ...) on one scenario. Returns timings, images and metrics."""
     per_pass = {p.name: (variant_id if p.shader == shader else "baseline") for p in sc.passes}
     base, var = [], []
     for r in range(rounds):
-        jb = make_job(sc, "baseline", samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_base_{variant_id}")
+        jb = make_job(sc, "baseline", samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_base_{variant_id}", inflight=inflight)
         rb, _ = run_job(jb, sc, "baseline", device=device, android=android)
-        jv = make_job(sc, variant_id, per_pass_variant=per_pass, samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_var_{variant_id}")
+        jv = make_job(sc, variant_id, per_pass_variant=per_pass, samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_var_{variant_id}", inflight=inflight)
         rv, _ = run_job(jv, sc, variant_id, device=device, android=android)
         if not rb.get("ok") or not rv.get("ok"):
             return {"ok": False, "error": rb.get("error") or rv.get("error"), "baseline": rb, "variant": rv}
