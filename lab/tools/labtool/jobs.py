@@ -15,6 +15,15 @@ def input_npy_name(inp: dict) -> str:
     fmt = inp.get("format", "RGBA32F")
     return f"{inp['name']}.npy" if fmt == "RGBA32F" else f"{inp['name']}.{fmt}.npy"
 
+# ---- execution target: set once from the CLI (--android/--inflight/--iterations/--warmup); every driver inherits it ----
+TARGET = {"android": None, "inflight": 3, "iterations": 8, "warmup": 5}
+
+def set_target(android: str | None = None, inflight: int | None = None, iterations: int | None = None, warmup: int | None = None) -> None:
+    if android is not None: TARGET["android"] = android
+    if inflight is not None: TARGET["inflight"] = int(inflight)
+    if iterations is not None: TARGET["iterations"] = int(iterations)
+    if warmup is not None: TARGET["warmup"] = int(warmup)
+
 def gen_inputs(sc: Scenario, force: bool = False) -> dict[str, Path]:
     """Generates (or loads) every input of the scenario and saves it as float32 .npy, quantized to the input's
     declared format (formats.quantize), so the CPU model and the GPU upload see identical values."""
@@ -54,9 +63,13 @@ def variant_spv(shader: str, variant_id: str) -> Path:
     return p
 
 def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict | None = None, samples: int = 30,
-             iterations: int = 8, warmup: int = 5, readback: str = "last", tag: str | None = None, extra_inputs: dict | None = None,
-             inflight: int = 3) -> Path:
-    """per_pass_variant maps pass name -> variant id (default: variant_id for every pass whose shader has it, else baseline)."""
+             iterations: int | None = None, warmup: int | None = None, readback: str = "last", tag: str | None = None, extra_inputs: dict | None = None,
+             inflight: int | None = None) -> Path:
+    """per_pass_variant maps pass name -> variant id (default: variant_id for every pass whose shader has it, else baseline).
+    iterations/warmup/inflight default to the execution TARGET (set from the CLI) so every driver measures the same way."""
+    iterations = TARGET["iterations"] if iterations is None else iterations
+    warmup = TARGET["warmup"] if warmup is None else warmup
+    inflight = TARGET["inflight"] if inflight is None else inflight
     inputs = gen_inputs(sc)
     jid = tag or variant_id
     jd = JOBS_DIR / sc.name / jid
@@ -91,6 +104,8 @@ def run_job(job_dir: Path, sc: Scenario, variant_id: str, out_dir: Path | None =
     stamp = time.strftime("%Y%m%d-%H%M%S")
     out = out_dir or (RESULTS_DIR / sc.name / variant_id / stamp)
     out.mkdir(parents=True, exist_ok=True)
+    if android is None:
+        android = TARGET["android"]
     if android:
         from .android import run_job_android
         r = run_job_android(job_dir, out, android, device_index=device)
