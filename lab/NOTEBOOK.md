@@ -73,3 +73,11 @@
 
 ## 2026-09-28 (Android)
 - User connected a Pixel 9 Pro XL (Tensor G4, Mali, Android 17). adb via platform-tools (no sudo) + udev rule for vendor 18d1 (sudo). NDK r27c installed. Cross-build of the runner and an adb job path are being built.
+
+## 2026-09-28 Android runner (adb)
+- Cross-compiled shaderlab-runner for arm64-v8a with NDK r27c (`lab/runner/build-android.sh`, static libc++, IGL Vulkan-only, link log+android): builds and links unchanged sources; `sysinfo.cpp` gained an `__ANDROID__` branch (dumpsys thermalservice / dumpsys battery / Mali or kgsl clock sysfs); runner gained `--info` and a fallback to the only integrated GPU when no discrete one exists.
+- `lab/tools/labtool/android.py`: `lab android devices|push|probe|clean`, `run_job_android` (push job, run over adb shell, pull result, delete job; inputs cached on the device by sha256), `--android SERIAL` on run/baseline/aa/lift-check/verify; thermal gate (ThermalStatus >= SEVERE: 30 s cooldown, 3 retries, `state.throttled`), throttled samples dropped in measure_variant and aa. CONTRACTS.md "Android runner".
+- Verified on Pixel 9 Pro XL (Tensor G4, Mali-G715, Android 17, driver v1.r54p3, Vulkan 1.4.343): shaderFloat16, storageBuffer16BitAccess, shaderFloatControls2 all supported (IGL enables the first two), timestamps supported with period 40.69 ns. Selftest on device: rgba32f max abs err 0, srgb 4.1e-3, ubo 2.4e-4, g0 expected failure; copy pass 95..140 us at 256x128 with the GPU clock reading 150 MHz (idle) before and after. `lab run vignette_gradient --android` end to end: 1769 us median at 1080p, 3 samples.
+- Not verified: thermal gate retry path (the phone stayed at ThermalStatus 0), Adreno sysfs paths (no Adreno device), the timing noise floor on the phone (`lab aa` not run; no timing sweeps yet).
+- Desktop selftest still PASS after the runner refactor.
+

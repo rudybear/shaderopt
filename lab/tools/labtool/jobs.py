@@ -76,15 +76,21 @@ def make_job(sc: Scenario, variant_id: str = "baseline", per_pass_variant: dict 
     (jd / "job.json").write_text(json.dumps(job, indent=2))
     return jd
 
-def run_job(job_dir: Path, sc: Scenario, variant_id: str, out_dir: Path | None = None, device: int | None = None) -> tuple[dict, Path]:
-    require(RUNNER, "runner binary (build lab/runner first)")
+def run_job(job_dir: Path, sc: Scenario, variant_id: str, out_dir: Path | None = None, device: int | None = None,
+            android: str | None = None) -> tuple[dict, Path]:
+    """Run a job bundle on the desktop runner, or on an Android device (adb serial) through labtool.android."""
     stamp = time.strftime("%Y%m%d-%H%M%S")
     out = out_dir or (RESULTS_DIR / sc.name / variant_id / stamp)
     out.mkdir(parents=True, exist_ok=True)
-    cmd = [RUNNER, "--job", job_dir / "job.json", "--out", out]
-    if device is not None:
-        cmd += ["--device", str(device)]
-    r = run(cmd)
+    if android:
+        from .android import run_job_android
+        r = run_job_android(job_dir, out, android, device_index=device)
+    else:
+        require(RUNNER, "runner binary (build lab/runner first)")
+        cmd = [RUNNER, "--job", job_dir / "job.json", "--out", out]
+        if device is not None:
+            cmd += ["--device", str(device)]
+        r = run(cmd)
     (out / "runner.stdout").write_text(r.stdout); (out / "runner.stderr").write_text(r.stderr)
     rj = out / "result.json"
     if not rj.exists():
@@ -92,6 +98,8 @@ def run_job(job_dir: Path, sc: Scenario, variant_id: str, out_dir: Path | None =
     res = json.loads(rj.read_text())
     res["_dir"] = str(out)
     res["_tools"] = tool_versions()
+    if android:
+        res["_android"] = android
     if res.get("ok"):
         for pname, rel in res.get("images", {}).items():
             img = np.load(out / rel)

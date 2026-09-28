@@ -22,19 +22,27 @@ def noise_floor(sc: Scenario) -> float | None:
     d = json.loads(fp.read_text())
     return max(abs(v["rel_diff"]) for v in d["floor"].values())
 
+def throttled(res: dict) -> bool:
+    """Android thermal gate: labtool.android marks state.throttled when ThermalStatus stayed >= SEVERE after the cooldown retries."""
+    return any(isinstance(res.get(k), dict) and res[k].get("throttled") for k in ("state", "state_after"))
+
 def measure_variant(shader: str, variant_id: str, sc: Scenario, rounds: int = 3, samples: int = 30, iterations: int = 8,
-                    warmup: int = 5, device=None) -> dict:
+                    warmup: int = 5, device=None, android: str | None = None) -> dict:
     """Interleave baseline and variant runs (B, V, B, V, ...) on one scenario. Returns timings, images and metrics."""
     per_pass = {p.name: (variant_id if p.shader == shader else "baseline") for p in sc.passes}
     base, var = [], []
     for r in range(rounds):
         jb = make_job(sc, "baseline", samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_base_{variant_id}")
-        rb, _ = run_job(jb, sc, "baseline", device=device)
+        rb, _ = run_job(jb, sc, "baseline", device=device, android=android)
         jv = make_job(sc, variant_id, per_pass_variant=per_pass, samples=samples, iterations=iterations, warmup=warmup, tag=f"ab_var_{variant_id}")
-        rv, _ = run_job(jv, sc, variant_id, device=device)
+        rv, _ = run_job(jv, sc, variant_id, device=device, android=android)
         if not rb.get("ok") or not rv.get("ok"):
             return {"ok": False, "error": rb.get("error") or rv.get("error"), "baseline": rb, "variant": rv}
+        if throttled(rb) or throttled(rv):
+            drop_images(rb, rv); continue   # thermally throttled sample: dropped, never averaged in
         base.append(rb); var.append(rv)
+    if not base:
+        return {"ok": False, "error": f"all {rounds} rounds dropped: device thermally throttled (state.throttled)", "baseline": None, "variant": None}
     out = {"ok": True, "scenario": sc.name, "split": sc.split, "variant_id": variant_id, "shader": shader,
            "device": var[-1]["device"], "state": var[-1].get("state"), "validation": var[-1]["validation"],
            "validation_baseline": base[-1]["validation"], "timing": {}, "metrics": {}, "result_dir": var[-1]["_dir"],

@@ -19,6 +19,23 @@ The project `add_subdirectory`s the IGL checkout (`IGL_WITH_VULKAN=ON`, everythi
 system Vulkan loader/headers 1.3.275. SPIRV-Reflect is compiled from IGL's vendored copy; toml++ and
 nlohmann/json are vendored in `third_party/` (see the README there).
 
+## Build (Android, arm64-v8a)
+
+```
+lab/runner/build-android.sh        # -> build-android/shaderlab-runner (stripped) + shaderlab-runner.dbg (symbols)
+```
+
+Same sources and the same IGL subdirectory, cross-compiled with the pinned NDK r27c
+(`build/cmake/android.toolchain.cmake`, `ANDROID_ABI=arm64-v8a`, `ANDROID_PLATFORM=android-26`,
+`ANDROID_STL=c++_static` so it runs from `/data/local/tmp` without `libc++_shared.so`). IGL's CMake
+forces Vulkan on and OpenGL off for Android; the runner additionally links `log` and `android`
+(IGL's Android log handler, AHardwareBuffer support, ATrace macros). Vulkan is loaded by volk at
+runtime (`libvulkan.so`); the NDK's headers are 1.3.275, same as the desktop. No window, no
+surface, no shell: identical device path to the desktop runner. Pushing and running is done by
+`lab android ...` / `lab run --android SERIAL` (`lab/tools/labtool/android.py`, CONTRACTS.md
+"Android runner"). Verified on a Pixel 9 Pro XL (Mali-G715, Android 17): selftest cases rgba32f
+(max abs error 0), srgb (4.1e-3), ubo (2.4e-4) and g0 (expected failure) all pass.
+
 ## Run
 
 ```
@@ -28,7 +45,11 @@ build/shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] [--n
 - Exit 0 on success, 1 on any error. `result.json` is always written; on failure it has
   `ok=false` and `error` set (and whatever device info was gathered before the failure).
 - `--device N` / `SHADERLAB_DEVICE_INDEX=N` picks physical device N in enumeration order
-  (the error message for a bad index lists them). Default: the first discrete GPU.
+  (the error message for a bad index lists them). Default: the first discrete GPU, else the only
+  device when it is an integrated GPU (phones); otherwise an error listing the devices.
+- `--info [--device N] [--no-validation]` opens the device like a run and prints
+  `{ok, device, devices, notes, state, tools, os}` as JSON on stdout, no job needed (used by
+  `lab android devices`).
 - `--no-validation` skips `VK_LAYER_KHRONOS_validation`. `--verbose` / `SHADERLAB_VERBOSE=1` also
   forwards IGL's informational logs to stderr.
 - Selftest on the real GPU: `selftest/run_selftest.sh` (compiles with the pinned glslang, validates
@@ -99,7 +120,11 @@ build/shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] [--n
   advertised. `enabled_by_igl` reports what IGL actually turned on. `state` is parsed from
   `nvidia-smi --query-gpu=clocks.gr,clocks.mem,pstate,temperature.gpu,clocks_throttle_reasons.active`
   before (`state`) and after (`state_after`) the run; without nvidia-smi everything is "unknown".
-  `locked_clocks` is `null`: nvidia-smi does not expose it.
+  `locked_clocks` is `null`: nvidia-smi does not expose it. On Android (`sysinfo.cpp`,
+  `__ANDROID__`) `state` comes from `dumpsys thermalservice` (ThermalStatus + every HAL
+  temperature sensor), `dumpsys battery`, and the GPU clock sysfs node (Mali
+  `/sys/class/misc/mali0/device/cur_freq` in kHz, kgsl `gpuclk` in Hz, or a GPU devfreq);
+  fields in CONTRACTS.md "Android runner".
 - **Tools.** `igl_commit` from `git rev-parse` in the IGL checkout at configure time;
   `runner_build` = shaderopt short HEAD @ UTC configure time.
 
@@ -117,5 +142,10 @@ build/shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] [--n
 - Uniform member types are the contract's (float, int, vec2/3/4, mat4); arrays, structs, bool,
   ivec, 16-bit members are rejected.
 - `state.locked_clocks` is never asserted; timing runs share the GPU with whatever else is running.
+- Android: state is sampled before and after the run, not per sample, so a short job can report
+  the idle GPU clock (150 MHz on the Pixel 9 Pro XL) on both sides while DVFS ramped during the
+  samples. Per-sample state would need the runner to poll sysfs between submits.
+- Android: no validation layer (production devices do not expose one to `/data/local/tmp`
+  binaries); `lab` passes `--no-validation`.
 - IGL's `copyBytesColorAttachment` reads back through a staging buffer with a synchronous wait per
   pass; fine for readback = last only.

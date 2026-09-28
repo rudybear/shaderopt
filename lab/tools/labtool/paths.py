@@ -13,6 +13,7 @@ SPIRV_OPT = SPIRV_TOOLS / "spirv-opt"
 SPIRV_DIS = SPIRV_TOOLS / "spirv-dis"
 SPIRV_CROSS = IGL / "third-party/deps/src/SPIRV-Cross/build/spirv-cross"
 RUNNER = LAB / "runner/build/shaderlab-runner"
+RUNNER_ANDROID = LAB / "runner/build-android/shaderlab-runner"   # arm64-v8a, pushed to the device by labtool.android
 SHADER_IR = LAB / "crates/shader-ir/target/release/shader-ir"
 SHADERS = LAB / "shaders"
 SCENARIOS = LAB / "scenarios"
@@ -46,6 +47,7 @@ def tool_versions() -> dict:
     v["igl_commit"] = git_commit(IGL)
     v["lab_commit"] = git_commit(ROOT)
     v["runner"] = sha256_file(RUNNER)[:16] if RUNNER.exists() else "missing"
+    v["runner_android"] = sha256_file(RUNNER_ANDROID)[:16] if RUNNER_ANDROID.exists() else "missing"
     v["shader_ir"] = sha256_file(SHADER_IR)[:16] if SHADER_IR.exists() else "missing"
     v["os"] = f"{platform.system()} {platform.release()}"
     return v

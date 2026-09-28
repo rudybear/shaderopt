@@ -41,7 +41,9 @@ def cmd_gen_inputs(a):
 
 def _run_one(sc: Scenario, variant_id: str, a, tag=None, per_pass=None):
     jd = make_job(sc, variant_id, per_pass_variant=per_pass, samples=a.samples, iterations=a.iterations, warmup=a.warmup, tag=tag)
-    res, out = run_job(jd, sc, variant_id, device=a.device)
+    res, out = run_job(jd, sc, variant_id, device=a.device, android=getattr(a, "android", None))
+    if any(isinstance(res.get(k), dict) and res[k].get("throttled") for k in ("state", "state_after")):
+        print(f"WARNING: {sc.name} {variant_id}: device thermally throttled (state.throttled), sample is unreliable ({out})")
     return res, out
 
 def gates_1_2(res: dict) -> dict:
@@ -88,7 +90,11 @@ def cmd_aa(a):
             res, out = _run_one(sc, "baseline", a, tag=f"aa_{tagk}")
             if not res.get("ok"):
                 print(f"FAILED {res.get('error')}"); sys.exit(1)
+            if any(isinstance(res.get(k), dict) and res[k].get("throttled") for k in ("state", "state_after")):
+                continue  # Android thermal gate: dropped
             runs[tagk].append(res)
+    if not runs["A"] or not runs["B"]:
+        print("every round was dropped as thermally throttled"); sys.exit(1)
     floor = {}
     for p in sc.passes:
         A = np.concatenate([np.asarray(r["timings_ns"][p.name]) for r in runs["A"]])
@@ -258,6 +264,7 @@ def main(argv=None):
     def common(p, samples=30):
         p.add_argument("--samples", type=int, default=samples); p.add_argument("--iterations", type=int, default=8)
         p.add_argument("--warmup", type=int, default=5); p.add_argument("--device", type=int, default=None)
+        p.add_argument("--android", metavar="SERIAL", default=None, help="run on this Android device through adb (labtool.android)")
     sub.add_parser("build").set_defaults(f=cmd_build)
     p = sub.add_parser("gen-inputs"); p.add_argument("--scenario"); p.add_argument("--split"); p.add_argument("--force", action="store_true"); p.set_defaults(f=cmd_gen_inputs)
     p = sub.add_parser("run"); p.add_argument("scenario"); p.add_argument("--variant", default="baseline"); p.add_argument("--record", action="store_true"); common(p); p.set_defaults(f=cmd_run)
@@ -274,6 +281,8 @@ def main(argv=None):
     p = sub.add_parser("approx"); p.add_argument("--shader"); p.add_argument("--max-rel-err", type=float, default=1e-3); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_approx)
     p = sub.add_parser("search"); p.add_argument("--shader"); p.add_argument("--gpu-budget", type=int, default=10); p.add_argument("--rounds", type=int, default=2); p.add_argument("--samples", type=int, default=20); p.add_argument("--device", type=int, default=None); p.set_defaults(f=cmd_search)
     p = sub.add_parser("verify"); p.add_argument("--scenario", default="vignette_gradient"); common(p, samples=3); p.set_defaults(f=cmd_verify)
+    from .android import add_parser as add_android_parser
+    add_android_parser(sub)
     a = ap.parse_args(argv)
     a.f(a)
 

@@ -2,6 +2,12 @@
 
 #include <cstdio>
 #include <cstdlib>
+#include <filesystem>
+#include <fstream>
+#include <map>
+#include <string>
+#include <utility>
+#include <vector>
 #include <sys/utsname.h>
 #include <sys/stat.h>
 
@@ -84,9 +90,6 @@ nlohmann::json toNumber(const std::string& s) {
 } // namespace
 
 #if defined(__ANDROID__)
-
-#include <filesystem>
-#include <fstream>
 
 namespace {
 
@@ -313,14 +316,15 @@ std::string readSysfs(const std::string& path) {
 }
 
 // GPU clock: Adreno (kgsl) or Mali (mali0 / devfreq). Sysfs is often unreadable for the shell user
-// (SELinux), in which case the clock stays null. Values are Hz, kHz or MHz depending on the node.
+// (SELinux), in which case the clock stays null. Units differ per node (verified on Pixel 9 Pro XL:
+// /sys/class/misc/mali0/device/cur_freq is kHz, 150000 idle .. 940000).
 void fillGpuClock(nlohmann::json& st) {
   namespace fs = std::filesystem;
-  std::vector<std::string> candidates = {
-      "/sys/class/kgsl/kgsl-3d0/gpuclk",
-      "/sys/class/kgsl/kgsl-3d0/devfreq/cur_freq",
-      "/sys/class/misc/mali0/device/clock",
-      "/sys/class/misc/mali0/device/cur_freq",
+  std::vector<std::pair<std::string, double>> candidates = { // path, multiplier to Hz
+      {"/sys/class/kgsl/kgsl-3d0/gpuclk", 1.0},
+      {"/sys/class/kgsl/kgsl-3d0/devfreq/cur_freq", 1.0},
+      {"/sys/class/misc/mali0/device/cur_freq", 1e3},
+      {"/sys/class/misc/mali0/device/clock", 1.0},
   };
   std::error_code ec;
   for (const char* base : {"/sys/class/misc/mali0/device/devfreq", "/sys/class/devfreq"}) {
@@ -331,25 +335,17 @@ void fillGpuClock(nlohmann::json& st) {
           n.find("kgsl") == std::string::npos) {
         continue;
       }
-      candidates.push_back((e.path() / "cur_freq").string());
+      candidates.emplace_back((e.path() / "cur_freq").string(), 1.0); // devfreq is Hz
     }
     ec.clear();
   }
   st["clock_source"] = nullptr;
-  for (const auto& p : candidates) {
-    const std::string v = readSysfs(p);
-    const nlohmann::json n = toNumber(v);
+  for (const auto& [p, mult] : candidates) {
+    const nlohmann::json n = toNumber(readSysfs(p));
     if (!n.is_number()) {
       continue;
     }
-    double hz = n.get<double>();
-    if (hz > 1e8) {
-      // Hz
-    } else if (hz > 1e5) {
-      hz *= 1e3; // kHz
-    } else {
-      hz *= 1e6; // MHz
-    }
+    const double hz = n.get<double>() * mult;
     st["clocks_mhz"]["gpu"] = static_cast<long long>(hz / 1e6 + 0.5);
     st["clock_source"] = p;
     break;

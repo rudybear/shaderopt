@@ -17,6 +17,12 @@ cmake -G Ninja -S "$HERE" -B "$BUILD" \
   ${IGL_DIR:+-DIGL_DIR="$IGL_DIR"} \
   "$@"
 ninja -C "$BUILD" shaderlab-runner
+# The NDK toolchain links with -g: keep the symbols next to the binary (ndk-stack on tombstones) and push the
+# stripped one (~5 MB instead of ~55 MB).
+STRIP="$NDK/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip"
+cp -f "$BUILD/shaderlab-runner" "$BUILD/shaderlab-runner.dbg"
+"$STRIP" --strip-unneeded "$BUILD/shaderlab-runner"
 echo
-echo "built: $BUILD/shaderlab-runner"
+echo "built: $BUILD/shaderlab-runner (symbols: shaderlab-runner.dbg)"
 file "$BUILD/shaderlab-runner" || true
+ls -l "$BUILD/shaderlab-runner"

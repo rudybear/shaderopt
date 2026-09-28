@@ -89,6 +89,20 @@ Accepted `format` values: `RGBA8`, `RGBA8_SRGB`, `RGBA16F`, `RGBA32F`, `R11G11B1
 - `validation.messages` holds every Khronos validation message text, deduplicated, with counts. Any error makes gate 2 fail but the run still completes.
 - `images[pass]` is written for every pass when `readback = last`.
 
+## Android runner (adb)
+
+The same runner sources cross-compiled for arm64-v8a (`lab/runner/build-android.sh` -> `lab/runner/build-android/shaderlab-runner`, NDK r27c, android-26, static libc++, Vulkan through volk) and driven entirely over adb by `lab/tools/labtool/android.py` (`lab android devices|push|probe|clean`, `lab run|baseline|aa|lift-check|verify --android SERIAL`). Job and result bundles are the formats above, unchanged.
+
+- Device layout (all under `/data/local/tmp/shaderlab/`, owned by the `shell` user):
+  - `shaderlab-runner`: pushed once by `lab android push` (skipped when the device copy has the same sha256; `--force` re-pushes).
+  - `inputs/<sha256>.npy`: content-addressed input cache. `ensure_input` pushes an input only when no file of that hash and size exists (`.part` then `mv`, so an interrupted push never leaves a truncated cache entry). A 1080p input is 33 MB and is pushed once per content, not per run. `lab android clean --inputs` drops the cache.
+  - `jobs/<scenario>-<job>-<stamp>-<pid>/`: the pushed job (`spv/<pass>.spv`, `scenario.toml`, `job.json`, `result/`), deleted after the result is pulled.
+- The pushed `job.json` is rewritten so the bundle is self-contained whatever the local layout: `passes` -> `spv/<pass>.spv`, `scenario` -> `scenario.toml`, `inputs` -> absolute paths into the cache (job paths may be absolute; the runner accepts both). Nothing else changes.
+- Runner invocation: `cd <job> && shaderlab-runner --job <job>/job.json --out <job>/result --no-validation [--device N]`. `VK_LAYER_KHRONOS_validation` is not available to a `/data/local/tmp` binary on a production device, so Android results have `validation.errors = 0` by construction and gate 2 is desktop-only. Without `--device`, the runner picks the first discrete GPU, else the only integrated GPU (phones).
+- `state` / `state_after` on Android (`source = "android"`): `thermal` = Android ThermalStatus name (`none`, `light`, `moderate`, `severe`, `critical`, `emergency`, `shutdown`) and `thermal_status` = 0..6 from `dumpsys thermalservice`; `temperatures` = sensor name -> `{value, type, status}` (type from `mType`: cpu, gpu, skin, battery, npu, ...); `temperature_c` = the GPU sensor, else skin; `throttle_reasons` = sensors with status > 0, or `none`; `clocks_mhz.gpu` from `/sys/class/misc/mali0/device/cur_freq` (kHz), `/sys/class/kgsl/kgsl-3d0/gpuclk` (Hz) or a GPU devfreq `cur_freq` (Hz), `clock_source` naming the node, null when none is readable; `battery` = `{level, status, plugged, temperature_c}` from `dumpsys battery`; `power_state` = the battery status. Anything not readable is `"unknown"` / null, as on desktop. State is sampled before and after the run, not per sample.
+- Thermal gate: after each run `run_job_android` reads the ThermalStatus of `state` and `state_after`; at >= 3 (SEVERE) it sleeps 30 s and reruns the job, up to 3 retries. The final `result.json` always carries `state.throttled` and `state_after.throttled` (bool), `state.cooldown_retries` and `state.serial`. `experiment.measure_variant` and `lab aa` drop throttled samples; `lab run|baseline` print a warning and keep them.
+- `shaderlab-runner --info [--device N] [--no-validation]` (both platforms) prints `{ok, device, devices, notes, state, tools, os}` on stdout without a job; `lab android devices` / `probe` use it to identify the Vulkan device.
+
 ## Results log: `lab/results.jsonl`
 
 One line per experiment, written by `lab`:
