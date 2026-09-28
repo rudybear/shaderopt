@@ -17,10 +17,13 @@ All tools below are vendored through IGL's `deploy_deps.py` or built from that v
 | Python | 3.12.3 via `uv venv` | `.venv/` with numpy, imageio, opencv-headless, OpenEXR, toml |
 | Vulkan | 1.4.312 on RTX PRO 6000 Blackwell, driver 580.178.04 | system loader `libvulkan-dev` |
 
+| Android platform-tools (adb) | 1.0.41, latest zip 2026-09-28 | `~/Android/platform-tools/adb` |
+| Android NDK | r27c | `~/Android/android-ndk-r27c` |
+
 ## Not yet available
 
 - **IGL full build.** Done 2026-09-24 in `~/sources/igl/build` (Vulkan backend, shell, samples, IGLU; OpenGL off) after the user installed the X11 and GL/EGL dev packages. 29 `*_vulkan` shell sessions built. `HelloWorldSession_vulkan` renders windowed on the RTX PRO 6000 (swapchain BGRA_SRGB).
 - **IGL shell `--headless` is unusable on this driver.** NVIDIA 580.178.04 segfaults in `vkGetPhysicalDeviceSurfaceCapabilitiesKHR` for a `VK_EXT_headless_surface` surface; reproduced without IGL by `lab/probes/headless_surface_probe.c`. The lab runner therefore creates the IGL device with no window and zero swapchain size (`HWDevice::create` skips the swapchain when width or height is 0) and renders offscreen. Shell sessions are run windowed when needed.
 - **Khronos validation layer.** `VK_LAYER_KHRONOS_validation` is not installed, so acceptance gate 2 (no new validation messages) cannot run yet. Ubuntu has `vulkan-validationlayers` 1.3.275; a Vulkan SDK build would be newer. Needs sudo.
-- **malioc, RGA, adb, NDK, Xcode, renderdoc.** Not installed; needed only when mobile devices arrive or for proxy stats.
+- **malioc, RGA, Xcode, renderdoc.** Not installed; needed for proxy stats and iOS.
 - **python3-venv system package.** Absent; `uv` is used instead.
