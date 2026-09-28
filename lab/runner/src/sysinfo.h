@@ -13,3 +13,6 @@ nlohmann::json gpuState(); // {"thermal","clocks_mhz","power_state","locked_cloc
                            // "thermal_status" (0..6), "temperatures", "battery", "clock_source"
 
 } // namespace shaderlab
+
+// Cheap per-sample GPU clock read (MHz), NaN when no readable clock source exists on this host.
+double gpuClockMhzNow();

@@ -6,7 +6,7 @@ import numpy as np
 from .paths import RESULTS_DIR, RESULTS_JSONL, VARIANTS, SPV_DIR, BUDGETS, run, SPIRV_VAL, tool_versions
 from .scenarios import Scenario, all_scenarios
 from .jobs import make_job, run_job, load_result_images, drop_images
-from .stats import median_ci, speedup_ci
+from .stats import median_ci, speedup_ci, timings_steady
 from .metrics import flip_metrics, exact_metrics, kind_for
 
 def budgets() -> dict:
@@ -50,10 +50,12 @@ def measure_variant(shader: str, variant_id: str, sc: Scenario, rounds: int = 3,
     b_img = load_result_images(base[-1]); v_img = load_result_images(var[-1])
     bud = budgets()
     for p in sc.passes:
-        B = np.concatenate([np.asarray(r["timings_ns"][p.name]) for r in base]); V = np.concatenate([np.asarray(r["timings_ns"][p.name]) for r in var])
+        Bs = [timings_steady(r, p.name) for r in base]; Vs = [timings_steady(r, p.name) for r in var]
+        B = np.concatenate([b[0] for b in Bs]); V = np.concatenate([v[0] for v in Vs])
         sp, ci = speedup_ci(B, V); mb, cb = median_ci(B); mv, cv = median_ci(V)
         out["timing"][p.name] = {"baseline_median_ns": mb, "variant_median_ns": mv, "speedup": sp, "speedup_ci95": list(ci),
-                                 "baseline_ci95": list(cb), "variant_ci95": list(cv), "n": int(B.size), "touched": p.shader == shader}
+                                 "baseline_ci95": list(cb), "variant_ci95": list(cv), "n": int(B.size), "touched": p.shader == shader,
+                                 "clock": {"baseline": [b[1] for b in Bs], "variant": [v[1] for v in Vs]}}
     for name in sc.quality_outputs + [p.name for p in sc.passes if p.shader == shader]:
         if name in out["metrics"]:
             continue

@@ -1,4 +1,5 @@
 // shaderlab-runner: headless IGL/Vulkan executor for lab job bundles (see lab/CONTRACTS.md).
+#include <cmath>
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -159,6 +160,13 @@ int main(int argc, char** argv) {
     }
     for (const auto& [pass, t] : rr.timingsNs) {
       result["timings_ns"][pass] = t;
+    }
+    {
+      json clocks = json::array();
+      for (double c : rr.sampleClockMhz) {
+        if (std::isnan(c)) { clocks.push_back(nullptr); } else { clocks.push_back(c); }
+      }
+      result["sample_clock_mhz"] = clocks;
     }
     std::error_code ec;
     fs::create_directories(outDir, ec);

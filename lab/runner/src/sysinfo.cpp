@@ -1,3 +1,4 @@
+#include <limits>
 #include "sysinfo.h"
 
 #include <cstdio>
@@ -444,3 +445,16 @@ nlohmann::json gpuState() {
 #endif
 
 } // namespace shaderlab
+
+double gpuClockMhzNow() {
+  using namespace shaderlab;
+  nlohmann::json st;
+  st["clocks_mhz"] = {{"gpu", nullptr}, {"mem", nullptr}};
+#if defined(__ANDROID__)
+  fillGpuClock(st);
+#else
+  // Desktop: nvidia-smi is too slow to call per sample; the clock is recorded before/after the run instead.
+#endif
+  const auto& g = st["clocks_mhz"]["gpu"];
+  return g.is_number() ? g.get<double>() : std::numeric_limits<double>::quiet_NaN();
+}

@@ -650,6 +650,7 @@ RunResult runJob(const Job& job,
       }
       out.timingsNs[gpu.passes[p].desc->name].push_back(total / static_cast<double>(K));
     }
+    out.sampleClockMhz.push_back(gpuClockMhzNow());
   }
 
   // ---- readback (after the final sample) ----

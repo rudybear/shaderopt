@@ -91,7 +91,7 @@ def run_hypothesis(shader: str, hdir: Path, rounds: int = 2, samples: int = 20, 
 def measure_variant_derived(shader, variant_id, sc, dsc, extra_arrays, rounds, samples, device):
     """Like experiment.measure_variant, but the variant runs on a derived scenario (extra uniforms/inputs) while the baseline runs on the original."""
     from .experiment import tool_versions
-    from .stats import median_ci, speedup_ci
+    from .stats import median_ci, speedup_ci, timings_steady
     from .metrics import exact_metrics
     per_pass = {p.name: (variant_id if p.shader == shader else "baseline") for p in sc.passes}
     base, var = [], []
@@ -107,9 +107,10 @@ def measure_variant_derived(shader, variant_id, sc, dsc, extra_arrays, rounds, s
            "validation": var[-1]["validation"], "validation_baseline": base[-1]["validation"], "timing": {}, "metrics": {}, "result_dir": var[-1]["_dir"], "baseline_dir": base[-1]["_dir"], "tools": tool_versions()}
     b_img = load_result_images(base[-1]); v_img = load_result_images(var[-1]); bud = budgets()
     for p in sc.passes:
-        B = np.concatenate([np.asarray(r["timings_ns"][p.name]) for r in base]); V = np.concatenate([np.asarray(r["timings_ns"][p.name]) for r in var])
+        Bs = [timings_steady(r, p.name) for r in base]; Vs = [timings_steady(r, p.name) for r in var]
+        B = np.concatenate([b[0] for b in Bs]); V = np.concatenate([v[0] for v in Vs])
         sp, ci = speedup_ci(B, V); mb, cb = median_ci(B); mv, cv = median_ci(V)
-        out["timing"][p.name] = {"baseline_median_ns": mb, "variant_median_ns": mv, "speedup": sp, "speedup_ci95": list(ci), "baseline_ci95": list(cb), "variant_ci95": list(cv), "n": int(B.size), "touched": p.shader == shader}
+        out["timing"][p.name] = {"baseline_median_ns": mb, "variant_median_ns": mv, "speedup": sp, "speedup_ci95": list(ci), "baseline_ci95": list(cb), "variant_ci95": list(cv), "n": int(B.size), "touched": p.shader == shader, "clock": {"baseline": [b[1] for b in Bs], "variant": [v[1] for v in Vs]}}
     for name in dict.fromkeys(sc.quality_outputs + [p.name for p in sc.passes if p.shader == shader]):
         fmt = next(p.format for p in sc.passes if p.name == name); kind = kind_for(name, fmt, bud)
         out["metrics"][name] = exact_metrics(b_img[name], v_img[name]) if kind == "mask" else flip_metrics(b_img[name], v_img[name], kind)

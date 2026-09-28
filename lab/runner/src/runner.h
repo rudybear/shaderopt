@@ -21,6 +21,7 @@ struct RunConfig {
 struct RunResult {
   nlohmann::json device; // result.json "device" object
   std::map<std::string, std::vector<double>> timingsNs; // pass -> one entry per sample
+  std::vector<double> sampleClockMhz;                     // GPU clock read right after each recorded sample (NaN if unreadable)
   std::map<std::string, NpyImage> images; // pass -> readback (only when readback == last)
   std::vector<std::string> notes; // informational, goes to stderr and result "notes"
 };
