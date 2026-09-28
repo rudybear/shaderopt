@@ -81,3 +81,5 @@
 - Not verified: thermal gate retry path (the phone stayed at ThermalStatus 0), Adreno sysfs paths (no Adreno device), the timing noise floor on the phone (`lab aa` not run; no timing sweeps yet).
 - Desktop selftest still PASS after the runner refactor.
 
+- Pixel first A/A (warmup 10, K=8): CV 12%, vignette A/B -9.7%: the Mali clock ramped 150 -> 467 MHz during the samples. Runner now records the GPU clock per sample; stats keep steady-clock samples (top clock within 5%).
+- Pixel second A/A (warmup 20, K=16, steady @940 MHz): blur_h/v CV 2.7% (fine), but full-res passes (threshold, composite, vignette) CV 13..19%. They read a 33 MB RGBA32F input per frame at 1080p (~41 GB/s) and are memory-bound; memory-bus DVFS (devfreq_mif, unreadable via sysfs) is the likely source. Actions: per-input texture formats (RGBA16F/RGBA8, as a real app would use) and a screen-off A/A to test the display's bandwidth share.
