@@ -260,16 +260,22 @@ igl::StoreAction toStore(const std::string& s) {
 
 } // namespace
 
-RunResult runJob(const Job& job,
-                 const Scenario& scenario,
-                 const RunConfig& cfg,
-                 nlohmann::json* deviceOut) {
-  using namespace igl;
-  RunResult out;
-  Gpu gpu;
-  Result res;
+namespace {
 
-  // ---- context and device (no window, no surface, no swapchain) ----
+struct OpenedDevice {
+  std::unique_ptr<igl::vulkan::Device> device;
+  nlohmann::json deviceJson;
+  nlohmann::json deviceList = nlohmann::json::array();
+  std::vector<std::string> notes;
+};
+
+// Context + logical device with no window, no surface, no swapchain (shared by runJob and --info).
+// Default device: the first discrete GPU; otherwise the only device when it is an integrated GPU
+// (phones, laptops with one iGPU); otherwise an error listing the devices.
+OpenedDevice openDevice(const RunConfig& cfg) {
+  using namespace igl;
+  OpenedDevice out;
+  Result res;
   vulkan::VulkanContextConfig ctxCfg;
   ctxCfg.enableValidation = cfg.validation;
   ctxCfg.enableGPUAssistedValidation = false;
@@ -292,6 +298,7 @@ RunResult runJob(const Job& job,
   for (size_t i = 0; i < devices.size(); ++i) {
     deviceList += "\n  [" + std::to_string(i) + "] " + devices[i].name + " (type " +
                   std::to_string(static_cast<int>(devices[i].type)) + ")";
+    out.deviceList.push_back({{"index", i}, {"name", devices[i].name}, {"type", static_cast<int>(devices[i].type)}});
   }
   const HWDeviceDesc* chosen = nullptr;
   if (cfg.deviceIndex >= 0) {
@@ -306,26 +313,60 @@ RunResult runJob(const Job& job,
         break;
       }
     }
+    if (!chosen && devices.size() == 1 && devices[0].type == HWDeviceType::IntegratedGpu) {
+      chosen = &devices[0]; // the only GPU (mobile SoC)
+    }
     if (!chosen) {
       fail("no discrete GPU found; pass --device N to pick one of:" + deviceList);
     }
   }
   out.notes.push_back("device: " + chosen->name + " (of" + deviceList + "\n)");
-  gpu.device = vulkan::HWDevice::create(
+  out.device = vulkan::HWDevice::create(
       std::move(ctx), *chosen, /*width*/ 0, /*height*/ 0, 0, nullptr, nullptr, "shaderlab-runner", &res);
   check(res, "HWDevice::create");
-  if (!gpu.device) {
+  if (!out.device) {
     fail("HWDevice::create returned null");
   }
-  const vulkan::VulkanContext& vctx = gpu.device->getVulkanContext();
-  out.device = queryDeviceJson(vctx);
-  out.device["validation_layer_active"] = vctx.areValidationLayersEnabled();
-  if (deviceOut) {
-    *deviceOut = out.device;
-  }
+  const vulkan::VulkanContext& vctx = out.device->getVulkanContext();
+  out.deviceJson = queryDeviceJson(vctx);
+  out.deviceJson["validation_layer_active"] = vctx.areValidationLayersEnabled();
   if (cfg.validation && !vctx.areValidationLayersEnabled()) {
     out.notes.push_back("WARNING: validation requested but VK_LAYER_KHRONOS_validation is not active");
   }
+  return out;
+}
+
+} // namespace
+
+nlohmann::json deviceInfo(const RunConfig& cfg) {
+  OpenedDevice od = openDevice(cfg);
+  nlohmann::json j;
+  j["device"] = od.deviceJson;
+  j["devices"] = od.deviceList;
+  j["notes"] = od.notes;
+  return j;
+}
+
+RunResult runJob(const Job& job,
+                 const Scenario& scenario,
+                 const RunConfig& cfg,
+                 nlohmann::json* deviceOut) {
+  using namespace igl;
+  RunResult out;
+  Gpu gpu;
+  Result res;
+
+  // ---- context and device (no window, no surface, no swapchain) ----
+  {
+    OpenedDevice od = openDevice(cfg);
+    gpu.device = std::move(od.device);
+    out.device = std::move(od.deviceJson);
+    out.notes = std::move(od.notes);
+  }
+  if (deviceOut) {
+    *deviceOut = out.device;
+  }
+  const vulkan::VulkanContext& vctx = gpu.device->getVulkanContext();
   if (vctx.getVkPhysicalDeviceProperties().limits.timestampComputeAndGraphics != VK_TRUE) {
     fail("device does not support timestampComputeAndGraphics");
   }

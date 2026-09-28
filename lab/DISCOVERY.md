@@ -69,7 +69,7 @@ Desktop, from `vulkaninfo`:
 
 Consequences: explicit f16 arithmetic and 16-bit storage are testable on desktop; f16 varyings are not (`storageInputOutput16` false), so f16 stays inside the fragment shader. `FPFastMathMode` via float_controls2 is testable. Lavapipe is present and can run the harness for CPU-only sanity, never for timing.
 
-Mobile: none reachable. Android and iOS sections of the brief are deferred until devices exist.
+Mobile (added 2026-09-28): **Google Pixel 9 Pro XL** (komodo), Android 17 (SDK 37), Tensor G4, Mali GPU (`ro.hardware.vulkan=mali`), serial `47271FDAS002PF`, reachable via adb (platform-tools 1.0.41, udev rule for vendor 18d1). Vulkan device name, driver and features to be read by the runner's first probe run. Thermal via `dumpsys thermalservice` (status 0 at connection), GPU clock via `/sys/class/misc/mali0/device/` (see `lab/TOOLS.md`). iOS: none.
 
 ## 5. IGL
 

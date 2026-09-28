@@ -9,6 +9,7 @@
 /lab/results/**/*.exr
 /lab/results/**/*.png
 /lab/runner/build/
+/lab/runner/build-android/
 # local scratch
 *.msl
 __pycache__/

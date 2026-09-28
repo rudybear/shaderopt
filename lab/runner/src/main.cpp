@@ -31,6 +31,7 @@ void usage() {
   fprintf(stderr,
           "usage: shaderlab-runner --job <dir>/job.json --out <result_dir> [--device N] "
           "[--no-validation] [--verbose]\n"
+          "       shaderlab-runner --info [--device N] [--no-validation]   (device + state JSON on stdout)\n"
           "  env: SHADERLAB_DEVICE_INDEX=N (same as --device), SHADERLAB_VERBOSE=1\n");
 }
 
@@ -54,6 +55,7 @@ int main(int argc, char** argv) {
   std::string outDir;
   shaderlab::RunConfig cfg;
   bool verbose = std::getenv("SHADERLAB_VERBOSE") != nullptr;
+  bool info = false;
   if (const char* e = std::getenv("SHADERLAB_DEVICE_INDEX")) {
     cfg.deviceIndex = std::atoi(e);
   }
@@ -77,6 +79,8 @@ int main(int argc, char** argv) {
       cfg.validation = false;
     } else if (a == "--verbose") {
       verbose = true;
+    } else if (a == "--info") {
+      info = true;
     } else if (a == "-h" || a == "--help") {
       usage();
       return 0;
@@ -85,6 +89,26 @@ int main(int argc, char** argv) {
       usage();
       return 1;
     }
+  }
+  if (info) {
+    // Probe mode: no job, no files written. Used by `lab android devices` to identify the GPU.
+    shaderlab::validation::install(verbose);
+    json j;
+    j["ok"] = false;
+    j["tools"] = {{"igl_commit", SHADERLAB_IGL_COMMIT}, {"runner_build", SHADERLAB_RUNNER_BUILD}};
+    j["os"] = shaderlab::osString();
+    j["state"] = shaderlab::gpuState();
+    try {
+      const json d = shaderlab::deviceInfo(cfg);
+      j["device"] = d["device"];
+      j["devices"] = d["devices"];
+      j["notes"] = d["notes"];
+      j["ok"] = true;
+    } catch (const std::exception& e) {
+      j["error"] = e.what();
+    }
+    printf("%s\n", j.dump(2).c_str());
+    return j["ok"].get<bool>() ? 0 : 1;
   }
   if (jobPath.empty() || outDir.empty()) {
     usage();

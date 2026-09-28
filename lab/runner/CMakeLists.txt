@@ -28,6 +28,16 @@ set(IGL_WITH_TRACY    OFF CACHE BOOL "" FORCE)
 set(IGL_WITH_OPENXR   OFF CACHE BOOL "" FORCE)
 set(IGL_ENFORCE_LOGS  ON  CACHE BOOL "" FORCE)   # validation messages arrive through IGL logging
 set(IGL_DEPLOY_DEPS   OFF CACHE BOOL "" FORCE)   # do not re-run deploy_deps.py
+if(ANDROID)
+  # Android cross-build (build-android.sh): IGL's own CMake forces Vulkan on, OpenGL off; there is no
+  # shell, no window and no surface, exactly like the desktop runner. IGL's Vulkan backend loads
+  # libvulkan.so through volk at runtime; liblog/libandroid are needed by IGL's Android log handler,
+  # AHardwareBuffer support (API >= 26) and the ATrace profiler macros.
+  set(IGL_WITH_OPENGLES OFF CACHE BOOL "" FORCE)
+  if(NOT ANDROID_ABI STREQUAL "arm64-v8a")
+    message(WARNING "shaderlab-runner is only tested for arm64-v8a (got ${ANDROID_ABI})")
+  endif()
+endif()
 add_subdirectory(${IGL_DIR} igl EXCLUDE_FROM_ALL)
 
 # Tool identity baked into result.json
@@ -64,4 +74,11 @@ target_compile_definitions(shaderlab-runner PRIVATE
   SHADERLAB_IGL_COMMIT="${SHADERLAB_IGL_COMMIT}"
   SHADERLAB_RUNNER_BUILD="${SHADERLAB_RUNNER_BUILD}")
 target_link_libraries(shaderlab-runner PRIVATE IGLLibrary IGLVulkan)
+if(ANDROID)
+  target_link_libraries(shaderlab-runner PRIVATE log android)
+  # Runs from /data/local/tmp as the shell user: no app sandbox, no libc++_shared.so next to it.
+  if(NOT ANDROID_STL STREQUAL "c++_static")
+    message(FATAL_ERROR "build with -DANDROID_STL=c++_static so the binary runs from /data/local/tmp")
+  endif()
+endif()
 set_source_files_properties(${SPIRV_REFLECT_DIR}/spirv_reflect.c PROPERTIES LANGUAGE C)

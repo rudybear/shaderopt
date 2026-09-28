@@ -70,3 +70,6 @@
 - Housekeeping: two earlier commits contain ~500 MB of reference npy files (now untracked, .git is 327 MB); rewrite history if clone size matters. Never evict page cache with a huge allocation in this harness.
 - Debug (.g.spv) builds do not round-trip byte-identically: rspirv re-emits an OpLine that glslang places before OpFunction inside the function (OpLine %1 14 18 moved). Measured -V builds are unaffected; `lab verify` now excludes .g.spv from the round-trip check.
 - Corpus search re-run with the validated predictor: predictor excludes 54..120 genomes per shader before GPU time; predicted == measured p99 on all measured genomes. deferred_lit: pcf4 + exact + hoist + f16 demotion = +14.0% at p99 0.043 (pcf4 alone +11.7%): the first composition that beats its single gene; provisional because deferred_spheres has no holdout scene (add one: extreme values + different light directions).
+
+## 2026-09-28 (Android)
+- User connected a Pixel 9 Pro XL (Tensor G4, Mali, Android 17). adb via platform-tools (no sudo) + udev rule for vendor 18d1 (sudo). NDK r27c installed. Cross-build of the runner and an adb job path are being built.

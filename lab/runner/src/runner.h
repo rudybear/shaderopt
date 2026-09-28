@@ -25,6 +25,10 @@ struct RunResult {
   std::vector<std::string> notes; // informational, goes to stderr and result "notes"
 };
 
+// Opens the device like runJob and returns {"device": <result.json device object>, "devices":
+// [{index,name,type}], "notes": [...]} without needing a job (`--info`). Throws on failure.
+nlohmann::json deviceInfo(const RunConfig& cfg);
+
 // Runs everything. Throws std::runtime_error on any failure. `device` in the result is filled as
 // soon as the device exists, so callers can report it even when a later step fails: pass a
 // pointer to receive it early.
