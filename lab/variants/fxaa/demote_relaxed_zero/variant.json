@@ -213,12 +213,13 @@
     "glslang": "Glslang Version: 11:15.3.0",
     "spirv-tools": "SPIRV-Tools v2025.2 v2025.2-0-ga62abcb4\nTargets:\n  SPIR-V 1.0\n  SPIR-V 1.1\n  SPIR-V 1.2\n  SPIR-V 1.3\n  SPIR-V 1.4\n  SPIR-V 1.5\n  SPIR-V 1.6\n  SPIR-V 1.2 (under OpenCL 2.2 Full Profile semantics)\n  SPIR-V 1.0 (under Vulkan 1.0 semantics)\n  SPIR-V 1.3 (under Vulkan 1.1 semantics)\n  SPIR-V 1.4 (under Vulkan 1.1 semantics)\n  SPIR-V 1.5 (under Vulkan 1.2 semantics)\n  SPIR-V 1.6 (under Vulkan 1.3 semantics) SPIR-V 1.6 (under Vulkan 1.4 semantics)",
     "igl_commit": "6804e57c74bba676168a30bba20f976567240e1a",
-    "lab_commit": "8c7f9f0c0d90706680c8e952c8457f04f012e90c",
-    "runner": "490a9856b502995c",
-    "shader_ir": "0308433335fc7770",
+    "lab_commit": "71587388f15c423f1de7c2591bd3df02f7dd9c8a",
+    "runner": "4962ccabf40e27fc",
+    "runner_android": "8b204919f77966c2",
+    "shader_ir": "6607ce44df1918df",
     "os": "Linux 6.17.0-20-generic"
   },
-  "created": "2026-09-25T02:19:13",
+  "created": "2026-09-28T16:37:34",
   "mode": "relaxed",
   "set": "zero",
   "sites": [

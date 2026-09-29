@@ -1,6 +1,6 @@
-# AXIOM Shader Lab: final report (desktop phase)
+# AXIOM Shader Lab: final report (desktop phase, plus a first mobile device class)
 
-Date: 2026-09-25. Device class measured: desktop, NVIDIA RTX PRO 6000 Blackwell, driver 580.178.04, Vulkan 1.4.312. No mobile device was available; every Android/iOS item in the brief is built but unmeasured. Reproduce everything from `VERIFY.md`.
+Date: 2026-09-25, mobile addendum 2026-09-28. Device classes measured: desktop (NVIDIA RTX PRO 6000 Blackwell, driver 580.178.04, Vulkan 1.4.312) and Android (Samsung Galaxy Tab S10 Ultra, Mali-G720 Immortalis MC12, Vulkan 1.3.247); see `lab/reports/MOBILE.md`. iOS is built in design only. Reproduce everything from `VERIFY.md`.
 
 ## 1. What was built
 
@@ -50,8 +50,11 @@ Date: 2026-09-25. Device class measured: desktop, NVIDIA RTX PRO 6000 Blackwell,
 3. Quarter-resolution bloom intermediates when content is smooth (+8% chain), or R11G11B10F intermediates (+1..2%, safe).
 4. Carry the f16, hoisting and format variants to the mobile devices; they are expected to matter on tilers with fp16 ALU rate, where this desktop verdict does not transfer.
 
+## 4b. Mobile (2026-09-28)
+The Android runner (arm64, adb, thermal gate, per-sample clocks, 3 submits in flight) ran the full pipeline on a Mali-G720. Verdicts flip between device classes exactly as the brief anticipated: the 1D LUT tonemapper is 60% slower on desktop and +10% on the Mali; quarter-resolution bloom is +8% on desktop and slower on the tiler; explicit f16 and RelaxedPrecision move the tonemapper by +12..40% on the Mali and nothing on desktop. 2x2 PCF is accepted on both (+24% on the tablet). The mobile limiting factor is timing noise from unreadable DVFS state; finalists need the foreground APK with sustained performance mode (gate 5). Details: `lab/reports/MOBILE.md`.
+
 ## 5. Open items and handoff
-- Mobile: no devices. Android headless runner (adb) and iOS host are unbuilt; SPIRV-Cross to MSL untested. The job/result bundle contract is device-agnostic.
+- Mobile: Android headless runner done and measured on one Mali-G720 device (Pixel 9 Pro XL probed). iOS host unbuilt; SPIRV-Cross to MSL untested. The foreground APK (sustained performance mode, gate 5) is the next mobile step.
 - IGL: `VK_KHR_shader_float_controls2` not enabled (`lab/IGL_PATCHES.md` #1); fast-math (M4) blocked until then.
 - axiom-compute: five parked upstream proposals (`lab/AXIOM_REQUESTS.md` 001-P1..P5) once device evidence justifies each; the lab stays merge-compatible (same rspirv pin, tolerance grammar, verdict set).
 - Clocks were never locked (sudo); the noise floor was low enough that it did not matter.

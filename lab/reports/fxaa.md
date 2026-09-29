@@ -47,7 +47,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| hyp_dir4 | 0.2884 | +2.63% | 2/2 | no | no |
+| demote_f16_s137 | 0.0000 | +28.17% | 2/2 | no | no |
 
 ### Accepted variants
 
@@ -57,5 +57,9 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| demote_f16_s137 | f16 | s137 | 1 | 0.0000 | +28.17% | no | no |
 | hyp_dir4 |  |  |  | 0.2884 | +2.63% | no | no |
+| hoist |  |  |  | 0.0000 | -0.19% | no | no |
+| demote_f16_zero | f16 | zero | 29 | 0.0130 | -26.86% | no | no |
+| demote_relaxed_zero | relaxed | zero | 29 | 0.0130 | -34.76% | no | no |
 

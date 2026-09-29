@@ -82,7 +82,8 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
-| hyp_bilinear5 | 0.0071 | +19.33% | 2/2 | no | no |
+| demote_f16_s46 | 0.0000 | +27.92% | 2/2 | no | no |
+| g_bilinear5_xh_aoff_dq2 | 0.0110 | +32.85% | 2/2 | no | no |
 
 ### Accepted variants
 
@@ -92,5 +93,20 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| g_bilinear5_xh_aoff_dq2 |  |  |  | 0.0110 | +32.85% | no | no |
+| demote_f16_s46 | f16 | s46 | 1 | 0.0000 | +27.92% | no | no |
+| g_bilinear5_xh_a0p01_dq1 |  |  |  | 0.0110 | +27.31% | no | no |
+| g_bilinear5_xh_a0p001_dq1 |  |  |  | 0.0110 | +24.42% | no | no |
+| g_bilinear5_xh_a0p01_dq2 |  |  |  | 0.0110 | +23.12% | no | no |
+| g_bilinear5_--_a0p001_dq2 |  |  |  | 0.0110 | +23.03% | no | no |
+| g_bilinear5_xh_a0p01_dq4 |  |  |  | 0.0110 | +22.42% | no | no |
 | hyp_bilinear5 |  |  |  | 0.0071 | +19.33% | no | no |
+| g_bilinear5_xh_a0p001_dq2 |  |  |  | 0.0110 | +10.63% | no | no |
+| g_bilinear5_xh_a0p01_dall |  |  |  | 0.0110 | +8.18% | no | no |
+| g_bilinear5_xh_a0p001_dq4 |  |  |  | 0.0110 | +3.43% | no | no |
+| demote_f16_q4 | f16 | q4 | 19 | 0.0136 | -0.94% | no | no |
+| demote_f16_zero | f16 | zero | 8 | 0.0117 | -1.68% | no | no |
+| hoist |  |  |  | 0.0000 | -2.41% | no | no |
+| demote_relaxed_zero | relaxed | zero | 8 | 0.0117 | -3.73% | no | no |
+| demote_relaxed_q4 | relaxed | q4 | 19 | 0.0136 | -37.45% | no | no |
 

@@ -35,4 +35,11 @@ bash lab/runner/selftest/run_selftest.sh
 | deferred_lit | g_pcf4_xh_a0p01_dall (search, provisional: no holdout scene) | +14.0% | 0.0431 | `./lab/lab search --shader deferred_lit` |
 
 ```
+
+## Accepted variants (Android, Samsung Tab S10 Ultra, Mali-G720)
+
+| shader | variant | speedup | worst FLIP p99 | reproduce |
+|---|---|---|---|---|
+| deferred_lit | hyp_pcf4 | +24.1% | 0.0269 | `./lab/lab hypo --shader deferred_lit --id pcf4 --android SERIAL --inflight 3 --iterations 32 --warmup 20 --rounds 4` |
+
 Accepted variants are listed below with the exact command that reproduces their gate results.

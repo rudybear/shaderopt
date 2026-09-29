@@ -70,15 +70,37 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
+| demote_f16_s130 | 0.0000 | +5.63% | 1/0 | no | no |
 | hyp_pcf4 | 0.0269 | +24.11% | 1/0 | yes | no |
 
 ### Accepted variants
 
 - **hyp_pcf4**: speedup +24.11%, worst FLIP p99 0.0269, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/hyp_pcf4/variant.json`)
+- **g_pcf4_xh_a0p001_dall**: speedup +23.25%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dall/variant.json`)
+- **g_pcf4_xh_a0p001_dq2**: speedup +22.53%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq2/variant.json`)
+- **g_pcf4_xh_a0p001_dq4**: speedup +22.17%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p001_dq4/variant.json`)
+- **g_pcf4_xh_a0p01_dall**: speedup +21.76%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dall/variant.json`)
+- **g_pcf4_--_a0p01_dall**: speedup +21.61%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_--_a0p01_dall/variant.json`)
+- **g_pcf4_xh_a0p0001_dall**: speedup +21.38%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p0001_dall/variant.json`)
+- **g_pcf4_xh_a0p01_dq1**: speedup +20.69%, worst FLIP p99 0.0385, tolerance budgets, 1 edit ops (`lab/variants/deferred_lit/g_pcf4_xh_a0p01_dq1/variant.json`)
 
 ### All variants
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
 | hyp_pcf4 |  |  |  | 0.0269 | +24.11% | yes | no |
+| g_pcf4_xh_a0p001_dall |  |  |  | 0.0385 | +23.25% | yes | no |
+| g_pcf4_xh_a0p001_dq2 |  |  |  | 0.0385 | +22.53% | yes | no |
+| g_pcf4_xh_a0p001_dq4 |  |  |  | 0.0385 | +22.17% | yes | no |
+| g_pcf4_xh_a0p01_dall |  |  |  | 0.0385 | +21.76% | yes | no |
+| g_pcf4_--_a0p01_dall |  |  |  | 0.0385 | +21.61% | yes | no |
+| g_pcf4_xh_a0p0001_dall |  |  |  | 0.0385 | +21.38% | yes | no |
+| g_pcf4_xh_a0p01_dq1 |  |  |  | 0.0385 | +20.69% | yes | no |
+| demote_f16_s130 | f16 | s130 | 1 | 0.0000 | +5.63% | no | no |
+| demote_relaxed_zero | relaxed | zero | 6 | 0.0000 | +3.12% | no | no |
+| demote_relaxed_q4 | relaxed | q4 | 38 | 0.0059 | +1.97% | no | no |
+| g_pcf4_xh_a0p01_dq4 |  |  |  | 0.0385 | -3.30% | no | no |
+| demote_f16_zero | f16 | zero | 6 | 0.0000 | -3.54% | no | no |
+| demote_f16_q4 | f16 | q4 | 38 | 0.0059 | -15.25% | no | no |
+| g_pcf4_xh_a0p01_dq2 |  |  |  | 0.0385 | -16.64% | no | no |
 

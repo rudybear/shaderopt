@@ -41,9 +41,6 @@
   ],
   "s46": [
    46
-  ],
-  "s47": [
-   47
   ]
  },
  "rejected_sites": [
@@ -70,8 +67,8 @@
    "predicted": {
     "flip_p99": 0.0,
     "flip_mean_max_site": 0.0,
-    "module_flip_p99": 0.001866091275587678,
-    "module_flip_mean": 0.000355786265572533
+    "module_flip_p99": 0.0019612957257777452,
+    "module_flip_mean": 0.00037999014602974057
    },
    "ops": 8,
    "runs": [
@@ -84,56 +81,151 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.03193209377526273,
+      "estimator": "paired-rounds",
+      "speedup": -0.04961977352921023,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.03193209377526273,
+      "estimator": "paired-rounds",
+      "speedup": -0.04961977352921023,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4948.0,
-       "variant_median_ns": 4790.0,
-       "speedup": 0.03193209377526273,
+       "baseline_median_ns": 66778.375,
+       "variant_median_ns": 66711.0,
+       "speedup": 0.0010089344042888135,
        "speedup_ci95": [
-        0.029935275080906147,
-        0.032780250910562525
+        -0.07818168445389337,
+        0.06448458474862123
        ],
        "baseline_ci95": [
-        4940.0,
-        4952.0
+        63211.0,
+        70461.0
        ],
        "variant_ci95": [
-        4786.0,
-        4796.0
+        64403.4375,
+        69317.0
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 76980.25,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 61614.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64066.875,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64009.0,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65124.375,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65239.75,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 68326.375,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 66595.5,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": -0.04961977352921023,
+        "ci95": [
+         -0.06648521564380969,
+         0.1540119056511248
+        ],
+        "rounds": [
+         0.1540119056511248,
+         -0.05883116698686802,
+         -0.06648521564380969,
+         -0.04040838007155244
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 9.23567422432825e-05,
-       "flip_p99": 0.002389218658208847,
-       "flip_max": 0.02958531118929386,
+       "flip_mean": 0.0002898413804359734,
+       "flip_p99": 0.006078512407839298,
+       "flip_max": 0.03457120060920715,
        "abs_max": 0.0087127685546875,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0008710171678103507,
-       "flip_p99": 0.006696125492453575,
-       "flip_max": 0.006772226188331842,
+       "flip_mean": 0.0007322491728700697,
+       "flip_p99": 0.0038564472924917936,
+       "flip_max": 0.005923374556005001,
        "abs_max": 0.015625,
-       "abs_p99": 0.00390625,
+       "abs_p99": 0.015625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -147,37 +239,140 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.032362459546925564,
+      "estimator": "paired-rounds",
+      "speedup": -0.003489501264335942,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": true,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.032362459546925564,
+      "estimator": "paired-rounds",
+      "speedup": -0.003489501264335942,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4944.0,
-       "variant_median_ns": 4784.0,
-       "speedup": 0.032362459546925564,
+       "baseline_median_ns": 57932.0,
+       "variant_median_ns": 58903.375,
+       "speedup": -0.016767503279707243,
        "speedup_ci95": [
-        0.031174089068825912,
-        0.034733441033925685
+        -0.03613234214030568,
+        0.0057959464486454036
        ],
        "baseline_ci95": [
-        4940.0,
-        4952.0
+        57038.0,
+        58893.75
        ],
        "variant_ci95": [
-        4780.0,
-        4788.0
+        58219.784375,
+        59389.0625
        ],
-       "n": 40,
-       "touched": true
+       "n": 41,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60047.625,
+          "plateau": true,
+          "plateau_floor_ns": 57576.25,
+          "n_plateau": 10,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60855.375,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57739.875,
+          "plateau": true,
+          "plateau_floor_ns": 55057.25,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58547.75,
+          "plateau": true,
+          "plateau_floor_ns": 55903.375,
+          "n_plateau": 8,
+          "n_steady": 15
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60682.25,
+          "plateau": true,
+          "plateau_floor_ns": 58490.0,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60412.875,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 61191.75,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57355.375,
+          "plateau": true,
+          "plateau_floor_ns": 56038.0,
+          "n_plateau": 12,
+          "n_steady": 15
+         }
+        ]
+       },
+       "paired": {
+        "speedup": -0.003489501264335942,
+        "ci95": [
+         -0.08786179448062374,
+         0.007271337987811266
+        ],
+        "rounds": [
+         0.0008107243632171823,
+         0.007271337987811266,
+         -0.08786179448062374,
+         -0.007789726891889066
+        ]
+       }
       }
      },
      "metrics": {
@@ -188,6 +383,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -197,6 +393,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
@@ -208,60 +405,158 @@
      "gates": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.032388663967611336,
+      "estimator": "paired-rounds",
+      "speedup": 0.0032278438452722287,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.032388663967611336,
+      "estimator": "paired-rounds",
+      "speedup": 0.0032278438452722287,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4940.0,
-       "variant_median_ns": 4780.0,
-       "speedup": 0.032388663967611336,
+       "baseline_median_ns": 59105.125,
+       "variant_median_ns": 60590.875,
+       "speedup": -0.02513741405673366,
        "speedup_ci95": [
-        0.03079416531604538,
-        0.03441295546558704
+        -0.0825214075906564,
+        0.05173414569706092
        ],
        "baseline_ci95": [
-        4936.0,
-        4948.0
+        57413.0,
+        62499.625
        ],
        "variant_ci95": [
-        4774.0,
-        4786.0
+        58661.559375,
+        63086.0
        ],
-       "n": 20,
-       "touched": true
+       "n": 53,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58980.375,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 63384.125,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62451.5,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57413.0,
+          "plateau": true,
+          "plateau_floor_ns": 55672.875,
+          "n_plateau": 8,
+          "n_steady": 15
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59038.125,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62912.875,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 61605.25,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59480.375,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.0032278438452722287,
+        "ci95": [
+         -0.05266848805955291,
+         0.01355051519979504
+        ],
+        "rounds": [
+         -0.0009791392475887106,
+         0.007434826938133168,
+         0.01355051519979504,
+         -0.05266848805955291
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.016435295343399048,
-       "flip_p99": 0.9673883318901062,
-       "flip_max": 0.9939436316490173,
-       "abs_max": 1.0,
-       "abs_p99": 1.0,
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0012547859223559499,
+       "flip_mean": 0.0,
        "flip_p99": 0.0,
-       "flip_max": 0.9923807382583618,
+       "flip_max": 0.0,
        "abs_max": 0.0,
        "abs_p99": 0.0,
-       "masked_pixels": 33060,
-       "metric": "flip_hdr"
+       "masked_pixels": 33328,
+       "one_sided_nonfinite": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
      }
     },
@@ -274,7 +569,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0304,
+      "estimator": "paired-rounds",
+      "speedup": 0.07379219052880091,
       "required": 0.1
      },
      "gates_strict": {
@@ -283,47 +579,141 @@
       "3": false,
       "4": true,
       "5": null,
-      "speedup": 0.0304,
+      "estimator": "paired-rounds",
+      "speedup": 0.07379219052880091,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 5000.0,
-       "variant_median_ns": 4848.0,
-       "speedup": 0.0304,
+       "baseline_median_ns": 91259.1875,
+       "variant_median_ns": 79441.8125,
+       "speedup": 0.12949244151445025,
        "speedup_ci95": [
-        0.0284,
-        0.0335195530726257
+        0.00737025937587804,
+        0.18336281726384282
        ],
        "baseline_ci95": [
-        4996.0,
-        5012.0
+        84143.875,
+        95999.5
        ],
        "variant_ci95": [
-        4840.0,
-        4858.0
+        74864.875,
+        88422.5625
        ],
-       "n": 20,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 93489.75,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 75345.5,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 95778.375,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 88788.0,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 90586.125,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 74701.375,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 74864.875,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 78441.875,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.07379219052880091,
+        "ci95": [
+         0.00854895116496672,
+         0.21835304681249812
+        ],
+        "rounds": [
+         0.031058217612091165,
+         0.00854895116496672,
+         0.21835304681249812,
+         0.11652616344551066
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0004438724718056619,
-       "flip_p99": 0.006939820013940334,
-       "flip_max": 0.03501365706324577,
+       "flip_mean": 0.0010910950368270278,
+       "flip_p99": 0.011747914366424084,
+       "flip_max": 0.03569566458463669,
        "abs_max": 0.008483350276947021,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0009282489190809429,
-       "flip_p99": 0.00196139607578516,
-       "flip_max": 0.0034693069756031036,
-       "abs_max": 0.0009765625,
+       "flip_mean": 0.0015862624859437346,
+       "flip_p99": 0.0024304958060383797,
+       "flip_max": 0.003673978615552187,
+       "abs_max": 0.001953125,
        "abs_p99": 0.0009765625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -359,8 +749,8 @@
    "predicted": {
     "flip_p99": 0.003789854235947132,
     "flip_mean_max_site": 0.0005676077562384307,
-    "module_flip_p99": 0.002399953780695796,
-    "module_flip_mean": 0.00040620125946588814
+    "module_flip_p99": 0.005265714600682259,
+    "module_flip_mean": 0.0007999624358490109
    },
    "ops": 27,
    "runs": [
@@ -373,56 +763,151 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.037186742118027485,
+      "estimator": "paired-rounds",
+      "speedup": 0.013985686026506749,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.037186742118027485,
+      "estimator": "paired-rounds",
+      "speedup": 0.013985686026506749,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4948.0,
-       "variant_median_ns": 4764.0,
-       "speedup": 0.037186742118027485,
+       "baseline_median_ns": 68720.625,
+       "variant_median_ns": 69364.9375,
+       "speedup": -0.009375824215801297,
        "speedup_ci95": [
-        0.034761519805982216,
-        0.03799514955537591
+        -0.10850309370226706,
+        0.04788368161772764
        ],
        "baseline_ci95": [
-        4944.0,
-        4952.0
+        64735.0625,
+        72134.125
        ],
        "variant_ci95": [
-        4760.0,
-        4776.0
+        66807.1875,
+        74778.25
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 69297.75,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 66720.625,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64124.5,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 70278.375,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 67768.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 66326.375,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 88268.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 67865.0,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.013985686026506749,
+        "ci95": [
+         -0.37652340369125686,
+         0.03434022200997106
+        ],
+        "rounds": [
+         0.022062404623526738,
+         0.005908967429486759,
+         -0.37652340369125686,
+         0.03434022200997106
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0001544598489999771,
-       "flip_p99": 0.0036448119208216667,
-       "flip_max": 0.024111095815896988,
+       "flip_mean": 0.00041891782893799245,
+       "flip_p99": 0.008129939436912537,
+       "flip_max": 0.034761521965265274,
        "abs_max": 0.0087127685546875,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0009788521565496922,
-       "flip_p99": 0.006696951109915972,
-       "flip_max": 0.006799567956477404,
+       "flip_mean": 0.00066976627567783,
+       "flip_p99": 0.004432535730302334,
+       "flip_max": 0.006413924042135477,
        "abs_max": 0.03125,
        "abs_p99": 0.015625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -436,37 +921,130 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.03559870550161812,
+      "estimator": "paired-rounds",
+      "speedup": 0.07311446392731495,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": true,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.03559870550161812,
+      "estimator": "paired-rounds",
+      "speedup": 0.07311446392731495,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4944.0,
-       "variant_median_ns": 4768.0,
-       "speedup": 0.03559870550161812,
+       "baseline_median_ns": 72446.6875,
+       "variant_median_ns": 69393.6875,
+       "speedup": 0.0421413332390111,
        "speedup_ci95": [
-        0.03358963982193444,
-        0.03681229773462783
+        -0.1643880213679425,
+        0.14994613862000458
        ],
        "baseline_ci95": [
-        4938.0,
-        4948.0
+        66009.125,
+        77937.29218749994
        ],
        "variant_ci95": [
-        4762.0,
-        4776.0
+        62491.512500000004,
+        80683.25624999992
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 72826.5,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 67307.25,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 66009.125,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 92374.625,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64903.5,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58297.625,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 63538.0,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 118759.125,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.07311446392731495,
+        "ci95": [
+         -0.2856249754735134,
+         0.13385816535365805
+        ],
+        "rounds": [
+         0.10879281580194022,
+         0.13385816535365805,
+         0.037436112052689687,
+         -0.2856249754735134
+        ]
+       }
       }
      },
      "metrics": {
@@ -477,6 +1055,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -486,6 +1065,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
@@ -497,60 +1077,158 @@
      "gates": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.03484602917341977,
+      "estimator": "paired-rounds",
+      "speedup": 0.4319210492470473,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.03484602917341977,
+      "estimator": "paired-rounds",
+      "speedup": 0.4319210492470473,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4936.0,
-       "variant_median_ns": 4764.0,
-       "speedup": 0.03484602917341977,
+       "baseline_median_ns": 132009.1875,
+       "variant_median_ns": 94509.125,
+       "speedup": 0.2840716105460463,
        "speedup_ci95": [
-        0.03277177464590876,
-        0.03796484228390529
+        0.15077972094197867,
+        0.47866991288975685
        ],
        "baseline_ci95": [
-        4932.0,
-        4946.0
+        126653.375,
+        142653.375
        ],
        "variant_ci95": [
-        4754.0,
-        4776.0
+        70345.75,
+        110134.125
        ],
-       "n": 20,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 157739.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 132240.0,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 129855.25,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 118268.75,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58672.5,
+          "plateau": true,
+          "plateau_floor_ns": 56067.0,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 76326.375,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 72586.125,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 132239.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.4319210492470473,
+        "ci95": [
+         -0.11813031760291709,
+         0.6389526586096255
+        ],
+        "rounds": [
+         0.6389526586096255,
+         0.4228193058076225,
+         0.44102279268647204,
+         -0.11813031760291709
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.016435295343399048,
-       "flip_p99": 0.9673883318901062,
-       "flip_max": 0.9939436316490173,
-       "abs_max": 1.0,
-       "abs_p99": 1.0,
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.001254949951544404,
+       "flip_mean": 0.0,
        "flip_p99": 0.0,
-       "flip_max": 0.9923807382583618,
-       "abs_max": 4.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
        "abs_p99": 0.0,
-       "masked_pixels": 33060,
-       "metric": "flip_hdr"
+       "masked_pixels": 33328,
+       "one_sided_nonfinite": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
      }
     },
@@ -563,56 +1241,155 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0386762360446571,
+      "estimator": "paired-rounds",
+      "speedup": 0.0697854834759449,
       "required": 0.1
      },
      "gates_strict": {
       "1": true,
       "2": true,
       "3": false,
-      "4": true,
+      "4": false,
       "5": null,
-      "speedup": 0.0386762360446571,
+      "estimator": "paired-rounds",
+      "speedup": 0.0697854834759449,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 5016.0,
-       "variant_median_ns": 4822.0,
-       "speedup": 0.0386762360446571,
+       "baseline_median_ns": 263220.75,
+       "variant_median_ns": 192461.125,
+       "speedup": 0.26882236677769517,
        "speedup_ci95": [
-        0.03478608556577369,
-        0.04066985645933014
+        -0.2277225795902741,
+        0.2940008838965803
        ],
        "baseline_ci95": [
-        4998.0,
-        5020.0
+        157239.875,
+        264509.25
        ],
        "variant_ci95": [
-        4812.0,
-        4830.0
+        182337.9953125,
+        229807.375
        ],
-       "n": 20,
-       "touched": true
+       "n": 57,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 268365.0,
+          "plateau": true,
+          "plateau_floor_ns": 266162.875,
+          "n_plateau": 12,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 137460.875,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 264182.125,
+          "plateau": true,
+          "plateau_floor_ns": 261989.875,
+          "n_plateau": 15,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 137249.625,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 252807.375,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 188980.25,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 229807.375,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 125922.625,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.0697854834759449,
+        "ci95": [
+         -0.3747930092835507,
+         0.13011762245458508
+        ],
+        "rounds": [
+         0.05704250831311392,
+         -0.3747930092835507,
+         0.13011762245458508,
+         0.08252845863877588
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0006110653048381209,
-       "flip_p99": 0.008817500434815884,
-       "flip_max": 0.03499123454093933,
+       "flip_mean": 0.001673657214269042,
+       "flip_p99": 0.013639191165566444,
+       "flip_max": 0.03569566458463669,
        "abs_max": 0.008483350276947021,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0012048797216266394,
-       "flip_p99": 0.0022878716699779034,
-       "flip_max": 0.003718550316989422,
-       "abs_max": 0.001953125,
-       "abs_p99": 0.0009765625,
+       "flip_mean": 0.0022338037379086018,
+       "flip_p99": 0.00328208995051682,
+       "flip_max": 0.0057778507471084595,
+       "abs_max": 0.0029296875,
+       "abs_p99": 0.001953125,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -644,7 +1421,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012126111560226355,
+      "estimator": "paired-rounds",
+      "speedup": 0.34119395051502005,
       "required": 0.1
      },
      "gates_strict": {
@@ -653,28 +1431,122 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0012126111560226355,
+      "estimator": "paired-rounds",
+      "speedup": 0.34119395051502005,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4948.0,
-       "variant_median_ns": 4954.0,
-       "speedup": -0.0012126111560226355,
+       "baseline_median_ns": 166379.375,
+       "variant_median_ns": 119922.625,
+       "speedup": 0.2792218085925614,
        "speedup_ci95": [
-        -0.003236245954692557,
-        0.0008077544426494346
+        0.10482988806671151,
+        0.3898043194568139
        ],
        "baseline_ci95": [
-        4942.0,
-        4952.0
+        160235.0625,
+        178691.875
        ],
        "variant_ci95": [
-        4946.0,
-        4960.0
+        102663.125,
+        148057.125
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 164086.125,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 160845.75,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 119586.0,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 185730.25,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 112451.5,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 101701.5,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 208720.75,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62528.375,
+          "plateau": true,
+          "plateau_floor_ns": 60365.0,
+          "n_plateau": 8,
+          "n_steady": 15
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.34119395051502005,
+        "ci95": [
+         -0.7453610790560768,
+         0.6733808170720709
+        ],
+        "rounds": [
+         0.3146800194105382,
+         0.3677078816195019,
+         -0.7453610790560768,
+         0.6733808170720709
+        ]
+       }
       }
      },
      "metrics": {
@@ -685,6 +1557,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -694,6 +1567,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -707,7 +1581,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0004045307443365696,
+      "estimator": "paired-rounds",
+      "speedup": 0.38206404638971003,
       "required": 0.1
      },
      "gates_strict": {
@@ -716,28 +1591,120 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0004045307443365696,
+      "estimator": "paired-rounds",
+      "speedup": 0.38206404638971003,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4944.0,
-       "variant_median_ns": 4946.0,
-       "speedup": -0.0004045307443365696,
+       "baseline_median_ns": 153629.375,
+       "variant_median_ns": 86739.9375,
+       "speedup": 0.4353948422949713,
        "speedup_ci95": [
-        -0.0024271844660194173,
-        0.0016181229773462784
+        0.32505788268955527,
+        0.5214778372628729
        ],
        "baseline_ci95": [
-        4938.0,
-        4950.0
+        142336.0,
+        171297.625
        ],
        "variant_ci95": [
-        4936.0,
-        4954.0
+        78624.625,
+        101676.27656249993
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 133191.75,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 171461.0,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 114211.125,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 179095.625,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 152143.75,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 73739.75,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 90759.25,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 79018.75,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.38206404638971003,
+        "ci95": [
+         -0.14229109535688209,
+         0.5699328127095957
+        ],
+        "rounds": [
+         -0.14229109535688209,
+         0.5699328127095957,
+         0.20533792132771655,
+         0.5587901714517035
+        ]
+       }
       }
      },
      "metrics": {
@@ -748,6 +1715,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -757,6 +1725,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
@@ -771,7 +1740,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0004045307443365696,
+      "estimator": "paired-rounds",
+      "speedup": 0.25812219726906366,
       "required": 0.1
      },
      "gates_strict": {
@@ -780,28 +1750,122 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0004045307443365696,
+      "estimator": "paired-rounds",
+      "speedup": 0.25812219726906366,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4944.0,
-       "variant_median_ns": 4946.0,
-       "speedup": -0.0004045307443365696,
+       "baseline_median_ns": 89730.25,
+       "variant_median_ns": 76836.125,
+       "speedup": 0.14369875265030466,
        "speedup_ci95": [
-        -0.002430133657351154,
-        0.002825999192571659
+        0.06029416074267782,
+        0.28802807187662993
        ],
        "baseline_ci95": [
-        4936.0,
-        4956.0
+        84417.6875,
+        92744.8125
        ],
        "variant_ci95": [
-        4938.0,
-        4950.0
+        63720.625,
+        82332.51406249999
        ],
-       "n": 20,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 159163.125,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 89922.375,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 73826.375,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 69528.375,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 88403.25,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57547.75,
+          "plateau": true,
+          "plateau_floor_ns": 56124.625,
+          "n_plateau": 11,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62672.625,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 83297.625,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.25812219726906366,
+        "ci95": [
+         -0.19803785145273423,
+         0.4445745520515509
+        ],
+        "rounds": [
+         0.4445745520515509,
+         0.3651635646856525,
+         0.1510808298524748,
+         -0.19803785145273423
+        ]
+       }
       }
      },
      "metrics": {
@@ -812,6 +1876,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -820,283 +1885,14 @@
        "flip_max": 0.0,
        "abs_max": 0.0,
        "abs_p99": 0.0,
-       "masked_pixels": 24752,
-       "metric": "flip_hdr"
-      }
-     }
-    },
-    {
-     "scenario": "bloom_noise",
-     "split": "holdout",
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0003996802557953637,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0003996802557953637,
-      "required": 0.02
-     },
-     "timing": {
-      "blur_h": {
-       "baseline_median_ns": 5004.0,
-       "variant_median_ns": 5006.0,
-       "speedup": -0.0003996802557953637,
-       "speedup_ci95": [
-        -0.003198720511795282,
-        0.001597444089456869
-       ],
-       "baseline_ci95": [
-        4998.0,
-        5008.0
-       ],
-       "variant_ci95": [
-        4998.0,
-        5020.0
-       ],
-       "n": 20,
-       "touched": true
-      }
-     },
-     "metrics": {
-      "composite": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip"
-      },
-      "blur_h": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip_hdr"
-      }
-     }
-    }
-   ]
-  },
-  {
-   "variant_id": "demote_f16_s47",
-   "mode": "f16",
-   "set": "s47",
-   "sites": [
-    47
-   ],
-   "n_sites": 1,
-   "predicted": {
-    "flip_p99": 0.0,
-    "flip_mean_max_site": 0.0,
-    "module_flip_p99": 0.0,
-    "module_flip_mean": 0.0
-   },
-   "ops": 1,
-   "runs": [
-    {
-     "scenario": "bloom_hdr_edges",
-     "split": "train",
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0016168148746968471,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": -0.0016168148746968471,
-      "required": 0.02
-     },
-     "timing": {
-      "blur_h": {
-       "baseline_median_ns": 4948.0,
-       "variant_median_ns": 4956.0,
-       "speedup": -0.0016168148746968471,
-       "speedup_ci95": [
-        -0.0032375884142694937,
-        0.0012116316639741518
-       ],
-       "baseline_ci95": [
-        4942.0,
-        4956.0
-       ],
-       "variant_ci95": [
-        4944.0,
-        4964.0
-       ],
-       "n": 40,
-       "touched": true
-      }
-     },
-     "metrics": {
-      "composite": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip"
-      },
-      "blur_h": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip_hdr"
-      }
-     }
-    },
-    {
-     "scenario": "bloom_hdr_gradient",
-     "split": "train",
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0016142050040355124,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0016142050040355124,
-      "required": 0.02
-     },
-     "timing": {
-      "blur_h": {
-       "baseline_median_ns": 4956.0,
-       "variant_median_ns": 4948.0,
-       "speedup": 0.0016142050040355124,
-       "speedup_ci95": [
-        0.0003934624697336567,
-        0.0024193548387096775
-       ],
-       "baseline_ci95": [
-        4950.0,
-        4960.0
-       ],
-       "variant_ci95": [
-        4948.0,
-        4952.0
-       ],
-       "n": 40,
-       "touched": true
-      }
-     },
-     "metrics": {
-      "composite": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip"
-      },
-      "blur_h": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
+       "masked_pixels": 33328,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
      }
     },
     {
-     "scenario": "bloom_extreme",
-     "split": "holdout",
-     "gates": {
-      "1": true,
-      "2": true,
-      "3": true,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.1
-     },
-     "gates_strict": {
-      "1": true,
-      "2": true,
-      "3": false,
-      "4": false,
-      "5": null,
-      "speedup": 0.0,
-      "required": 0.02
-     },
-     "timing": {
-      "blur_h": {
-       "baseline_median_ns": 4952.0,
-       "variant_median_ns": 4952.0,
-       "speedup": 0.0,
-       "speedup_ci95": [
-        -0.0024271844660194173,
-        0.0024183796856106408
-       ],
-       "baseline_ci95": [
-        4944.0,
-        4964.0
-       ],
-       "variant_ci95": [
-        4948.0,
-        4960.0
-       ],
-       "n": 20,
-       "touched": true
-      }
-     },
-     "metrics": {
-      "composite": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 0,
-       "metric": "flip"
-      },
-      "blur_h": {
-       "flip_mean": 0.0,
-       "flip_p99": 0.0,
-       "flip_max": 0.0,
-       "abs_max": 0.0,
-       "abs_p99": 0.0,
-       "masked_pixels": 24752,
-       "metric": "flip_hdr"
-      }
-     }
-    },
-    {
      "scenario": "bloom_noise",
      "split": "holdout",
      "gates": {
@@ -1105,7 +1901,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0015942606616181746,
+      "estimator": "paired-rounds",
+      "speedup": 0.023857920344848946,
       "required": 0.1
      },
      "gates_strict": {
@@ -1114,28 +1911,122 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": 0.0015942606616181746,
+      "estimator": "paired-rounds",
+      "speedup": 0.023857920344848946,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 5018.0,
-       "variant_median_ns": 5010.0,
-       "speedup": 0.0015942606616181746,
+       "baseline_median_ns": 83653.25,
+       "variant_median_ns": 83638.9375,
+       "speedup": 0.00017109317330767185,
        "speedup_ci95": [
-        -0.0007993605115907274,
-        0.0031910968521977248
+        -0.15977786955222956,
+        0.1270323676250039
        ],
        "baseline_ci95": [
-        5006.0,
-        5024.0
+        74682.25,
+        90518.625
        ],
        "variant_ci95": [
-        5002.0,
-        5016.0
+        74624.2671875,
+        90547.5
        ],
-       "n": 20,
-       "touched": true
+       "n": 53,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 69336.0,
+          "plateau": true,
+          "plateau_floor_ns": 66816.75,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 90518.625,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 86220.75,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 88182.25,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 92605.25,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 84412.875,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 87922.5,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 74422.625,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.023857920344848946,
+        "ci95": [
+         -0.3674575370178269,
+         0.15603622044118856
+        ],
+        "rounds": [
+         -0.3674575370178269,
+         0.06745296893318917,
+         -0.019737128243491272,
+         0.15603622044118856
+        ]
+       }
       }
      },
      "metrics": {
@@ -1146,6 +2037,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -1155,6 +2047,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -1191,7 +2084,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0016116035455278,
+      "estimator": "paired-rounds",
+      "speedup": -0.00016218134061607783,
       "required": 0.1
      },
      "gates_strict": {
@@ -1200,47 +2094,141 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0016116035455278,
+      "estimator": "paired-rounds",
+      "speedup": -0.00016218134061607783,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4964.0,
-       "variant_median_ns": 4972.0,
-       "speedup": -0.0016116035455278,
+       "baseline_median_ns": 63946.625,
+       "variant_median_ns": 64427.4375,
+       "speedup": -0.007518966012670723,
        "speedup_ci95": [
-        -0.004035512510088781,
-        0.0
+        -0.07867079380773441,
+        0.038421910846727074
        ],
        "baseline_ci95": [
-        4956.0,
-        4968.0
+        60999.5,
+        66778.4375
        ],
        "variant_ci95": [
-        4966.0,
-        4980.0
+        63341.0,
+        68230.43125
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 70970.75,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64826.5,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60355.25,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60999.5,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65672.5,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 67095.75,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 69364.875,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58884.0,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": -0.00016218134061607783,
+        "ci95": [
+         -0.14927657494584148,
+         0.07465399477953946
+        ],
+        "rounds": [
+         0.07465399477953946,
+         -0.03500497481739721,
+         -0.14927657494584148,
+         0.03468061213616505
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 9.23567422432825e-05,
-       "flip_p99": 0.002389218658208847,
-       "flip_max": 0.02958531118929386,
+       "flip_mean": 0.0002898413804359734,
+       "flip_p99": 0.006078512407839298,
+       "flip_max": 0.03457120060920715,
        "abs_max": 0.0087127685546875,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0008710171678103507,
-       "flip_p99": 0.006696125492453575,
-       "flip_max": 0.006772226188331842,
+       "flip_mean": 0.0007322491728700697,
+       "flip_p99": 0.0038564472924917936,
+       "flip_max": 0.005923374556005001,
        "abs_max": 0.015625,
-       "abs_p99": 0.00390625,
+       "abs_p99": 0.015625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -1254,7 +2242,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0032310177705977385,
+      "estimator": "paired-rounds",
+      "speedup": -0.05244191987062337,
       "required": 0.1
      },
      "gates_strict": {
@@ -1263,28 +2252,130 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0032310177705977385,
+      "estimator": "paired-rounds",
+      "speedup": -0.05244191987062337,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4952.0,
-       "variant_median_ns": 4968.0,
-       "speedup": -0.0032310177705977385,
+       "baseline_median_ns": 56961.1875,
+       "variant_median_ns": 59085.875,
+       "speedup": -0.03730061807436862,
        "speedup_ci95": [
-        -0.004042037186742118,
-        -0.0016142050040355124
+        -0.0690145575143343,
+        -0.014982961969189287
        ],
        "baseline_ci95": [
-        4948.0,
-        4956.0
+        56701.4375,
+        57441.875
        ],
        "variant_ci95": [
-        4962.0,
-        4968.0
+        57970.625,
+        60922.625
        ],
-       "n": 40,
-       "touched": true
+       "n": 42,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58287.875,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 56941.875,
+          "plateau": true,
+          "plateau_floor_ns": 56192.0,
+          "n_plateau": 11,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58566.75,
+          "plateau": true,
+          "plateau_floor_ns": 56432.375,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58566.875,
+          "plateau": true,
+          "plateau_floor_ns": 55874.625,
+          "n_plateau": 8,
+          "n_steady": 15
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59287.875,
+          "plateau": true,
+          "plateau_floor_ns": 57432.25,
+          "n_plateau": 11,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57182.125,
+          "plateau": true,
+          "plateau_floor_ns": 55576.5,
+          "n_plateau": 10,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 63124.5,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65893.75,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": -0.05244191987062337,
+        "ci95": [
+         -0.15936387288894166,
+         0.0021423838148156883
+        ],
+        "rounds": [
+         0.0021423838148156883,
+         -0.0016172709493004363,
+         -0.1032665687919463,
+         -0.15936387288894166
+        ]
+       }
       }
      },
      "metrics": {
@@ -1295,6 +2386,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -1304,6 +2396,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
@@ -1315,10 +2408,11 @@
      "gates": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0032310177705977385,
+      "estimator": "paired-rounds",
+      "speedup": 0.02524692603449129,
       "required": 0.1
      },
      "gates_strict": {
@@ -1327,48 +2421,149 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0032310177705977385,
+      "estimator": "paired-rounds",
+      "speedup": 0.02524692603449129,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4952.0,
-       "variant_median_ns": 4968.0,
-       "speedup": -0.0032310177705977385,
+       "baseline_median_ns": 59336.0,
+       "variant_median_ns": 57369.75,
+       "speedup": 0.03313755561547796,
        "speedup_ci95": [
-        -0.0048543689320388345,
-        0.0
+        -0.0034330202051353507,
+        0.10349239818977933
        ],
        "baseline_ci95": [
-        4944.0,
-        4966.0
+        57691.75,
+        63845.8125
        ],
        "variant_ci95": [
-        4962.0,
-        4974.0
+        56961.125,
+        58499.375
        ],
-       "n": 20,
-       "touched": true
+       "n": 56,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59287.875,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 56759.125,
+          "plateau": true,
+          "plateau_floor_ns": 54999.5,
+          "n_plateau": 11,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65172.5,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 60441.75,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57115.0,
+          "plateau": true,
+          "plateau_floor_ns": 55201.5,
+          "n_plateau": 10,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58191.875,
+          "plateau": true,
+          "plateau_floor_ns": 55547.625,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 61028.25,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59874.625,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.02524692603449129,
+        "ci95": [
+         -0.01324900665783696,
+         0.06358893705167057
+        ],
+        "rounds": [
+         0.04111085108042749,
+         -0.01324900665783696,
+         0.06358893705167057,
+         0.009383000988555096
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.016435295343399048,
-       "flip_p99": 0.9673883318901062,
-       "flip_max": 0.9939436316490173,
-       "abs_max": 1.0,
-       "abs_p99": 1.0,
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0012547859223559499,
+       "flip_mean": 0.0,
        "flip_p99": 0.0,
-       "flip_max": 0.9923807382583618,
+       "flip_max": 0.0,
        "abs_max": 0.0,
        "abs_p99": 0.0,
-       "masked_pixels": 33060,
-       "metric": "flip_hdr"
+       "masked_pixels": 33328,
+       "one_sided_nonfinite": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
      }
     },
@@ -1381,7 +2576,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.0027910685805422647,
+      "estimator": "paired-rounds",
+      "speedup": 0.02181984478679787,
       "required": 0.1
      },
      "gates_strict": {
@@ -1390,47 +2586,147 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.0027910685805422647,
+      "estimator": "paired-rounds",
+      "speedup": 0.02181984478679787,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 5016.0,
-       "variant_median_ns": 5030.0,
-       "speedup": -0.0027910685805422647,
+       "baseline_median_ns": 76057.125,
+       "variant_median_ns": 76119.6875,
+       "speedup": -0.0008225725071779929,
        "speedup_ci95": [
-        -0.005595523581135092,
-        -0.0007968127490039841
+        -0.0653696547146155,
+        0.18368253436138116
        ],
        "baseline_ci95": [
-        5004.0,
-        5022.0
+        73480.375,
+        90374.625
        ],
        "variant_ci95": [
-        5022.0,
-        5036.0
+        71393.75,
+        80211.125
        ],
-       "n": 20,
-       "touched": true
+       "n": 53,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 93470.75,
+          "plateau": true,
+          "plateau_floor_ns": 89490.0,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 75191.875,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 73480.375,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 72865.0,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 90230.25,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 78836.0,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 71105.25,
+          "plateau": true,
+          "plateau_floor_ns": 69403.375,
+          "n_plateau": 9,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 70172.625,
+          "plateau": true,
+          "plateau_floor_ns": 68663.0,
+          "n_plateau": 9,
+          "n_steady": 15
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.02181984478679787,
+        "ci95": [
+         -0.048464345383061665,
+         0.05370891374459617
+        ],
+        "rounds": [
+         0.0022868113391011566,
+         -0.048464345383061665,
+         0.041352878234494586,
+         0.05370891374459617
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0004438724718056619,
-       "flip_p99": 0.006939820013940334,
-       "flip_max": 0.03501365706324577,
+       "flip_mean": 0.0010910950368270278,
+       "flip_p99": 0.011747914366424084,
+       "flip_max": 0.03569566458463669,
        "abs_max": 0.008483350276947021,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0009282489190809429,
-       "flip_p99": 0.00196139607578516,
-       "flip_max": 0.0034693069756031036,
-       "abs_max": 0.0009765625,
+       "flip_mean": 0.0015862624859437346,
+       "flip_p99": 0.0024304958060383797,
+       "flip_max": 0.003673978615552187,
+       "abs_max": 0.001953125,
        "abs_p99": 0.0009765625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -1478,7 +2774,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.00645682001614205,
+      "estimator": "paired-rounds",
+      "speedup": 0.060633179032721335,
       "required": 0.1
      },
      "gates_strict": {
@@ -1487,47 +2784,143 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.00645682001614205,
+      "estimator": "paired-rounds",
+      "speedup": 0.060633179032721335,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4956.0,
-       "variant_median_ns": 4988.0,
-       "speedup": -0.00645682001614205,
+       "baseline_median_ns": 68764.0625,
+       "variant_median_ns": 68105.25,
+       "speedup": 0.009580767570269717,
        "speedup_ci95": [
-        -0.007673667205169628,
-        -0.004838709677419355
+        -0.13217814161639055,
+        0.10587918022521234
        ],
        "baseline_ci95": [
-        4952.0,
-        4960.0
+        64932.25,
+        73297.5
        ],
        "variant_ci95": [
-        4984.0,
-        4992.0
+        63422.75,
+        76307.25
        ],
-       "n": 40,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 72874.625,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 74749.5,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 64932.25,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 66278.5,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 58864.875,
+          "plateau": true,
+          "plateau_floor_ns": 56797.5,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 67422.625,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 63422.75,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 90028.5,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.060633179032721335,
+        "ci95": [
+         -0.358336413769171,
+         0.20411768842721317
+        ],
+        "rounds": [
+         0.20411768842721317,
+         0.0980190502946508,
+         0.023247307770791863,
+         -0.358336413769171
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0001544598489999771,
-       "flip_p99": 0.0036448119208216667,
-       "flip_max": 0.024111095815896988,
+       "flip_mean": 0.00041891782893799245,
+       "flip_p99": 0.008129939436912537,
+       "flip_max": 0.034761521965265274,
        "abs_max": 0.0087127685546875,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0009788521565496922,
-       "flip_p99": 0.006696951109915972,
-       "flip_max": 0.006799567956477404,
+       "flip_mean": 0.00066976627567783,
+       "flip_p99": 0.004432535730302334,
+       "flip_max": 0.006413924042135477,
        "abs_max": 0.03125,
        "abs_p99": 0.015625,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }
@@ -1541,7 +2934,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.006058158319870759,
+      "estimator": "paired-rounds",
+      "speedup": -0.1306990243953876,
       "required": 0.1
      },
      "gates_strict": {
@@ -1550,28 +2944,124 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.006058158319870759,
+      "estimator": "paired-rounds",
+      "speedup": -0.1306990243953876,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4952.0,
-       "variant_median_ns": 4982.0,
-       "speedup": -0.006058158319870759,
+       "baseline_median_ns": 66413.0,
+       "variant_median_ns": 91283.1875,
+       "speedup": -0.3744777001490672,
        "speedup_ci95": [
-        -0.008087343307723413,
-        -0.004842615012106538
+        -0.5299776854044822,
+        -0.1819224828719882
        ],
        "baseline_ci95": [
-        4944.0,
-        4956.0
+        60797.625,
+        73066.75
        ],
        "variant_ci95": [
-        4976.0,
-        4988.0
+        82119.75,
+        98191.875
        ],
-       "n": 40,
-       "touched": true
+       "n": 53,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62067.0,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 71287.875,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 73624.625,
+          "plateau": false,
+          "reason_plateau": "only 3 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57643.75,
+          "plateau": true,
+          "plateau_floor_ns": 55922.625,
+          "n_plateau": 8,
+          "n_steady": 15
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 126528.375,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 93114.875,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 68143.625,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 55547.625,
+          "plateau": true,
+          "plateau_floor_ns": 54384.0,
+          "n_plateau": 9,
+          "n_steady": 15
+         }
+        ]
+       },
+       "paired": {
+        "speedup": -0.1306990243953876,
+        "ci95": [
+         -1.0385772632800039,
+         0.0744452009093425
+        ],
+        "rounds": [
+         -1.0385772632800039,
+         -0.3061811002221626,
+         0.0744452009093425,
+         0.04478305143138739
+        ]
+       }
       }
      },
      "metrics": {
@@ -1582,6 +3072,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
@@ -1591,6 +3082,7 @@
        "abs_max": 0.0,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr",
        "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
@@ -1602,10 +3094,11 @@
      "gates": {
       "1": true,
       "2": true,
-      "3": false,
+      "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.006053268765133172,
+      "estimator": "paired-rounds",
+      "speedup": 0.19728819671145825,
       "required": 0.1
      },
      "gates_strict": {
@@ -1614,48 +3107,147 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.006053268765133172,
+      "estimator": "paired-rounds",
+      "speedup": 0.19728819671145825,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 4956.0,
-       "variant_median_ns": 4986.0,
-       "speedup": -0.006053268765133172,
+       "baseline_median_ns": 71489.9375,
+       "variant_median_ns": 57605.375,
+       "speedup": 0.19421701830414945,
        "speedup_ci95": [
-        -0.008885298869143781,
-        -0.004032258064516129
+        0.016029889996490174,
+        0.31354490087205156
        ],
        "baseline_ci95": [
-        4946.0,
-        4962.0
+        60576.5,
+        81249.5625
        ],
        "variant_ci95": [
-        4980.0,
-        4994.0
+        54105.375,
+        61355.375
        ],
-       "n": 20,
-       "touched": true
+       "n": 56,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 57470.625,
+          "plateau": true,
+          "plateau_floor_ns": 55730.125,
+          "n_plateau": 11,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 62797.5,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 70374.5,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 82893.875,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 65191.875,
+          "plateau": false,
+          "reason_plateau": "only 7 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 53162.875,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 53845.75,
+          "plateau": true,
+          "plateau_floor_ns": 52845.625,
+          "n_plateau": 8,
+          "n_steady": 15
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 59057.25,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.19728819671145825,
+        "ci95": [
+         -0.15581258255250116,
+         0.2875559261766928
+        ],
+        "rounds": [
+         -0.15581258255250116,
+         0.153423703172897,
+         0.24115269025001954,
+         0.2875559261766928
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.016435295343399048,
-       "flip_p99": 0.9673883318901062,
-       "flip_max": 0.9939436316490173,
-       "abs_max": 1.0,
-       "abs_p99": 1.0,
+       "flip_mean": 0.0,
+       "flip_p99": 0.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
+       "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.001254949951544404,
+       "flip_mean": 0.0,
        "flip_p99": 0.0,
-       "flip_max": 0.9923807382583618,
-       "abs_max": 4.0,
+       "flip_max": 0.0,
+       "abs_max": 0.0,
        "abs_p99": 0.0,
-       "masked_pixels": 33060,
-       "metric": "flip_hdr"
+       "masked_pixels": 33328,
+       "one_sided_nonfinite": 0,
+       "metric": "flip_hdr",
+       "note": "flip_hdr unavailable (flat reference); used LDR FLIP on x/(1+x) tonemapped images"
       }
      }
     },
@@ -1668,7 +3260,8 @@
       "3": true,
       "4": false,
       "5": null,
-      "speedup": -0.007182761372705506,
+      "estimator": "paired-rounds",
+      "speedup": 0.002486021198078255,
       "required": 0.1
      },
      "gates_strict": {
@@ -1677,47 +3270,141 @@
       "3": false,
       "4": false,
       "5": null,
-      "speedup": -0.007182761372705506,
+      "estimator": "paired-rounds",
+      "speedup": 0.002486021198078255,
       "required": 0.02
      },
      "timing": {
       "blur_h": {
-       "baseline_median_ns": 5012.0,
-       "variant_median_ns": 5048.0,
-       "speedup": -0.007182761372705506,
+       "baseline_median_ns": 97398.625,
+       "variant_median_ns": 101571.5625,
+       "speedup": -0.04284390565061878,
        "speedup_ci95": [
-        -0.008792965627498001,
-        -0.004777070063694267
+        -0.2113614470208606,
+        0.05798696457293361
        ],
        "baseline_ci95": [
-        5004.0,
-        5024.0
+        89413.0,
+        104624.5
        ],
        "variant_ci95": [
-        5040.0,
-        5052.0
+        93566.75,
+        113966.0
        ],
-       "n": 20,
-       "touched": true
+       "n": 60,
+       "touched": true,
+       "clock": {
+        "baseline": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 99528.5,
+          "plateau": false,
+          "reason_plateau": "only 6 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 75768.75,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 70778.375,
+          "plateau": false,
+          "reason_plateau": "only 4 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 124941.75,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         }
+        ],
+        "variant": [
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 87826.625,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 76278.25,
+          "plateau": false,
+          "reason_plateau": "only 5 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 127422.75,
+          "plateau": false,
+          "reason_plateau": "only 1 samples within 5% of the minimum"
+         },
+         {
+          "steady": false,
+          "reason": "only 0 samples at the top clock nan MHz",
+          "top_clock_mhz": NaN,
+          "n_top": 0,
+          "raw_median_ns": 123480.375,
+          "plateau": false,
+          "reason_plateau": "only 2 samples within 5% of the minimum"
+         }
+        ]
+       },
+       "paired": {
+        "speedup": 0.002486021198078255,
+        "ci95": [
+         -0.800306237604353,
+         0.11757310720045012
+        ],
+        "rounds": [
+         0.11757310720045012,
+         -0.006724408149797904,
+         -0.800306237604353,
+         0.011696450545954414
+        ]
+       }
       }
      },
      "metrics": {
       "composite": {
-       "flip_mean": 0.0006110653048381209,
-       "flip_p99": 0.008817500434815884,
-       "flip_max": 0.03499123454093933,
+       "flip_mean": 0.001673657214269042,
+       "flip_p99": 0.013639191165566444,
+       "flip_max": 0.03569566458463669,
        "abs_max": 0.008483350276947021,
        "abs_p99": 0.0,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip"
       },
       "blur_h": {
-       "flip_mean": 0.0012048797216266394,
-       "flip_p99": 0.0022878716699779034,
-       "flip_max": 0.003718550316989422,
-       "abs_max": 0.001953125,
-       "abs_p99": 0.0009765625,
+       "flip_mean": 0.0022338037379086018,
+       "flip_p99": 0.00328208995051682,
+       "flip_max": 0.0057778507471084595,
+       "abs_max": 0.0029296875,
+       "abs_p99": 0.001953125,
        "masked_pixels": 0,
+       "one_sided_nonfinite": 0,
        "metric": "flip_hdr"
       }
      }

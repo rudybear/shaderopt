@@ -51,9 +51,7 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | hyp_onepow | 0.0000 | -13.73% | 2/3 | no | no |
-| demote_f16_s61 | 0.0160 | +3.30% | 2/3 | no | no |
-| demote_f16_zero | 0.0300 | +21.55% | 2/3 | no | no |
-| demote_relaxed_q2 | 0.0335 | +36.62% | 2/3 | no | no |
+| demote_f16_zero | 0.0300 | +35.52% | 2/3 | no | no |
 
 ### Accepted variants
 
@@ -63,11 +61,20 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
-| demote_relaxed_q2 | relaxed | q2 | 32 | 0.0335 | +36.62% | no | no |
-| demote_f16_q2 | f16 | q2 | 32 | 0.0335 | +33.01% | no | no |
-| demote_f16_zero | f16 | zero | 28 | 0.0300 | +21.55% | no | no |
+| demote_f16_zero | f16 | zero | 28 | 0.0300 | +35.52% | no | no |
+| demote_f16_q2 | f16 | q2 | 32 | 0.0335 | +31.72% | no | no |
+| demote_relaxed_q2 | relaxed | q2 | 32 | 0.0335 | +24.14% | no | no |
+| g_onepow_xh_aoff_dq2 |  |  |  | 0.0335 | +24.06% | no | no |
+| g_onepow_xh_aoff_dq1 |  |  |  | 0.0335 | +20.81% | no | no |
+| g_onepow_xh_a0p001_dall |  |  |  | 0.0335 | +14.84% | no | no |
+| g_onepow_xh_a0p001_dq2 |  |  |  | 0.0335 | +13.55% | no | no |
+| g_onepow_--_a0p01_dq2 |  |  |  | 0.0335 | +13.09% | no | no |
+| g_onepow_xh_a0p001_dq1 |  |  |  | 0.0335 | +11.58% | no | no |
 | hyp_lut1d |  |  |  | 0.9674 | +9.14% | no | no |
-| demote_f16_s61 | f16 | s61 | 1 | 0.0160 | +3.30% | no | no |
+| g_onepow_xh_a0p01_dq1 |  |  |  | 0.0335 | -9.46% | no | no |
 | hyp_onepow |  |  |  | 0.0000 | -13.73% | no | no |
-| demote_relaxed_zero | relaxed | zero | 28 | 0.0300 | -24.68% | no | no |
+| demote_relaxed_zero | relaxed | zero | 28 | 0.0300 | -14.36% | no | no |
+| g_onepow_xh_a0p01_dq2 |  |  |  | 0.0335 | -29.02% | no | no |
+| demote_f16_s61 | f16 | s61 | 1 | 0.0160 | -48.59% | no | no |
+| g_onepow_xh_a0p01_dall |  |  |  | 0.0335 | -70.70% | no | no |
 

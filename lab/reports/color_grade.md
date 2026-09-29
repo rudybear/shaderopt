@@ -49,6 +49,8 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 | variant | worst FLIP p99 | min speedup (train) | scenarios (train/holdout) | accepted (budget) | accepted (strict) |
 |---|---|---|---|---|---|
 | hyp_foldmat | 0.0000 | +1.14% | 2/1 | no | no |
+| demote_relaxed_q4 | 0.0308 | +6.69% | 2/1 | no | no |
+| g_foldmat_-h_a0p01_dq4 | 0.0319 | +39.27% | 2/1 | no | no |
 
 ### Accepted variants
 
@@ -58,5 +60,20 @@ Every variant measured against the same device's baseline, interleaved. Speedup 
 
 | variant | mode | set | sites | worst FLIP p99 | min speedup | accepted | strict |
 |---|---|---|---|---|---|---|---|
+| g_foldmat_-h_a0p01_dq4 |  |  |  | 0.0319 | +39.27% | no | no |
+| demote_f16_q2 | f16 | q2 | 45 | 0.0499 | +26.03% | no | no |
+| g_foldmat_xh_a0p0001_dq4 |  |  |  | 0.0319 | +13.58% | no | no |
+| g_foldmat_-h_a0p001_dq4 |  |  |  | 0.0319 | +6.85% | no | no |
+| demote_relaxed_q4 | relaxed | q4 | 20 | 0.0308 | +6.69% | no | no |
 | hyp_foldmat |  |  |  | 0.0000 | +1.14% | no | no |
+| g_foldmat_-h_a0p01_dzero |  |  |  | 0.0000 | +0.02% | no | no |
+| g_foldmat_xh_a0p01_dnone |  |  |  | 0.0000 | -1.23% | no | no |
+| demote_f16_s33 | f16 | s33 | 1 | 0.0021 | -3.01% | no | no |
+| g_foldmat_xh_a0p01_dq4 |  |  |  | 0.0319 | -3.10% | no | no |
+| g_foldmat_xh_a0p001_dq4 |  |  |  | 0.0319 | -3.25% | no | no |
+| demote_relaxed_q2 | relaxed | q2 | 45 | 0.0499 | -5.06% | no | no |
+| g_baseline_-h_a0p001_dq4 |  |  |  | 0.0308 | -5.32% | no | no |
+| demote_f16_q4 | f16 | q4 | 24 | 0.0308 | -9.29% | no | no |
+| hoist |  |  |  | 0.0000 | -15.96% | no | no |
+| g_foldmat_-h_a0p0001_dq4 |  |  |  | 0.0319 | -16.83% | no | no |
 
